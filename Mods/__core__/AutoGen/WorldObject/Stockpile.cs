@@ -7,53 +7,54 @@ namespace Eco.Mods.TechTree
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using Eco.Core.Controller;
     using Eco.Core.Items;
+    using Eco.Core.Utils;
     using Eco.Gameplay.Blocks;
+    using Eco.Gameplay.Civics.Objects;
     using Eco.Gameplay.Components;
     using Eco.Gameplay.Components.Auth;
+    using Eco.Gameplay.Components.Storage;
     using Eco.Gameplay.DynamicValues;
     using Eco.Gameplay.Economy;
     using Eco.Gameplay.Housing;
+    using Eco.Gameplay.Housing.PropertyValues;
     using Eco.Gameplay.Interactions;
     using Eco.Gameplay.Items;
-    using Eco.Gameplay.Modules;
+    using Eco.Gameplay.Items.Recipes;
     using Eco.Gameplay.Minimap;
+    using Eco.Gameplay.Modules;
     using Eco.Gameplay.Objects;
     using Eco.Gameplay.Occupancy;
+    using Eco.Gameplay.Pipes;
+    using Eco.Gameplay.Pipes.Gases;
+    using Eco.Gameplay.Pipes.LiquidComponents;
     using Eco.Gameplay.Players;
     using Eco.Gameplay.Property;
+    using Eco.Gameplay.Settlements;
     using Eco.Gameplay.Skills;
     using Eco.Gameplay.Systems;
+    using Eco.Gameplay.Systems.NewTooltip;
     using Eco.Gameplay.Systems.TextLinks;
-    using Eco.Gameplay.Pipes.LiquidComponents;
-    using Eco.Gameplay.Pipes.Gases;
     using Eco.Shared;
-    using Eco.Shared.Math;
+    using Eco.Shared.Items;
     using Eco.Shared.Localization;
+    using Eco.Shared.Math;
+    using Eco.Shared.Networking;
     using Eco.Shared.Serialization;
     using Eco.Shared.Utils;
     using Eco.Shared.View;
-    using Eco.Shared.Items;
-    using Eco.Shared.Networking;
-    using Eco.Gameplay.Pipes;
     using Eco.World.Blocks;
-    using Eco.Gameplay.Housing.PropertyValues;
-    using Eco.Gameplay.Civics.Objects;
-    using Eco.Gameplay.Settlements;
-    using Eco.Gameplay.Systems.NewTooltip;
-    using Eco.Core.Controller;
-    using Eco.Core.Utils;
-	using Eco.Gameplay.Components.Storage;
-    using Eco.Gameplay.Items.Recipes;
 
     [Serialized]
     [RequireComponent(typeof(PropertyAuthComponent))]
     [RequireComponent(typeof(LinkComponent))]
     [RequireComponent(typeof(OccupancyRequirementComponent))]
     [RequireComponent(typeof(ForSaleComponent))]
+    [RequireComponent(typeof(PublicStorageComponent))]
     [Tag("Usable")]
     [Ecopedia("Crafted Objects", "Storage", subPageName: "Stockpile Item")]
-            public partial class StockpileObject : WorldObject, IRepresentsItem
+    public partial class StockpileObject : WorldObject, IRepresentsItem
     {
         public virtual Type RepresentedItemType => typeof(StockpileItem);
         public override LocString DisplayName => Localizer.DoStr("Stockpile");
@@ -62,6 +63,8 @@ namespace Eco.Mods.TechTree
         protected override void Initialize()
         {
             this.ModsPreInitialize();
+            var storage = this.GetComponent<PublicStorageComponent>();
+            storage.Initialize(64);
             this.ModsPostInitialize();
         }
 
@@ -76,9 +79,9 @@ namespace Eco.Mods.TechTree
     [LocDescription("Designates a 5x5x5 area as storage for large items.")]
     [Ecopedia("Crafted Objects", "Storage", createAsSubPage: true)]
     [Weight(1000)] // Defines how heavy Stockpile is.
-            public partial class StockpileItem : WorldObjectItem<StockpileObject>
+    public partial class StockpileItem : WorldObjectItem<StockpileObject>
     {
-        protected override OccupancyContext GetOccupancyContext => new SideAttachedContext( 0  | DirectionAxisFlags.Down , WorldObject.GetOccupancyInfo(this.WorldObjectType));
+        protected override OccupancyContext GetOccupancyContext => new SideAttachedContext(0 | DirectionAxisFlags.Down, WorldObject.GetOccupancyInfo(this.WorldObjectType));
 
     }
 
@@ -115,7 +118,7 @@ namespace Eco.Mods.TechTree
                     new CraftingElement<StockpileItem>()
                 });
             this.Recipes = new List<Recipe> { recipe };
-            
+
             // Defines the amount of labor required and the required skill to add labor
             this.LaborInCalories = CreateLaborInCaloriesValue(25);
 

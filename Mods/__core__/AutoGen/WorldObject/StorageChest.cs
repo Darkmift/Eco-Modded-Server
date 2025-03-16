@@ -64,7 +64,7 @@ namespace Eco.Mods.TechTree
         {
             this.ModsPreInitialize();
             var storage = this.GetComponent<PublicStorageComponent>();
-            storage.Initialize(32);
+            storage.Initialize(64);
             // storage.Storage.AddInvRestriction(new NotCarriedRestriction()); // can't store block or large items
             this.ModsPostInitialize();
         }
