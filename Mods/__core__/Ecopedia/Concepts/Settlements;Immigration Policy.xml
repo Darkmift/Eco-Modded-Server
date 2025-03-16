@@ -1,0 +1,15 @@
+<ecopedia icon="EcopediaSettlementsImmigrationPolicy">
+    <summary></summary>summary>
+  <section type="banner" image="settlements_immigrationpolicy" />
+  <section>
+    A settlement can have its rules about new Citizens defined in an [Immigration Policy].
+
+    Every settlement always has one Immigration Policy associated with it.  It begins as an embedded object in the Settlement, with default settings that allow the leader to approve new Citizens, and is visible in the tooltips of the settlement.  Once an [ImmigrationDeskItem] is placed in that Settlement's influence, that policy can be edited.
+
+    Requirements can be set that must be met and/or maintained in order to remain a Citizen of the settlement.  For Citizens to become or stay Citizens, they must meet all these requirements in the settlement they join as well as all of its parents.
+  </section>
+  <section type="header">Settlement Advertisement</section>
+  <section>
+    When a settlement is set to allow brand new people to instantly join, a special feature is unlocked. Newly joining people will see the settlement on the map when they first start among other possible starting positions, as well as a note from the settlement (assigned in the Advertisement section on the immigration policy).  When they enter the world into your settlement this way, they'll automatically become a Citizen, and start at a designated position next to the Immigration Desk object.  Using this feature is a great way to get new players into your settlements and grow a community.
+  </section>
+</ecopedia>

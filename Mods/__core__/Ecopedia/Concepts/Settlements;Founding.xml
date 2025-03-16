@@ -1,0 +1,25 @@
+<ecopedia icon="EcopediaSettlementsFounding" priority="-1">
+    <summary></summary>summary>
+  <section type="banner" image="settlements_founding" />
+  <section>
+    The first step in starting a new settlement is to place the foundation object.  Those are [TownFoundationItem], [CountryFoundationItem], and [FederationFoundationItem]. Once placed, it will begin a new unfounded settlement, and once all the requirements are met the founding ceremony can be triggered.
+</section>
+    <section type="header">Founding Requirements</section>
+  <section>The Citizen who places the foundation will become the first leader of the town, and be given some special privileges, but this position can change over time depending on the rules of the government.
+
+    When placed, the plot beneath it will be claimed as property of this new settlement, with ownership assigned to the leader.  More plots can be claimed using the [ClaimToolItem] (right-click the item to select the settlement deed as the target).  This will allow you to claim land around the foundation and build a room that meets the requirements.
+
+    Settlements need a minimum number of citizens, a minimum number of sub-settlements (IE, a country will need a certain number of towns as part of it to form), and a minimum culture level in all the sub-settlements.  For the lowest level settlement, a Town, culture and sub-settlements are not required (because a Town can not have sub-settlements, it's the lowest one).  On the 'Citizens' tab of the foundation object, the leader can invite and approve applied citizens, and other non-citizens can accept invites and apply to become a citizen.
+</section>
+    <section type="header">Ratifying the Constitution</section>
+  <section>
+    Once all the requirements are met, the election to ratify the settlement [Constitution] can begin.  On the Constitution tab, you can configure the constitution however you like, designing your government as you see fit (see Constitution guide). Once you click to start the voting, all current citizens of the settlement will be allowed to vote on it.  If it fails, you can make alterations and try again.
+
+    If you want, you can add other civic elements to the initial founding of your settlement, for example by placing a court on the initial settlement property you can create laws associated with the settlement, which can be placed on the same election as ratifying the constitution. You can package an arbitrary number of civic objects into a single election this way, if you want to start your government more fully formed.  If not, you can always add them later with additional elections.
+
+    Once all requirements are met and the constitution is ratified, the settlement is ready to be founded!  Click the button on the Foundation tab of the Foundation object to start the reveal ceremony, which all your citizens can attend to celebrate the beginning of a new settlement.
+
+    Once founded, your settlement will begin casting [Influence], generating [Settlement Property], and receiving [Culture].
+  </section>
+    <section type="header">Settlement Foundation Settings</section>
+</ecopedia>

@@ -1,0 +1,19 @@
+<ecopedia icon="EcopediaSettlementsPropertyCrisis" priority="10">
+    <summary></summary>summary>
+  <section type="banner" image="settlements_propertycrisis" />
+  <section>
+    A <b>Property Crisis</b> occurs when the number of Citizens in a settlement reduces such that there aren't enough Citizens to support the number of Claim Stakes and Claim Papers in use.
+    
+    Because settlements spawn Claim Stakes and Papers when Citizens join, and despawn them when they leave, it is possible for Citizens to leave and generate a property crisis when there aren't any available Stakes or Papers to despawn on the Settlement Foundation object.  When this happens, a <b>timer</b> will start, by the end of which Citizens must return the needed number of Stakes and Papers to the Settlement Foundation, unclaiming or collecting them however they can.  When Stakes and Claims are placed into a Settlement Foundation during a property crisis, they will be immediately de-spawned, and if the defecit is met, the crisis will end immediately.
+
+    If Citizens are unable or unwilling to return the needed Stakes and Papers before the timer expires, the Stakes and Papers will be destroyed wherever they are. When a property crisis resolves, it will perform these repossessions:
+    - First, claims/stakes that aren't being used (in a Citizen's backpack, say) will be destroyed.
+    - Then stakes/claims that are in-use will be destroyed if the defecit is still not met.
+    In both steps, claims owned by abandoned Citizens will be destroyed first.
+
+    Its very important for Settlements to manage their Citizen populations carefully to prevent a shortfall, and it is wise to hold some in reserve and not immediately use them, or to adjust when Citizens start to leave.
+
+    Citizens that enter the Abandoned [Demographic] will also stop contributing to the number of spawned Stakes and Papers, which can lead to a property crisis as well.
+  </section>
+  <section type="header">Property Crisis Settings</section>
+</ecopedia>

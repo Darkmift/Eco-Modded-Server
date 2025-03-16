@@ -1,0 +1,87 @@
+# Logs
+Logs/
+*.log
+
+# Storage and Backups
+Storage/Backup/
+Storage/UserTextures/
+
+# Build results and binaries
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+*.exe
+*.dll
+*.pdb
+*.cache
+
+# Profiling Results
+ProfilingResults/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio files
+.vs/
+*.vspscc
+*.vssscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.meta
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# User-generated content
+Mods/UserCode/*
+!Mods/UserCode/.gitkeep
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Node modules (if using any JavaScript/Node.js components)
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Environment files
+*.env
+*.env.local
+*.env.development.local
+*.env.test.local
+*.env.production.local
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# Config files that might contain sensitive information
+Configs/*.private.*

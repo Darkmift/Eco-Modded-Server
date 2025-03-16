@@ -1,0 +1,17 @@
+<ecopedia icon="EcopediaSettlementsCulture" priority="5">
+    <summary></summary>summary>
+  <section type="banner" image="settlements_culture" />
+  <section>
+    Culture is created by Citizens by creating creative works, discovering historical artifacts (coming soon), hosting events and festivals (coming soon), and founding settlements.  Culture is always assigned to a settlement, and the more Culture a settlement has, the farther its [Influence] will reach.
+  </section>
+    <section type="header">Culture from Settlement Foundation</section>
+    <section>A founded settlement will generate a default amount of culture for its property, this amount is constant and gives a baseline level of influence.  To expand it further and from other properties, other sources must be used.</section>
+
+    <section type="header">Culture from Works of Art</section>
+  <section>
+    When Citizens use an [EaselItem] a [HandheldCameraItem] or [TripodCameraItem] to create a picture, these pictures can be displayed in a frame on the wall to give Culture points to the property. The amount of culture depends on the reputation of both the picture and artist, and viewers will be prompted to rate the images they view to give them additional reputation. As these values go up, more culture is generated, up to a limit.  The culture bonus from Citizens in the same settlement, however, is reduced by 90%, so that the majority of value comes from other Citizens of other settlements spreading the reputation of the work. This makes it advantageous to gain reputation in a given settlement, but then sell or transfer it to another settlement, where it will have much more value due to originating from a different place.
+
+    Within a single gallery, there is diminishing returns for displaying pictures from the same artist on the property as a whole.  To avoid this, you can show a collection from many artists instead.
+  </section>
+  <section type="header">Cultural Settings</section>
+</ecopedia>

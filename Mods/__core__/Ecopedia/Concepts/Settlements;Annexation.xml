@@ -1,0 +1,38 @@
+<ecopedia icon="EcopediaSettlementsAnnexation" priority="9">
+    <summary></summary>
+  <section type="banner" image="settlements_annexation" />
+  <section>
+    A settlement with sufficiently more culture than a neighboring settlement can <b>annex</b> it, merging it into itself, if requirements are met.
+
+    When two settlements of the same type neighbor each other, their influence ranges can push up against each other. In these cases, settlements with more culture than the other will push further into their boundaries. Eventually its possible for the cultural difference to be so large that one settlement can completely take over the other.
+
+    Annexing can be an important tool for bringing laws to a rogue settlement that is refusing to comply with global needs, as annexing will disable all their laws and allow the annexing settlement to implement new ones.
+  </section>
+  <section type="header">Requirements</section>
+  <section>
+    The requirements that must be met before one settlement can annex another are:
+
+    <b>Higher Tier Settlement</b>. The annexing settlement must be a higher tier than its target, <i>unless</i> it's the top tier settlement (Federations), which are the only type that are allowed to annex the same tier.
+
+    <b>Citizen Requirement</b>. The annexing settlement must have a given percentage of the target settlement.
+
+    <b>Surrounding Influence Requirement</b>.  This means that the annexing settlement must have <i>influenced plots</i> surrounding the influence-border of the neighboring settlement.  After a defined threshold, this requirement is met, but growing the amount of plots surrounding the influence will increase the multiplier of the next requirement, culture.
+    
+    <b>Culture Requirement</b>. This requirement states that the culture of the annexing settlment must be more than the target settlement in two ways: it must be a given <i>percentage</i> more, and an <i>absolute vaue</i> more. This is to prevent small settlements with little culture from being too easily annexed, a baseline cultural advantage must be achieved.  Culture is grown in various ways described on the [Culture] page.
+    
+    <b>Resource Cost</b>.  This is a set of items that is the physical cost of performing the annex.  A portion of it be distributed to the target settlement's non-abandoned citizens, with the rest being wasted (that's why its always less costly to come to an agreement with another settlement rather than force it to your will). The resources to perform this annex must be linked to an emmbassy desk within the settlement's jurisdiction, and the storage must be accessible to the leader of the settlement.
+
+Note that the type of settlement matters: a settlement can only annex other settlements of lower tiers (IE, a town can't annex a country but a federation can annex a town).  If the annexing settlement is a higher type than the target (IE, a country annexing a neighbor town), a different, easier set of values (displayed below) are used that make it easier to perform.
+  </section>
+  <section type="header">Performing the Annex</section>
+  <section>
+    Once both these are met, the leader of the settlement can perform the annex at anytime on an [EmbassyDeskItem] associated with the annexing settlement.
+    
+    When activated, if the settlements are <b>the same</b> type, the target settlement will be removed and all citizens moved to the new settlement.  
+    If the settlements are <b>different</b> types, then the target will simply be removed from any current settlement parent and added as a child of the new settlement.  
+    In both cases all laws and other civic objects will be disabled and sent back to draft form. 
+    
+    Once a settlement is annexed, it can no longer perfrom the 'Secede Settlement', it will be locked to the parent until the parent removes it. 
+  </section>
+  <section type="header">Annexation Settings</section>
+</ecopedia>

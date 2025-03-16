@@ -1,0 +1,16 @@
+<ecopedia icon="EcopediaSettlementsProperty">
+    <summary></summary>summary>
+  <section type="banner" image="settlements_property" />
+  <section>
+    As more Citizens join a Settlement, more [Property] can be claimed, using Claim Stakes and Claim Papers associated with the settlement.
+
+    The settlement will spawn these objects based on their level, with claim stakes of [TownClaimStakeItem], [CountryClaimStakeItem], [FederationClaimStakeItem] varieties.  These will claim property in the name of the settlement they are associated with, and can be powered-up with [ClaimPaperItem] to claim more plots, by placing them in the inventory of the claim stake.
+
+    If Citizens leave, the max number of Claim Papers and Stakes allowed will reduce and be removed from the Settlement Foundation inventory.  If they're all in use and not available to be returned, a [Property Crisis] will occur.
+  </section>
+
+  <section type="header">Homestead Support Claims</section>
+  <section>Settlements will also spawn [Homestead Support Claims|HomesteadSupportClaimItem] which can be given or sold to non-citizens. These claims will allow homesteads that have no settlement associated with them to claim more plots, anywhere in the map.  Typically, farmers in far-off, isolated regions who want to have larger farms will seek these out (trading food or labor) from towns around the world.  They represent support from a settlement applied to outside property protection.</section>
+  
+  <section type="header">Settlement Property Settings</section>
+</ecopedia>

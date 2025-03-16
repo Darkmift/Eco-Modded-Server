@@ -1,0 +1,26 @@
+<ecopedia icon="EcopediaSettlementsOverview" priority="-2">
+   <summary>Settlements are a community of citizens that have banded together under agreed-upon rules.</summary>
+  <section type="banner" image="settlements_overview" />
+  <section type="quote">"Civilization is a movement and not a condition, a voyage and not a harbor."
+    -Arnold J. Toynbee
+  </section>
+  <section>
+    A <b>Settlement</b> can be created by a collection of Citizens to enact a government within its areas of [Influence].
+  </section>
+
+  <section>There are three levels of settlements:</section>
+<section image="Settlement0"> <b>Towns</b> are collections of citizens.</section>
+<section image="Settlement1"> <b>Countries</b> are collections of Towns and citizens.</section>
+<section image="Settlement2"> <b>Federations</b> are collections of Countries, Towns, and citizens.</section>
+  
+  <section type="header">Settlement Concepts</section>
+  <section>
+    - [Founding] - Multiple citizens can join together to found a new settlement.
+    - [Citizenship] - Citizens may be granted special rights and privileges, and being a citizen of a settlement increases its power.
+    - [Influence] - Settlements will cast an influence in a radius around certain buildings within which laws and property rules are enforced.
+    - [Settlement Property] - The more citizens in a settlement, the more property can be claimed.
+    - [Culture] - Culture allows settlements to exert influence on neighboring settlements, which can lead to their annexation.
+    - [Annexation] - Settlements can take over other settlements or homesteads if their culture levels are high enough.
+    - [Property Crisis] - If a settlement loses citizens, it may not be able to maintain the property that is already claimed.
+  </section>
+</ecopedia>

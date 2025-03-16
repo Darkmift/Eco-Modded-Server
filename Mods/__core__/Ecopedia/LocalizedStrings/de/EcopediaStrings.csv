@@ -1,0 +1,1150 @@
+0;Komponenten in Verbindung mit der Wirtschaft.
+1;In der Bank-Komponente werden [Bank Accounts] erstellt und verwaltet. Bürger können mehrere Konten für sich erstellen und mit anderen Bürgern teilen. Konten können auch [Titles] und [Demographics] zugewiesen werden.
+2;Kontobenutzer können Transaktionen über das Konto ausführen (Geld hinzufügen und entfernen).
+
+Kontoverwalter können die Benutzer sowohl in der Verwalterliste als auch in der Benutzerliste ändern, das Konto umbenennen und Transaktionen ausführen. 
+
+In den erweiterten Einstellungen kannst du das Konto als Regierungskonto festlegen. Regierungskonten können Steuergelder empfangen und auszahlen und werden bei der Steuererhebung und der Berechnung des persönlichen Vermögens ignoriert. Um dies einzustellen, musst du über staatliche Bankprivilegien verfügen, die durch einen [Elected Title|Elected Titles] zugewiesen werden.
+3;Mit der Bank-Komponente können Konten erstellt und verwaltet werden
+4;Mit der Anschlagsbrett-Komponente können Bürger [Contracts] und [Work Parties] veröffentlichen und akzeptieren, wodurch geltende Arbeits- und andere Vereinbarungen zwischen Bürgern ermöglicht werden.
+5;Einen Vertrag Erstellen
+6;
+Wenn ein Vertrag veröffentlicht wird, kann er so viele oder so wenige Klauseln wie gewünscht haben, und jede Klausel kann so konfiguriert werden, dass sie den angeforderten Job beschreibt.  Jede Klausel muss erfüllt sein, bevor der Vertrag als vollständig angesehen wird.
+
+Wenn Auto-Akzeptieren aktiviert ist, wird der Abschluss von Verträgen automatisch vom System erkannt.  Wenn ein Vertrag beispielsweise den Bau einer Straße zwischen zwei Punkten vorsieht, kann der Auftragnehmer, der die Arbeiten ausführt, den Vertrag in seinem Seitenmenü öffnen und auf Auftrag Beendet klicken, wodurch erkannt wird, ob der Auftrag tatsächlich abgeschlossen ist. Ist dies der Fall, wird der Vertrag entsprechend der Vereinbarung ausgezahlt und automatisch geschlossen.
+
+Die 'Benutzerdefinierte Klausel' ist eine spezielle Klausel, die es dem Spieler erlaubt, in Worten zu beschreiben, was er gerne getan hätte. Wenn ein Vertrag eine solche Klausel enthält, muss er manuell vom Auftraggeber genehmigt werden (Auto-Akzeptieren darf nicht angehakt sein), da die Auto-Erkennung nicht feststellen kann, wann er fertig ist.
+  
+Wenn die automatische Erkennung nicht aktiviert ist, klickt der Auftragnehmer auf Auftrag Beendet, wenn er der Meinung ist, dass der Auftrag beendet ist, und der Auftragnehmer akzeptiert dann entweder die Fertigstellung oder lehnt sie ab.  Verträge ohne Auto-Akzeptanz erfordern mehr Vertrauen zwischen den Bürgern, da es keine Garantie gibt, dass der Auftragnehmer einen abgeschlossenen Auftrag ehrlich akzeptiert.  Den Bürgern wird empfohlen, [Reputation] als Mittel zur Bestimmung des Vertrauens in diesen Situationen zu verwenden.
+
+Verträge haben eine festgelegte Zeitspanne, innerhalb derer sie abgeschlossen werden müssen, die bei der Veröffentlichung des Vertrags festgelegt wird. Außerdem können Verträge so eingestellt werden, dass sie sich bei wiederkehrenden Aufträgen wiederholen: wenn dies aktiviert ist, verringert sich der Wiederholungszähler jedes Mal, wenn ein Vertrag angenommen wird, um eins.
+
+Jede für einen Vertrag angebotene Zahlung wird in einem speziellen Treuhandkonto  [Bank Account|Bank Accounts] gehalten, solange der Vertrag aktiv ist.  Wenn der Vertrag erfolgreich abgeschlossen wird, wird diese Zahlung an den Auftragnehmer überwiesen, und wenn er scheitert, wird sie an den Auftraggeber zurückerstattet.  Der Auftragnehmer kann auch eine Kaution erheben, die auf einem Treuhandkonto verwahrt und bei erfolgreichem Abschluss an den Auftragnehmer zurückerstattet oder bei Misserfolg an den Auftraggeber übergeben wird.
+  
+7;Arbeitsgruppen
+8;
+[Work Parties] können auch auf einem Anschlagsbrett gepostet werden. Dies ermöglicht die Erstellung von Aufgaben, die von mehreren anderen Bürgern erledigt werden können, im Gegensatz zu Verträgen, die nur eine Vereinbarung zwischen zwei Parteien sind. Bevor ein Bürger eine Arbeitsgruppe aushängt, muss er einen Arbeitsauftrag auf einem Handwerkstisch, den er besitzt, starten.
+
+Nachdem er eine Arbeitsgruppe veröffentlicht hat, können Arbeiter dem Projekt auf dem Anschlagsbrett beitreten. Standardmäßig kann jeder der Arbeitsgruppe als Arbeiter beitreten, aber es können Anforderungen für einzelne Rollen oder allgemeine Anforderungen festgelegt werden, damit jeder beitreten kann. Wenn „Rollen Erweitern, Wenn Voll“ aktiviert ist, wird automatisch Platz für neue Arbeiter geschaffen, die dem Projekt beitreten können, wenn alle Rollen besetzt sind.
+
+Beim Einstellen der gewünschten Arbeit kann die Person, die die Arbeitsgruppe ausgehängt hat, entscheiden, ob sie Arbeitskräfte, Ressourcen oder beides anheuern möchte. Jeder Bürger, der zur Arbeitsgruppe beiträgt, erhält einen Anteil an der Bezahlung, basierend auf der Menge der von ihm geleisteten Arbeit. Wenn einem bestimmten Job in einer Arbeitsgruppe zusätzliche Last zugewiesen wird, erhält dieser Job einen höheren Anteil an der Bezahlung.
+
+9;
+Es gibt eine Vielzahl von Zahlungsoptionen für eine Arbeitsgruppe, und es können mehrere Zahlungsoptionen für dieselbe Arbeitsgruppe angeboten werden.
+
+- Wenn [Currency] als Zahlung angeboten wird, gibt es die „umlagefinanzierte“ Option, bei der die Arbeiter nach ihren Beiträgen ausbezahlt werden, anstatt einen Pauschalbetrag zu zahlen, wenn der Auftrag beendet ist.
+
+- Wenn [Reputation] als Zahlung angeboten wird, wird sie durch alle Bürger geteilt, die beigetragen haben, wenn die Arbeitsgruppe fertig ist.
+
+- Wenn [Research] als Bezahlung angeboten wird, werden alle Bürger, die den erforderlichen Betrag beisteuern, die Technologie sofort entdecken, wenn die Arbeitsgruppe fertig ist. Forschung kann nur als Bezahlung angeboten werden, wenn die Arbeitsgruppe ein Forschungsbuch erstellt oder wenn der Bürger, der das Angebot macht, das Forschungsbuch in seinem Inventar hat, wenn er den Job aushängt.
+
+- Wenn ein [Title|Titles] als Bezahlung angeboten wird, muss der Bürger, der den Auftrag anbietet, ein Titelmanager für den angebotenen Titel sein. Alle Bürger, die den Mindestbetrag einzahlen, erhalten den neuen Titel. Der Zugriffstyp bestimmt, ob sie ein Titelmanager oder ein Titelnutzer werden.
+
+10;Das Anschlagsbrett ermöglicht es Bürgern, Verträge und Angebote von Arbeitsgruppen zu veröffentlichen oder anzunehmen
+11;Mit der Kredit-Komponente können Bürger die Währung und das Bankkonto für alle Transaktionen an einem Objekt, das sie besitzen, festlegen.  
+12;
+Bei der Auswahl von [Bank Accounts], können Bürger jedes Konto auswählen, auf das ihnen Zugriff gewährt wurde (durchgeführt in einer [Bank Component]). Standardmäßig wird das persönliche Konto des Bürgers ausgewählt.
+
+Jede der [Currencies|Currency] der Welt kann in der Kredit-Komponente ausgewählt werden. Dies ist die Währung, die für alle Transaktionen verwendet wird, die für dieses Objekt stattfinden (z. B. akzeptiert ein [Store|Store Component] die hier festgelegte Währung).
+
+Bei Auswahl von Keine für die Währung in einem Geschäft, sind direkte Geschäfte ohne die Notwendigkeit einer Währung möglich.
+
+Objekte mit einer [Crafting Component] können eine Gebühr für berechtigte Bürger definieren, um sie zu nutzen. Die Einstellungen in der Kredit-Komponente bestimmen, in welcher Währung diese Gebühr erhoben wird und auf welches Konto das Geld eingezahlt wird.  
+13;Mit der Kredit-Komponente können Bürger das Bankkonto und die Währung für Transaktionen an einem Objekt festlegen.
+14;Mit der Urkundenverkauf-Komponente können Bürger [Property] kaufen und verkaufen.  
+15;
+Durch den Besuch eines [Real Estate Desk|Real Estate Desk Item], können Bürger Inserate für ihre Urkunden erstellen und die Inserate anderer Bürger anzeigen. Alle veröffentlichten Inserate können von jedem Immobilienschalter aus abgerufen werden.
+
+Beim Erstellen eines Inserats legt der Eigentümer den Preis und die verwendete [Currency] fest. Alle Einnahmen gehen auf das ausgewählte [Bank Account|Bank Accounts].
+
+Beim Kauf einer Urkunde wird die Währung vom dem vom Käufer ausgewählten Bankkonto abgebucht.
+
+Nach dem Verkauf des Eigentums werden die Urkunde und alle in der Urkunde enthaltenen Gegenstände auf den neuen Eigentümer übertragen.  
+16;Mit der Urkundenverkaufs-Komponente können Bürger Grundstücke kaufen und verkaufen.
+17;Mit der Austausch-Komponente können Bürger eine [Currency] gegen eine andere tauschen.
+18;Währung umtauschen
+19;
+Der Eigentümer eines [CurrencyExchangeItem] verwendet die Austausch-Komponente, um anderen Bürgern einen Währungsumtausch anzubieten. Beim Einrichten eines Austauschs ist die Eigentümerwährung die Währung, die zum Verkauf angeboten wird. Für jede Einheit der Eigentümerwährung, die gekauft wird, wird den Bürgern der festgelegte Betrag der Alternativwährung berechnet.
+
+Wenn eine [Authorized Consumer|Authorization Component] die Wechselstube besucht, sieht er eine Liste aller angebotenen Austausche. Standardmäßig sind alle Bürger autorisierte Verbraucher.
+20;Devisenbewirtschaftung
+21;
+Der Eigentümer der Wechselstube hat die Möglichkeit, Kontostandsbeschränkungen einzurichten. Diese verhindern, dass Bürger Geld umtauschen können, wenn der Währungsbetrag auf dem ausgewählten Konto nicht der Beschränkung entspricht.
+
+Die Zahl links ist der minimale Währungsbestand und die Zahl rechts ist der maximale Währungsbestand. Wenn einer der Werte für die Kontostandsbeschränkung bei 0 bleibt, gibt es keine Begrenzung für diesen Teil der Kontostandsbeschränkung.
+22;Ermöglicht es Bürgern, einen Geldumtausch einzurichten.
+23;Die Gegenstandverteilungs-Komponente ermöglicht es dem Eigentümer, neuen Bürgern aus gutem Willen kostenlose Gegenstände zur Verfügung zu stellen und den anfänglichen Wohlstand der Bürger zu steigern.
+24;
+Alle neuen Bürger, die sich qualifizieren (basierend darauf, wie lange sie gespielt haben), können ihre Gegenstände über das [DistributionStationItem] sammeln. Beim Betreten der Welt beginnen neue Bürger mit einer globalen Kartenmarkierung, um sie darauf aufmerksam zu machen, dass die Gegenstände verfügbar sind. Beachte, dass die [Storage Component] mit den verteilten Artikeln gefüllt bleiben muss, damit neue Bürger sie abholen können.
+
+Der Eigentümer kann festlegen, welche Artikel verteilt werden sollen, wie viele von jedem Artikel und wie kürzlich der Bürger der Welt beigetreten sein muss, um geeignet zu sein.  
+25;Ermöglicht dem Eigentümer, neuen Bürgern aus gutem Willen kostenlose Gegenstände zur Verfügung zu stellen und den anfänglichen Wohlstand der Bürger zu steigern.
+26;Mit der Münzstätte-Komponente können Bürger [Currencies|Currency] erstellen, die von einer Ressource unterstützt werden.
+
+27;
+Bei der Erstellung einer Währung an einem [MintItem] wird ein gestützter Gegenstand gewählt, sowie eine Menge an Münzen pro Gegenstand, die von jedem verbrauchten Gegenstand generiert werden.  Durch die Verwendung eines gestützten Gegenstands für die Währung, kann die mögliche Gesamtmenge der Währung auf die Anzahl der eingebrachten Gegenstände begrenzt werden, was für mehr Stabilität sorgt, da es schwieriger wird, den Markt mit neuer Währung zu überfluten.  Die Wahl des gestützten Gegenstandes beeinflusst dies, wobei seltenere Gegenstände in der Regel für mehr Stabilität sorgen, da sie schwieriger zu bekommen sind.
+
+Das gestützte Material und die Münzen pro Gegenstand sind permanent, daher solltest du bei der Entscheidung, wie du eine Währung unterstützen willst, vorsichtig sein. Sobald eine Währung geprägt wurde, ist sie an die Prägeanstalt gebunden, in der sie hergestellt wurde, selbst wenn diese Prägeanstalt aufgekauft wird.
+
+Bürger, denen in der [Authorization Component] Konsumrechte gewährt wurden, können die Münz-Komponente verwenden, um zusätzliche Währung zu prägen. Die Währung kann auf das vom Münzbesitzer ausgewählte Ziel [Bank Account|Bank Accounts] oder auf ein beliebiges Bankkonto geprägt werden, auf das der prägende Bürger in der [Bank Component] Zugriff hat.  
+28;Ermöglicht es Bürgern, gedeckte Währungen zu erstellen und zu drucken.
+29;
+Mit der Laden-Komponente können Bürger Artikel festlegen, bei denen sie kaufen und an andere Bürger verkaufen möchten. Diese Aktionen können automatisch ausgeführt werden, ohne dass der Ladenbesitzer online sein muss.  
+30;
+Die Währung und das Bankkonto, die in der [Credit Component] ausgewählt wurden, werden für alle Transaktionen in dem Laden verwendet. Wenn Keine für die Währung in einem Geschäft ausgewählt wird, sind Direktgeschäfte möglich, die nicht der Umsatzsteuer unterliegen. 
+ 
+Ein Ladenbesitzer kann bestimmte Container in der [Storage Component] verknüpfen, um auszuwählen, welche Artikel als Teil des Ladeninventars betrachtet werden. Standardmäßig werden alle in der Nähe befindlichen Lagercontainer mit dem Geschäft verknüpft, wenn es zum ersten Mal platziert wird.
+
+Beim Erstellen einer Verkaufsliste muss nur der Preis festgelegt werden. Der Bestand für eine Verkaufsliste wird automatisch durch die Verfügbarkeit von Artikeln in den verknüpften Lagercontainern bestimmt.
+
+Bei der Erstellung einer Einkaufsliste müssen der Preis und die Maximal zu Kaufende Menge für jeden Artikel festgelegt werden. Wenn die Maximal zu Kaufende Menge auf Null gesetzt wird, kauft das Geschäft so lange Artikel ein, bis die verknüpften Container voll sind. Wenn eine Maximal zu Kaufende Menge festgelegt wird, können Bürger diesen Artikel verkaufen, bis das verknüpfte Lager diese Menge enthält.
+
+Für Werkzeuge mit Haltbarkeit kann eine Mindesthaltbarkeit zum Kaufen/Verkaufen festgelegt werden, und nur Gegenstände mit dieser Haltbarkeit oder höher können über den Laden gehandelt werden.
+ 
+32;Stellt ein Interface für andere Bürger zur Verfügung, um automatisch Güter zu kaufen und zu verkaufen.
+33;Komponenten in Verbindung mit der Regierung.
+34;
+Mit der Bürgerengagement-Komponente können Bürger an [Elections] teilnehmen, [Executive Actions] durchführen und aus dem Amt ausscheiden, je nachdem, welches Objekt verwendet wird.
+
+35;An Wahlen teilnehmen
+36;
+Wenn der  Bürgerengagement-Komponente an einem [Ballot Box|Ballot Box Item] verwendet wird, können Bürger für [Elected Titles] kandidieren und an Wahlen teilnehmen. 
+
+Durch das Klicken auf „Wählen“ werden die Spieler zur Webschnittstelle weitergeleitet, wo sie alle laufenden [Elections] sehen, sie mit ihren Mitbürgern diskutieren, ihre Argumente mit [Data] belegen und wählen können.  
+
+Bürger, die im aktuellen [Election Process|Election Processes] ein Vetorecht erhalten haben, können eine Wahl sofort aufheben.
+
+Um für gewählte Titel zu kandidieren, muss ein berechtigter Bürger zunächst „Wahl Starten“ verwenden. Sobald eine Wahl begonnen hat, können berechtigte Bürger die Aktion „Wahl Beitreten“ wählen, um dem Rennen beizutreten und eine Wahlkampfrede zu halten. Kandidaten können sich jederzeit von der Wahl zurückziehen, indem sie die auf einer Wahlurne verfügbare Option verwenden.
+
+37;Exekutive Maßnahmen Ausführen
+38;
+Die Verwendung der Bürgerengagement-Komponente in einem [Executive Office|Executive Office Item] ermöglicht es einem gewählten Titel, einmalige Exekutivaktionen durchzuführen, die eine Reihe von Bürgern betreffen.
+
+Die Bürgerbedingungen diktieren, für welche Bürger die Exekutivaktion gilt, und es können mehrere Bedingungen für die Qualität eines Bürgers festgelegt werden. Um eine Aktion für alle Bürger auszuführen, verwende die [Demographic] „Alle“ als Bürgerbedingung.
+
+Die Aktion für jeden Bürger wird wirksam, sobald die Exekutivmaßnahme genehmigt ist. Für jeden Bürger, der die Bedingungen erfüllt, können mehrere Aktionen auf einmal ausgeführt werden.
+
+39;Maßnahmen des Regierungsbüros
+40;
+Im [Government Office|Government Office Item] erlaubt die Bürgerengagement-Komponente gewählten Titeln, zurückzutreten oder andere gewählte Titel aus dem Amt zu entfernen.
+
+Von Amt Zurücktreten ermöglicht es jedem gewählten Beamten, von seiner Stelle zurückzutreten. Wenn dem Gewählten Titel bei seiner Erstellung ein Nachfolgetitel zugewiesen wurde, wird ein neuer Beamter zufällig aus allen Bürgern ausgewählt, die diesen Titel innehaben; andernfalls wird der Gewählte Titel vakant.
+
+Mit der Aktion Beamter aus dem Amt Entfernen können Bürger, denen die Befugnis erteilt wurde, gewählte Titel aus dem Amt entfernen. Es gelten die gleichen Regeln für die Suche nach einem Nachfolger, als ob der Beamte zurückgetreten wäre.
+
+41;Erlaubt es Bürgern an Wahlen teilzunehmen und Exekutive Aktionen durchzuführen.
+42;    Die Bürgerrecht-Komponente ermöglicht es den Bürgern, verschiedene Bürgerrechte vorzuschlagen, zu ändern und aufzuheben. 
+43;Bürgerliche Aufgaben
+44;Innerhalb einer Bürgerrecht-Komponente siehst du eine Liste deiner [Civic Duties]. Diese informiert den Bürger darüber, welche Berechtigungen er in Bezug auf Bürgerrechte hat, angesichts der aktuellen [Constitution]. Die Möglichkeiten der verschiedenen Bürgerpflichten sind:
+45;Die Bürgerrecht-Komponente ermöglicht es den Bürgern, verschiedene Bürgerrechte vorzuschlagen, zu ändern und aufzuheben.
+46;Die Registrar-Komponente ermöglicht die Erstellung und Verwaltung nicht gewählter [Titles]. Diese Titel können für viele der gleichen Zwecke wie [Elected Titles] verwendet werden, werden jedoch beim Registrar ernannt.
+47;Titel zuweisen
+48;Titelmanager können den Titel umbenennen und neue Manager und Titelträger zuweisen. Titelmanager gelten nicht als Titelbenutzer. Titelnutzer sind die Bürger, die als Titelträger gelten und alle damit verbundenen Vorteile und Bedingungen erhalten.
+49;Erweiterte Einstellungen
+50;
+In den Erweiterten Einstellungen können Anforderungen für Titelverteidiger festgelegt werden, und den qualifizierten Titelverteidiger können Stundenlöhne zugewiesen werden.
+  
+Bei der Entscheidung, was von Amtsträgern Verlangt wird, können verschiedene Bedingungen festgelegt werden. Wenn ein Bürger diese Anforderungen nicht einhält, verliert er seine Zuweisung als Titelnutzer. Durch die Verwendung eines „Bedingungssatzes“ können mehrere Anforderungen für Titelverteidiger festgelegt werden.
+ 
+Löhne werden an Titelnutzer von jedem [Bank Account|Bank Accounts] gezahlt, für das ein Titelmanager die Erlaubnis zur Verwendung in der [Bank Component] erhalten hat. Löhne werden stündlich (abhängig von den Welteinstellungen) auf das persönliche Konto jedes Titelnutzers gezahlt. Die Lohnart kann verwendet werden, um Offline-Stunden von Lohnzahlungen auszuschließen.
+51;Erlaubt das Erstellen und Verwalten von nicht gewählten Titeln.
+52;Mit der Staatskasse-Komponente können [Elected Titles], denen das Recht zum „Festlegen von Steuern bei der Staatskasse“ gewährt wurde, die Anpassung des Steuersatzes und die Auswahl der Weltstandardwährung.
+53;Steuern
+54;Nachdem [Taxes] in der Staatskasse-Komponente eingestellt sind, werden sie automatisch auf alle relevanten Transaktionen angewendet. Alle Einnahmen gehen in das [Bank Account|Bank Accounts] von der Staatskasse. Gewählte Titel, die die Einstellung „Bankenprivileg der Regierung“ haben, können direkt vom Staatskassenkonto transagieren (was die Auswahl des Kontos innerhalb der [Credit Component] ermöglicht). Geld kann auch über [Laws], die aus der Staatskasse kommen, die Zahlungen an Bürger vornehmen.
+55;Standardwährung
+56;Die Weltstandardwährung ist die Standard [Currency], die beim Platzieren eines neuen Objekts, das die Kreditkomponente enthält, verwendet wird. Bürger können immer noch eine beliebige Währung in einem [Trade] verwenden, aber mit einer Weltstandardwährung ist es einfacher, eine Wirtschaft mit einer gemeinsamen Währung aufzubauen.
+57;Direkte Steuern
+58;Gewählte Titel mit dem Recht „Steuern bei der Staatskasse festlegen“ können direkt von den Bürgern Steuern erheben oder Gelder zuweisen. Dies geschieht durch die Verwaltung der gewünschten Währung und die Auswahl der Bürger, für die die Aktion gelten soll. Ein gewählter Titel muss immer einen Grund angeben, warum er diese Aktion durchführt, der für alle Bürger angezeigt wird.
+	  
+Die Verwaltung der Staatskasse beinhaltet auch die Option, die Währung aus dem Konto der Staatskasse zu entfernen. Dadurch wird die Währung dauerhaft entfernt. Sei also vorsichtig, wenn du diese Fähigkeit für gestützte Währungen verwendest.  
+59; Erlaubt Bürgern, die einen Gewählten Titel mit Steuerberechtigung besitzen, Steuern festzulegen und die Weltstandardwährung auszuwählen.
+60;Wohnbezogene Komponenten.
+61;Die Autorisierungs-Komponente ermöglicht es anzugeben, welche Berechtigungen Bürger für das Objekt haben.    
+62;
+Die hier angezeigte Urkunde ist einfach eine Verbindung zur Urkunde des [Property], auf dem sich das Objekt befindet (oder der Urkunde, die mit der [Vehicle|Vehicle Component] verbunden ist, wenn es eine ist).
+
+Autorisierte Verbraucher können hier aufgeführt werden, entweder als bestimmte Personen,  [Titles] oder [Demographics]. Jeder Aufgeführte kann mit dem Objekt interagieren, ohne die volle Kontrolle zu haben.  Ein Geschäft zum Beispiel erlaubt Bürgern mit Verbraucherrechten, dort zu kaufen und zu verkaufen, aber nur Bürger mit vollen Rechten auf das Grundstück können ändern, was zum Verkauf steht, oder das Geschäft selbst verschieben.
+
+Alle platzierten Objekte haben Berechtigungs-Komponenten.  
+63;Ermöglicht den Bürgern, die Zugriffsrechte für ein bestimmtes Objekt festzulegen.
+64;Betten erlauben es Bürgern, die Zeit zu beschleunigen, wenn alle Bürger sie gleichzeitig verwenden oder offline sind.  
+  
+(Diese Funktion ist auf dedizierten Servern standardmäßig deaktiviert, um zu verhindern, dass die Zeit beschleunigt wird, wenn alle Benutzer offline sind. Sie kann jedoch von einem Serveradministrator aktiviert werden.)
+65;Ermöglicht das Schlafen in Einzelspieler-Servern oder Servern, bei denen das Schlafen aktiviert ist.
+66;Komponenten in Verbindung mit der Industrie.
+67;
+    Der Herstellungs-Komponente wird verwendet, um Gegenstände zu [Craft|Crafting], Ressourcen oder Arbeit hinzuzufügen und bestehende Projekte abzubrechen. Wenn zu einer [Work Party|Work Parties] beigetragen wird, können Bürger, die der Arbeitsgruppe beigetreten sind, auf die Herstellungs-Komponente zugreifen.
+  
+68;Gegenstände Herstellen
+69;
+Nach der Auswahl eines Gegenstands und der Menge, die hergestellt werden soll, werden Ressourcen und Arbeitskräfte benötigt, um das Projekt zu starten. Diese Ressourcen können manuell hinzugefügt werden (indem man sie direkt auf dem Handwerkstisch platziert) oder durch die Verknüpfung einer [Storage Component], die sie enthält.
+
+Bürger mit einer verwandten [Specialty|Specialties] benötigen weniger Kalorien, um Arbeit hinzuzufügen. Einige Projekte erfordern Fachkräfte von einem Bürger mit der entsprechenden Spezialität. Diese Verringerung wird nach dem Start des Arbeitsauftrags angewendet, damit Bürger mit unterschiedlichen Fertigkeitsstufen zur selben Arbeitsgruppe beitragen können.
+
+Durch Hinzufügen einer Aufrüstung in der [Modules Component] haben Arbeitsaufträge auf einem Handwerkstisch weniger Herstellungszeit und Ressourcenkosten.
+
+Wenn ein Projekt vorzeitig abgebrochen wird (durch Rechtsklick auf den Auftrag), werden die Ressourcen zurückerstattet, aber die aufgewendete Arbeit geht verloren.  
+70;Arbeit Hinzufügen
+71;
+Für jede Arbeitseinheit, die benötigt wird, werden [Calories|Nutrition] verbraucht. Nachdem ein Arbeitsauftrag gestartet wurde, können Bürger Arbeit hinzufügen, indem sie die Schaltfläche „Arbeit“ in der Herstellungs-Komponente drücken. 
+
+Sobald ein Projekt gestartet ist, können Arbeitskräfte schnell von außerhalb der Herstellungs-Komponente hinzugefügt werden, indem mit der rechten Maustaste auf einen Handwerkstisch geklickt wird. Wenn beim Hinzufügen von Arbeit auf diese Weise die Taste „Strg“ gedrückt gehalten wird, wird die fünffache Menge der normalen Arbeit hinzugefügt. Wenn die „Alt“-Taste gedrückt gehalten wird, werden alle verfügbaren Kalorien hinzugefügt.  
+72;Etikettierte Zutaten
+73;
+Einige Rezepte verwenden Etikettierte Zutaten, die ähnliche Elemente als Eingaben akzeptieren können. Ein Element kann beispielsweise angeben, dass es Stein benötigt, und akzeptiert alle Arten von Gestein mit diesem Etikett ([GraniteItem], [BasaltItem] usw.).
+
+Etikettierte Zutaten werden automatisch konsumiert, sodass keine separaten Aufträge mit den verschiedenen Zutaten erstellt werden müssen.  
+74;Mutterrezepte
+75;
+Einige Rezepte sind Teil einer größeren Gruppe von Rezepten, die als Mutterrezepte bezeichnet werden. Bei der Herstellung eines dieser Rezepte kann ein Bürger eine bestimmte Variante für die Herstellung auswählen. Die hergestellte Zahl ist die Menge, die für das Mutterrezept ausgewählt wurde.
+
+Standardmäßig werden nur Rezepte angezeigt, die über verfügbare Ressourcen verfügen. Wenn du „Alle Anzeigen“ aktivierst, werden alle möglichen Variationen angezeigt.  
+76;Die Herstellungs-Komponente wird verwendet, um Gegenstände herzustellen und Arbeitskraft zu Projekten hinzuzufügen.
+77; Mit der Modul-Komponente können Bürger Aufrüstungen in ihre [Crafting] tische einfügen. Nach dem Einfügen einer Aufrüstung reduzieren Arbeitsaufträge an diesem Tisch die Ressourcenkosten und die Herstellungszeiten.
+78;Aktualisierungen benutzen
+79;
+Aufrüstungen gibt es in fünf verschiedenen Qualitätsstufen. Eine Aufrüstung der Stufe 1 verringert die Ressourcenkosten und die Herstellungszeit um 10 %, wobei jede weitere Stufe eine zusätzliche Verringerung bedeutet.
+
+Handwerkstische akzeptieren unterschiedliche Arten von Aufrüstungen. Frühe Tische akzeptieren „Basis-Aufrüstungen“, während spätere Tische „Erweiterte Aufrüstungen“ oder „Moderne Aufrüstungen“ erfordern. Jede Stufe von Aufrüstungen hat fünf verschiedene Qualitätsstufen, wobei die höchste Qualitätsstufe eine Spezialitäten-Aufrüstung ist.
+
+Einige Rezepte haben Kosten, die Statische Zutaten verwenden. Statische Zutaten sind von der Ressourcenkostenreduzierung nicht betroffen, aber die Rezepte, die sie enthalten, erhalten trotzdem eine Reduzierung für die Herstellungszeit.  
+		
+80;Spezialisierungs-Upgrades
+81;
+Die höchste Stufe der Aufrüstung kann nur von einem Bürger hergestellt werden, der die maximale Stufe in seiner gewählten [Specialty|Specialties] erreicht hat. Im Gegensatz zu anderen Aufrüstungen geben diese Aufrüstungen eine zusätzliche Kostenreduzierung beim Herstellen von Rezepten mit dem angegebenen Beruf.
+
+Einige Spezialisierungen verfügen über verschiedene Arten von Aufrüstungen, die verschiedenen Handwerkstischen entsprechen. Zum Beispiel, [CarpentrySkill] hat [CarpentryBasicUpgradeItem] für den [CarpentryTableItem] und den [CarpentryAdvancedUpgradeItem] für die [SawmillItem].
+  
+82;Ermöglicht es den Bürgern ihre Handwerkstische aufzurüsten.
+83;
+Mit der Rohr-Komponente kann ein Bürger den Status des Smogausstoßes, des Wasserverbrauchs und des Abwasserflusses eines Objekts überprüfen.  
+84;Smogausstoß
+85;
+Durch Überprüfen von dem Smog-Ausstoß Tooltip kann ein Bürger zusätzliche Informationen über den Verschmutzungsausstoß des aktuellen Objekts und die [Pollution] -Werte der Welt finden.
+	
+Rohre können verwendet werden, um den Fluss der Luftverschmutzung umzuleiten. Die Rohre, die den Smog-Ausstoß enthalten, können mehrere Eingänge haben, dürfen aber nur ein offenes Ende haben, das sich außerhalb aller Räume und oberhalb des Objekts befindet.
+
+Objekte, die Smog-Verschmutzung ausstoßen, verschmutzen nur, wenn das Objekt aktiv ist. 
+	
+86;Wasser und Abwasser
+87;
+Objekte mit einem Wassereingang und Pumpen mit einem Wasserausgang sind durch ein Rohrsystem verbunden. Wasserrohrsysteme können mehrere Eingänge für Wasserpumpen und mehrere Ausgänge für jedes Objekt mit einem Wasserbedarf haben.	
+
+Durch Überprüfen des Wasser-Tooltips in der Rohr-Komponente kann ein Bürger genau sehen, wie viel Wasser ein Objekt produziert oder verbraucht. Wenn nicht genügend Wasser produziert wird, werden die Objekte inaktiv.
+
+Rohre, die Abwasser produzieren, funktionieren ähnlich wie Wasserrohre, aber das [Sewage], das sie enthalten, ist eine Quelle der Bodenverschmutzung. Nachdem [Waste Filters|Waste Filter Item] erfunden wurden, kann der Abwasserausgang in einen Filter geleitet werden, um die Bodenverschmutzung zu mindern. 
+	
+88;Die Rohr-Komponente ermöglicht es einem Bürger, den Status des Smogausstoßes und des Wasserverbrauchs eines Objekts zu überprüfen.
+89;Der Strom-Komponente wird verwendet, um den Status des lokalen Stromnetzes zu überprüfen. Er wird auch verwendet, um den Verbrauch von Objekten zu prüfen, die zum Betrieb Kraftstoff benötigen.
+90;Kraftstoff
+91;
+Objekte, die Kraftstoff verbrauchen, können hier einen Brennstoffeinsatz haben, und für den Betrieb sind möglicherweise unterschiedliche Kraftstoffarten erforderlich. Die Tooltips für den aufgenommenen Kraftstoff enthalten eine Liste bestimmter Gegenstände, mit denen das Objekt betankt werden kann. Kraftstoff kann auch über die [Storage Component] hinzugefügt werden.
+
+Während des Betriebs verbraucht ein Objekt jede Sekunde Kraftstoff, gemessen in Watt (W). Jede Kraftstoffart enthält eine andere Menge an potenzieller Energie, gemessen in Joule (J). Für 1 Watt pro Sekunde wird 1 Joule Energie verbraucht. Während das Objekt inaktiv ist, wird kein Kraftstoff verbraucht.  
+92;Energiebilanz
+93;
+Es gibt zwei Arten von [Power], die von einem Objekt verwendet werden können: Elektrisch und Mechanisch. Das Stromnetz zeigt den Typ und die Verfügbarkeit des für dieses Objekt benötigten Stroms an. Wenn nicht genügend Strom vorhanden ist, um die benötigte Leistung zu erreichen, werden Objekte inaktiv.
+
+Stromerzeuger, die Kraftstoff verbrauchen, werden inaktiv, wenn sich keine Objekte in der Nähe befinden, die Strom benötigen. Sie müssen nicht ein- und ausgeschaltet werden, um Kraftstoff zu sparen.  
+94;Der Strom-Komponente dient zur Überprüfung von Versorgung und Bedarf an Strom und Kraftstoff.
+95;Die Reparatur-Komponente ermöglicht es den Bürgern, Werkzeuge an einem [ToolBenchItem] zu reparieren.
+96;
+Nach dem Einsetzen eines defekten Werkzeugs werden die Reparaturkosten angezeigt. Erweiterte Werkzeuge können von Bürgern mit den entsprechenden [Specialty|Specialties] für weniger Ressourcen repariert werden. Die verwendeten Ressourcen können von einem Bürger manuell hinzugefügt oder aus einem verknüpften Container in der [Storage Component] entnommen werden.
+
+Der Besitzer einer Werkzeugbank kann anderen Bürgern gegen eine in der [Credit Component] festgelegte Gebühr den Zugang zur Reparatur ihrer eigenen Werkzeuge ermöglichen. Wenn der Öffentlichkeit Werkzeugreparaturen angeboten werden, müssen die Verbraucherrechte in der [Authorization Component] angegeben werden.  
+97;Ermöglicht Bürgern Werkzeuge zu reparieren.
+98;
+Mit der Status-Komponente können Bürger sehen, welche Anforderungen für ein Objekt aktiv sein müssen, und welche dieser Anforderungen erfüllt sind. Wenn ein Objekt [Pollution] verursacht, zeigt die Status-Komponente auch die lebenslange Verschmutzungsproduktion für dieses Objekt an.
+99;Objektstatus
+100;
+Jede Bedingung in der Status-Komponente muss erfüllt sein, bevor ein Objekt aktiv sein kann. Einige Beispiele für Bedingungen sind:
+
+- In einem gültigen [Room|Rooms] enthalten sein
+
+- Genug [Power] haben
+
+- Ein funktionierendes [Sewage]-System
+101;Statusanzeige
+102;
+Bei der Interaktion mit einem Objekt mit einer Status-Komponente, können Bürger den Status des Objekts schnell anzeigen, indem sie die Statusanzeige in der oberen linken Ecke aktivieren. Ein grüner Kreis bedeutet, dass ein Objekt aktiv ist, während ein roter Kreis bedeutet, dass es inaktiv ist.
+103;Zeigt an, ob ein Objekt aktiv oder inaktiv ist und warum.
+104;Der Lager-Komponente dient dazu, den Bestand von Lagercontainern zu verwalten und sie mit Objekten zu verknüpfen, die Lagerplatz benötigen.
+  
+105;Lager Verwalten
+106;
+Das Inventar kann zwischen Containern verschoben werden, indem Stapel von Gegenständen von einem Container in einen anderen gezogen werden.
+
+Wenn du beim Ziehen von Gegenständen die Umschalttaste gedrückt hältst, werden alle Stapel desselben Gegenstands zwischen den Containern verschoben. Wenn du mit der rechten Maustaste auf einen Stapel von Gegenständen klickst, kann der Spieler den Stapel in kleinere Mengen unterteilen. Wenn du beim Klicken auf einen Stapel von Gegenständen die Strg-Taste gedrückt hältst, wird der Stapel in zwei Hälften geteilt.
+
+Einige Lagercontainer, wie z. B. ein [StockpileItem], können jede Art von Gegenstand enthalten. Andere Lagercontainer, wie z. B. ein [StorageChestItem], können nur nicht transportierbare Elemente enthalten.  
+107;Verknüpfung von Lagercontainer
+108;
+Ein Objekt kann mit Containern in der Speicher-Komponente verknüpft werden, indem das Kontrollkästchen für den Container aktiviert wird. Nach der Verknüpfung erhält das Objekt Zugriff auf alle Elemente in den Containern und kann den Container zur Lagerung verwenden. Beim Verknüpfen von Lagercontainern wird zuerst der oberste Container in der Speicher-Komponente für die Lagerung verwendet. Die Reihenfolge kann durch Klicken und Ziehen auf die Lageranzeigen in der Liste geändert werden.  
+109;Verwaltet das Inventar und ermöglicht die Verknüpfung der Lagerung mit anderen Objekten.
+110;Eine vom Handel florierende Wirtschaft ist entscheidend für die Entwicklung der Technologie, die zum Stoppen des Meteors erforderlich ist.
+111;Bankkonten sind Speicher von [Currency], auf die ein oder mehrere Bürger zugreifen können.  Jeder Bürger betritt die Welt mit einem permanenten persönlichen Bankkonto, das eine unendliche Menge seines Persönlichen Kredites enthält. Zusätzliche Bankkonten können gewährt und ihre Zugriffsrechte an einer [Bank|bank component] angepasst werden.
+
+Bankkonten sind nützlich, um Währungen zu organisieren, mehreren Parteien den Zugriff auf Gelder zu ermöglichen und die Erhebung von Steuern zu speichern und festzulegen, wer darauf zugreifen darf. Regierungen richten in der Regel eine Reihe von Bankkonten ein, um den Steuerzufluss zu verwalten und sicherzustellen, dass die Mittel wie vorgesehen verwendet werden.  Jedes Bankkonto kann unbegrenzte Beträge in unbegrenzten Währungen enthalten, wobei jede Währung separat verfolgt wird. Durch Klicken auf das Bankkonto, wird das Hauptbuch angezeigt, das alle Transaktionen auf oder von diesem Konto auflistet, da alle Transaktionen in Eco öffentlich sind.
+
+112;Bankkonten dienen als Lagerung und Trennung von Währungen für verschiedene Zwecke durch verschiedene Bürger und staatliche Stellen.
+113;
+Ein Vertrag ist eine Vereinbarung zwischen zwei Bürgern, die in einer [Contract Board|contract board component] erstellt wurde. Die Vereinbarung kann eine beliebige Anzahl von Klauseln enthalten und Kombinationen von auszuführenden Arbeiten und zu zahlenden Entschädigungen festlegen. Sie wird vom Kundenbürger veröffentlicht und kann von jedem rechtskräftigen Bürger asynchron akzeptiert werden.
+114;Beispiele für Verträge sind:
+    - Eine Straße zwischen zwei bestimmten Punkten anlegen.
+    - Geld zwischen zwei Parteien mit einem gegebenen Zinssatz und Fälligkeitsdatum leihen.
+    - Einen Raum mit gegebenen Anforderungen an einem bestimmten Ort bauen.
+    - Benutzerdefinierte Anforderungen, die in einem Text beschrieben und nach Fertigstellung vom Kunden akzeptiert/abgelehnt werden.
+  
+115;Verträge halten eine Vereinbarung zwischen zwei Bürgern aufrecht.
+116;
+Mit der Herstellung kann man neue Produkte aus Zutaten, Arbeit und/oder Energie erstellen. Die Herstellung kann auch Nebenprodukte erzeugen, die Umweltverschmutzung verursachen und die Umwelt negativ beeinflussen.  Sie bildet das Rückgrat der Wirtschaft und erzeugt Nachfrage nach Ressourcen, die aus dem Ökosystem um sie herum stammen, sowie Nachfrage nach individueller Facharbeit und geteilten Dienstleistungen wie [Power|Power Component] oder [Sewage].
+
+Jeder Tisch, der eine [Crafting Component] besitzt, kann in einer Liste definierte Produkte herstellen. Handwerkstische können gemeinsam genutzt werden, wobei jeder eine konfigurierbare [Authorization Component] hat, die festlegt, wer darauf zugreifen darf, und in der [Credit Component] des Tisches können Gebühren festgelegt werden, um mit der gemeinsamen Nutzung deines Tisches Geld zu verdienen.
+
+Die Inputs und Outputs können entweder direkt vom Handwerkstisch genommen oder in einer angeschlossenen [Storage Component] platziert werden.  Das Ablegen von Zutaten und Produkten im Lager ermöglicht es den Bürgern, große Aufträge in die Warteschlange zu stellen, die automatisch ablaufen. 
+
+Viele Rezepte erfordern die Arbeit eines bestimmten [Skill|skills overview].  Während jeder Bürger ein Herstellungsrezept starten oder Zutaten hinzufügen kann, kann nur ein Bürger mit den erforderlichen Fertigkeiten Arbeit dazu beitragen.  Um eine Gruppe zu bilden und viele Bürger zu einem Arbeitsauftrag beitragen zu lassen, während sie sich die Bezahlung teilen, können [Work Parties] erstellt werden.
+  
+117;Bürger können mit der Herstellung Produkten an bestimmten Tischen erschaffen.
+118;Währungen sind ein Mittel zur Erleichterung des Handels als Repräsentation des Wertes. Ihr Wert hängt ganz davon ab, wie sie verwendet werden.
+
+Bei Eco gibt es zwei Arten von Währungen: gestützt und nicht gestützt.
+  
+Eine nicht gestützte Währung ist eine ungedeckte Währung, und jeder Spieler beginnt mit seiner eigenen persönlichen Währung mit einem unendlichen Betrag. Diese sind besonders im frühen Spiel nützlich, wenn keine globale Währung festgelegt ist. Diese Währungen erfordern jedoch viel Vertrauen, dass der Eigentümer ihren Wert nicht manipuliert, da sie einen unbegrenzten Betrag haben und eine Wirtschaft, die sie nutzt, leicht destabilisieren können.
+  
+Gestützte Währungen sind viel stabiler. Eine gestützte Währung wird an einer [Mint|Mint Component] erstellt, indem ein Währungsunterstützendes Material in Münzen umgewandelt wird. Mehr Währung kann nur durch den Erwerb von mehr Material geschaffen werden. Dies bietet eine viel stärkere Begrenzung der Währungsbeträge, die in die Welt eingeführt werden können, und bildet eine stärkere Grundlage für den globalen Handel. Oft entscheidet sich eine Welt dafür, von einer Sammlung persönlicher Währungen zu einer oder mehreren gestützten Währungen zu wechseln, wenn die Wirtschaft im Laufe des Spiels wächst und mehr globaler Handel und Zusammenarbeit erforderlich sind.
+  
+Währungen können in der Wirtschaftsanzeige sowie über [Trade] auf andere Währungen übertragen werden. Alle Währungen werden auf einem [Bank Account|Bank Accounts] gespeichert.
+
+119;Währung ist ein gesellschaftliches Konstrukt, das den Handel erleichtert.
+120;Die Wirtschaft hat häufig nichts mit dem ausgegebenen Geld zu tun, sondern mit der Weisheit, mit der sie ausgegeben wird.
+     Henry Ford  
+121;Die Wirtschaft umfasst die Handlungen der Ernte, Produktion und des Handels zwischen Bürgern, die sich aus der [Ecosystem|Ecosystem Overview] gemäß der Verordnung der [Government|Government Overview] ergeben. Die Bürger müssen für eine reibungslose Wirtschaft sorgen, um die Technologie so weit voranzutreiben, dass der Meteor gestoppt wird, ohne dass er Amok läuft und den Planeten durch Verschmutzung zerstört.  
+122;Wirtschaftskonzepte
+123;
+  - [Crafting]. Verwendung industrieller Werkzeuge zur Herstellung neuer Waren.
+  - [Trade]. Warenaustausch von Personen mit unterschiedlichen Fachgebieten oder Zugang zu Ressourcen.
+   - [Transport]. Bewegen von Ressourcen von Ort zu Ort und Aufbau einer weltweiten Infrastruktur, um dies zu tun.
+  - [Research]. Förderung des menschlichen Wissens zur Verbesserung der Gesellschaft.
+  - [Currency]. Eine von den Bürgern geschaffene Wertrepräsentation, die die Wirtschaftstätigkeit erleichtert.
+  - [Work Parties]. Organisierte Arbeitsgruppen, die Belohnungen teilen.
+  - [Contracts]. Vereinbarungen zwischen zwei Bürgern über Arbeit oder andere Vereinbarungen.
+  - [Bank Accounts]. Währungsbehälter mit konfigurierbarem Zugang.
+  - [Finance].  Bereitstellung von Kapital für andere Bürger, um ihnen zu helfen, Fortschritte zu erzielen und gleichzeitig selbst Gewinne zu erzielen.  
+124;Die Wirtschaft besteht aus dem gesamten Ressourcenverbrauch, dem Handel und dem technologischen Fortschritt der Bürger.
+125;Durch die Verwendung von [Contracts] können Bürger in Eco Darlehens- und Anleiheverträge zwischen zwei Parteien erstellen und dabei automatisch die Zinszahlung und das Fälligkeitsdatum der Mittel verfolgen.  Darlehen und Anleihen sind eine großartige Möglichkeit für neue Bürger, mit langjährigen Bürgern mit mehr Reichtum auf eine Weise zusammenzuarbeiten, die beiden Parteien zugutekommt und den gesellschaftlichen Fortschritt erhöht.
+
+Wenn ein Bürger einen Kredit aufnimmt, gibt ihm die anbietende Partei Geld, von dem er erwartet, dass er es mit Zinsen zurückzahlt.
+Wenn ein Bürger eine Anleihe kauft, gibt er der anbietenden Partei Geld, von dem er erwartet, dass es mit Zinsen zurückgezahlt wird.
+
+Strafen für die Nichteinhaltung von Krediten können mit [Laws] konstruiert werden, indem man auf den Zahlungsverzug von dem Auslöser Darlehen/Anleihen achtet.  Es können dann Maßnahmen ergriffen werden, wie z. B. die Wiederinbesitznahme von Eigentum oder die Anwendung anderer Strafen und Bußgelder.
+
+126;Finanzen ist die Verwaltung von Geld, um den Fortschritt zu fördern.
+127;Jeder Spieler kann den Ruf eines anderen Spielers beeinflussen, was wiederum als Faktor in Gesetzen, Verträgen usw. verwendet werden kann, die den Ruf eines Bürgers abfragen und Privilegien (oder deren Fehlen) basierend auf dem Wert bestimmen. Um den Ruf eines Bürgers einzustellen, bewege den Mauszeiger über seinen Namen im Chat und klicke auf den Rufeintrag im Tooltip (eine Liste aller Bürger findest du auf der Seite  [Current Citizens]).
+
+128;Der Ruf wird durch einen Netzwerkmultiplikator modifiziert, der als +1 für jeden Bürger berechnet wird, der dir einen guten Ruf gibt, und -1 für jeden Bürger, der dir einen negativen Ruf gibt.  Auf diese Weise wird es vorteilhafter, vielen Bürgern zu helfen und einen weit verbreiteten Ruf zu erlangen, als sich nur auf einige wenige Bürger zu konzentrieren.  Relativer Ruf ist ein weiterer Wert, der nur die Bürger berücksichtigt, denen du einen positiven Ruf gegeben hast.
+
+129;Ein Wert, der von anderen Bürgern oder von Gesetzen festgelegt wird und deinen sozialen Status darstellt.
+130;Forschung schafft neues, gemeinsam nutzbares Wissen, das neue Arten von Produkten und Fähigkeiten freischaltet.  Sie wird an einem [ResearchTableItem] durchgeführt, wo du ein Fertigkeitsbuch herstellst.  Einmal erstellt, kann ein Fertigkeitsbuch verwendet werden, um eine unbegrenzte Anzahl von Fertigkeitsschriftrollen zu erstellen, die die Spezialität für einen Bürger freischalten, der eine verwendet.
+
+Jede Schriftrolle ist ein einmalig verwendbares Verbrauchsmaterial, das bei demjenigen, der sie benutzt, eine neue [Specialty|specialties]  freischaltet, die dann mit einem Level-Up durch das [Skills|skills overview]-System beansprucht werden muss.  Der Erwerb einer neuen Fertigkeitsschriftrolle gewährt dem Bürger auch den Vorteil eines Satzes von [Property Claim Papers|Property], der es ihm erlaubt, mehr Land zu beanspruchen, während er an Fertigkeit gewinnt.
+    
+Fertigkeitsbücher gehören zu den am schwierigsten herzustellenden Gegenständen, und die Bürger müssen in der Regel zusammenarbeiten, um die verschiedenen Ressourcen und Arbeitskräfte zu beschaffen, die für ihre Herstellung erforderlich sind.  Daher eignen sich Forschungsprojekte besonders gut für [Work Parties], da die Bürger sie nutzen können, um die Arbeit, die zur Erstellung benötigt wird, zusammen mit der Wissensbelohnung nach Fertigstellung zu teilen.  
+131;Forschung schafft neues, gemeinsam nutzbares Wissen, das neue Arten von Produkten und Fähigkeiten freischaltet.
+132;Der Handel mit deinen Mitbürgern ist für Eco von entscheidender Bedeutung, da jeder Spieler eine Reihe von [Specialties] hat, zu denen er am effektivsten beitragen kann, während er mit anderen Bürgern handelt, die in Berufen ausgebildet sind, in denen er nicht ausgebildet ist. 
+
+ - Der Handel kann in einem [Store Component] eingerichtet werden, in dem Kauf- und Verkaufspreise für die verschiedenen gewünschten Waren aufgelistet werden. Die Bürger können dann asynchron Waren kaufen und verkaufen, ohne anwesend zu sein.
+ - Der Handel von Arbeitskraft kann über [Contracts] und [Work Parties] erfolgen, sodass die Spieler ihre Arbeit gegen Bezahlung nach vereinbarten Bedingungen ausführen können. Dies kann auch asynchron erfolgen.
+ - Der Handel mit Währungen kann an einer [Currency Exchange|Exchange Component] durchgeführt werden, die Kauf-/Verkaufspreise für den Tausch verschiedener Währungen auflistet.
+ - Der Handel wird durch [Transport] erleichtert, und der Aufbau einer Transportinfrastruktur zwischen den aufkeimenden Knotenpunkten der Zivilisation fördert die Handelsfähigkeit erheblich.
+ - Der Handel unterliegt [Taxes], festgelegt von der [government overview], die den Wert bestimmter Handelsgeschäfte entweder fördern oder bremsen kann.
+
+133;Der Handel zwischen Bürgern mit unterschiedlichen Fähigkeiten und unterschiedlichen Gütern ist das Rückgrat der Wirtschaft.
+134;Da die Ressourcen auf der ganzen Welt verteilt sind und die Orte, an denen sie gesammelt und verarbeitet werden, sich von denen unterscheiden, an denen sie verwendet werden, wird der Transport zu einem entscheidenden Erfolgsfaktor in Eco.
+
+Um Materialien effizient zu verarbeiten, musst du Fahrzeuge erstellen, um sie zu transportieren, und dafür muss der Boden zu Straßen planiert werden. Mit einem [StoneRoadToolItem] kannst du den Boden planieren und für Fahrzeuge nutzbar machen. Mit Rampen kannst du leichte Hänge erstellen, auf denen Fahrzeuge fahren können. Fortgeschrittenere Fahrzeuge erfordern fortgeschrittene Straßen, um effizient zu fahren, und Straßen müssen regelmäßig aktualisiert werden, sobald neue Technologien verfügbar sind.
+
+Der Bau von Straßen zwischen Dörfern und Ressourcenspeichern wird Zeit und Mühe vieler Bürger erfordern und ist ein guter Kandidat für öffentliche Bauprojekte, die von [Taxes] finanziert und von [Work Parties] gebaut werden. Mit dem technologischen Fortschritt der Welt wird immer mehr Verkehrsinfrastruktur geschaffen, die den Handelsfluss unterstützt, und schließlich bis zu einem Punkt wachsen, an dem der Straßenbau und die Fahrzeugnutzung Auswirkungen auf die Umwelt haben werden. Ein sorgfältiges Management dieses Einflusses ist der Schlüssel zum Erhalt der Ökosysteme, die sie durchlaufen.
+
+135;Da die Ressourcen und ihre Nutzung über die ganze Welt verteilt sind, wird eine Umgestaltung der Welt durch den Bau von Transportinfrastrukturen notwendig.
+136;Eine Arbeitsgruppe ist ein Vertrag zwischen mehreren Bürgern um eine Arbeit gemeinsam zu verrichten. Sie beginnt mit einem Bürger, der am [Contract Board|Contract Board Component] einen Arbeitsauftrag angelegt hat.
+
+Der Bürger, welcher die Arbeitsgruppe anlegt, kann die verschiedenen Parameter der Arbeit festlegen. Dies umfasst:
+ - Erfüllen des Arbeitsauftrags
+ - Voraussetzungen um der Arbeitsgruppe beizutreten.
+ - Art und Weise wie Teilnehmer der Arbeitsgruppe bezahlt werden.
+ - Wie die Bezahlung verteilt wird.
+
+Arbeitsgruppen sind besonders praktisch um [Research] durchzuführen. Ein Bürger kann ein Forschungsprojekt, welches viele Ressourcen kostet, einer Arbeitsgruppe zuweisen. Bürger können automatisch einer Arbeitsgruppe beitreten (selbst wenn der beauftragende Bürger offline ist, falls sie die angezeigten Voraussetzungen erfüllen) und mit der Bearbeitung von Aufgaben beginnen.
+
+Die Bezahlung kann in verschieden Formen erfolgen:
+- [Currency], wird abhängig von der geleisteten Arbeit verteilt, entweder direkt oder nach Abschluss.
+- [Reputation], wird vom Ersteller der Arbeitsgruppe an den Arbeiter gegeben (bezogen auf das ggf. eingestellte Tageslimit).
+- Wissen einer bestimmten Spezialität (der selbe Effekt vom Lesen einer Fähigkeitsschriftrolle). Um diese Bezahlung zu wählen, muss der Ersteller das Fähigkeitsbuch der Spezialität besitzen oder in einem Arbeitsauftrag der Arbeitsgruppe erstellt werden.
+- Gewähren eines [Title], welcher neue Privilegien für den Eigentumsnutzung oder anderer Fähigkeiten.
+
+Die Wirtschaft von Eco fokussiert sich nicht nur auf den Handel von Waren, sondern auch den Austausch von Arbeit. Arbeitsgruppen machen es einfach verschiedene Arten von Arbeit an die gesamte Bevölkerung auszulagern.  
+137;Arbeitsgruppen sind gemeinsame Vereinbarungen einer Reihe von Spielern zur Erfüllung einer bestimmten Aufgabe, wobei die Vergütung auf verschiedene Weise verteilt wird.
+138;Das lebendige Biom der Welt, das Ressourcen bereitstellt, die der Mensch zum Überleben nutzen muss.
+139;
+Die enorme Vielfalt und die Reichhaltigkeit des Lebens auf unserem Planeten lassen sich grob in Bereiche einteilen, die Biome genannt werden. Biome in Eco sind Regionen der Welt, die bestimmte Niederschläge und Temperaturen haben. Aufgrund dieser simulierten physikalischen Unterschiede sind verschiedene Arten von Mikroorganismen, Pflanzen, Pilzen und Tieren in der Lage, in verschiedenen Biomen zu überleben und zu blühen. Jedes Biom in Eco bietet eine einzigartige Reihe von Ressourcen an, die der Spieler entdecken und abbauen kann, um seine Gesellschaft aufzubauen und zu versorgen. Die Lebensgemeinschaften innerhalb jedem Biom haben voneinander abhängige Beziehungen, die in der Regel an den Lebensraum, die Ernährung und den Boden gebunden sind, die wiederum durch das Klima und die vorhandenen Bodenressourcen entstehen. 
+  
+Biome sind Ökosysteme innerhalb des globalen Ökosystems, und innerhalb den Biomen gibt es manchmal weitere Unterteilungen oder Subbiome, wie z. B. die Hochwüste, Hochgrasprärie, Gletschereis in der Tundra oder Meeresküsten. Biome und Subbiome sind zusammenhängende Einheiten, von denen viele Einschränkungen haben, welche Biome sich neben oder innerhalb von ihnen befinden können. Im Laufe der Zeit, wenn sich die Bedingungen durch den Einfluss von den Spielern ändern, haben Biome das Potenzial, radikal umgestaltet zu werden. 
+
+Der Klimawandel kann die Grenzen von Biomen verschieben und Gemeinschaften verdrängen. Einige Arten werden überleben und sich anpassen, aber andere werden nicht so widerstandsfähig sein. Direkte Bodenverschiebungen und andere Lebensraumzerstörungen durch Aktivitäten wie Bau, Landwirtschaft, Bergbau und Holzeinschlag werden sich ebenfalls in unterschiedlichem Maße auf Arten innerhalb von Biomen auswirken. Pflanzen- oder Tierarten bevorzugen möglicherweise nicht nur bestimmte Biome, sondern auch bestimmte Teile von diesen Subbiomen, was eine größere Auswirkung bedeutet, wenn diese stark lokalisierten Bereiche verändert oder zerstört werden. Resistente und anpassungsfähige Arten werden in der Lage sein, über Biomgrenzen hinweg zu gedeihen, wenn diese verändert werden, aber dieselben Arten können zu einer Bedrohung für empfindlichere Pflanzen oder Tiere in den neuen Biomen werden, in die sie eingeführt werden. 
+140;Biome in Eco:
+141;Ozean : Die Teile des Ozeans auf den Kontinentalsockeln, die reich an Leben sind.
+Tiefsee : Die tiefsten Teile des Ozeans, die die größten Meeresarten und wandernden Fischpopulationen tragen.
+Kalte Küste : Strände und flache Gewässer in kälteren Klimazonen.
+Warme Küste : Strände und flache Gewässer in wärmeren Klimazonen.
+Feuchtgebiete : Ein einzigartiges Biom, das durch eine Sättigung des Bodens mit Süß- oder Brackwasser gekennzeichnet ist.
+Grasland : Ein Biom, in dem es genug Wasser gibt, um Gräser, aber nicht viele Bäume zu tragen.
+Wüste : Das trockenste Biom, und in Eco derzeit auch das heißeste.
+Kalter Wald : Ein Biom, das feucht genug ist, um dichte Baumbestände zu tragen, und kalt genug, dass Nadelbäume dominieren.
+Warmer Wald : Ein Biom, das feucht genug ist, um dichte Baumbestände zu tragen, und warm genug, dass Laubbäume dominieren.
+Regenwald : Ein feuchtes und warmes Biom, das einen Wald mit reichlich Pflanzen- und Tierleben trägt.
+Taiga : Ein kaltes und eher trockenes Biom, das einen spärlichen Wald aus Nadelbäumen trägt.
+Tundra : Ein sehr kaltes Biom, das keine Bäume trägt, aber eine einzigartige Pflanzen- und Tiergemeinschaft trägt.
+Eis : Die kältesten Gebiete des Landes, die von Gletschereis bedeckt sind. 
+
+Es gibt derzeit auch einige Subbiome in Eco:
+
+Hochwüste : Ein geologisch angehobener Teil der Wüste mit kältetoleranteren Arten, die sich an den durch Erosion entstandenen steilen Klippen wohlfühlen.
+Kalte Steppe : Ein etwas kälteres Grasland, das oft durch noch weniger Bäume und größere Freiflächen gekennzeichnet ist.  
+142;Das lebende System von Pflanzen und Tieren, das den Menschen die Grundlage bietet, zu überleben.
+143;Diagramme
+144;
+Jede Welt in Eco speichert jede Aktion im Spiel und überwacht den Fortschritt von jedem Aspekt der Simulation. Die Daten werden in ein paar Hauptkategorien gespeichert, insbesondere das Ökosystem und die Wirtschaft. Wenn Spieler Aktionen durchführen oder sich das Ökosystem verändert, wird dies in Diagrammen dargestellt, die für die Bürger sichtbar sind.
+
+Diese Diagramme sind am nützlichsten, um die Zustände verschiedener Messwerte zu vergleichen und sie im Laufe der Zeit zu betrachten. Als solche sind sie besonders nützlich, um die Ergebnisse von Gesetzen und Vorschriften im Nachhinein zu bestimmen, indem man untersucht, wie sich die Dinge verändert haben, nachdem sie eingeführt wurden. Sie sind auch nützlich, um zukünftige Effekte zu erschließen, die Geschwindigkeit vorherzusagen, mit der sich Dinge verändern (z.B. Bevölkerungsrückgang als Folge von Abholzung) und Änderungen vorzunehmen, bevor sie eintreten. Das Lesen, Verfassen und Verstehen von Diagrammen ist ein sehr mächtiges Mittel für die Regierung, und den Bürgern werden Mittel gegeben, um Diagramme zu erstellen, die Argumente unterstützen oder widerlegen, und sie ihren Mitbürgern direkt bei Diskussionen für bürgerliche Aktionen zu präsentieren.
+
+145;Heatmaps
+146;
+Eco-Welten sind vielfältige Orte mit vielen verschiedenen Biomen und Orten menschlicher Entwicklung und Umweltauswirkungen. Um zu sehen, wie sich verschiedene Teile der Welt unterscheiden, stehen Heatmaps für alle verschiedenen Welteffekte im Spiel zur Verfügung. Werte wie Bürgeraktivität, Bevölkerungsrate, Verschmutzungsrate, Temperatur, Feuchtigkeit und Dutzende mehr können mit Heatmaps angezeigt werden, wobei Änderungen im Laufe der Zeit aufgezeichnet werden, die wiedergegeben und für wissenschaftliche Argumentationen verwendet werden können.
+
+Spieler können diese auf zwei Arten anzeigen: über die Minikarte im Spiel, die auch farbiges Gelände im Spiel anzeigen kann. Zweitens können sie im Webbrowser angezeigt werden, wo ihre Fähigkeit zur Wiedergabe von Daten verschiedener Zeitpunkte genutzt wird. Alle 10 Minuten wird eine Momentaufnahme jeder Heatmap in den Serverdaten gespeichert (konfigurierbar), und die Bürger können sich in Zeitrafferansichten ansehen, wie sich die Heatmaps im Laufe der Zeit ändern. Dies ist wichtig, um die Auswirkungen an bestimmten Standorten zu messen und die besten Wege für den Bau von Infrastrukturen und neuen Siedlungen zu ermitteln.
+
+147;Mini-Map
+148;Die Minikarte ist ein leistungsstarkes Mittel im Spiel, das vielen Zwecken dient: Navigation, Planung, Datenanzeige, Ortung von Objekten und vielem mehr. Sie kann aktiviert werden, um die verschiedenen Weltebenen des Spiels (Heatmaps) anzuzeigen und Regionen mit hoher/niedriger Bevölkerung, Umweltverschmutzung, Bürgeraktivität usw. mithilfe eines Farbverlaufs hervorzuheben.  Weltmarkierungen können manuell oder global für alle Bürger hinzugefügt werden, um auf bestimmte Punkte zu verweisen und die Koordination menschlicher Aktivitäten zu unterstützen. Diese Markierungen werden auch verwendet, um die Bürger automatisch zu dynamischer Arbeit zu leiten und festzulegen, wo Straßen gebaut werden sollen in einem Vertrag, wo Waren für den Transport geliefert werden sollen usw.
+
+Derzeit arbeiten wir daran, im Spiel die Bezeichnung von Grundstücken und Bezirken hinzuzufügen sowie bestimmte Landflächen für Arbeitsgruppen und Verträge festzulegen, damit beispielsweise die Bürger im Spiel die Bereiche hervorheben können, in denen sie andere einstellen möchten, um ein Feld zu pflügen oder eine Straße zu bauen usw. Dies wird die Möglichkeiten für den Arbeitsmarkt erheblich öffnen und es den Bürgern ermöglichen, auf einfachere Weise viel spezifischer zu sein, wenn sie festlegen, wo sie arbeiten möchten.
+149;Das lebende System von Pflanzen und Tieren, das den Menschen die Grundlage bietet, zu überleben.
+150;Der wahre Sinn des Lebens besteht darin, Bäume zu pflanzen, unter deren Schatten du nicht erwartest zu sitzen.\n– Nelson Henderson
+151;
+
+Das Ökosystem ist ein Selbstzweck in Eco, und sein kontinuierliches Gedeihen ist neben dem wirtschaftlichen Fortschritt das primäre Ziel des Spiels. Das heißt, das Ökosystem beginnt vollständig, und die Spieler müssen seine Ressourcen nutzen, ohne es aus dem Gleichgewicht zu bringen, was die Zerstörung der Menschheit bedeuten würde.
+
+Das Ökosystem in Eco läuft in einer durchgehenden Simulation, die so lange aktiv ist, wie der Server läuft, unabhängig davon, ob Spieler im Spiel sind oder nicht. Jede simulierte Pflanze und Tier wächst, konsumiert Nahrungsquellen und vermehrt sich. Es ist die einzige Materialquelle, aus der die Spieler ihre Gesellschaft aufbauen müssen, und der Prozess der Gewinnung dieser Materialien wird starke Auswirkungen auf sie haben. Das Abholzen eines Waldes kann den Lebensraum einer Kreatur zerstören und sie zum Aussterben bringen. Abfälle von dem Bergbau kann nahegelegene Flüsse und Seen verschmutzen und Farmen vergiften, die darauf angewiesen sind. Die Handlungen der Spieler in Eco wirken sich auf ihre Umgebung aus, und die Spieler müssen die Auswirkungen verstehen, die sie haben, um zu überleben und den Meteor aufzuhalten. Das Ökosystem in einem unberührten Zustand zu belassen ist keine Option; der Meteor sorgt dafür, dass auch diese Wahl zur Zerstörung des Ökosystems führen wird. Um es zu retten, müssen die Bürger davon nehmen und eine Gesellschaft aufbauen, die die Macht hat, den Meteor zu stoppen, und gleichzeitig die Zurückhaltung hat, das Ökosystem dabei nicht zu zerstören.
+
+152;Spielablauf
+153;Das Ökosystem ist das grundlegende System, das die Bürger verstehen und mit dem sie sich auseinandersetzen müssen. Vom Anbau großer [Farms|Farming] und [Mines|Mining] bis hin zum Verständnis der Auswirkungen der [Pollution] durch Studien - die Auswirkung der Bürger auf das Ökosystem wird über Erfolg oder Misserfolg von Spielerentscheidungen entscheiden. Zu verstehen wie es mit Hilfe von [Data] im Spiel funktioniert, wird zu einer wichtigen Voraussetzung für das Überleben. Anders als die [Economy|Economy Overview] und die [Government|Government Overview], ist das Ökosystem kein Konstrukt der Bürger; sein Verhalten ist absolut, und nichts daran, wie es funktioniert, kann per Ermächtigung geändert werden, wie es die Wirtschaft kann. In diesem Sinne ist es ein Realitätscheck: der Ort, an dem die widersprüchlichen Vorurteile und Glauben der Bürger zusammenstoßen und die wahren Konsequenzen offenbaren.
+154;Zwischen Wirtschaft und Regierung
+155;Wenn die Bürger die Gesellschaft voranbringen, müssen sie sich vor der „Tragik der Allmende“ hüten. Wenn einer Bevölkerung ungehinderter Zugang zu einer gemeinsamen Ressource gewährt wird, führt dies häufig zu deren Zerstörung. Um dies zu verhindern, müssen sich die Bürger organisieren und Regeln für das Gemeinwohl durch [Laws] und andere staatsbürgerliche Vorschriften festlegen, die den Einzelnen einschränken, der Gruppe jedoch das Überleben ermöglichen. Dieser Konflikt, des Individuums gegen die Gruppe, bildet das Herzstück der Herausforderung, eine Zivilisation aufzubauen.
+  
+156;Das lebende System von Pflanzen und Tieren, das den Menschen die Grundlage bietet, zu überleben.
+157;
+Die Landwirtschaft bietet eine Möglichkeit, Pflanzenarten zu nutzen die für den Menschen am nützlichsten sind und eine globale Nahrungsmittelversorgung zu schaffen. Die Landwirtschaft kann sich auch auf Pflanzen konzentrieren, die für andere industrielle Zwecke nützlich sind, wie Biokraftstoff für eine potenziell erneuerbare Energiequelle.
+
+Die Landwirte müssen auf die Ressourcen und die Gesundheit ihres Bodens achten, um Erschöpfung und Verschmutzung zu vermeiden. Düngemittel wie [CompostFertilizerItem] und Methoden zur Überwachung der Bodenressourcen wie der [SoilSamplerItem] werden wichtige Mittel sein, um das Ackerland fruchtbar zu halten. Verschiedene Fahrzeuge, Lagertechnologien und stärkere Handwerkzeuge werden es den Spielern ermöglichen, ihre landwirtschaftlichen Vorgänge auszubauen, während der Bedarf an Nahrungsmitteln und Kraftstoff in ihrer Gesellschaft steigt.
+
+Die Landwirtschaft ist eine große Tätigkeit in Eco, die wir im Laufe der Entwicklung verbessern und erweitern wollen. Der Ausgleich und die Lagerung werden ein zentraler Bestandteil der Verbesserungen in der Landwirtschaft sein, da wir sicherstellen wollen, dass die Gesellschaften in Eco eine angemessene Nachfrage von den Farmern zu erzeugen, um das technologische Wachstum voranzutreiben, und dass die Lagerobjekte und Mechaniken existieren, um diese Nachfrage zu unterstützen. Die Landwirtschaft selbst hat viele mögliche Verbesserungen und Erweiterungen, darunter die Entwicklung und Modifizierung von Saatgut und Organismen, um fruchtbarer oder resistent gegen Schadstoffe oder andere Umweltfaktoren zu sein.
+  
+158;Erde
+159;
+Der Boden von Eco enthält Nährstoffe, die Pflanzen wachsen und gedeihen lassen: Zu viel oder zu wenig eines bestimmten Typs kann den Ertrag und die Wachstumsgeschwindigkeit sowohl natürlich vorkommender als auch gezüchteter Pflanzen verändern. Wenn Pflanzen wachsen, nehmen sie Nährstoffe aus dem Boden und geben sie zurück, wenn sie sterben, wodurch die Welt in einen natürlichen Gleichgewichtszustand versetzt wird. Die Spieler beeinflussen diese Veränderungen, indem sie die Pflanzen aus der Umwelt entfernen, sie ernten, abholzen, abbauen oder verschmutzen, was langsam Nährstoffe aus dem Boden entfernt. Spieler können Nährstoffe wieder einführen oder die vorhandenen Verhältnisse ändern, indem sie Düngemittel auf ihrem Land verwenden.
+
+Wenn wir die Abhängigkeit der Tiere von den Pflanzenschichten erhöhen, können diese Teile der Ökosysteme den Boden weiter beeinflussen, da Arten, die Pflanzen konsumieren, auch Nährstoffe aus dem Boden entfernen können. Eine weitere Ergänzung, die in Betracht gezogen werden kann, ist die Existenz von Mutterboden in Eco: Derzeit ist er rein kosmetisch und an das Biom des Gebiets gebunden. In jedem Biom ist der Mutterboden jedoch eine einzigartige und wertvolle Ressource im Vergleich zu dem dichten Ton und Erde darunter.
+
+160;Das lebende System von Pflanzen und Tieren, das den Menschen die Grundlage bietet, zu überleben.
+161;
+Der Boden unter dir beherbergt eine Vielzahl von Ressourcen wie Gesteinen Metalle und andere Mineralvorkommen. Verschiedene Gesteinsarten beherbergen verschiedene Arten von Mineralvorkommen oder eignen sich dazu, andere Ressourcen wie Erdöl zu fangen. Aufgrund der immensen Komplexität der Erdressourcen in der Realität und der Notwendigkeit in Eco, den Spielern zunächst ein vorhersehbares Gleichgewicht der Rohstoffe zur Verfügung zu stellen, werden Gesteine und ihre Ablagerungen auf der Grundlage von Biomen erzeugt. Jedes Biom verfügt über eine Reihe von zugehörigen Gesteinen und Ablagerungen, die sich schichtweise unter ihm ausbreiten.
+
+162;Bergbau von Hand
+163;
+Um Erz abzubauen, musst du es zuerst lokalisieren. Erze in Eco sind jeweils in bestimmten Wirtsgesteinen beheimatet. Daher ist es ein guter Anfang, zu lernen, welche Gesteine die gewünschte Erzart haben, um dann in der Nähe von Gesteinen dieser Art zu graben. Verwende eine [WoodenShovelItem] oder besser, um Erde von der Oberfläche zu entfernen oder von der Seite in einen Hügel zu graben. Sobald du auf Stein getroffen bist, durch den du graben möchtest, muss du eine Spitzhacke wie die [StonePickaxeItem] verwenden, um ihn zu brechen. Wenn du Steine mit der Spitzhacke brichst, brichst du manchmal ein größeres Stück Stein ab, das erneut gehackt werden muss, um in Stücke zu zerbrechen, die klein genug sind, um aufgenommen zu werden. Es ist eine gute Idee, Steine beim Brechen aufzunehmen und an anderer Stelle zur späteren Verwendung zu stapeln, vorzugsweise in einem [StockpileItem] oder Fahrzeug, mit dem du dein Erz transportierst, wie einem [WoodCartItem].
+
+164;Mineralienverarbeitung
+165;
+Sobald du eine große Menge Metallerz gesammelt hast, musst du das Erz verarbeiten, bevor du Metallprodukte damit herstellen kannst. Dies ist ein schmutziger und teurer Prozess, und die Optimierung des Prozesses und der daraus resultierenden Nebenprodukte ist ein ständiger Prozess. Die drei Hauptschritte der Mineralaufbereitung sind:
+
+Zerkleinerung: Zerkleinerung bedeutet, das Gestein in kleinere Partikel zu zerkleinern, die weiterverarbeitet werden können. Zerkleinertes Gestein der Art, in der sich das Erz befindet, ist das Hauptnebenprodukt dieses Prozesses.
+Konzentration: Die Konzentration ist ein Weg, um die gewünschten Metalle in einem Erzgestein vom Abfallgestein zu trennen. Dieser Prozess ist niemals perfekt und führt unweigerlich zu einer großen Menge Gesteinsabfälle, die noch Spuren von freigesetzten Metallen enthalten. Dieses Abfallgestein mit Spuren von Schwermetallen ist als [TailingsItem] bekannt. [CopperOreItem] und [GoldOreItem] erfordern chemisches Auslaufen und Nassverarbeitung, um sich von ihren Wirtsgesteinen zu trennen und somit während des Konzentrationsprozesses verschmutzteres und flüchtigeres [WetTailingsItem] zu erzeugen.  
+Schmelzen: Sobald du wertvolles Erzkonzentrat hast, kannst du es endlich in Metallprodukten wie [IronBarItem] bei einem [BloomeryItem] oder mithilfe einer fortschrittlicheren Schmelztechnologie schmelzen. 
+
+166;Das lebende System von Pflanzen und Tieren, das den Menschen die Grundlage bietet, zu überleben.
+167;
+Bei der Verbrennung von Brennstoffen zum Kochen oder zur Stromerzeugung, beim Schmelzen von Metallen, bei der Verarbeitung von Abwässern und bei zahllosen anderen notwendigen industriellen Aktivitäten ist ein häufiges Nebenprodukt die Verschmutzung. Verschmutzung ist jede Substanz, die als Schadstoff oder Gift wirken kann, wenn sie in die Umwelt zurückgeführt wird. In Eco gibt es viele Quellen und verschiedene Arten der Verschmutzung, von denen einige stärker sind als andere. Schwermetalle können den Boden verseuchen und die verfügbaren Nährstoffe sowie die Gesundheit der darauf und darin lebenden Pflanzen und Tiere beeinträchtigen. Wasser kann Schadstoffe schnell verbreiten und das Ausmaß ihrer Auswirkungen erhöhen. Luftverschmutzung kann unsichtbar oder offensichtlich aus einem Ofen oder einem Kraftwerk strömen, die zu Treibhausgasen beiträgt und die Luftqualität beeinträchtigen, sowie als saurer Regen auf den Boden zurückfallen. 
+
+Um das Überleben der Ökosysteme zu sichern und Ressourcen wie Boden und Wasser zu erhalten, müssen die Spieler die Quellen der Verschmutzung, die ihre Zivilisation verursacht, regeln und eindämmen. In einigen Fällen werden Verschüttungen oder tödliche Konzentrationen unvermeidlich sein, und dann kann die Sanierung und Lagerung die einzige Option sein, um das Land wieder in einen unversehrten Zustand zu versetzen. 
+
+168;Bodenverschmutzung
+169;
+Einmal in den Boden und den Grundwasserspiegel freigesetzt, sind Bodenverschmutzungen nicht leicht zu stoppen oder zu entfernen. Verschiedene Materialien in Eco sind Quellen der Bodenverschmutzung, insbesondere Bergbaurückstände und Müll aus Herstellungs- und anderen Spieleraktivitäten. Die Verschmutzung breitet sich als Gradient aus, dessen Konzentration mit der Zeit zunimmt, wenn die Schadstoffquelle erhalten bleibt oder zunimmt. Wenn die Schadstoffquelle nicht mehr mit dem Boden in Berührung kommt, verteilt sich die Bodenverschmutzung und verschwindet mit der Zeit.
+
+170;Luftverschmutzung
+171;
+Viele Spieleraktivitäten können schädliche Emissionen verursachen, die, wenn sie in die Atmosphäre freigesetzt werden, als Luftverschmutzung wirken. Das Herstellen an Objekten mit CO2-Ausstoß oder das Betreiben von Generatoren mit diesen trägt zur lokalen und globalen Verschmutzung bei. Über lange Zeiträume hinweg trägt der globale CO2-Gehalt zu einem globalen Erwärmungseffekt bei, der sich wiederum auf den Meeresspiegel auswirkt. Es gibt natürliche Senken und Einlässe für einige Schadstoffe wie CO2 wie Wälder.
+
+Die Konzentrationen der Luftverschmutzung fallen als saurer Regen auf den Boden zurück, den wir anhand der Luftverschmutzung und der lokalen Niederschlagsmengen simulieren. 
+
+172;Wasserverschmutzung
+173;
+Wasser ist ein Medium, durch das sich die Verschmutzung schneller und weiter ausbreitet, stromabwärts rauscht und sich in Seen oder Ozeanen ausbreitet. Die Verschmutzung des Wassers kommt in der Regel von nahegelegenen Bodenverschmutzungsquellen, kann aber in Gebieten mit viel Luftverschmutzung auch über den Mechanismus des sauren Regens ins Wasser gelangen. 
+
+Die Beseitigung der Quelle ist derzeit der einzige Weg, um die Wasserverschmutzung zu stoppen, aber Reinigungs- und Sanierungsstrategien sind Funktionen, die wir für die Zukunft in Betracht ziehen.
+
+174;Eindämmung
+175;
+In vielen Fällen gibt es keine perfekte Lösung für den Umgang mit umweltschädlichen Materialien. Es muss Platz für die Lagerung verschiedener Schadstoffe geschaffen werden, und Schadstoffe müssen so gelagert werden, dass sie nicht in die Umgebung gelangen können. Dies ist eine Herausforderung, die für das Umweltmanagement der Industrie in Eco von entscheidender Bedeutung sein sollte. Gegenwärtig erfordern Rückstandmechaniken eine tiefe unterirdische Lagerung; dies wird mit der weiteren Entwicklung verbessert. 
+
+Die Eindämmungsmaßnahmen sind die Spitze der Funktionen, die wir im Zusammenhang mit der Schadstoffgruppe von Funktionen in Eco verbessern möchten. Die Spieler sollten Eindämmungen verwenden, um mit den enormen Mengen an Rückständen und Müll umzugehen, die ihre Gesellschaften produzieren.
+
+176;Das lebende System von Pflanzen und Tieren, das den Menschen die Grundlage bietet, zu überleben.
+177;In Verfassungsartikeln wird festgelegt, wie die Dinge in der Regierung geschehen: wer kann Gesetze verabschieden, Steuern festlegen, Regeln ändern usw. Sie kann auch bestimmte Maßnahmen als Wahl-bedürftig definieren, indem sie einen [Election Process|Election Processes] dazu festlegen.  
+
+Verfassungsartikel können an zwei Stellen hinzugefügt werden. An einem [CapitolItem] kannst du bis zu drei hinzufügen, und auf [AmendmentsItem] kannst du weitere 10 pro Element hinzufügen.
+
+Die Festlegung der Regierungsregeln ist sehr wichtig, um eine stabile, Gesellschaftsunterstützende Struktur zu gewährleisten. Regierungen können mit Gesetzen viel Macht über die Welt erhalten, und es besteht die Gefahr, dass diese Macht missbraucht wird. Durch Gewaltenteilung können die Bürger eine Regierung entwerfen, die eine Reihe von Veränderungen durchlaufen kann, einschließlich Veränderungen in der Führung, und dabei die Macht behält, positive Veränderungen in der Welt zu bewirken.
+
+178;Eine Reihe von Regeln darüber, wie die Regierung arbeitet.
+179;Eine Verfassung ist ein Gründungsdokument, das definiert, wie eine Gesellschaft regiert wird. Vor jedem anderen Regierungsobjekt muss eine Verfassung geschaffen werden. Sie werden in einem [Capitol|CapitolItem] erstellt.
+ 
+Regierungen Stürzen
+Sobald ein Kapitol platziert ist, kann eine Verfassung ratifiziert werden, indem du es öffnest und auf Ratifizieren klickst. Solange es keine anderen Verfassungen gibt, wird die Regierung sofort geschaffen.
+ 
+Wenn bereits eine Verfassung aktiv ist, kann eine neue Verfassung nur dann an ihre Stelle treten, wenn der Wohnwert ihres Raumes die bestehende Verfassung in Abhängigkeit von den Servereinstellungen erheblich übersteigt. 
+ 
+Hinweis: Ein bevorstehendes Update von Eco ermöglicht mehrere gleichzeitige Regierungen.
+180;Das Gründungsdokument für eine Regierung.
+181;
+  Bevölkerungsgruppen sind Klassen von Bürgern, die in der Regierung erstellt wurden. Diese können dann überall dort verwendet werden, wo du einen Bürger angeben kannst (Berechtigungen, Gesetze usw.).
+
+Zum Beispiel könnten Bürger eine Bevölkerungsgruppe „Holzfäller“ definieren, die nur Spieler mit einer Holzbearbeitungsstufe von 3 oder mehr enthält. Dann könnte ein Gesetz geschaffen werden, das es Holzfällern nur erlaubt, alte Bäume zu fällen.
+
+Bevölkerungsgruppen werden in einem [Census Bureau|CensusBureauItem] definiert.
+
+Bevölkerungsgruppen können auch Löhne festgelegt werden. Die Löhne werden regelmäßig gezahlt, solange ein Bürger in der Bevölkerungsgruppe ist.
+
+182;Definiert eine Gruppe von Bürgern, die bestimmten Kriterien entsprechen.
+183;Distrikte werden von Spielern an einem [ZoningOfficeItem] erstellt und können als gesetzlich festgelegte Bereiche verwendet werden.
+
+Ein Distrikt ist ein ausgewählter, nicht zusammenhängender Landbereich, den die Spieler nach Belieben anpassen können. Distrikte sind in Distriktskarten enthalten, und es kann mehrere Distriktskarten auf der Welt geben. Innerhalb jeder Distriktskarte dürfen sich jedoch keine Distrikte überschneiden.
+
+Distrikte können verwendet werden, um festzulegen, wo Aktionen gesetzlich zulässig sind. Es kann beispielsweise ein Gesetz erlassen werden, das das Fällen von Bäumen in einem Schutzgebiet im Distrikt verhindert.
+
+184;Ein definierter Landabschnitt, auf den sich Gesetze und andere Systeme beziehen können.
+185;Gewählte Titel sind Regierungsbeamte, denen Berechtigungen zur Verwaltung der Regierungspolitik zugewiesen werden können. Diese Titel können überall dort verwendet werden, wo man einen Bürger angeben kann (Berechtigungen, Gesetze usw.). 
+
+Gewählte Titel werden bei einem [GovernmentOfficeItem] erstellt. Bei der Definition eines gewählten Titels können verschiedene Bedingungen festgelegt werden:
+
+  - Ein [Election Process|Election Processes] mit Amtszeit für Titelträger
+  - Die Anzahl der Bürger, die gleichzeitig den gewählten Titel besitzen können
+  - Voraussetzungen, um nach der Wahl im Amt zu bleiben
+  - Ein Nachfolger, der die Position übernimmt, wenn ein Titelträger aus dem Amt abberufen wird
+
+Beim Erstellen eines ausgewählten Titels können die folgenden Berechtigungen zugewiesen werden:
+
+  - Festlegen des Steuersatzes bei einer [TreasuryItem]
+  - Zugang, um das Geld auf dem Bankkonto der Staatskasse auszugeben
+  - Regierungsbankprivilegien zur Einrichtung von Regierungsbankkonten, die von persönlichen Vermögensberechnungen ausgenommen sind
+  - Die Möglichkeit, eine globale Kartenmarkierung zu setzen, um die Bürger auf einen Punkt von Interesse zu informieren
+
+Gewählte Titel können Löhne zugewiesen werden, die regelmäßig an die Bürger gezahlt werden, die den Titel besitzen.
+  
+186;Gewählte Titel sind Regierungsbeamte, denen Berechtigungen zur Verwaltung der Regierungspolitik zugewiesen werden können.
+187;Bürger können an einem [BoardOfElectionsItem] neue Arten von Wahlen definieren, und jeder dort erstellte Wahlprozess kann für verschiedene Änderungen an Regierung und Führung verwendet werden.
+
+[Civic Articles] können auf Wahlprozesse verweisen, um Maßnahmen zu bezeichnen, die eine Wahl erfordern. [Elected Titles], die in einem [GovernmentOfficeItem] erstellt werden, müssen einen Wahlprozess angeben, durch den neue Mitglieder gewählt werden.
+
+Jeder Wahlprozess kann einen anderen Satz von Wählern, Vetos, Zeitpunkten, Prozentsätzen, die zum Gewinnen benötigt werden, usw. definieren. Durch die Verwendung verschiedener Wahltypen können die Bürger ihre Regierung so gestalten, dass sie unterschiedliche Machtbefugnisse hat. Zum Beispiel können sie einen mächtigen Titel definieren, der von der Bevölkerung gewählt werden muss, aber auch von ihr abgewählt werden kann.  
+
+188;Definiert, wie eine Wahl stattfindet.
+189;Wahlen können zwei Arten haben:
+  
+    - Wahlen von Beamten. Dies sind Wahlen von [Elected Titles], die einem Bürger bestimmte Befugnisse verleihen.
+    - Volksabstimmung. Eine Ja/Nein-Abstimmung, die bestimmt, ob eine bestimmte bürgerliche Aktion durchgeführt werden soll.
+
+Wahlen werden an einer [BallotBoxItem] gestartet, an der die Bürger eine Reihe von Bürgeraktionen durchführen können. Je nachdem, welche [Civic Articles] verfügbar sind, können diese Maßnahmen eine Wahl erfordern oder nicht. Wenn sie eine benötigen, hat der Bürger die Möglichkeit, sofort eine zu starten.
+
+Wahlen können eine Reihe von Einstellungen haben, die durch ihren [Election Process|Election Processes] bestimmt werden. Darin wird angegeben, wer wählen kann, wer ein Veto einlegen kann, wie lange die Wahl dauert, wie viel Prozent benötigt werden, um zu gewinnen usw. Es können mehrere Arten von Wahlen für verschiedene Zwecke erstellt werden. So könnte z. B. eine repräsentative Regierung erstellt werden, bei der bei einigen Wahlen nur gewählte Beamte wählen dürfen, während die meisten Bürger nur bei Wahlen für Vertreter abstimmen.
+  
+190;Eine Abstimmung unter einer Gruppe von Bürgern, um eine Position oder ein Referendum zu bestimmen.
+191;Exekutivmaßnahmen sind einmalige Maßnahmen, die eine bestimmte Gruppe von Bürgern oder alle Bürger gleichzeitig betreffen können.
+  
+Exekutivmaßnahmen können an einem [ExecutiveOfficeItem] unter Verwendung der [Civic Action Component] vorgeschlagen werden. Diese Maßnahmen haben drei Haupteffekte:
+  
+ - Eine einmalige [Tax|Taxes] ausgeben
+ - Eine Zahlung an Bürger aus dem [TreasuryItem] bereitstellen
+ - Ändern des [Property]-Besitzers von einem vorhandenen Eigentum
+
+Abhängig davon, welche [Civic Articles] vorhanden sind, erfordern diese Aktionen eine Wahl oder nicht. In einigen Bürgerartikeln heißt es, dass nur [Elected Titles] Exekutivmaßnahmen ausführen dürfen.
+  
+192;Eine Handlung, die von einem Regierungsbeamten durchgeführt wird und Auswirkungen auf Steuern, Eigentum usw. hat.
+193;Diejenigen, die zu klug sind, um sich in der Politik zu engagieren, werden dadurch bestraft werden, dass sie von Leuten regiert werden, die dümmer sind als sie selbst.\n- Platon
+194;Zwischen dem Ökosystem und der Wirtschaft liegt die Regierung, die von den Bürgern geführt wird, um das Überleben und das Gedeihen beider zu sichern.
+  
+  
+195;    Die Regierung wird Stück für Stück von den Bürgern geschaffen, wobei ihre Macht und ihre Fähigkeiten zusammen mit der Macht des Volkes wachsen. Die Teile der Regierung sind:
+  
+196;[Constitution]
+Bevor ein anderer Aspekt der Regierung erstellt werden kann, muss eine Verfassung an einem [CapitolItem] erstellt werden. Sie legt fest, wie die Regierung über bürgerliche Artikel funktioniert.
+
+197;[Civic Articles]
+Eine Verfassung enthält Bürgerparagrafen, die festlegen, wie die Regierung funktioniert: wer was und wie tun kann. Sie können an einem [CapitolItem] einer neuen Verfassung erstellt oder an einer [AmendmentsItem] -Tabelle zu einer bestehenden Verfassung hinzugefügt werden.
+
+198;[Laws]
+Gesetze bestimmen Regeln und Prozesse, denen alle Bürger folgen müssen. Ein [CourtItem] kann bis zu 3 Gesetze enthalten.
+
+199;[Elections]
+Wahlen werden automatisch gestartet, wenn Änderungen vorgenommen werden, die dies erfordern, wie in der Verfassung festgelegt. Sie können viele Auswirkungen haben (Änderung von Gesetzen, Wahl von Anführern, Durchführung von Exekutivmaßnahmen).
+
+200;[Election Processes]
+Ein Wahlprozess bestimmt, wie Wahlen funktionieren: wer wählen und ein Veto einlegen kann, wie lange sie dauern, welche Mehrheiten erforderlich sind usw. Ein [BoardOfElectionsItem] kann bis zu drei Wahlprozesse enthalten.
+
+201;[Elected Titles]
+Ein Gewählter Titel ist eine Regierungsposition, die besondere Privilegien erhalten kann. Ein [GovernmentOfficeItem] kann einen gewählten Titel enthalten.
+
+202;[Demographics]
+Eine Bevölkerungsgruppe ist eine nach bestimmten Regeln definiert Gruppe von Personen. Diese Gruppe kann dann in anderen Aspekten der Regierung verwendet werden. Ein [CensusBureauItem] kann bis zu drei Bevölkerungsgruppen beinhalten.
+
+203;[Districts]
+Definiert einen Landbereich, auf den in Gesetzen und anderen Orten verwiesen werden kann. Ein [ZoningOfficeItem] kann bis zu drei Distriktskarten enthalten.
+
+204;[Executive Actions]
+Eine Exekutivmaßnahme ist ein einmaliger Vorgang, der durchgeführt werden kann, um Veränderungen in der Gesellschaft herbeizuführen. Sie werden bei einem [ExecutiveOfficeItem] von Benutzern ausgeführt, denen Berechtigungen aus der Verfassung erteilt wurden (normalerweise gewählte Titel).
+
+205;
+  [Ballot Boxes|Civic Action Component]
+  Eine Wahlurne ermöglicht die Durchführung von Vorgängen im Zusammenhang mit Wahlen und Amtsausübung.
+
+206;
+  [Treasury|Treasury Component]
+  Bestimmt die Steuern auf verschiedene Teile der Wirtschaft.
+
+207;Eine Institution, die vom Volk entworfen und betrieben wird, um das Gemeinwohl zu fördern.
+209;Gesetze sind die Mittel, mit denen die Regierung Änderungen in der Welt vornimmt, um Ziele der Bevölkerung zu erreichen.
+
+Gesetze werden erstellt, indem ein [CourtItem] platziert wird, und je nach den verfügbaren [Civic Articles] kann eine Wahl erforderlich sein, um sie zu genehmigen. Jedes Gesetz wird mit einer Liste von Ursachen und Wirkungen erstellt, und wenn die Ursache eintritt, wird die Wirkung aktiviert. Dies erlaubt eine große Flexibilität in der Funktionsweise der Gesetze, und sie können viele Bereiche umfassen: von der Besteuerung über die Verordnung bis hin zur Auszahlung von Geldern zur Förderung von Aktivitäten.
+
+Viele „Ursache“-Entscheidungen liefern Kontext über den Bürger, der sie ausgelöst hat, wo sie ausgelöst wurde usw. Diese „Kontext“-Eigenschaften sind in der Tooltip „Ursache“ zu sehen und sind für angebende Daten in den „Wirkungen“ verfügbar.  Zum Beispiel kann eine Ursache den spezifischen Spieler besteuern, der einen Baum gefällt hat
+  
+210;Ursache-Wirkungs-Regeln, die von den Bürgern konzipiert und automatisch durchgesetzt werden, um gesellschaftliche Ziele zu erreichen.
+211;Zum Wohle des Volkes, oder zumindest zur Bereicherung der Regierung, können Steuern auf viele Dinge in Eco erhoben werden.
+  
+Steuern der Staatskasse
+Bei einem [TreasuryItem] können Steuern auf eine Vielzahl von Aktionen festgelegt werden:
+ - Mehrwertsteuer. Steuer auf den Verkauf von Waren in einem Geschäft.
+ - Handwerksgebührensteuer. Auf die Gebühren für die gemeinsame Nutzung deiner Handwerksstation wird eine Steuer erhoben.
+ - Vertragssteuer. Steuern aus Zahlungen durch Verträge und Arbeitsgruppen.
+ - Direkte Überweisungssteuer. Steuern aus Transfers zwischen Spielern.
+ - Direkte Eigenüberweisungssteuer. Steuern, die bei der Überweisung auf ein Konto erhoben werden, auf das du Zugriff hast (zum optionalen Schutz vor Steuerhinterziehung.
+
+Nur ein Bürger mit einem [Elected Title|Elected Titles], dem das Recht eingeräumt wurde, „Steuern in der Staatskasse festzusetzen“, kann diese Gebühren anpassen. Alle aus diesen Einstellungen entnommenen Steuern werden auf dem speziellen „Staatskassen“ Bankkonto gespeichert. Die Zuordnung von diesem speziellen Bankkonto zu anderen kann durch Befehle an die Staatskasse erfolgen.
+
+Steuergesetze
+Steuern können auch durch [Laws] festgelegt werden, deren Beträge und Bestimmungsorte dynamisch festgelegt werden können. Das Bankkonto, auf das sie gelegt werden, kann ebenfalls festgelegt werden, sodass bestimmte Mittel für bestimmte Zwecke finanziert werden können, die auf Bankkonten gespeichert sind, die nur einer begrenzten Anzahl von Personen zugänglich sind. Mithilfe des Rechtssystems können diese Steuern sehr gezielt und auf der Grundlage der laufenden Maßnahmen angepasst werden.
+
+Beispielsweise könnte eine Position als Gewählter Titel ein „Verkehrsminister“ geschaffen werden, der alleinigen Zugang zu einem Transportfonds[Bank Account|Bank Accounts] hat. Dann könnte ein Gesetz zur Besteuerung der Produktion und des Handels mit Kraftstoff geschaffen werden, dessen Einnahmen in den Transportfonds fließen, wo der derzeit gewählte Verkehrsminister sie zur Finanzierung neuer Straßenbau-[Work Parties] verwenden kann.
+
+212;Von der Wirtschaft können Steuern erhoben werden, um öffentliche Projekte zu finanzieren sowie wirtschaftliche Aktivitäten zu fördern oder zu beeinträchtigen.
+213;Titel werden verwendet, um eine Gruppe von Benutzern zu bezeichnen, auf die dann in anderen Dingen wie Berechtigungen verwiesen wird. Sie unterscheiden sich von [Demographics] dadurch, dass Titel direkt von den Bürgern angegeben werden, während die Bürger innerhalb einer Demografie automatisch basierend auf einer vom Bürger definierten Bedingung definiert werden.
+
+Es gibt zwei Arten von Titeln:
+
+ - Reguläre Titel. Diese können von jedem Bürger bei einem [RegistrarItem] erstellt und verwaltet werden. Dort kann der Bürger festlegen, welche anderen Bürger die Rolle zuweisen können (Manager) und welche die Rolle besetzen.
+ - Gewählte Titel. Diese Titel können nur gewählt (oder ernannt) werden und werden bei einem [GovernmentOfficeItem] erstellt. Die Eigenschaften des Regierungsbüros bestimmen, welche Art von [Election] erforderlich ist, um die gegebene Position zu wählen. Gewählte Titel können nur verlassen werden, wenn sie gewaltsam aus dem Amt abberufen werden, wenn sie zurücktreten (beide werden bei einem [BallotBoxItem] durchgeführt oder wenn ihre Amtszeit wie in den Amtszeitbeschränkungen der Position definiert endet.
+
+Gewählte Titel bieten viel Flexibilität bei der Definition der Führung einer Welt, und Privilegien können direkt mit diesen Konten verknüpft werden. Beispielsweise könnte ein Steuergesetz geschaffen werden, das die Nutzung von Fahrzeugen besteuert und in einen Fonds einbringt, zu dem nur der gewählte Titel „Verkehrsminister“ Zugang hat. Wenn es eine weitere Wahl für diese Position gibt und die Führung gewechselt wird, verliert der ehemalige Bürger automatisch den Zugriff auf das Konto.
+
+Indem du Anforderungen an den Gewählten Titel festlegst, kannst du sicherstellen, dass die amtierenden Bürger weiterhin eine gute Regierungsführung haben. Du könntest beispielsweise festlegen, dass alle Bewohner eines bestimmten Büros Teil der „Aktiven“ Demografie sind, die dieses Amt innehaben dürfen. Wenn ein Amtsinhaber inaktiv wird, wird er automatisch aus dem Dienst entlassen und ein bestimmter Nachfolger in seine Position versetzt.
+
+Auf Titel können auch Löhne festgelegt werden. Die Löhne werden regelmäßig gezahlt, solange ein Bürger weiterhin den Titel innehat (und der Zahler über Geldmittel verfügt).
+  
+214;Positionen, die einen oder mehrere Bürger halten können. Wird für die Benennung von Berechtigungen und die Zahlung von Löhnen verwendet.
+215;Ein Bürger kann ohne angemessene Unterbringung nicht gedeihen, und zusammen mit deiner [Nutrition] bestimmt dein Wohnwert deinen [Experience] -Multiplikator. Je besser die Materialien und Möbel deines Hauses sind, desto höher ist dein Erfahrungsmultiplikator.  
+
+Darüber hinaus erfordern viele Objekte Häuser und Versorgung, um zu funktionieren. Das Gebäudesystem besteht aus folgenden Teilen:
+ - [Residency]. Du kannst den Wohnsitz eines Grundstücks mit anderen teilen.
+ - [Rooms]. Ein Raum ist ein vollständig geschlossener Bereich, und viele Objekte müssen in einem Raum platziert werden, um zu funktionieren.
+ -[Property]. Die Bürger können einzelne Grundstücke beanspruchen, zu denen sie dann den Zugang kontrollieren können.
+ - [Power]. Viele Gegenstände benötigen zum Betrieb eine Stromquelle, und der erzeugte Strom kann von vielen Bürgern gemeinsam genutzt werden.
+ - [Sewage]. Bestimmte Gegenstände erfordern ein Abwassersystem aus Rohren, Pumpen und Abwasserbehandlung.
+
+216;Deine Unterkunft (zusammen mit deiner Ernährung) bestimmt deinen Fähigkeitszugewinn.
+217;Viele Objekte benötigen Energie, um zu funktionieren, und mit dem Fortschritt der Gesellschaft werden auch die Arten von Energie fortschreiten.
+  
+Am Anfang wird der größte Teil der Energie aus den von den Bürgern verbrauchten Kalorien stammen. Es können auch lokale Energiequellen wie [Waterwheels|Waterwheel Item] gebaut werden, die nur die unmittelbare Umgebung mit Energie versorgen. Wenn die Technologie auf Elektrizität umgestellt wird, kann Strom zentral erzeugt werden, sodass sich Gruppen zusammenschließen können, um Städte als Gruppe mit Strom zu versorgen, anstatt einzelne Stromquellen einrichten zu müssen (Gemeinschaftsprojekte wie dieses eignen sich hervorragend für die Verwendung des [Taxes] -Systems um sie zu finanzieren und [Contracts] und [Work Parties], um sie zu bauen).
+  
+Es gibt viele Arten der Stromerzeugung, und jede hat unterschiedliche Brennstoffanforderungen sowie Umweltauswirkungen. Der Bau, die Versorgung mit Kraftstoff und der Betrieb von Kraftwerken können mit fortschreitender Technologie zu einer wichtigen Quelle für [Pollution] werden. Die Bürger müssen die Art der Stromquellen und den Umgang mit Umweltverschmutzung sorgfältig regulieren, um eine ökologische Katastrophe zu verhindern.
+  
+218;Viele Objekte benötigen zum Funktionieren Energie, die auf unterschiedliche Weise erzeugt werden kann.
+219;
+    Durch die Inanspruchnahme von Grund, können die Bürger den Zugang zu Grundstücken schützen und bestimmen, wer das Grundstück betreten darf und was sie an darauf enthaltenen Gegenständen tun dürfen.
+  
+220;Landbesitzrechte
+221;
+  Grund kann als Eigentum beansprucht werden, indem ein [Land Claim Stake|Property Tool Item] verwendet und auf ein nicht beanspruchtes Grundstück anvisiert wird. Wenn ein Ziel ausgewählt wird, wird ein [Land Claim Paper|Property Claim Item] verbraucht und der Bürger wird der Eigentümer auf der Urkunde. Das Grundstück an deiner aktuellen Position wird im Weltfenster unten rechts auf dem Bildschirm angezeigt. Wenn du auf den Titel klickst, wird die Urkunde geöffnet.
+222;Objekt Eigentumsrechte
+223;Die Zugriffsrechte für Objekte können getrennt von dem Land festgelegt werden, auf dem sie sich befinden, um dem Verbraucher den Zugriff auf Objekte zu ermöglichen, die sich auf privatem Land befinden. Diese Einstellungen werden in einer [Authorization Component] festgelegt.  
+
+224;Urkunden
+225;In der Urkunde können Bürger Parteien hinzufügen und entfernen, die das Land betreten dürfen (Blöcke platzieren oder entfernen). Der Besitzer kann auch geändert werden, indem du auf das Zahnrad neben dem Namen des Besitzers klickst. Beachte, dass sowohl [Demographics] als auch [Titles] auf einer Urkunde als Eigentümer angegeben werden können, einschließlich [Elected Titles]. Durch die Strukturierung einer Regierung auf diese Weise können nur gewählte Beamte bestimmte Zugangsrechte zu Land erhalten.
+226;Bürger und Regierungen können Grundstücke besitzen und ihre Zugangsrechte festlegen.
+227;Räume sind geschlossene Bereiche, die vor Witterungseinflüssen geschützt sind, in denen alle Löcher nach außen mit Wänden, Türen und Fenstern gefüllt sind.
+
+Du kannst die Details zu einem Raum in einem Bereich auf der rechten Seite des Bildschirms sehen, während du dich in einem Bereich befindest, in dem die Informationen angegeben sind. Viele Arten von Objekten haben Raumanforderungen und nehmen Platz in ihrem Raum ein. Die Materialien des Raums müssen eine bestimmte Qualität aufweisen. Dein Wohnwert wird auch von der Qualität der Raummaterialien beeinflusst. Dies bedeutet, dass ein Ziegelstein, den ein Haus zum Beispiel bietet, viel mehr Nutzen bringt als eine Erdhütte.
+
+
+Einrichtung und Zimmertypen
+Wenn du Land beanspruchst und Räume darauf baust, sammelst du zusätzliche Erfahrungen, die auch offline bestehen bleiben. Durch das Hinzufügen zusätzlicher Zimmertypen und Möbel für diese Zimmer wird dies weiter erhöht. Jede Art von Möbeln ist einer Art von Raum zugeordnet: Badezimmer, Schlafzimmer, Küche oder Allgemein (auf dem Tooltip des Artikels angezeigt). Der Zimmertyp wird von der Kategorie bestimmt, aus der du den höchsten Einrichtungsbeitrag hast. Für jeden Raum wird sein Wert berechnet, indem alle darin enthaltenen Möbel summiert werden.
+
+Wiederholungen derselben Möbel in einem Raum oder Wiederholungen desselben Zimmertyps in einem Haus führen zu einer Verringerung der Rendite. Das heißt, du erhältst immer noch Wohnpunkte für sie, aber nicht so viele wie die ersten. Letztendlich wird der Punktegewinn vernachlässigbar sein und es wird sich nicht lohnen, dem Haus weitere Möbel oder Räume dieser Art hinzuzufügen. Zum Beispiel wird dein zwölftes Badezimmer deinem Haus viel weniger Wert verleihen als dein Erstes.
+
+Raummaterialqualität
+Die durchschnittliche Stufe des Raummaterials bestimmt auch deinen Wohnwert, indem es eine weiche Obergrenze setzt. Sobald dein Raumwert die weiche Obergrenze für den Raum überschritten hat, erhältst du abnehmende Renditen für zusätzliche Wohnpunkte. In diesem Fall kann es an der Zeit sein, die Materialien des Raums zu renovieren.
+
+228;Räume schützen dich und deine Ausrüstung vor Witterungseinflüssen, bieten Fähigkeitspunkte und ermöglichen das Funktionieren der Ausrüstung.
+229;
+Viele Industrie- und Wohnobjekte benötigen ein Abwassersystem, um funktionieren zu können. In der Regel bedeutet dies, dass sie Wasser als Eingang und einen Ausgang für Abwasser benötigen. Jedes Objekt, das eine [Pipe Component] hat, benötigt einen Abwasseranschluss.
+
+Abwassersysteme werden erstellt, indem ein [MechanicalWaterPumpItem] oder [ElectricWaterPumpItem] an eine Wasserquelle anschließt und dann Rohre zwischen den verschiedenen Objekten baut, die versorgt werden müssen. Auf der Abfallseite nehmen Rohre das Abwasser aus dem Objekt auf, um es entweder in die Umwelt abzuleiten (wobei am Austrittspunkt [Pollution] erzeugt wird) oder es in einem [Waster Filter|WasteFilterItem] zu verarbeiten, der [Compost|CompostItem] aus dem Abwasser erzeugt.
+
+Rohre verbinden sich automatisch mit jedem benachbarten Rohrblock desselben Typs. Verwende unterschiedliche Rohrmaterialien, um Abwassersysteme mit unterschiedlichen Rohren in unmittelbarer Nähe zu erstellen.
+
+230;Bestimmte Gegenstände benötigen Abwasser zur Wasserversorgung und Abwasserentsorgung.
+231;Komponenten in Verbindung mit der Industrie.
+232;Wenn du Erfahrung in Eco sammelst, kannst du neue Spezialisierungen und Fähigkeiten innerhalb dieser Spezialisierung freischalten. Es gibt zwei Arten von Erfahrung, die du sammeln kannst: Charaktererfahrung und Spezialisierungserfahrung. Beide werden durch deinen Erfahrungsmultiplikator erhöht.
+
+Charaktererfahrung
+Die Charaktererfahrung ist deine Lernrate im Hintergrund, wie schnell du Kenntnisse und Fähigkeiten erwirbst. Sie steigt ständig, auch wenn du offline bist. An jedem realen Tag erhältst du Charaktererfahrung mit einer Rate von 1 * deinen Erfahrungsmultiplikator. Wenn du ein Level aufsteigst, erhältst du eine neue Spezialisierungs-Freischaltung, die durch einen Stern dargestellt wird. Jedes Level erfordert mehr und mehr Charaktererfahrung, daher ist es sehr schwierig, mehr als ein paar Spezialitäten zu haben.
+
+Spezialisierungserfahrung
+Spezialisierungserfahrung ist deine Fähigkeit in einer bestimmten Spezialisierung, und anstatt ständig zu steigen, steigt sie nur, wenn du Aktionen ausführst, die mit dieser Spezialisierung zusammenhängen, wie z. B. die Herstellung oder Arbeit. Wie die Charaktererfahrung wird auch diese mit deinem Erfahrungsmultiplikator multipliziert. Auf der linken Seite des Bildschirms siehst du Symbole, die anzeigen, wie viel Erfahrung du beim Ausführen von Aktionen sammelst. Du kannst darauf klicken, um dir die verfügbaren Fertigkeitspunkte für diese Spezialität genauer zu betrachten.
+Mit einigen Level-Aufstiegen kannst du Talente freischalten, die bestimmte Boni für die Fähigkeiten geben, in denen sie sich befinden.
+
+Erfahrungsmultiplikator
+Dein Erfahrungsmultiplikator (oder XP-Multiplikator) ist ein persönlicher Wert, der dein Gesundheits- und Unterstützungssystem darstellt und bestimmt, wie schnell du neue Fähigkeiten erlernst. Es wird als Summe deiner [Nutrition]- und [Housing|Housing Overview]-Werte ermittelt. Da dies sowohl deinen Charakter als auch deine Spezialisierungs-Erfahrungspunkte beeinflusst, solltest du ihn so hoch wie möglich halten, indem du nahrhafte Essen isst und ein gut eingerichtetes Haus hast.
+
+
+233;Es gibt zwei Arten von Erfahrung in Eco: Charaktererfahrung (gewonnen durch Essen und Wohnen) und Spezialisierungserfahrung (gewonnen durch das Ausführen von Aktionen in einer Spezialisierung).
+234;
+Deine Erfahrung[Experience] wird durch deine Ernährung und Wohnen[Housing|Housing Overview] bestimmt. Je nahrhafter das Essen, das du isst, desto schneller wirst du [Experience] sammeln. Je gesünder du bist, desto schneller kommst du voran.
+
+Lebensmittel enthalten vier Nährstoffe: Eiweiß, Fett, Vitamine und Kohlenhydrate. Durch das Addieren des Durchschnitts jedes dieser Nährstoffe in allen Lebensmitteln, die du in den letzten 24 Stunden gegessen hast, wird dein Erfahrungsmultiplikator bestimmt. Dies bedeutet, dass wenn du Junk-Food (niedrige Nährstoffe) isst, es dich 24 Stunden lang betrifft, bevor es durch deinen Körper gelangt ist.
+
+Zusätzlich wird ein Gleichgewichtsmultiplikator angewendet, der einen zusätzlichen Wert von 0 % - 50 % ergibt, je nachdem, wie gleich die Nährstoffe in deinem Körper sind. Wenn du z. B. genau 25 % von jedem Nährstoff hast, erhältst du eine zusätzliche Fähigkeit von 50 %.
+
+Abhängig von den Schwierigkeitseinstellungen für diesen Server kann auch ein Fertigkeitsgewinn-Multiplikator festgelegt werden, der ihn weiter erhöht.
+
+Schließlich wird ein Basiswert für den Fertigkeitsgewinn zu der Gesamtsumme addiert. Dadurch wird sichergestellt, dass du auch bei völligem Hunger zumindest eine gewisse Fertigkeit erlangst.  Du kannst all diese Berechnungen im Tooltip für Nahrung in der unteren linken Benutzeroberfläche selbst sehen.
+
+Kalorien
+Kalorien werden im Gegensatz zu Nährstoffen verbraucht, wenn du arbeitest, und wenn dir die Kalorien ausgehen, kannst du erst arbeiten, wenn du mehr isst. Der Kalorienverbrauch kann durch verbesserte Werkzeuge und dem Aufleveln von Fähigkeiten erheblich reduziert werden.
+Alle Lebensmittel enthalten sowohl Kalorien als auch Nährstoffe. Während du also Kalorien aus Lebensmitteln gewinnst, bestimmst du auch deinen Fähigkeitsmultiplikator, also achte auf deine Ernährung.
+
+235;Die Ernährung bestimmt neben der Unterbringung, wie schnell du Erfahrung sammelst.
+236;Zentral für eine florierende Wirtschaft ist die Fähigkeit, sich zu spezialisieren und zu handeln und dadurch effizienter zu arbeiten, als wenn du versucht hättest, alles selbst zu tun. Um eine erfolgreiche Gesellschaft zu erreichen, muss beides erfolgreich erreicht werden.  
+    
+    Die Fähigkeiten eines Bürgers verleihen ihm einzigartige Fähigkeiten und Verbesserungen, die es ihm ermöglichen, mit anderen Bürgern mit anderen Fertigkeiten in der Wirtschaft zu [Trade]. Wenn du [Experience] sammelst, kannst du neue [Specialties] freischalten und vorhandene verbessern. Die Erfahrung, die du sammelst, wird mit deiner [Nutrition] und [Housing|Housing Overview] multipliziert.    
+  
+237;Das Fähigkeits-System ermöglicht es den Bürgern, sich auf bestimmte Berufe zu spezialisieren.
+238;
+    Spezialitäten werden freigeschaltet, wenn du durch Charakter[Experience] aufsteigst. Jede Spezialität (mit einem Stern dargestellt) schaltet neue Fähigkeiten frei, die du verwenden kannst.
+
+Berufe und Fachgebiete
+[Professions|Profession Overview] sind lediglich Gruppierungen von Fähigkeiten und dienen keinem anderen Zweck als dem gemeinsamen Gruppieren ähnlicher Fähigkeiten.
+Spezialitäten sind jeweils in einem Beruf enthalten und erfordern zwei Schritte, um sie zu erhalten.
+
+1. Zuerst musst du eine Fähigkeitsrolle für die Fähigkeit lesen.
+2. Als Nächstes musst du einen Stern ausgeben, um die Spezialität zu erhalten.
+
+Sobald du die Spezialität ausgewählt hast, erhältst du die damit verbundenen Grundfähigkeiten. Wenn du spezialisierungsbezogene Aktionen ausführst, erhältst du Spezialisierungs-[Experience], was die Spezialisierung erhöht und neue Fähigkeiten freischaltet.
+Du kannst die Verbreitung von Spezialisierungen sehen, die andere Bürger im Dialogfeld zur Auswahl der Fähigkeiten ausgewählt haben, und es ist oft eine gute Idee, Spezialitäten auszuwählen, die andere Spieler nicht ausgewählt oder gelevelt haben. Auf diese Weise kannst du jeweils deine eigenen Spezialitäten ausführen und [Trade] miteinander treiben, um einen Nettogewinn zu erzielen.
+
+
+239;Spezialisierungen können durch Sammeln von Charaktererfahrung gewonnen werden, und jede Spezialisierung wird neue einzigartige Fähigkeiten freischalten.
+240;Essen und Wohnen sind unerlässlich, um deine Fähigkeiten zu verbessern.
+241;Tischler sind Spezialisten für die Arbeit mit Holz.
+
+   - Mit [LoggingSkill] können Bürger Bäume schneller fällen und gleichzeitig weniger Kalorien verbrauchen. Darüber hinaus wird diese Spezialisierung zur Herstellung von [HewnLogItem] verwendet, dem Hauptbaustoff für den Schreinerberuf.
+   - Mit [CarpentrySkill] können Bürger Holzmöbel und [Boards|Board Item] herstellen. Mit einem [SawmillItem] können Bürger mit dieser Spezialisierung [LumberItem] und hochwertigere Möbel herstellen.
+   - [CompositesSkill] ermöglicht es den Bürgern, mithilfe fortschrittlicher Technologie Holzbaustoffe von höchster Qualität herzustellen.
+   - Mit [PaperMillingSkill] können Bürger Zellstoff zu [PaperItem] raffinieren. Papier wird für einige Spezialmöbel verwendet.
+	
+242;Schreiner sind auf die Arbeit mit Holz spezialisiert.
+243;Köche kochen hochwertiges Essen, das es den Bürgern ermöglicht, schneller Erfahrung zu sammeln. Unter Verwendung der von Landwirten und Jägern produzierten Rohkost stellen Köche Lebensmittel her, die einen hohen Nährstoffgehalt haben. Mit fortschreitender Technologie kochen die Chefkoch-Spezialitäten immer hochwertigere Lebensmittel.
+  
+  - [CampfireCookingSkill] ist die Einstiegs-Kochspezialität, die einen [CampfireItem] verwendet, um bessere Mahlzeiten zuzubereiten als die einfache verkohlte Nahrung, die von Nicht-Köchen hergestellt wird.
+  - [CookingSkill] ist die zweite Stufe im Beruf des Kochs, der einen [CastIronStoveItem] verwendet, um hochwertigere Mahlzeiten herzustellen.
+  - [BakingSkill] ist eine Alternative zum Kochen, bei der [FlourItem] zur Herstellung von Backwaren verwendet wird.
+  - [AdvancedCookingSkill] ist ein hochstufiger Kochberuf, der die höchste Stufe von Speisen herstellt.
+  - [AdvancedBakingSkill] ist eine Alternative zum Fortgeschrittenen Kochen, die [YeastItem] verwendet, um hochwertige Backwaren mit [LeavenedDoughItem] herzustellen.  
+244;Köche kochen qualitativ hochwertige Speisen, mit denen die Bürger schneller Erfahrungen sammeln können.
+245;Ingenieure nutzen die von anderen Berufen geschaffenen Materialien, um den technologischen Fortschritt voranzutreiben. Die Fahrzeuge, die sie produzieren, verbessern die Kapazität für den Handel und die Geschwindigkeit, mit der die Bürger arbeiten, erheblich. Die von ihnen hergestellten Handwerkstische werden von verschiedenen Berufen verwendet, um hochwertige Waren herzustellen. Ingenieur zu sein erfordert eine häufige Interaktion mit anderen Berufen, da Ingenieure nicht in der Lage sind, die für das Handwerk erforderlichen primären Beiträge zu produzieren.
+  
+- Mit [BasicEngineeringSkill] können Bürger Straßen und Karren herstellen, um den Transport zu erleichtern. Darüber hinaus erstellt der Grundmaschinenbau die Handwerkstische, die für die Verarbeitung und das Schmelzen von Erz erforderlich sind.
+- Mit [MechanicsSkill] können Bürger frühe motorisierte Fahrzeuge wie ein [SteamTruckItem] erstellen. Die Mechanik ist die erste elektrische Energiequelle, die den technologischen Fortschritt ermöglicht.
+- Mit [IndustrySkill] können Bürger fortschrittliche Fahrzeuge wie ein [ExcavatorItem] erstellen, mit dem große Mengen natürlicher Ressourcen schnell gesammelt werden können.
+- Mit [OilDrillingSkill] können Bürger ein [PumpJackItem] verwenden, um [PetroleumItem] für Kraftstoff und eine Vielzahl von Industrieprojekten zu sammeln.
+- [ElectronicsSkill] ist eine luxuriöse Spezialisierung für Ingenieure, die teure Zutaten verwendet, um die fortschrittlichsten Materialien herzustellen, die für moderne Herstellungsprojekte benötigt werden. Neben der Bereitstellung von Ökostrom wird mithilfe der Elektronik das [LaserItem] hergestellt, das zur Rettung der Welt vor dem Meteor benötigt wird.
+  
+246;Ingenieure sind meisterhafte Erfinder, die Fahrzeuge und andere fortschrittliche Produkte für andere Bürger herstellen.
+247;
+Landwirte sind Spezialisten in der Landwirtschaft. Die von ihnen produzierten Feldfrüchte sind eine Hauptquelle für die Kalorien, die die Bürger für ihre Arbeit benötigen.
+  - [GatheringSkill] erlaubt es Bürgern, Saatgut aus Produkten zu erzeugen, um große Farmen zu schaffen.
+  - [FarmingSkill] erlaubt es den Bürgern, dem Boden Nährstoffe hinzuzufügen und die Bodenbedingungen mit einem [SoilSamplerItem] zu testen.
+  - [FertilizersSkill] erlaubt es Bürgern, mehr Produkte sowohl von wilden Pflanzen als auch von Menschen angelegten Farmen zu ernten.
+  - [MillingSkill] erlaubt es Bürgern, Produkte in einem [MillItem] zu verarbeiten, damit sie von Köchen in fortgeschritteneren Rezepten verwendet werden können.
+  
+248;Landwirte sind Spezialisten in der Landwirtschaft.
+249;
+    Jäger sind Spezialisten für die effiziente Jagd auf Tiere und die Zubereitung von Fleisch für die Verwendung durch Köche. Die beiden Jägerspezialitäten sind eng miteinander verbunden, da die gejagten Tiere verarbeitet werden müssen, bevor sie von einem Koch verwendet werden können. 
+    
+  - Der [ButcherySkill] ermöglicht es Bürgern, Tierkadaver zu zubereitetem Fleisch für Köche zu verarbeiten. Die dabei entstehenden Felle und Häute können für Kleidung und andere Herstellungsprojekte verwendet werden.
+  - Der [HuntingSkill] gewährt Bürgern zusätzlichen Schaden bei der Jagd auf Tiere und ermöglicht es ihnen, sich Tieren auf eine geringere Distanz zu nähern, ohne dass diese weglaufen.
+  
+250;Jäger sind Spezialisten für die Jagd auf Tiere und die Zubereitung von Fleisch für Köche.
+251;Steinmetze sind Spezialisten im Abbau und der Bearbeitung von Stein. Sie sind eine wertvolle Quelle für Baumaterial und Möbel für Häuser. Das Erz, das sie sammeln, wird von Schmieden zum Schmelzen von Metallbarren verwendet.
+  
+  -[MiningSkill] ermöglicht es Bürgern, beim Abbau von Stein und Erz weniger Kalorien zu verbrauchen. Bergarbeiter verarbeiten auch das gesammelte Erz und konzentrieren es, um es für die Verhüttung zu verwenden.
+  -[MasonrySkill] erlaubt es Bürgern, [MortarItem] zu produzieren, eine Hauptzutat für die meisten Baumaterialien der Maurer. Das [MortaredStoneItem], das sie produzieren, ist eine großartige Quelle für frühes Baumaterial.
+  -Der [PotterySkill] erlaubt es Bürgern, [BrickItem] Baumaterial und Möbel aus [ClayItem] herzustellen.
+  -[GlassworkingSkill] erlaubt es den Bürgern, [GlassItem] und später [FramedGlassItem] herzustellen. Glas ist ein schönes ergänzendes Baumaterial und wird in einer Vielzahl von industriellen Projekten verwendet.
+  -[AdvancedMasonrySkill] ist eine hochstufige Steinmetz-Fertigkeit, die feinstes Baumaterial und Möbel aus Quaderstein herstellt.
+  
+252;Maurer sind Spezialisten im Bergbau und in der Arbeit mit Stein.
+253;Berufe sind Gruppen ähnlicher [Specialties], die neue Herstellungsrezepte freischalten und Fähigkeiten wie reduzierten Kalorienverbrauch beim Herstellen oder Verwenden eines Werkzeugs bieten. Innerhalb jedes Berufs gibt es eine Gruppe von ähnlichen Spezialisierungen.
+  
+Nachfolgend steht eine Liste aller Berufe und der entsprechenden Spezialisierungen. Die Bürger können sich auf einen Beruf konzentrieren oder Spezialitäten aus verschiedenen Berufen lernen.
+  
+254;Berufe verleihen den Bürgern besondere Fähigkeiten und die Fähigkeit, fortgeschrittene Gegenstände herzustellen.
+255;Schmiede schmelzen konzentriertes Erz zu Metallbarren, die von einer Vielzahl von Berufen verwendet werden können. Darüber hinaus stellen die Schmiede bessere Werkzeuge her, die den Bürgern helfen, produktiver zu arbeiten.
+  
+- [SmeltingSkill] sind Spezialisten für die Herstellung von Metallbarren, die die Grundlage für den technologischen Fortschritt bilden. Die Eisenwerkzeuge, die sie herstellen, bieten erhebliche Vorteile gegenüber den frühen Steinwerkzeugen.
+- [AdvancedSmeltingSkill] ermöglicht es den Bürgern, Eisenbarren weiter zu [Steel|SteelBarItem] zu veredeln, um sie in der Industrie und für hochwertige Baumaterialien zu verwenden. Bürger mit dieser Spezialität können den von ihnen hergestellten Stahl zu noch moderneren Werkzeugen verarbeiten als die durch einfaches Schmelzen hergestellten Eisenwerkzeuge.  
+256;Schmiede schmelzen Erz zu Metallbarren und stellen fortschrittliche Werkzeuge her.
+257;Alle Bürger sind Überlebenskünstler in der Welt von Eco. 
+  
+Erfahrung in [SelfImprovementSkill] wird immer dann gesammelt, wenn ein Bürger in einer anderen Spezialisierung aufsteigt. Selbstverbesserung hat zwei Hauptvorteile. Dadurch dass die Bürger fortschreiten, werden sie eine erhöhte Tragfähigkeit und eine größere Magenkapazität für zusätzliche Kalorien haben. Darüber hinaus werden bei Verwendung von Hämmern, Schaufeln und Bohrern weniger Kalorien verbraucht.
+  
+258;Überlebenskünstler verbrauchen weniger Kalorien, wenn sie grundlegende Werkzeuge verwenden, und haben ein höheres Traggewicht.
+259;Schneider arbeiten mit Stoff, um Kleidung und hochwertige Möbel für andere Bürger herzustellen. Im Gegensatz zu anderen Berufen hat der Schneiderberuf nur eine Spezialität.
+
+Mit [TailoringSkill] können Bürger [ClothItem] für Herrstellungsprojekte verschiedener Berufe erstellen. Die Kleider, die Schneider erstellen, bieten den Bürgern besondere Prämien. Beispielsweise hat ein [BigBackpackItem] eine höhere maximale Gewichtsgrenze als der Starter-[BasicBackpackItem].
+	
+260;Schneider arbeiten mit Stoff, um Kleidung und hochwertige Möbel für andere Bürger herzustellen.
+261;Jedes Objekt, das eine Fahrzeug-Komponente enthält, kann auf verschiedene Weise gefahren und benutzt werden, was eine Reihe von Vorteilen bietet.
+  
+Viele Fahrzeuge benötigen [Power|Power Component] zum Betrieb und jedes hat seine eigene [Storage|Storage Component]. Durch den Aufbau einer Infrastruktur auf der ganzen Welt werden deine [Transport] -Fähigkeiten erheblich verbessert, da viele Fahrzeuge Straßen benötigen, um zu funktionieren.
+262;  
+- Transport: Fahrzeuge wie das [WoodCartItem] können Güter und Personen von Ort zu Ort transportieren. Mit fortschreitender Technologie werden fortschrittlichere Fahrzeuge mit höheren Bewegungsgeschwindigkeiten und höherer Tragfähigkeit auf Kosten der Entstehung von Umweltverschmutzung verfügbar
+
+- Ausgrabung: Mit [ExcavatorItem] und [SkidSteerItem] können große Mengen von Erde und Gestein schnell bewegt werden. Dies erhöht die Geschwindigkeit von [Mining] erheblich und ermöglicht eine schnelle Rodung von Landflächen für neue Bauprojekte.
+
+- Bau: Das [CraneItem] kann schnell große [Building] -Projekte fertigstellen. Der Kran hat eine viel größere Reichweite als ein Bürger, der mit einem Hammer baut und kann auf große Mengen an Lagerung zugreifen.
+
+264;Fahrzeuge besitzen vielfältige Einsatzmöglichkeiten.
+265;
+In Eco ernten die Spieler zunächst Nahrung aus den wilden Biomen um sie herum. Pflanzen, die reif für die Möglichkeit sind, nachhaltig zu ernten, gibt es im Überfluss. Wilde Nahrungsquellen können als zusätzliche erneuerbare Ressource dienen, werden aber schnell versiegen, wenn sie ausgenutzt werden. Einige Pflanzen sind für mehr als nur Nahrung nützlich: sie können chemische Verbindungen liefern, die nirgendwo anders gefunden werden können, oder die Rohstoffe, die für Textilien und Kleidung benötigt werden.
+
+Verschiedene Pflanzen erfordern unterschiedliche Werkzeuge zum Ernten, wie z. B. eine Schaufel oder eine Sense. Andere Arten können ohne Werkzeug von Hand gepflückt werden. Ebenso werden einige Pflanzen beim Ernten abgetötet, während bei anderen die gepflückten Früchte einfach wieder nachwachsen, wenn sie weiter wachsen und gesund sind. 
+
+
+  
+266;Das lebende System von Pflanzen und Tieren, das den Menschen die Grundlage bietet, zu überleben.
+267;
+Tierarten sind Bewohner der Welt in Eco, die sich hinsichtlich der möglichen Nutzung als Ressourcen stark unterscheiden. Einige Arten eignen sich hervorragend für Fleisch- und Nahrungsquellen wie Milch, während andere nützliche Nebenprodukte wie Wolle, Leder, Talg oder Knochenmehl liefern können. Tiere unterscheiden sich jedoch auch stark in Bezug auf ihre Widerstandsfähigkeit und Anpassungsfähigkeit an Auswirkungen auf ihre Populationen, ihren Lebensraum und ihre Nahrungsquellen. 
+
+Durch die Jagd können Spieler verschiedene Fallen und Handwerkzeuge verwenden, um wilde Tiere direkt aus den Ökosystemen zu ernten, in denen sie leben. Die Jagd kann auch dazu dienen, übermäßige Tierpopulationen zu kontrollieren oder zu erlegen. Die Jagd wird eine wichtige, aber nicht unbedingt notwendige Aktivität für die Spieler sein, insbesondere am Anfang, um den Appetit einer großen Gesellschaft zu stillen. 
+
+Die Jagd auf ein Tier ist nur der erste Schritt, um es optimal zu nutzen. Dank der Fortschritte in der Metzgerei können Spieler Tiere für eine Vielzahl von tierischen Produkten verarbeiten und verwenden. Die Zusammenarbeit mit anderen Berufen wie Köchen und Schneidern wird viele ernährungsphysiologische, industrielle und sogar kulturelle Verwendungszwecke für Tiere und ihre Produkte freisetzen, die nicht alle durch die Jagd erreicht werden müssen. Wenn jedoch ein bestimmtes tierisches Produkt in der Wirtschaft populär wird, muss darauf geachtet werden, dass kein zerstörerischer Druck auf eine Art ausgeübt wird. Die Jagd ist oft der letzte Schlag für eine gefährdete Art, deren Produkte mit zunehmender Seltenheit immer wertvoller werden.
+
+Um mit der Jagd zu beginnen, musst du ein [WoodenBowItem] und einige [Arrows|Arrow Item] herstellen. Fortgeschrittenere Bögen erleichtern es, dein Ziel schnell zu treffen. Denke daran, dass Tiere mit einem gezielten Schuss schneller getötet werden können und dass es möglicherweise einfacher ist, einige Tiere je nach Tageszeit zu jagen. 
+  
+268;Das lebende System von Pflanzen und Tieren, das den Menschen die Grundlage bietet, zu überleben.
+269;Ecopedia-Leitfaden für den Einstieg.
+270;
+    Sobald du deine Grundbedürfnisse gedeckt hast, ist es Zeit darüber nachzudenken, wie du zum Gemeinschaftsprojekt der Gesellschaft beitragen möchtest, und dein Beruf ist, wie du das tust.
+  
+271;
+
+In jedem Beruf befindet sich eine Reihe von [Specialties], die besondere Fähigkeiten freischalten. Da die Bürger nur eine begrenzte Anzahl von Spezialisierungen haben können, ist es ein guter Ansatz, verschiedene Spezialisierungen zu nehmen und dann untereinander [Trade] zu treiben. Im Fähigkeitsfenster kannst du sehen, wie viele Bürger sich für einen Beruf entschieden haben, und nach den am meisten benötigten Fähigkeiten suchen, um diejenigen auszuwählen, auf die du dich konzentrieren möchtest.
+  
+272;
+    Sehe dir die [Profession Overview] an, um einen Überblick über die verschiedenen Optionen zu erhalten.
+  
+273;(Beachte: Der Fertigkeiten-Dialog ist bis zum Ende des Tutorials ausgeblendet. Er kann durch Abschließen des Tutorials oder Überspringen sichtbar gemacht werden)
+ 
+274;Eine Welt mit einer Reihe von Berufen kann zum gegenseitigen Nutzen handeln.
+275;
+    Die [Government|Government Overview] von Eco wird von einzelnen Bürgern betrieben, und die Qualität der Regierungsführung hängt vollständig davon ab, wie sich diese Bürger beteiligen.
+
+     Es gibt eine Reihe von Möglichkeiten, sich an der Regierungsführung zu beteiligen, darunter:
+
+     - Gründung der Regierung durch Erstellung eines [CapitolItem] und einer [Constitution].
+     - Definieren von Bürgerrechten, einschließlich  [Districts], [Demographics], [Elected Titles], [Election Processes], und [Amendments|Constitution].
+     - Bewerbung als Kandidat für einen [Elected Title|Elected Titles] mit besonderen Befugnissen, die ihm von der Verfassung zugewiesen wurden.
+     - Erlass von [Laws] nach Erlangung des Privilegs dies zu tun (in der Verfassung definiert).
+     - Erlass von [Executive Actions] mit Privilegien, die auch in der Verfassung festgelegt sind.
+     - Abstimmung in [Elections] für [Elected Titles] und andere Bürgeraktionen.
+     - Debattiere Gesetze unter Verwendung von [Data] und präsentiere deinen Mitbürgern Argumente, die für oder gegen eine Entscheidung argumentieren.
+  
+276;
+    Jede dieser Optionen ist an einer Vielzahl von Orten verfügbar, die von Bürgern errichtet werden müssen. Die aktuelle Regierung kann durch Auswahl des Regierungssymbols in der Aktionsleiste angezeigt werden. Wenn du den Mauszeiger über jeden Abschnitt bewegst, wird angegeben, wo das Bürgerrecht definiert ist.
+  
+277;Deine bürgerlichen Pflichten sind die vielen verschiedenen Möglichkeiten, wie du mit der Regierung interagieren kannst.
+278;Um eine Gesellschaft durch die Jahrhunderte auf den Höhepunkt der Technologie zu bringen, ist eine blühende [Economy|Economy Overview] erforderlich, und durch ihre Teilnahme können die Bürger sowohl zum Fortschritt der Gesellschaft beitragen als auch ihre eigenen Fähigkeiten und ihren Wohlstand fördern.
+ 
+Die Teilnahme an der Wirtschaft erfolgt durch den [Trade] mit Waren und Dienstleistungen. Durch die Suche nach bestehenden Siedlungen mit [Stores|Store Component], [Contracts] und [Work Parties] können die Bürger die Waren und Arbeitskraft, auf die sie sich spezialisiert haben, gegen die Spezialisierungen anderer eintauschen und ihre individuellen Ziele schneller erreichen, als wenn sie jeweils alleine gearbeitet hätten.  
+Wenn du neue Projekte übernimmst, für die Materialien oder Arbeitskraft erforderlich sind, die du selbst nicht herstellen oder ausführen kannst, kannst du stattdessen die Waren und Dienstleistungen verkaufen, die du auf dem Markt ausführen kannst, indem du Geschäfte erstellst und Preise in einer [Currency] deiner Wahl festlegst. Wenn du diese Währung verwendest, um Waren und Dienstleistungen anderer zu kaufen, kannst du diese Ziele erreichen, ohne alles selbst lernen zu müssen.
+
+Wenn du deine Fähigkeiten ausbaust und mehr und mehr anderer Bürger benötigst, kannst du deine eigenen Geschäfte, Verträge und Arbeitsgruppen einrichten, um deren Hilfe zu suchen. Wenn du Wohlstand erwirbst, steigt deine Fähigkeit, Veränderungen (sowohl gute als auch schlechte) herbeizuführen. 
+279;Der effizienteste Weg, um in Wissen und Technologie Fortschritte zu erzielen, ist der Handel in der Wirtschaft.
+280;Während eine funktionierende Gesellschaft notwendig ist, um den Meteor aufzuhalten, muss jeder Einzelne seine eigenen Bedürfnisse befriedigen, angefangen bei Nahrung und Unterbringung.
+ 
+281;Auswahl einer Siedlung
+282;Wenn du dich für einen Standort entscheidest, an dem du dich niederlassen möchtest, solltest du die folgenden Faktoren berücksichtigen:
+283;Nähe zu Ressourcen
+Natürliche Nahrungsquellen und Baumaterialien in der Nähe werden die ersten Fortschritte erheblich beschleunigen.
+
+Nähe zu Anderen
+Die Einrichtung in der Nähe anderer Siedlungen bietet einen deutlichen Vorteil, da du dann mit anderen handeln kannst, um schneller Fortschritte zu erzielen. Ein überfülltes Gebiet kann jedoch auch begrenzte Möglichkeiten für Expansion und natürliche Nahrung in der Nähe haben. Du solltest ein Gleichgewicht finden, das auf deinen persönlichen Vorlieben basiert.
+  
+284;Dein Grundstück Beanspruchen
+285; Sobald du einen Ort für den Bau deiner ersten Siedlung ausgewählt hast, möchtest du [Property] um ihn herum beanspruchen. Wenn du dein Startzelt aufstellst, geschieht dies automatisch, und weiterer Grund kann mit Landpapieren beansprucht werden. Von dir beanspruchter Grund wird vor anderen Bürgern geschützt, sofern du ihnen keinen Zugang gewährst.
+286;Nahrung
+287;Eine Nahrungsquelle zu finden ist entscheidend, um die Kalorien zu haben, die du zum Arbeiten benötigst. Darüber hinaus wirken sich die [Nutrition] der Lebensmittel, die du isst, darauf aus, wie schnell du Erfahrung sammelst. Daher möchtest du die besten verfügbaren Lebensmittel essen, um den schnellsten Fortschritt zu erzielen. Wenn du dich in der Wildnis niederlässt, suche Nahrungsquellen in der Nähe, oder plane die Einrichtung einer [Farm|Farming]. Wenn du dich in der Nähe eines bestehenden Dorfes niederlässt, schaue dir die lokale Wirtschaft an, um zu sehen, ob du [Trade] treiben kannst, um Nahrung zu erhalten.
+288;Die Errichtung einer Nahrungsquelle und Unterkunft hat oberste Priorität. 
+289;Das [Ecosystem|Ecosystem Overview] bietet eine Vielzahl von Ressourcen, die die Bürger nutzen können, ist aber auch anfällig für ihre Auswirkungen. Um als Gesellschaft erfolgreich zu sein, ist ein intelligentes Wirkungsmanagement erforderlich, bei dem mithilfe der [Government|Government Overview] geregelt wird, was zulässig ist.
+ 
+Verschiedene Formen von [Pollution] können sich auf die Umwelt auswirken und das Potenzial für Katastrophen schaffen, die deine Nahrungsmittelversorgung zerstören und den Fortschritt stoppen können, was zu einem ökologischen Zusammenbruch führt. Mithilfe von [Data] -Mitteln können Bürger die Auswirkungen überwachen, die sie auf die Welt haben, und diese Daten verwenden, um spezifische Vorschriften zu bestreiten, um sie zu schützen, oder um die Wirtschaft auf anderen Wegen zu beschleunigen.
+
+Die Welt beginnt als eine riesige unberührte Wildnis, und im Laufe der Zeit müssen die Bürger sie mithilfe von Technologie radikal verändern, um die Industrie und das Wissen aufzubauen, die erforderlich sind, um [The Meteor] zu stoppen. Die Bürger müssen sorgfältig zwischen der maximalen Nutzung der Ressourcen des Ökosystems und der Vermeidung von irreparablen Umweltschäden navigieren.
+
+290;Das Ökosystem stellt viele Ressourcen zur Verfügung, ist aber anfällig für menschliches Handeln.
+291;
+  Eco ist eine Welt, die von zwei Bedrohungen heimgesucht wird: Der ökologische Kollaps und der immer näher rückende [Meteor|The Meteor].
+  
+Um erfolgreich zu sein, musst du im Laufe der Jahrhunderte Fortschritte machen und Wissenschaft und Industrie auf ein Niveau bringen, das den Meteor zerstören kann, ohne dabei einen ökologischen Zusammenbruch zu verursachen. Du tust dies als einzelnes Mitglied einer größeren Gesellschaft, und die Schaffung eines positiven Zusammenspiels zwischen individuellen Bedürfnissen und gesellschaftlichen Bedürfnissen ist entscheidend für den Erfolg.  
+
+Dein Fokus in Eco wird darauf liegen, deinen individuellen Fortschritt zu verwalten und gleichzeitig daran zu arbeiten, die [Economy|Economy Overview] als Ganzes voranzutreiben, und dies in einem reichhaltigen [Ecosystem|Ecosystem Overview] von Pflanzen und Tieren, die von deinen Aktivitäten betroffen sind.  
+
+Um eine positive Beziehung zwischen diesem Dreieck aus Individuen, Wirtschaft und Ökosystem herzustellen, stehen dir die Werkzeuge der [Government|Government Overview] zur Verfügung. Du kannst verbindliche [Laws] festlegen, die festlegen, was zulässig ist, und für [Election|Elections] kandidieren, um Regierungsbefugnisse zu erlangen, um Änderungen vorzunehmen und die Gesellschaft zu leiten.
+
+ Aber zuerst musst du dich um deine Grundbedürfnisse kümmern, bevor du die Welt retten kannst. Dazu beginnst du mit [Food and Shelter].
+292;Deine Reise in Eco.
+293;Die Welt hat ein Ablaufdatum erhalten: ein Meteor in einer zusammenbrechenden Umlaufbahn um den Globus, der in 30 Echtzeit-Tagen kollidieren und dabei alles zerstören wird.  
+  
+Die Hoffnung ist jedoch nicht verloren, denn mit der richtigen Technologie kann diese Krise verhindert werden. Durch die Zusammenarbeit, um eine florierende [Economy|economy overview] zu generieren und Fortschritte der [Research] voranzutreiben, hat die Menschheit die Chance, den [Laser|LaserItem] aufzubauen, der zur Zerstörung dieser Bedrohung erforderlich ist.
+
+Es wird keine leichte Aufgabe sein, und die Industrie, die erforderlich ist, um solche Fortschritte zu erzielen, wird eine echte Bedrohung für das [Ecosystem|Ecosystem Overview] darstellen. Um dies zu bekämpfen und nicht Opfer eines ökologischen Zusammenbruchs deiner eigenen Schöpfung zu werden, muss eine gut regulierte [Government|Government Overview] von ihren Bürgern entworfen, umgesetzt und geschaffen werden.
+
+Das Schicksal der Welt hängt davon ab, dass ihre Bürger im Einklang mit dem Ökosystem zusammenarbeiten, um große technologische Leistungen zu erzielen, und nur durch eine studierte Zusammenarbeit können sie Erfolg haben.
+  
+294;Eine bedrohende Gefahr von oben.
+295;Durch den Einsatz von Werkzeugen können die Bürger große Strukturen bauen und Berge versetzen. Mit den Startwerkzeugen kannst du nur kleine Änderungen vornehmen, aber mit fortschreitender Technologie erhältst du jedoch Werkzeuge, die Batchbetrieb durchführen können, und schließlich [Vehicle|Vehicle Component], die massive Veränderungen in der Welt bewirken können. 
+296;Es stehen verschiedene Werkzeugtypen zur Verfügung:
+  - [Building]-Werkzeuge. Mit Hämmern kannst du Baumaterialien in 'Formen' platzieren, mit Schaufeln kannst du den Boden bewegen.
+  - [Farming]-Werkzeuge. Pflügen, Pflanzen und Säen verfügen alle über Werkzeuge, um ihre Effizienz zu steigern.
+  - [Transport]-Werkzeuge. Fahrzeuge und Werkzeuge für den Straßenbau sind besonders nützlich für den Warentransport.
+  - [Harvesting]-Werkzeuge. Diese Werkzeuge ermöglichen das Sammeln von Ressourcen aus dem Ökosystem.
+  - [Hunting]-Werkzeuge. Die Jagd auf Tiere erfordert spezielle Werkzeuge.
+  
+Werkzeuge, die manuell angetrieben werden, benötigen Kalorien, was sich auf deine [Nutrition] auswirkt.
+Allen Werkzeugen ist eine Haltbarkeit zugeordnet, die bei Verwendung abnimmt. Sobald ein Werkzeug seine Haltbarkeit verloren hat, benötigt es eine enorme Menge an Kalorien und sollte an einer [Repair|Repair Component]-Tisch repariert werden.
+  
+297;Der Zugang zu den besten Werkzeugen ermöglicht dir den schnellsten Fortschritt zu erzielen.
+298;Nach dem Sammeln einiger grundlegender Rohstoffe ist das Bauen eines der ersten Dinge, die ein Bürger tun wird, um sich in der Welt zu etablieren.
+  
+  
+299;Mit einem Hammer oder einem Kran können Bürger Gebäude für das Zuhause und die Industrie bauen.
+300;
+Mit der Meine-Urkunden-Komponente können Bürger alle [Property] anzeigen und verwalten, die sie besitzen, und eine Schnittstelle bereitstellen, über die sie problemlos darauf zugreifen können.
+  
+301;Ermöglicht es den Bürgern alle Grundstücke, die sie besitzen, zu sehen und zu verwalten.
+302;
+Die Text-Komponente befindet sich auf Schildern, [Vehicles|Vehicle Component] und der [Distribution Station|Item Distribution Component].
+  
+Text kann nützlich sein, um Anweisungen zu geben, zu werben oder einfach nur eine freundliche Begrüßung zu schreiben
+
+Diejenigen, die mit Text-Markups vertraut sind, können verschiedene Tags verwenden, um die Größe, Farbe und Formatierung von Text zu ändern.
+
+303;Ermöglicht Bürgern das Schreiben von Text, der anderen Bürgern angezeigt wird.
+304;
+Ein grundlegendes Ziel der Ökosystemsimulation in Eco ist es, eine Vielzahl von Nahrungsnetzen zu enthalten. Nahrungsnetze können als eine Reihe von „Verbraucher“ - und „Konsum“ -Beziehungen zwischen Pflanzen und Tieren betrachtet werden, die sich auf eine bestimmte Tiergemeinschaft und ihre Lieblingsnahrungsmittel konzentrieren. Im Allgemeinen besteht die Idee darin, in jedem Biom mindestens ein starkes Nahrungsnetz zu haben. Nahrungsnetze sind oft die Grundlage für die wichtigsten Wechselbeziehungen zwischen Arten in einem Ökosystem. Viele Arten verlassen sich auf andere Arten, um Nahrung zu erhalten oder um die Arten zu jagen, die sie fressen.
+
+Die Beute und Raubtiere des Tieres können über die Webschnittstelle angezeigt und die verknüpften Ebenen überprüft werden. Derzeit ist die Beute-Raubtier-Beziehung eine Möglichkeit: Die Raubtiere benötigen die Beute, aber sie entfernen tatsächlich keine aus der Simulation. Dies bedeutet, dass ein plötzlicher Überfluss an Elchen die Wolfspopulation erhöhen würde, aber dies würde keinen Druck auf die Elche ausübt. Es ist wichtig, diese Beziehung so zu ändern, dass sie in beide Richtungen konsumiert und gleichzeitig sichergestellt wird, dass sie nicht auf unerwartete und plötzliche Weise außer Kontrolle gerät.
+  
+305;Das lebende System von Pflanzen und Tieren, das den Menschen die Grundlage bietet, zu überleben.
+306;Folge der Entwicklung von Eco.
+307;
+    Wir beabsichtigen, dass Eco ein Spiel für die Ewigkeit ist, das an Tiefe und Breite zunimmt und Verbindungen zu anderen zukünftigen Spielen bietet, ein System unbegrenzter Möglichkeiten, das über die Unterhaltung hinausgehen soll. Diese Baumstruktur enthält die Vergangenheit, Gegenwart und Zukunft von Eco.
+
+    Über unsere Website kannst du alle interaktiven Teile des Baums anzeigen und sehen, wohin wir gehen und welche Philosophie hinter dem Spiel steht.
+  
+308;Siehe den Eco-Baum bei
+309;Folge der Entwicklung von Eco.
+310;Einrichten eines Ladens
+311;Werkzeuge reparieren
+312;Gebäude in Eco
+313;
+Gebäude sind in [Rooms] unterteilt und dienen verschiedenen Zwecken.
+
+Einige dieser Zwecke sind:
+
+- Der Bau eines mit Möbeln gefülltes Hauses, um Bonus [Experience] durch Behausung zu gewinnen
+
+- Bereitstellung eines Platzes für [Crafting] -Stationen, um zu funktionieren
+
+- Unterbringung der verschiedenen [Civic Objects|Civic Object Component], die zur Errichtung einer Regierung erforderlich sind
+
+314;Gebäude bauen
+315;Beim Tragen eines Baumaterials kann der Hammer zwischen verschiedenen Blockformen und Baumustern wechseln.
+
+Die Bürger bauen ihre ersten Häuser mit einem [StoneHammerItem], aber mit fortschreitender Technologie werden immer bessere Bauwerkzeuge verfügbar, die bei Verwendung weniger Kalorien verbrauchen.
+
+Große Bauprojekte können mit einem [CraneItem] schnell abgeschlossen werden, jedoch auf Kosten der Entstehung von [Pollution].
+  
+316;Arten von Fahrzeugen
+317;Arten von Bürgerrechten
+318;
+Sobald eine [Constitution] verabschiedet ist, sind neue Regierungsrichtlinien als Bürgerrechte in dem Regierungsgebäude enthalten, in dem sie erstellt wurden. Es gibt viele Arten von Regierungsgebäuden, von denen jedes seinen eigenen Typ von Bürgerobjekten hat:
+
+- [Laws] werden an einem [CourtItem] gesetzt
+- [Demographics] werden an einem [CensusBureauItem] gesetzt
+- [Districts] werden an einem [ZoningOfficeItem] gesetzt
+- [Elected Titles] werden an einem [GovernmentOfficeItem] gesetzt
+- [Civic Articles] werden an einem [CapitolItem] oder [AmendmentsItem] gesetzt
+- [Election Processes] werden an einem [BoardOfElectionsItem] gesetzt
+	
+319;Bürgerrechte vorschlagen
+320;
+Durch Klicken auf die Schaltfläche „Entwurf“ kann ein Bürger ein neues Bürgerrecht vorschlagen. Bürger können optional einen neuen Entwurf für ein Bürgerrecht beginnen, indem sie auf die Schaltfläche „Kopieren“ klicken, die angezeigt wird, wenn du den Mauszeiger über das Symbol bewegst. Daraufhin wird ein Dialogfeld geöffnet, in dem du jedes Bürgerrecht (Vergangenheit oder Gegenwart) auswählen kannst, das als Grundlage verwendet werden soll. 
+
+Durch den Besuch der Bürgerrechte-Komponente in einem Regierungsgebäude, das bereits Bürgerrechte enthält, können diese Richtlinien geändert oder aufgehoben werden. Um ein Bürgerrecht aufzuheben, klicke auf das rote „X“, das angezeigt wird, wenn du mit der Maus über das Symbol fährst. Um ein vorhandenes zu ändern, klicke auf die Schaltfläche „Überarbeiten“, die in der Benutzeroberfläche verfügbar ist.
+
+Die Gebäude, die Bürgerrechte enthalten, müssen platziert und aktiv bleiben, damit das Bürgerrecht in Kraft bleibt. Wenn ein Regierungsgebäude aufgehoben wird, werden alle darin enthaltenen Bürgerrechte mitgenommen, und sie werden schließlich deaktiviert, wenn das Gebäude nicht wieder gesetzt wird.
+	
+321;
+- Änderungen Sofort Übernehmen: Bürger, denen das Privileg einer Führungskraft übertragen wurde, können Bürgerrechte sofort hinzufügen, entfernen und bearbeiten.
+
+- Vorschlag durch Wahl: Bürger mit der Möglichkeit, Wahlen vorzuschlagen, können eine Hinzufügung/Löschung/Bearbeitung vorschlagen, die dann eine neue Wahl auslöst (unter Verwendung der in der Verfassung festgelegten [Election Process|Election Processes]).
+
+- Nur Anzeigen: Wenn der Bürger keine in der Verfassung festgelegten Berechtigungen hat, kann er die Bürgerrechte nur durch Klicken anzeigen und darf keine Änderungen vornehmen.
+  
+322;
+Auf diese Komponente wird über ein [RealEstateDeskItem] zugegriffen. Es enthält Links zu allen einzelnen Urkunden, auf die durch Interaktion mit einem [PropertyToolItem] in einer Urkunde, die der Bürger besitzt, zugegriffen werden kann.
+
+Bürger können ihre Urkunden schnell umbenennen, eine Farbe für dieses Grundstück auf der Minikarte auswählen oder anderen Bürgern Verbraucherrechte gewähren, was normalerweise über die [Authorization Component] erfolgt.
+
+Eine nützliche Funktion dieser Komponente ist die Möglichkeit, Grundstücke schnell von einer Urkunde in eine andere zu verschieben. Dies beinhaltet die Option, eine neue Urkunde zu erstellen, um ein vorhandenes Grundstück zu teilen.
+
+323;Mit der Text-Komponente kann ein Bürger Text schreiben, der auf einem Weltobjekt angezeigt wird, damit andere Bürger ihn lesen können.
+324;Rohr-Anforderungen
+325;
+Beim Öffnen der Rohr-Komponente werden unterschiedliche Rohrein- und Ausgänge angezeigt, um die Rohranforderungen darzustellen. Objekte mit dieser Komponente müssen alle Rohranforderungen erfüllen, damit dieses Objekt aktiv ist.
+
+Einige Objekte erfordern alle drei Verwendungen von Rohren, um einen aktiven [Status|Status Component] zu haben, während andere Objekte nur einige benötigen. Jedes Rohrsystem kann nur für eine der drei Verwendungszwecke verwendet werden.
+
+Wenn du die Maus über die Anzeige für eine der Rohre hältst, wird ein Tooltip mit weiteren Informationen darüber angezeigt, warum ein Rohr aktiv ist oder nicht.
+  
+326;Schreiner
+327;
+[Carpenters|Carpenter] sind darauf spezialisiert, Bäume zu fällen und das Holz zu Möbeln und Baumaterial für Wohnhäuser zu verarbeiten.
+   - [LoggingSkill] ermöglicht es Bürgern, Bäume effizienter zu fällen. Außerdem wird das Holzfällen zur Herstellung von [Hewn Logs|HewnLogItem] verwendet, die das primäre Baumaterial für den Schreinerberuf sind.
+   - [CarpentrySkill] ermöglicht es Bürgern, Holzmöbel und [Boards|Board Item] herzustellen. Mit einem [SawmillItem] können Bürger  mit dieser Spezialisierung [LumberItem] herstellen.
+   - [CompositesSkill] ermöglicht es den Bürgern fortschrittlicher Technologie zu nutzen, um [CompositeLumberItem]-Baustoffe von höchster Qualität herzustellen.
+   - [PaperMillingSkill] ermöglicht es Bürgern,  Zellstoff zu [PaperItem] zu verfeinern. Papier wird für einige Spezialmöbel verwendet.
+
+328;Koch
+329;
+[Chefs|Chef] spezialisieren sich auf das Kochen von nahrhafteren Speisen, um die Rate zu erhöhen, mit der Bürger Erfahrung sammeln.  
+  - [CampfireCookingSkill] ist die Einstiegskochspezialität, die einen [CampfireItem] verwendet, um einfache Mahlzeiten herzustellen.
+  - [CookingSkill] ist die zweite Stufe im Beruf des Kochs, der einen [CastIronStoveItem] verwendet, um Mahlzeiten von höherer Qualität herzustellen.
+  - [BakingSkill] ist eine Alternative zum Kochen, die [FlourItem] zur Herstellung von Backwaren verwendet.
+  - [AdvancedCookingSkill] ist ein hochrangiger Kochberuf, der die nahrhaftesten Speisen herstellt.
+  - [AdvancedBakingSkill] ist eine Alternative zum Fortgeschrittenen Kochen, die [LeavenedDoughItem] verwendet, um hochwertige Backwaren herzustellen. 
+330;Ingenieur
+331;
+[Engineers|Engineer] spezialisieren sich auf die Herstellung von Fahrzeugen und fortschrittlichen Herstellungsmaterialien zur Verwendung durch andere Berufe.
+  - Mit [BasicEngineeringSkill] können Bürger Straßen und Karren herstellen, um den Transport zu erleichtern. Darüber hinaus erstellt die grundlegende Technik die Handwerkstische, die für die Verarbeitung und das Schmelzen von Erz erforderlich sind.
+  - Mit [MechanicsSkill] können Bürger vorzeitige motorisierte Fahrzeuge, wie einen [SteamTruckItem], herstellen. Die Mechanik liefert die erste Quelle für elektrische Energie, um den technologischen Fortschritt zu ermöglichen.
+  - Mit [IndustrySkill] können Bürger fortschrittliche Fahrzeuge wie ein [ExcavatorItem] erstellen, mit dem große Mengen natürlicher Ressourcen schnell gesammelt werden können.
+  - Mit [OilDrillingSkill] können Bürger ein [PumpJackItem] verwenden, um [PetroleumItem] für Kraftstoff und eine Vielzahl von Industrieprojekten zu sammeln.
+  - [ElectronicsSkill] verwendet teure Zutaten, um die fortschrittlichsten Materialien herzustellen, die für moderne Herstellungsprojekte benötigt werden. Neben der Bereitstellung von Ökostrom wird mithilfe der Elektronik das [LaserItem] hergestellt, das zur Rettung der Welt vor dem Meteor benötigt wird.
+
+332;Landwirt
+333;
+[Farmers|Farmer] sind Spezialisten in der Landwirtschaft. Die von ihnen produzierten Feldfrüchte sind eine Hauptquelle für die Kalorien, die die Bürger für ihre Arbeit benötigen.
+  - [GatheringSkill] erlaubt es Bürgern, Saatgut aus Produkten zu erzeugen, um große Farmen zu schaffen.
+  - [FarmingSkill] erlaubt es den Bürgern, dem Boden Nährstoffe hinzuzufügen und die Bodenbedingungen mit einem [SoilSamplerItem] zu testen.
+  - [FertilizersSkill] erlaubt es Bürgern, mehr Produkte sowohl von wilden Pflanzen als auch von Menschen angelegten Farmen zu ernten.
+  - [MillingSkill] erlaubt es Bürgern, Produkte in einem [MillItem] zu verarbeiten, damit sie von Köchen in fortgeschritteneren Rezepten verwendet werden können.
+
+334;Jäger
+335;
+[Hunters|Hunter] sind Spezialisten für die effiziente Jagd auf Tiere und die Zubereitung von Fleisch, welches von Köchen verwendet werden kann. Die beiden Jägerspezialitäten sind eng miteinander verbunden, da die gejagten Tiere verarbeitet werden müssen, bevor das Fleisch von einem Koch verwendet werden kann. 
+  - [HuntingSkill] gewährt Bürgern zusätzlichen Schaden beim Jagen von Tieren und ermöglicht es ihnen, sich Tieren auf eine geringere Distanz zu nähern, ohne dass diese weglaufen.
+  - Der [ButcherySkill] erlaubt es Bürgern, Tierkadaver zu zubereitetem Fleisch für Köche zu verarbeiten. Die dabei entstehenden Felle und Leder können für Kleidung und andere Herstellungsprojekte verwendet werden.
+
+336;Steinmetz
+337;
+[Masons|Mason] sind Spezialisten im Abbau und der Bearbeitung von Stein. Sie sind eine wertvolle Quelle für Baumaterial und Möbel für Häuser. Das Erz, das sie sammeln, wird von Schmieden zum Schmelzen von Metallbarren verwendet.
+  -[MiningSkill] erlaubt es Bürgern, beim Abbau von Stein und Erz weniger Kalorien zu verbrauchen. Bergarbeiter verarbeiten auch das gesammelte Erz, um es für die Verhüttung zu verwenden.
+  -[MasonrySkill] erlaubt es Bürgern, [MortarItem] zu produzieren, eine Hauptzutat für die meisten Baumaterialien der Maurer. Der [MortaredStoneItem], den sie produzieren, ist eine großartige Quelle für frühes Baumaterial.
+  -Der [PotterySkill] erlaubt es Bürgern, [BrickItem] Baumaterial und Möbel aus [ClayItem] herzustellen.
+  -[GlassworkingSkill] erlaubt es den Bürgern, [GlassItem] und später [FramedGlassItem] herzustellen. Glas ist ein schönes ergänzendes Baumaterial und wird in einer Vielzahl von industriellen Projekten verwendet.
+  -[AdvancedMasonrySkill] ist eine hochstufige Steinmetz-Fertigkeit, die feinstes Baumaterial und Möbel aus Quaderstein herstellt.
+
+338;Schmied
+339;
+[Smiths|Smith] sind darauf spezialisiert, Erz zu schmelzen und aus den erzeugten Metallbarren Werkzeuge für andere Bürger herzustellen.
+  - [SmeltingSkill] ermöglicht es Bürgern, die Metallbarren zu schmelzen, die die Grundlage des technologischen Fortschritts bilden. Die von ihnen hergestellten Eisenwerkzeuge bieten erhebliche Vorteile gegenüber den frühen Steinwerkzeugen.
+  - [AdvancedSmeltingSkill] ermöglicht es Bürgern, Eisenbarren zu [Steel|SteelBarItem] weiter zu veredeln, um sie in der Industrie und für hochrangige Baumaterialien zu verwenden. Bürger mit dieser Spezialität können den Stahl, den sie herstellen, für fortschrittlichere Werkzeuge verwenden.
+
+340;Schneider
+341;
+Der [Tailor] ist auf die Herstellung von hochwertigen Möbeln und Spezialkleidung spezialisiert, die beim Tragen Boni bieten. Im Gegensatz zu den meisten Berufen gibt es nur eine Schneider-Spezialität.
+  - Der [TailoringSkill] ermöglicht es Bürgern, [ClothItem] zu erstellen, um hochwertige Möbel und zur Verwendung in Herstellungsprojekten durch eine Vielzahl von Berufen herzustellen. Die von Schneidern hergestellten Kleidungsstücke verleihen den Bürgern besondere Boni. Zum Beispiel hat ein [BigBackpackItem] ein höheres maximales Gewichtslimit als der Starter [BasicBackpackItem].
+
+342;Überlebenskünstler
+343;
+[Survivalists|Survivalist] ist darauf spezialisiert, zusätzliches Gewicht zu tragen und die verbrauchten Kalorien bei der Verwendung von Basiswerkzeugen zu reduzieren. Alle Bewohner sind Überlebenskünstler in der Welt von Eco. 
+   - Erfahrung in [SelfImprovementSkill] wird immer dann gewonnen, wenn ein Bewohner bei einer anderen Spezialität aufwertet. Selbstverbesserung hat zwei Hauptvorteile. Je weiter ein Bürger fortschreitet, desto mehr Gewicht kann er tragen und desto größer ist seine Magenkapazität für zusätzliche Kalorien. Außerdem werden bei der Verwendung von Hämmern und Schaufeln weniger Kalorien verbraucht.
+
+344;Eine allgemeine Übersicht über die aktuelle Wirtschaft, welche Informationen über verfügbare Handelsangebote, Arbeitsgruppen und Verträgen gibt.
+345;Die Wirtschaftsanzeige gibt dir einen allgemeinen Überblick über die aktuelle Wirtschaft und ist überaus nützlich für wirtschaftliche Beteiligung. Bei anderen Nutzern zeigt die Wirtschaftsanzeige die Standorte jedes [StoreItem] und was aktuell gekauft und verkauft wird an.
+346;
+Die Wirtschaftsanzeige gibt dir detaillierte Informationen über Folgendes:
+
+   - Aktuelle [Trade] angebote
+   - Bestehende [Work Parties] und deren Status
+   - Veröffentlichte [Contracts]
+   - Standorte der [Public Crafting Stations|Crafting Component]
+   - Informationen über die bestehende [Currencies|Currency]
+   
+Zusätzlich ermöglicht die Wirtschaftsübersicht den Bürgern, Währung direkt an andere Bürger zu überweisen und sich seinen eigenen Status des [Bank Accounts] und noch ausstehende Schulden ansehen.
+   
+347;Zugriff auf die Wirtschaftsanzeige
+348;Die Wirtschaftsanzeige kann durch das Klicken auf die Schaltfläche Wirtschaft unten rechts auf dem Bildschirm aufgerufen werden.
+349;Versorgung der Welt
+Essen bildet die Grundlage einer wachsenden Gesellschaft in Eco, und treibt den steigenden Bedarf an Fähigkeiten, die für den Aufbau einer Zivilisation benötigt werden, voran. Ein gut organisiertes Netzwerk an Lebensmittelherstellern, von Landwirten zu Köchen, garantiert, dass Bürger die nötigen Fähigkeitspunkte erhalten.
+
+350;Die Grundstücke, auf denen du deinen Wohnsitz hast, geben dir Punkte für den Wohnwert.
+351;
+Jede Urkunde kann eine beliebige Anzahl von Bewohnern haben, und diese Bewohner haben Anteil an einer [Experience]-Förderung, der auf der Qualität und der Anzahl der Bewohner basiert.
+
+Mit zunehmender Anzahl von Bewohnern steigt die Belegungsstrafe.  Bei einer geringen Anzahl von Bewohnern (1 oder 2) gibt es praktisch keine Strafe, und die Bürger können auf diese Weise effektiv zusammenleben und an den Vorteilen eines gut ausgestatteten Hauses teilhaben.  Wenn die Anzahl der Bewohner darüber hinaus steigt (5 und höher), wird die Strafe höher und erreicht den Höchstwert bei 99 %, wenn das Haus zu überfüllt ist.
+
+Allerdings wird die „reduzierende Rendite“ von Zimmern durch die Belegung positiv beeinflusst (da drei Bäder übertrieben sind, wenn du alleine lebst, aber großartig, wenn du Mitbewohner hast).  Das bedeutet, dass du die Strafe überwinden kannst, indem du ein größeres Haus baust. Doppelte Zimmer werden umgekehrt vom Belegungsbonus beeinflusst.
+  
+Um ein Bewohner eines Grundstückes zu werden, klicke auf den Namen des Grundstückes (sichtbar im Popup-Statusfenster, wenn du dich auf dem Grundstück befindest). Von dort aus kannst du sowohl ein Bewohner werden (wenn du die Urkunde besitzt) als auch andere einladen, Bewohner zu werden.  Diese anderen eingeladenen Bürger können dann über dieselbe Schnittstelle als Einwohner anmelden. Du kannst sogar Gruppen einladen, indem du Titel oder Demografien angibst, wodurch du Wohnungen für spezielle Klassen von Bürgern (z. B. neue Spieler) erstellen kannst. Du kannst auch die maximale Anzahl von Bewohnern festlegen, um sicherzustellen, dass eine auf diese Weise verwaltete Residenz (durch das Einladen großer Gruppen) nicht zu einer überfüllten Unterkunft führt.
+
+Hinweis: Später wird eine zusätzliche Funktion hinzugefügt, die es erlaubt, automatische Mietverträge zwischen den Bürgern abzuschließen. Im Moment kann dies mit manuellen Überweisungen erfolgen.
+352;Berechtigungen für Bewohner
+Wenn ein Bürger zum Bewohner eines Grundstückes wird, erhält er einen speziellen Satz von Berechtigungen, auch wenn er sonst keinen Zugang zu dem Grundstück hat, die sogenannten Bewohnerrechte. Diese Rechte sind wie folgt:
+
+  - Vormöblierte Zimmer werden freigeschaltet: Bewohner können auf alle Weltobjekte auf dem Grundstück als Verbraucher zugreifen.
+  - Du kannst mit deinen eigenen Sachen einziehen: Bewohner dürfen Objekte überall auf dem Grundstück platzieren (ausgenommen Blöcke).
+  - Es ist nicht erlaubt, die mit der Wohnung gelieferten Möbel zu stehlen: Bewohner dürfen Weltobjekte nur dann aufheben, wenn sie sie ursprünglich platziert haben.  
+

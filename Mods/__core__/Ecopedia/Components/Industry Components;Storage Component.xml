@@ -1,0 +1,27 @@
+<ecopedia icon="StorageComponent" customMerge="True">
+  <summary loc="109">Manages inventory and allows linking storage to other objects.</summary>
+  <section loc="104">The <b>Storage Component</b> is used to manage the inventory of storage containers and link them to objects that require access to storage.
+  </section>
+  <section type="header" loc="105">Managing Storage</section>
+  <section image="IllustrationStorageComponent" loc="106">
+Some storage containers, like a [StockpileItem], can contain any type of item. Other storage containers, like a [StorageChestItem], can only contain non-carriable items. Objects like a [StorageSiloItem] can only store specific types of items.
+
+Containers can be linked to an object as an input and/or output by toggling the associated button in the Storage Component of that object. When linked as an input, the object gains access to all items in that container to be used as crafting ingredients or as inventory in a store. Linking containers as an output allows them to be used as storage for finished products and store purchases.
+
+When linking storage containers, the topmost container in the Storage Component will be used first for pulling inputs and storing outputs. The order can be changed by clicking and dragging the storages displayed in this list.
+  </section>
+  <section type="header" loc="107">Storage Hotkeys</section>
+  <section loc="108">
+Inventory can be moved between containers by dragging stacks of items from one container to another. Simply clicking on an item stack will instantly move it to and from the open storage container. A quick reference for the advanced hotkeys explained below can be found at the bottom of an item's tooltip when viewing it from a storage container:
+
+- Holding 'Shift' while dragging items between containers will move all stacks of that same item.
+- Holding 'Shift' while clicking a stack of items will allow dividing the stack into smaller quantities.
+- Holding ‘Ctrl’ while clicking a stack of items will move half of the stack to/from the open storage container.
+- Holding 'Alt' while clicking a stack of items will move one of that item to/from the open storage container.
+- Holding 'Ctrl' + 'Alt' while clicking a stack of items will move all items of that type to/from the open storage container.
+  </section>
+  <section type="header" loc="107">Consolidating and Filtering</section>
+  <section image="IllustrationStorageSearch" loc="106">
+Stacks of identical items can be quickly consolidated and sorted by pressing the consolidate button found at the bottom right of the Storage Component. In addition, storages can be filtered to only display certain types items by using the item selector or simply typing of the name of the item.
+  </section>
+</ecopedia>

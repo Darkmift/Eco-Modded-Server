@@ -1,0 +1,12 @@
+<ecopedia icon="EcopediaSettlementsCitizenship">
+    <summary></summary>summary>
+  <section type="banner" image="settlements_citizenship" />
+  <section>
+    Citizenship is membership in a settlement that provides civic powers. The more citizens a settlement has, the more [Settlement Property] it can claim.
+
+    Each settlement can grant citizenship to a list of individuals on the [CitizenRosterComponent] tab of the foundation object.   Non-citizens can also apply for citizenship here, which must be approved by the Approver, which is set in the [Immigration Policy] settings, defaulting to the settlement leader.  Additionally, all the citizens in any sub-settlements will also automatically be citizens in the parent settlement (IE, the citizens of every Town in a Country is also a citizen of the Country).
+
+    Players with an existing homestead, utilizing the [HomesteadSupportClaimPaperItem], can seamlessly join settlements by depositing an equivalent number of that settlement claim papers within their homestead.
+  </section>
+  <section type="header">Citizenship Settings</section>
+</ecopedia>

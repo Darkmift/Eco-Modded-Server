@@ -1,0 +1,1113 @@
+0;Komponenter relateret til økonomien.
+1;Bank komponenten er hvor {Bank Accounts} oprettes og administreres. Indbyggere kan oprette flere konti for dem selv, eller dele konti med andre indbyggere. Konti kan også indstilles til {Titles} og {Demographics}.
+2;Kontobrugere kan udføre transaktioner ved hjælp af kontoen (tilføje og fjerne midler).
+
+Kontoadministratorer kan ændre brugerne i både managerlisten og brugerlisten, omdøbe kontoen og udføre transaktioner.
+
+I de avancerede indstillinger kan du indstille kontoen som en regeringskonto. Regeringskonti kan modtage og udbetale skattefonde og ignoreres, når de opkræver skat og beregner personlig formue. For at indstille dette skal du have offentlige bankrettigheder tildelt af en {Elected Title|Elected Titles}.
+3;Bankkomponenten bruges til at oprette og administrere bankkonti
+4;Contract Board Component giver borgerne mulighed for at poste og acceptere {Contracts} og {Work Parties}, hvilket muliggør tvunget arbejdskraft og andre aftaler mellem borgere.
+5;Oprettelse Af En Kontrakt
+6;
+Når du sender en kontrakt, kan den have så mange eller så få klausuler som ønsket, og hver klausul kan konfigureres til at beskrive det ønskede job. Hver klausul skal være opfyldt, før kontrakten betragtes som fuldstændig.
+
+Når 'Auto-Accept' er markeret, registreres afslutningen af ​​kontrakter automatisk af systemet. For eksempel, hvis en kontrakt er indstillet til at bygge en vej mellem to punkter, kan den entreprenør, der udfører arbejdet, åbne kontrakten i deres sidemenu og trykke på 'Job færdig', hvilket vil udløse en detektion, hvis jobbet virkelig er afsluttet. I så fald udbetales kontrakten i henhold til aftalen og lukkes automatisk.
+
+'Brugerdefineret klausul' er en særlig klausul, der giver spillerne mulighed for med ord at beskrive, hvad de gerne vil have gjort. Hvis en kontrakt indeholder en sådan klausul, skal den godkendes manuelt af klienten (autoaccept kontrolleres muligvis ikke), da automatisk detektion ikke kan bestemme, hvornår den er færdig.
+  
+Når automatisk registrering ikke er markeret, vil entreprenøren klikke på 'Job afsluttet', når de mener, at jobbet er udført, og entreprenøren vil derefter enten acceptere eller afvise færdiggørelsen. Kontrakter uden automatisk accept kræver mere tillid mellem borgerne, da der ikke er nogen garanti for, at entreprenøren ærligt accepterer et afsluttet job. Borgere rådes til at bruge {Reputation} som et middel til at bestemme tillid i disse situationer.
+
+Kontrakter har en bestemt tidsperiode, som de skal gennemføres inden for, bestemt ved udstationering af kontrakten. Derudover kan kontrakter indstilles til at gentages for gentagne job - når dette er aktiveret, reduceres gentagelsestælleren med en hver gang en kontrakt accepteres.
+
+Enhver betaling, der tilbydes til en kontrakt, opbevares i en særlig Escrow {Bank Account|Bank Accounts}, mens kontrakten er aktiv. Hvis kontrakten gennemføres med succes, overføres betalingen til entreprenøren, og hvis den mislykkes, refunderes den til klienten. Et depositum kan også opkræves af entreprenøren, som opbevares i deponering og tilbagebetales til entreprenøren efter vellykket afslutning eller gives til klienten ved fiasko.  
+7;Arbejdspartier
+8;
+{Work Parties} kan også sendes på et kontraktudvalg, hvilket muliggør oprettelse af opgaver, der kan udføres af flere andre borgere i modsætning til kontrakter, der kun er en aftale mellem to parter. Inden en borger udstationerer, skal en borger starte en arbejdsordre på et bord, de ejer.
+
+Efter udstationering af en arbejdsgruppe kan arbejdere deltage i projektet på kontraktudvalget. Som standard kan alle deltage i arbejdsgruppen som arbejder, men der kan stilles krav til individuelle roller eller generelle krav til, at alle kan deltage. Når 'Udvid roller når fuld' er markeret, oprettes der plads til nye arbejdere til at deltage automatisk, når alle roller er udfyldt.
+
+Når du indstiller det ønskede arbejde, kan arbejdsgruppens plakat beslutte at ansætte arbejdskraft, ressourcer eller begge dele. Enhver borger, der bidrager til arbejdsgruppen, modtager en del af betalingen baseret på den mængde arbejde, de leverede. Ved at tildele yderligere vægt til et bestemt job i en arbejdsgruppe, får dette job en højere andel af betalingen.
+
+9;
+Der er en række forskellige betalingsmuligheder for en arbejdsgruppe, og der kan tilbydes flere betalingsmuligheder for den samme arbejdsgruppe.
+
+- Når du tilbyder {Currency} som betaling, er der en mulighed for at 'betale som du går', som udbetaler arbejdere, da de bidrager i stedet for at betale et engangsbeløb, når kontrakten er afsluttet.
+
+- Når {Reputation} tilbydes som betaling, bliver den opdelt af alle borgere, der har bidraget, når arbejdsgruppen er færdig.
+
+- Når {Research} tilbydes som betaling, vil alle borgere, der bidrager med det krævede beløb, straks opdage teknologien, når arbejdsgruppen er færdig. Forskning kan kun tilbydes som betaling, når arbejdsgruppen opretter en forskningsbog, eller hvis den borger, der tilbyder arbejdsgruppen, har forskningsbogen i sin beholdning, når han udstationerer arbejdsgruppen.
+
+- Ved tildeling af en {Title|Titles} som betaling, skal den borger, der udstationerer kontrakten, være en titelforvalter for den tilbudte titel. Alle borgere, der bidrager med det mindste beløb, får den nye titel. Adgangstypen bestemmer, om de bliver en titeladministrator eller titelbruger.
+
+10;Contract Board Component giver borgerne mulighed for at bogføre eller acceptere kontrakter og tilbud fra arbejdsgrupper
+11;Kreditkomponenten giver borgerne mulighed for at indstille valuta og bankkonto for alle transaktioner på et objekt, de ejer.  
+12;
+Når man vælger {Bank Accounts}, kan borgere vælge enhver konto, de har fået adgang til (udført i en {Bank Component}). Som standard vælges borgerens personlige konto.
+
+Enhver af verdens {Currencies|Currency} kan vælges i kreditkomponenten. Dette er den valuta, der vil blive brugt til alle transaktioner, der finder sted på det pågældende objekt (f. eks. Accepterer en {Store|Store Component}} uanset hvilken valuta der indstilles her).
+
+Når du vælger 'Ingen' for valutaen i en butik, er direkte handel mulig uden behov for en valuta.
+
+Objekter med en {Crafting Component} kan definere et gebyr for autoriserede borgere til at bruge dem. Indstillingerne i kreditkomponenten bestemmer, hvilken valuta det gebyr opkræves på, og hvilken konto pengene indsættes på.  
+13;Kreditkomponenten giver borgerne mulighed for at indstille bankkonto og valuta for transaktioner på et objekt.
+14;Deed-salgskomponenten giver borgerne mulighed for at købe og sælge {Property}.  
+15;
+Ved at besøge en {Real Estate Desk|Real Estate Desk Item} kan borgere oprette lister til deres gerninger og se andre borgeres lister. Alle bogførte lister er tilgængelige fra enhver ejendomsskranke.
+
+Når du opretter en fortegnelse, indstiller ejendomsejeren prisen og den {Currency}, der er brugt. Alle indtægter indgår i den valgte {Bank Account|Bank Accounts}.
+
+Når du køber en gerning, tages valutaen fra den bankkonto, som køberen har valgt.
+
+Når ejendom er solgt, overføres skødet og alle genstande indeholdt i skødet til den nye ejer.  
+16;Deed Sales Component giver borgerne mulighed for at købe og sælge ejendom.
+17;Exchange-komponenten tillader borgere at handle en {Currency} til en anden.
+18;Udveksling Af Valuta
+19;
+Ejeren af ​​et {CurrencyExchangeItem} bruger Exchange-komponenten til at tilbyde valutaveksling til andre borgere. Når du opretter en børs, er ejervalutaen den valuta, der udbydes til salg. For hver enhed af købt ejervaluta opkræves borgere det fastsatte beløb af alternativ valuta.
+
+Når en {Authorized Consumer|Authorization Component} besøger valutavekslingen, vil de se en liste over alle tilbudte børser. Som standard er alle borgere autoriserede forbrugere.
+20;Udvekslingsrestriktioner
+21;
+Ejeren af ​​valutavekslingen har mulighed for at indstille saldobegrænsninger. Disse forhindrer borgere i at udveksle valuta, hvis valutaen på den valgte konto ikke overholder begrænsningen.
+
+Nummeret til venstre er den mindste valutaindkomst, og tallet til højre er den maksimale valutaindhold. Hvis en af ​​værdierne for balancebegrænsningen efterlades ved 0, er der ingen grænse for den del af balancebegrænsningen.
+22;Tillader borgere at oprette en valutaveksling.
+23;Varedistributionskomponenten giver ejeren mulighed for at levere gratis varer til nye borgere som en handling af god vilje og for at øge den indledende velstand for borgerne.
+24;
+Alle nye borgere, der kvalificerer sig (baseret på hvor længe de har spillet), kan indsamle deres varer ved at besøge {DistributionStationItem}. Når de kommer ind i verden, starter nye borgere med en global kortmarkør for at advare dem om, at varerne er tilgængelige. Bemærk, at {Storage Component} skal forblive på lager med de varer, der distribueres, så nye borgere kan samle dem.
+
+Ejeren kan udpege, hvilke genstande der skal distribueres, hvor mange af hver vare, og hvor nylig borgeren skal være tilmeldt verden for at være berettiget.  
+25;Tillader ejeren at levere gratis varer til nye borgere som en handling af god vilje og til at øge borgernes oprindelige velstand.
+26;Myntkomponenten giver borgerne mulighed for at oprette {Currencies|Currency}, der bakkes op af en ressource.
+
+27;
+Når du opretter en valuta på et {MintItem}, vælges en bageste vare samt en mængde mønter pr. Vare, der genereres fra hver forbrugte vare. Ved at bruge en bageste vare til valuta kan den samlede mulige mængde valuta begrænses til antallet af bidrag, hvilket giver mere stabilitet, da det bliver sværere at oversvømme markedet med ny valuta. Valget af bageste element vil påvirke dette, idet mere sjældne genstande generelt giver mere stabilitet ved at være sværere at få.
+
+Underlagsmaterialet og mønterne pr. Vare er permanente, så pas på, når du beslutter, hvordan du bakker en valuta. Når en valuta er preget, bliver den bundet til den mynte, den blev oprettet på, selvom denne mynte er afhentet.
+
+Borgere, der har fået tildelt forbrugerrettigheder i {Authorization Component}, kan bruge myntekomponenten til at præges yderligere valuta. Valuta kan præges på det mål {Bank Account|Bank Accounts}, der er valgt af myntejeren, eller en hvilken som helst bankkonto, som statsborgeren har adgang til i {Bank Component}.  
+28;Tillader borgere at oprette og udskrive støttede valutaer.
+29;
+Butikkomponenten giver borgerne mulighed for at indstille varer, de ønsker at købe fra og sælge til andre borgere. Disse handlinger kan ske automatisk og kræver ikke, at butiksejeren er online.  
+30;
+Valutaen og bankkontoen, der er valgt i {Credit Component}, bruges til alle transaktioner i butikken. Når du vælger 'Ingen' for valutaen i en butik, er det muligt at handle direkte, som ikke er underlagt moms.
+ 
+En butiksejer kan linke specifikke containere i {Storage Component} for at vælge, hvilke varer der betragtes som en del af butikens beholdning. Som standard er alle nærliggende opbevaringsbeholdere knyttet til butikken, når den først placeres.
+
+Når du opretter en salgsliste, skal kun prisen indstilles. Beholdningen for en salgsliste bestemmes automatisk af tilgængeligheden af ​​varer i de sammenkædede lagerbeholdere.
+
+Når du opretter en indkøbsliste, skal prisen og den maksimale mængde, der skal købes, bestemmes for hver vare. Hvis mængden Maks. Til køb er nul, fortsætter butikken med at købe varer, indtil de sammenkædede containere er fulde. Hvis der er angivet en Maks. At købe-mængde, kan borgere sælge varen, indtil den tilknyttede lagerplads indeholder det beløb.
+
+For værktøjer med holdbarhed kan der indstilles en mindste holdbarhed til at købe / sælge, og kun varer med denne holdbarhed eller højere er berettigede til handel via butikken. 
+32;Opretter en grænseflade, som andre borgere kan købe og sælge varer fra/til dig automatisk.
+33;Komponenter relateret til regeringen.
+34;
+Civic Action-komponenten giver borgerne mulighed for at deltage i {Elections}, udføre {Executive Actions} og fratræde deres embedsperiode, afhængigt af hvilket objekt der bruges.
+
+35;Deltagelse I Valg
+36;
+Når borgerkomponenten bruges til en {Ballot Box|Ballot Box Item}, kan borgere stille op til {Elected Titles} og deltage i valg.
+
+Ved at trykke på Stem-knappen omdirigeres spillere til webgrænsefladen, hvor de kan se alle kørende {Elections}, diskutere dem med deres medborgere, fremlægge bevis for deres argumenter med {Data} og stemme.
+
+Borgere, der har fået Veto-magt i den aktuelle {Election Process|Election Processes} kan øjeblikkeligt vælte et valg.
+
+For at køre til valgte titler skal en kvalificeret borger først bruge handlingen Start valg. Når et valg er startet, kan kvalificerede borgere vælge Enter Valg for at deltage i løbet og holde en kampagnetale. Kandidater kan til enhver tid vælge at trække sig tilbage fra valg ved hjælp af den valgmulighed, der er tilgængelig på en stemmeseddel.
+
+37;Udførelse Af Udøvende Handlinger
+38;
+Brug af Civic Action-komponenten på et {Executive Office|Executive Office Item} gør det muligt for en valgt titel at udføre engangsledende handlinger, der påvirker et sæt borgere.
+
+Borgerbetingelserne dikterer hvilke borgere den udøvende handling gælder for, og der kan indstilles flere betingelser for en borger til kvalitet. For at udføre en handling for alle borgere skal du bruge {Demographic} 'Alle' som borgerbetingelse.
+
+Handlingen mod hver borger træder i kraft, så snart den udøvende handling er godkendt. Flere handlinger kan udføres på én gang for hver borger, der opfylder betingelserne.
+
+39;Regeringskontorhandlinger
+40;
+På {Government Office|Government Office Item} tillader Civic Action Component, at valgte titler fratræder eller fjerner andre valgte titler fra embedet.
+
+Handlingen Resign from Office tillader enhver valgt embedsmand at træde tilbage fra deres stilling. Hvis en efterfølger-titel blev tildelt den valgte titel, da den blev oprettet, vælges en ny embedsmand tilfældigt blandt alle borgere, der har denne titel; ellers bliver den valgte titel ledig.
+
+Handlingen Fjern tjenestemand fra kontor tillader borgere, der har fået autoritet, at fjerne valgte titler fra embetet. De samme regler for at finde en efterfølger gælder, som om embedsmanden sagde op.
+
+41;Tillader borgere at deltage i valg og udføre udøvende handlinger.
+42;    Civic Object Component giver borgerne mulighed for at foreslå, ændre og ophæve forskellige Civic Objects. 
+43;Borgerlige Pligter
+44;Inden for en borgerlig objektkomponent vil du se en liste over dine {Civic Duties}. Dette informerer borgeren om, hvilke tilladelser de har til borgerlige objekter i betragtning af den nuværende {Constitution}. Mulighederne for forskellige borgerlige opgaver er:
+45;Civic Object Component giver borgerne mulighed for at foreslå, ændre og ophæve borgerlige objekter.
+46;Registratorkomponenten muliggør oprettelse og styring af ikke-valgte {Titles}. Disse titler kan bruges til mange af de samme formål som {Elected Titles}, men de udnævnes hos justitssekretæren.
+47;Tildeling Af Titler
+48;Titeladministratorer kan omdøbe titlen og tildele nye ledere og titelholdere. Titeladministratorer betragtes ikke som titelbrugere.
+
+Titelbrugere er borgere, der betragtes som indehavere af titler og modtager alle tilknyttede fordele og betingelser.
+49;Avancerede indstillinger
+50;
+I de avancerede indstillinger kan krav til titelholdere indstilles, og timeløn kan tildeles til titelholdere, der kvalificerer sig.
+  
+Når man beslutter, hvad der kræves af kontorholdere, kan der indstilles en række betingelser. Hvis en borger ikke overholder disse krav, mister de deres opgave som titelbruger. Ved at bruge et 'sæt betingelser' kan der stilles flere krav til titelindehavere.
+ 
+Løn udbetales til titelbrugere fra enhver {Bank Account|Bank Accounts}, som en titeladministrator har fået tilladelse til at bruge i {Bank Component}. Løn udbetales hver time (afhængigt af verdensindstillinger) til hver titelbrugeres personlige konto. Lønnetypen kan bruges til at ekskludere offline-timer fra lønbetalinger.
+51;Tillader oprettelse og styring af ikke-valgte titler.
+52;Treasury Component tillader {Elected Titles}, der har fået ret til at 'Sætte skatter på statskassen', til at justere skattesatsen og vælge verdens standardvaluta.
+53;Skatter
+54;Når {Taxes} er indstillet i statskassen, anvendes de automatisk på alle relevante transaktioner. Alle indtægter indgår i statskassen {Bank Account|Bank Accounts}. Valgte titler, der har indstillingen 'Regeringsbankrettigheder', kan handle direkte fra statskontoen (tillader valg af kontoen inden for {Credit Component}. Penge kan også komme ud af statskassen via {Laws}, der foretager betalinger til borgerne.
+55;Verdens Standardvaluta
+56;Verdens standardvaluta er standard {Currency}, der bruges, når du placerer et nyt objekt, der indeholder kreditkomponenten. Borgerne kan stadig vælge at bruge en hvilken som helst valuta i en {Trade}, men at have en verdensstandardvaluta gør det lettere at etablere en økonomi med en fælles valuta.
+57;Direkte Skatter
+58;Valgte titler med rettigheder til 'Sæt skatter i statskassen' kan beskatte eller tildele midler direkte fra borgerne. Dette gøres ved at styre den ønskede valuta og vælge hvilke borgere handlingen skal gælde for. En valgt titel skal altid give en grund til, at de udfører denne handling, der vises for alle borgere.
+  
+
+Treasury management inkluderer også muligheden for at dumpe valuta fra Treasury-kontoen. Dette fjerner valutaen permanent, så pas på, når du bruger denne evne til understøttede valutaer.  
+59; Tillader borgere, der har en valgt titel med skattetilladelse, at indstille skatter og vælge verdens standardvaluta.
+60;Komponenter relateret til boliger.
+61;Autorisationskomponenten tillader at specificere, hvilke tilladelser borgerne har til objektet.    
+62;
+Den gerning, der vises her, er simpelthen et link til den gerning af {Property}, som objektet er på (eller den gerning, der er knyttet til {Vehicle|Vehicle Component}, hvis den er en).
+
+Autoriserede forbrugere kan vises her, enten som specifikke personer, {Titles} eller {Demographics}. Alle på listen kan interagere med objektet uden fuld kontrol. En butik tillader f. eks. Borgere med forbrugerrettigheder at købe og sælge der, men kun borgere med fulde rettigheder til ejendommen kan ændre det, der er til salg, eller flytte selve butikken.
+
+Alle placerede objekter har autorisationskomponenter.  
+63;Tillader borgere at indstille adgangsrettighederne til et givet objekt.
+64;Senge giver borgerne mulighed for at fremskynde tiden, når alle borgere bruger den samtidigt (eller offline).
+  
+(Denne funktion er som standard deaktiveret på dedikerede servere for at forhindre hurtigere tid, når brugerne er offline, men kan aktiveres af en serveradministrator.)
+65;Tillader at sove i singleplayer-servere eller servere, hvor sleep er aktiveret.
+66;Komponenter relateret til industrien.
+67;
+Crafting Component bruges til at {Craft|Crafting} genstande, tilføje ressourcer eller arbejdskraft og annullere eksisterende projekter. Når man bidrager til en {Work Party|Work Parties}, kan man få adgang til Crafting Component af borgere, der har tilsluttet sig arbejdsgruppen.  
+68;Crafting Items
+69;
+Efter valg af en vare og mængde, der skal håndværkes, kræves ressourcer og arbejdskraft for at starte projektet. Disse ressourcer kan tilføjes manuelt (placerer dem direkte på udformningstabellen) eller ved at linke en {Storage Component}, der indeholder dem.
+
+Borgere med en relateret {Specialty|Specialties} har brug for færre kalorier for at tilføje arbejdskraft. Nogle projekter kræver kvalificeret arbejdskraft fra en borger med den tilsvarende specialitet. Denne reduktion anvendes, efter at arbejdsordren er startet, så borgere på forskellige niveauer kan bidrage til den samme arbejdsgruppe.
+
+Ved at tilføje en opgradering i {Modules Component} vil arbejdsordrer på et udformningsbord have reduceret udformningstid og ressourceomkostninger.
+
+Hvis et projekt annulleres tidligt (ved at højreklikke på ordren), refunderes ressourcerne, men brugt arbejdskraft går tabt.  
+70;Tilføjelse af arbejdskraft
+71;
+For hver nødvendig arbejdsenhed forbruges {Calories|Nutrition}. Når en arbejdsordre er startet, kan borgere tilføje arbejdskraft ved at trykke på knappen 'Arbejde' i håndværkskomponenten.
+
+Når et projekt er startet, kan arbejdskraft hurtigt tilføjes uden for Crafting Component ved at højreklikke på et crafting-bord. Når du tilføjer arbejdskraft på denne måde, skal du holde 'Ctrl' nede 5 gange den normale mængde arbejde. Hvis du holder Alt nede, tilføjes alle tilgængelige kalorier.  
+72;Mærkede Ingredienser
+73;
+Some recipes use Tagged Ingredients that can accept similar items as inputs. For example, an item may specify it needs 'Rock', and will accept any type of rock with that tag ({GraniteItem}, {BasaltItem}, etc).
+	
+Tagged ingredients will be consumed automatically, so there is no need to create separate orders using the different ingredients.
+  
+74;Forældres Opskrifter
+75;
+Nogle opskrifter er en del af en større gruppe opskrifter, kendt som Parent Recipes. Når en borger laver en af ​​disse opskrifter, kan han vælge en bestemt variation, der skal produceres. Det udformede nummer vil være den mængde, der er valgt til den overordnede opskrift.
+
+Som standard vises kun opskrifter, der har tilgængelige ressourcer. Ved at markere 'Vis alle' vises alle mulige variationer.  
+76;Crafting Component bruges til at lave emner og tilføje arbejdskraft til projekter.
+77; Modulkomponenten giver borgerne mulighed for at indsætte opgraderinger i deres {Crafting} -tabeller. Efter indsættelse af en opgradering har arbejdsordrer på tabellen reducerede ressourceomkostninger og udformningstider.
+78;Brug Af Opgraderinger
+79;
+Opgraderinger findes i fem forskellige kvalitetsniveauer. En niveau 1-opgradering reducerer ressourceomkostningerne og håndværkstiden med 10%, hvor hvert progressive niveau tilføjer et yderligere fald.
+
+Crafting-tabeller accepterer forskellige typer opgraderinger. Tidlige tabeller accepterer 'Grundlæggende opgraderinger', mens senere tabeller kræver 'Avancerede opgraderinger' eller 'Moderne opgraderinger'. Hver opgraderingsgrad har fem forskellige kvalitetsniveauer, hvor det højeste kvalitetsniveau er en specialopgradering.
+
+Nogle opskrifter koster at bruge statiske ingredienser. Statiske ingredienser påvirkes ikke af reduktionen af ​​ressourceomkostningerne, men de opskrifter, der indeholder dem, får stadig en reduktion for håndteringstid.
+80;Specialitet Opgraderinger
+81;
+Det højeste niveau af opgradering kan kun laves af en borger, der har nået det maksimale niveau i deres valgte {Specialty|Specialties}. I modsætning til andre opgraderinger modtager disse opgraderinger en ekstra omkostningsreduktion, når de laver opskrifter ved hjælp af det specificerede erhverv.
+
+Nogle specialiteter har forskellige opgraderingsniveauer, der svarer til forskellige udformningstabeller. For eksempel har {CarpentrySkill} {CarpentryBasicUpgradeItem} til {CarpentryTableItem} og {CarpentryAdvancedUpgradeItem} til {SawmillItem}.  
+82;Tillader borgere at opgradere deres håndværksborde.
+83;
+Rørkomponenten giver en borger mulighed for at kontrollere status for et objekts smogoutput, vandforbrug og spildevand.  
+84;Luftforurening Produktion
+85;
+Ved at kontrollere Smog Output-værktøjstip kan en borger finde yderligere oplysninger om det aktuelle objekts forureningsudgang og verdens {Pollution} - niveauer.
+
+Rør kan bruges til at omdirigere strømmen af ​​luftforurening. Rørene, der indeholder Smog Output, kan have flere indgange, men skal kun have en åben ende, uden for alle rum og over objektet.
+
+Objekter, der udsender smogforurening, forurener kun, når genstanden er aktiv.
+86;Vand og Spildevand
+87;
+Objekter med vandindgang og pumper med vandudgang forbinder gennem et rørsystem. Vandrørssystemer kan have flere indgange til vandpumper og flere udgange til hvert objekt med vandbehov.
+
+Ved at kontrollere vandtipset i rørkomponenten kan en borger se nøjagtigt, hvor meget vand en genstand producerer eller forbruger. Hvis der ikke produceres nok vand, begynder genstande at blive inaktive.
+
+Rør, der indeholder spildevandsudgang, svarer til vandrør, men {Sewage}, de indeholder, er en kilde til jordforurening. Efter at {Waste Filters|Waste Filter Item} er opfundet, kan spildevandsudledningen ledes til et filter for at mindske jordforureningen.
+88;Rørkomponenten giver en borger mulighed for at kontrollere status for et objekts smogoutput og vandforbrug.
+89;Power Component bruges til at kontrollere status for det lokale elnet. Det bruges også til at kontrollere forbruget af genstande, der kræver brændstof til at fungere.
+90;Brændstof
+91;
+Objekter, der bruger brændstof, kan have brændstofindgang her, og hver kan kræve forskellige typer brændstof for at fungere. Værktøjstipene til det accepterede brændstof indeholder en liste over specifikke genstande, der kan bruges til at brænde genstanden. Brændstof kan også tilføjes fra {Storage Component}.
+
+Under drift bruger en genstand brændstof hvert sekund målt i watt (W). Hver type brændstof indeholder en forskellig mængde potentiel energi målt i Joule (J). For hver 1 Watt, der kræves pr. Sekund, forbruges 1 Joule energi. Brændstof forbruges ikke, mens genstanden er inaktiv.  
+92;Energistatistikker
+93;
+Der er to typer {Power}, der kan bruges af et objekt, elektrisk og mekanisk. Elnettet viser typen og tilgængeligheden af ​​den nødvendige strøm til dette objekt. Hvis der ikke er nok strømforsyning til at matche den krævede strøm, bliver objekter inaktive.
+
+Kraftgeneratorer, der bruger brændstof, bliver inaktive, hvis der ikke er genstande i nærheden, der kræver strøm. Det er ikke nødvendigt at tænde og slukke for at spare brændstof.  
+94;Power Component bruges til at kontrollere udbud og efterspørgsel efter strøm og brændstof.
+95;Reparationskomponenten giver borgerne mulighed for at reparere værktøjer på et {ToolBenchItem}.
+96;
+Efter isætning af et ødelagt værktøj vises reparationsomkostningerne. Avancerede værktøjer kan repareres for færre ressourcer af borgere med den tilsvarende {Specialty|Specialties}.. De anvendte ressourcer kan tilføjes manuelt af en borger eller hentes fra en sammenkædet container i {Storage Component}.
+
+Ejeren af ​​en værktøjsbænk kan give andre borgere adgang til at reparere deres egne værktøjer mod et gebyr, der er angivet i {Credit Component}. Når man tilbyder værktøjsreparation til offentligheden, skal forbrugerrettigheder gives i {Authorization Component}.  
+97;Tillader borgere at reparere værktøjer.
+98;
+Statuskomponenten giver borgerne mulighed for at se kravene til et objekt for at være aktivt, og hvilke af disse krav der er opfyldt. Hvis et objekt forårsager {Pollution}, viser statuskomponenten også produktionen af ​​det forurenede levetid for det objekt.
+99;Objektstatus
+100;
+Hver betingelse i statuskomponenten skal være opfyldt, før et objekt kan være aktivt. Nogle eksempler på forhold inkluderer:
+
+- At være indeholdt i et gyldigt {Room|Rooms}
+
+- At have nok {Power}
+
+- Et fungerende {Sewage} -system
+101;Statusindikator
+102;
+Når de interagerer med et objekt med en statuskomponent, kan borgere hurtigt se objektets status ved at kontrollere statusindikatoren i øverste venstre hjørne. En grøn cirkel betyder, at et objekt er aktivt, mens en rød cirkel betyder, at det er inaktivt.
+103;Viser, om et objekt er aktivt eller inaktivt, og hvorfor.
+104;Lagerkomponenten bruges til at styre lagerbeholdningen af ​​lagerbeholdere og knytte dem til objekter, der har brug for opbevaring.  
+105;Håndtering Af Lager
+106;
+Beholdning kan flyttes mellem containere ved at trække stakke med varer fra en container til en anden.
+
+Når du holder 'Skift' -tasten nede, mens du trækker emner, flyttes alle stakke af det samme emne mellem containere. Højreklik på en stak med genstande giver en spiller mulighed for at opdele en stak i mindre mængder. Når du holder 'Ctrl' nede, når du klikker på en stak med elementer, deles stakken i to.
+
+Nogle opbevaringsbeholdere, som et {StockpileItem}, kan indeholde enhver type vare. Andre lagerbeholdere, som f. eks. Et {StorageChestItem}, kan kun indeholde ikke-bærbare genstande.  
+107;Sammenkædning Af Opbevaringsbeholdere
+108;
+Et objekt kan linkes til containere i lagerkomponenten ved at markere afkrydsningsfeltet for containeren. Når objektet er linket, får det adgang til alle genstande i containerne og kan bruge containeren til opbevaring. Når du forbinder opbevaringsbeholdere, bruges den øverste beholder i opbevaringskomponenten først til opbevaring. Rækkefølgen kan ændres ved at klikke og trække lagringsdisplayene på listen.  
+109;Administrerer opgørelse og tillader linkning af lagring til andre objekter.
+110;En økonomi, der trives med handel, er afgørende for at udvikle den teknologi, der er nødvendig for at stoppe meteoren.
+111;Bankkonti er lager af {Currency}, som en eller flere borgere har adgang til. Hver borger kommer ind i verden med en permanent personlig bankkonto, der indeholder et uendeligt beløb af deres personlige kredit. Yderligere bankkonti kan tildeles og få deres adgangsrettigheder justeret i en {Bank|bank component}.
+
+Bankkonti er nyttige til at organisere valuta, give adgang til midler fra flere parter og gemme skatteopkrævningen og angive, hvem der kan få adgang til dem. Regeringer opretter normalt et antal bankkonti til at styre indstrømningen af ​​skatter og sikre, at midlerne bruges som tilsigtet. Hver bankkonto kan indeholde ubegrænsede mængder ubegrænsede valutaer, hvor hver valuta spores separat. Ved at klikke på bankkontoen vises hovedbogen, der viser alle transaktioner til eller fra den, da alle transaktioner i Eco er offentlige.
+
+112;Bankkonti tjener som opbevaring og adskillelse af valuta til forskellige anvendelser af forskellige borgere og offentlige enheder.
+113;
+En kontrakt er en aftale mellem to borgere oprettet på en {Contract Board|contract board component}. Aftalen kan have et hvilket som helst antal klausuler og specificere kombinationer af arbejde, der skal udføres, og kompensation, der skal betales. Det sendes af klientborgeren og kan accepteres af enhver gyldig borger asynkront.
+114;Eksempler på kontrakt inkluderer:
+    - Opret en vej mellem to udpegede punkter.
+    - Lån penge mellem to parter med en given rente og forfaldsdato.
+    - Byg et rum med givne krav på et bestemt sted.
+    - Brugerdefinerede krav beskrevet i tekst og accepteret / afvist af klienten efter afslutning.  
+115;Kontrakter opretholder en aftale mellem to borgere.
+116;
+Crafting er oprettelsen af ​​nye produkter fra ingredienser, arbejdskraft og / eller magt. Håndværk kan også skabe biprodukter, der forårsager forurening og påvirker miljøet negativt. Det danner rygraden i økonomien og genererer efterspørgsel efter ressourcer, der kommer fra økosystemet omkring dem, samt efterspørgsel efter individuelt kvalificeret arbejdskraft og delte tjenester som {Power|Power Component} eller {Sewage}.
+
+Enhver tabel, der har en {Crafting Component}, kan oprette produkter defineret på en liste. Crafting-tabeller kan deles, hver med konfigurerbar {Authorization Component}, der bestemmer, hvem der kan få adgang til dem, og gebyrer kan indstilles i {Credit Component} på bordet for at tjene penge på at dele dit bord.
+
+Input og output kan enten tages direkte fra crafting-bordet eller placeres i en vedhæftet {Storage Component}. Placering af ingredienser og produkter på lager giver borgere mulighed for at stille store ordrer i kø, der kører automatisk.
+
+Mange opskrifter kræver arbejdskraft af en bestemt {Skill|skills overview}. Mens enhver borger kan starte en håndværksopskrift eller bidrage med ingredienser, kan kun en borger med de krævede færdigheder tilføje arbejdskraft til den. For at danne en gruppe og have mange borgere bidrager til en arbejdsordre, mens de deler i betaling, kan der oprettes {Work Parties}.  
+117;Crafting er oprettelse af produkter af borgere ved bestemte borde.
+118;Valutaer er et middel til at lette handel som en repræsentation af værdi. Deres værdi bestemmes udelukkende af, hvordan de bruges.
+
+Der er to typer valutaer i Eco, støttet og ikke-backet.
+  
+En ikke-tilbagebetalt valuta er valuta efter fiat, og hver spiller starter med deres egen personlige valuta med et uendeligt beløb. Disse er især nyttige tidlige spil, når der ikke er angivet nogen global valuta. Disse valutaer kræver imidlertid stor tillid til, at ejeren af ​​dem ikke manipulerer deres værdi, da de har et ubegrænset beløb og let kan destabilisere en økonomi, der bruger dem.
+  
+Støttede valutaer er meget mere stabile. En støttet valuta oprettes ved en {Mint|Mint Component} ved at konvertere et valutastøttende materiale til mønter. Mere valuta kan kun oprettes ved at erhverve mere af det givne materiale. Dette giver en meget stærkere grænse for de mængder valuta, der kan introduceres i verden og danner et stærkere fundament for global handel. Ofte vælger en verden at flytte fra en samling personlige valutaer til en eller flere valutaer, der understøttes, når økonomien vokser gennem spilbuen, og der kræves mere global handel og samarbejde.
+  
+Valutaer kan overføres til andre i Economy Viewer såvel som via {Trade}. Al valuta gemmes på en {Bank Account|Bank Accounts}.
+
+119;Valuta er en samfundskonstruktion, der gør handel lettere.
+120;Økonomi har ofte intet at gøre med mængden af ​​penge, der bruges, men med den visdom, der bruges til at bruge dem.
+    Henry Ford  
+121;Økonomien omfatter handlinger med høst, produktion og handel blandt borgere, der tager fra {Ecosystem|Ecosystem Overview} under regulering af {Government|Government Overview}. Borgerne bliver nødt til at sikre en velfungerende økonomi for at udvikle teknologien nok til at stoppe meteoren uden at lade den løbe amok og ødelægge planeten gennem forurening i processen.  
+122;Økonomiske Begreber
+123;
+- {Crafting}. Brug af industrielle værktøjer til at skabe nye varer.
+  - {Trade}. Udveksling af varer skabt af enkeltpersoner med forskellige specialiteter eller adgang til ressourcer.
+  - {Transport}. Flytte ressourcer fra sted til sted og opbygge infrastruktur over hele verden for at gøre det.
+  - {Research}. Fremme menneskelig viden til forbedring af samfundet.
+  - {Currency}. En repræsentation af værdi skabt af borgerne, der letter økonomisk aktivitet.
+  - {Work Parties}. Organiserede arbejdsgrupper, der deler belønninger.
+  - {Contracts}. Aftaler mellem to borgere om arbejdskraft eller andre ordninger.
+  - {Bank Accounts}. Beholdere af valuta med konfigurerbar adgang.
+  - {Finance}. Tilvejebringelse af kapital til andre borgere for at hjælpe dem med at komme videre, mens du selv tjener penge.  
+124;Økonomien består af al borgeres ressourceforbrug, handel og teknologiske fremskridt.
+125;Ved brug af {Contracts} kan Citizens in Eco oprette lån- og obligationsaftaler mellem to parter, der automatisk sporer rentebetalingen og forfaldsdatoen for midlerne. Lån og obligationer er en fantastisk måde for nye borgere at samarbejde med mangeårige borgere med mere velstand på en måde, der gavner begge parter og øger samfundsmæssige fremskridt.
+
+Hvis en borger tager et lån, giver den udbydende part penge, som de forventes at betale med renter.
+Hvis en borger køber en obligation, giver de penge til den udbydende part, som de forventer at blive tilbagebetalt med renter.
+
+Sanktioner for misligholdelse af lån kan konstrueres ved hjælp af {Laws} ved at se efter udløseren Standard ved lån / obligation. Handlinger kan derefter træffes, såsom at overtage ejendom eller anvende andre sanktioner og bøder.
+
+126;Finans er forvaltning af valuta for at fremme fremskridt.
+127;Hver spiller kan påvirke omdømme for enhver anden spiller, som igen kan bruges som en faktor i love, kontrakter osv., Som kan spørge et borgeres omdømme og bestemme privilegier (eller mangel på det) baseret på værdien). For at sætte omdømme på en borger skal du holde markøren over deres navn i chat og klikke på deres omdømmeliste i værktøjstip (en liste over alle borgere kan findes på siden {Current Citizens}).
+
+128;Omdømme ændres af en netværksmultiplikator, som er en beregning som +1 for hver borger, der giver dig et positivt omdømme, og -1 for hver borger, der giver dig et negativt omdømme. På denne måde bliver det mere fordelagtigt at hjælpe mange borgere og få et bredt omdømme end at fokusere snævert på nogle få borgere. Relativ omdømme er en anden værdi, der kun tager højde for borgere, som du har givet et positivt ry for.
+
+129;En værdi, der er sat af andre borgere eller fra love, der repræsenterer din sociale status.
+130;Forskning skaber ny delbar viden og frigør nye typer produkter og evner. Det udføres på et {ResearchTableItem}, hvor du laver en færdighedsbog. Når den er oprettet, kan en færdighedsbog bruges til at oprette et ubegrænset antal færdighedsruller, som låser op for specialiteten for en borger, der bruger en.
+
+Hver færdighedsrulle er en forbrugsartikel til engangsbrug, der låser op for en ny {Specialty|specialties} hos den, der bruger den, som derefter skal gøres gældende med et niveau-op gennem systemet {Skills|skills overview} At få en ny færdighedsrulle giver også borgeren fordelen ved et sæt {Property Claim Papers|Property}, der giver dem mulighed for at kræve mere jord, efterhånden som de får dygtighed.
+    
+Færdighedsbøger er nogle af de sværeste ting at skabe, og borgere bliver typisk nødt til at samarbejde for at erhverve alle de forskellige ressourcer og arbejdskraft, der kræves for at producere dem. Som sådan er forskningsprojekter særligt velegnede til {Work Parties}, da borgere kan bruge dem til at dele det arbejde, der er nødvendigt for at skabe dem sammen med videnbelønningen efter afslutningen.  
+131;Forskning skaber ny delbar viden og frigør nye typer produkter og evner.
+132;Handel med dine medborgere er afgørende i Eco, da hver spiller har et sæt {Specialiteter}, som de kan bidrage til mest effektivt, mens de handler med andre borgere, der er dygtige i erhverv, som de ikke er.
+
+ - Handler kan opsættes i en {Store Component}, der angiver købs- / salgspriser for de forskellige varer, du ønsker. Borgere kan derefter købe og sælge varer til dig asynkront uden at være til stede.
+ - Arbejdshandel kan ske gennem {Contracts} og {Work Parties}, så spillerne kan udføre arbejde mod betaling inden for aftalte vilkår. Dette kan også udføres asynkront.
+ - Valutahandel kan ske ved en {Currency Exchange|Exchange Component}, der angiver købs- / salgskurser for udveksling af forskellige valutaer.
+ - Handel lettes af {Transport} og opbygning af transportinfrastruktur mellem de spirende nav i din civilisation vil i høj grad fremme muligheden for at handle.
+ - Handel er underlagt {Taxes}, fastlagt af regeringen {government overview}, som enten kan fremme eller reducere værdien af ​​visse handler.
+
+133;Handel mellem borgere med forskellige evner og besiddelse af forskellige varer er rygraden i økonomien.
+134;Med ressourcer spredt over hele verden og de steder, hvor de indsamles og behandles adskiller sig fra, hvor de bruges, bliver transport en kritisk faktor til succes inden for Eco.
+
+For effektivt at omdanne materialer skal du oprette køretøjer til at bære dem, og de kræver fladning af jorden til veje. Ved hjælp af et {StoneRoadToolItem} kan du flade jorden og gøre det anvendeligt til køretøjer, og med ramper kan du lave blide skråninger, som køretøjer kan køre på. Mere avancerede køretøjer kræver avancerede veje til at køre effektivt, og veje skal regelmæssigt opgraderes, efterhånden som ny teknologi kommer til rådighed.
+
+Bygning af veje mellem landsbyer og ressourcecacher vil tage tid og kræfter for mange borgere og er en god kandidat til projekter om offentlige arbejder finansieret af {Taxes} og bygget ved hjælp af {Work Parties}. Efterhånden som verden udvikler sig inden for teknologi, vil der blive skabt mere og mere transportinfrastruktur for at hjælpe strømmen af ​​handel og til sidst vokse til et punkt, hvor vejkonstruktion og køretøjsbrug vil påvirke miljøet. Omhyggelig styring af denne indflydelse vil være nøglen til at bevare de økosystemer, de passerer igennem.
+
+135;Med ressourcer og deres anvendelse spredt over hele verdenen, bliver det nødvendigt at transformere verden ved at opbygge transportinfrastruktur.
+136;En arbejdsgruppe er en aftale mellem flere borgere om at udføre arbejde. De startes af en individuel borger ved at besøge en {Contract Board|Contract Board Component} efter oprettelse af en arbejdsordre.
+
+Den borger, der udsteder en arbejdsgruppe, kan definere de forskellige parametre for arbejdet, som inkluderer:
+ - Arbejdsordrer, der skal gennemføres.
+ - Hvad kræves af borgere, der ønsker at deltage i arbejdsgruppen.
+ - Hvilken betaling gives til folk, der deltager.
+ - Hvordan betalingen fordeles.
+ - Hvordan betalingen fordeles.
+
+Arbejdsgrupper er især nyttige til udførelse af {Research}. En borger kan oprette et forskningsprojekt, der koster en stor mængde ressourcer og knytte en arbejdsgruppe til det. Borgere kan derefter automatisk deltage i arbejdsgruppen (selv når den udstedende borger er offline, hvis de opfylder de angivne krav) og begynde at udføre opgaven.
+
+Betaling kan have forskellige former:
+- {Currency}, distribueret baseret på hvor meget arbejde der udføres, enten straks eller efter afslutningen.
+- {Reputation}, givet fra arbejdsgruppens skaber til arbejderen (underlagt de daglige grænser for omdømme, der kan gives).
+- Viden om en bestemt specialitet (den samme effekt som at læse en skill-scroll). Til denne fordel skal arbejdsgruppeskaberen have færdighedsbogen til specialet, eller den skal udformes i en af ​​festens arbejdsordrer.
+- Tildeling af en {Title}, som kan give dem nye privilegier til at få adgang til ejendom og andre evner.
+
+Økonomiens økonomi er ikke kun fokuseret på handel med varer, men handel med arbejdskraft, og arbejdsgrupper gør det let at opdrætte mange slags arbejde til den generelle befolkning.  
+137;Arbejdspartier er fælles aftaler mellem et antal aktører om at udføre en given opgave, hvor kompensation fordeles på forskellige måder.
+138;Verdens levende biom, der leverer ressourcer, som mennesker skal bruge for at overleve.
+139;
+Den enorme mangfoldighed og rigdom i livet over hele planeten kan i vid udstrækning kategoriseres i områder kaldet biomer. Biomes in Eco er regioner i verden, der falder inden for bestemte områder med nedbør og temperatur. På grund af disse simulerede fysiske forskelle er forskellige arter af mikroorganismer, planter, svampe og dyr i stand til at overleve og trives i forskellige biomer. Hvert biom i Eco er vært for et unikt sæt ressourcer, som spillerne kan opdage og udvinde for at opbygge og give næring til deres samfund. Livssamfund inden for hvert biom har indbyrdes afhængige forhold, der normalt er bundet til levested, kost og jord, som igen opstår på grund af klimaet og jordressourcerne.
+  
+Biomer er økosystemer inden for det globale økosystem, og inden for biomer er der undertiden yderligere opdelinger eller 'subbiomer', såsom den høje ørken, højgræspræriegræsarealer, isis i tundraen eller havkysterne. Biomer og subbiomer er sammenhængende enheder, hvoraf mange har begrænsninger for, hvilke biomer de kan opholde sig ved siden af ​​eller indeni. Over tid, når forholdene ændrer sig på grund af spillerindflydelse, har biomer potentialet til at blive omformet radikalt.
+
+Klimaændringer kan flytte grænserne for biomer, fortrænge samfund - nogle arter vil overleve og tilpasse sig, men andre vil ikke være så modstandsdygtige. Direkte forskydning af jord og anden ødelæggelse af levesteder fra aktiviteter som konstruktion, landbrug, minedrift og skovhugst vil også have en forskellig indvirkning på arter inden for biomer. Arter af planter eller dyr foretrækker måske ikke kun bestemte biomer, men bestemte dele af subbiomer, hvilket vil betyde en større indvirkning, hvis disse stærkt lokaliserede områder ændres eller ødelægges. Modstandsdygtige og adaptive arter vil være i stand til at trives på tværs af biomegrænser, når de ændres, men de samme arter kan blive en trussel mod mere følsomme planter eller dyr i de nye biomer, de introduceres for. 
+140;Biomes I Eco:
+141;Ocean: De dele af havet på de kontinentale hylder, der er rig på liv.
+Deep Ocean: De dybeste dele af havet med de største marine arter og vandrende populationer af fisk.
+Cold Coast: Strande og lavt vand i koldere klimaer.
+Varm kyst: Strande og lavt vand i varmere klimaer.
+Vådområder: Et unikt biom, der er kendetegnet ved en mætning af jorden med frisk eller brakvand.
+Græsarealer: Et biom, hvor der er nok vand til at understøtte græs, men ikke mange træer.
+Ørken: Det tørreste biom, og i Eco i øjeblikket også det hotteste.
+Cold Forest: Et biom, der er vådt nok til at understøtte tæt trædække, og koldt nok til, at nåletræer har tendens til at dominere.
+Varm skov: Et biom, der er vådt nok til at understøtte tæt trædække, og varm nok til, at løvtræer har tendens til at dominere.
+Regnskov: En våd og varm biom, der understøtter en skov rig på plante- og dyreliv.
+Taiga: En kold og noget tør biom, der understøtter en sparsom skov af nåletræer.
+Tundra: Et meget koldt biom, der ikke understøtter træer, men som er vært for et unikt plante- og dyresamfund.
+Is: De koldeste områder af landet, dækket af isis.
+
+Der er også et par subbiomer i Eco i øjeblikket:
+
+High Desert: En geologisk opløftet del af ørkenen med arter, der er mere tolerante over for kulde, og som nyder de stejle klipper forårsaget af erosion.
+Kold steppe: En lidt koldere græsareal, ofte præget af endnu færre træer og større åbne rum.  
+142;Det levende system af planter og dyr, der giver mennesker mulighed for at overleve.
+143;Grafer
+144;
+Hver Eco-verden gemmer hver handling i spillet og overvåger fremskridtene i alle aspekter af simuleringen. Data lagres i nogle få hovedkategorier, specifikt økosystemet og økonomien. Når spillere udfører handlinger, eller når økosystemet ændres, vil det blive repræsenteret på grafer, der er synlige for borgerne.
+
+Grafer er mest nyttige til at sammenligne tilstande for forskellige målinger og se dem overarbejde. Som sådan er de især nyttige til at bestemme resultaterne af love og regler i eftertid ved at undersøge, hvordan tingene ændrede sig, efter at de blev implementeret. De er også nyttige til ekstrapolering til fremtidige effekter, projicerer den hastighed, hvormed ting ændrer sig (dvs. befolkningstab som følge af skovrydning) og foretager ændringer, før de opstår. Læsning, komponering og forståelse af grafer er et meget kraftfuldt værktøj for regeringen, og borgerne får værktøjerne til at udarbejde grafer, der understøtter eller tilbageviser argumenter og præsenterer dem for deres medborgere direkte på diskussioner for borgerlige handlinger.
+
+145;Varmekort
+146;
+Økoverdener er forskellige steder med mange forskellige biomer og placeringer af menneskelig udvikling og miljøpåvirkning. For at se, hvordan forskellige dele af verden varierer, er der tilgængelige heatmaps til alle de forskellige verdenseffekter i spillet. Sådanne værdier som borgeraktivitet, befolkningshastigheder, forureningshastigheder, temperatur, fugt og snesevis mere kan ses gennem varmekort med ændringer registreret over tid, der kan afspilles og bruges til videnskabelig argumentation.
+
+Spillere kan se disse på to måder: gennem minimakortet i spillet, som også kan vise farvet terræn i spillet. For det andet kan de ses i webbrowseren, hvor deres evne til at afspille over tid udnyttes. Et øjebliksbillede af hver varmekort gemmes i serverdataene hvert 10. minut (konfigurerbar), og borgere kan se tidsforløbede visninger af, hvordan varmekortene ændrer sig over tid. Dette er vigtigt for at måle påvirkninger på bestemte steder og bestemme de bedste ruter til at opbygge infrastrukturer og nyhedsafregninger.
+
+147;Mini-kort
+148;
+Minikortet er et kraftfuldt værktøj i spillet, der tjener mange formål: navigation, planlægning, datavisning, lokalisering af ejendom og mange flere. Det kan aktiveres for at se de forskellige verdenslag i spillet (heatmaps) og fremhæve regioner med høj / lav befolkning, forurening, borgeraktivitet osv. Ved hjælp af en gradient af farver. Verdensmarkører kan tilføjes manuelt eller globalt for alle borgere for at dirigere til bestemte punkter, hvilket hjælper med at koordinere menneskelig aktivitet. Disse markører bruges også til automatisk at dirigere borgerne til dynamisk arbejde, idet de angiver, hvor veje skal bygges i en kontrakt, hvor de skal levere varer til transport osv.
+
+I øjeblikket arbejder vi på at tilføje udpegning af ejendom og distrikter i spillet samt at specificere specifikke arealer til arbejdsgrupper og kontrakter, så for eksempel borgere kan fremhæve i spillet de områder, de ønsker at ansætte andre til at pløje en mark, eller bygge en vej osv. Dette vil i høj grad åbne mulighed for arbejdsmarkedet, så borgerne bliver meget mere specifikke på en lettere måde, når de angiver, hvor de ønsker, at arbejde skal udføres.
+
+149;Det levende system af planter og dyr, der giver mennesker mulighed for at overleve.
+150;Den sande mening med livet er at plante træer, i hvis skygge du ikke forventer at sidde.\n– Nelson Henderson
+151;
+
+Økosystemet er et mål for sig selv i Eco, og dets fortsatte velstand er det primære mål for spillet sammen med økonomisk fremgang. Det vil sige, økosystemet starter i en win-state, og spillere skal bruge dets ressourcer uden at bringe det i en tabt-state, hvilket vil betyde ødelæggelse for menneskeheden.
+
+Økosystemet i Eco kører på en kontinuerlig simulering, aktiv så længe serveren kører, uanset om spillere er med i spillet eller ej. Hver simuleret plante og dyr vokser, forbruger madkilder og reproducerer. Det er den eneste kilde til materialer, hvorfra spillerne skal opbygge deres samfund, og processen med at udvinde dem vil påvirke det meget. At hugge ned i en skov kan ødelægge en skabnings levested og føre dem til udryddelse. Mineafgang kan forurene nærliggende floder og søer og forgifte gårde, der er afhængige af det. De handlinger, som spillere træffer i Eco, påvirker deres miljø, og spillerne bliver nødt til at forstå den indflydelse, de har for at trives og stoppe meteoren. Det er ikke en mulighed at lade økosystemet være i en uberørt, uberørt tilstand; meteoren sikrer, at valget også vil føre til økosystemets ødelæggelse. For at redde det skal borgerne tage fra det og opbygge et samfund, der har magten til at stoppe meteoren, samtidig med at de er tilbageholdende for ikke at ødelægge økosystemet i processen.
+
+152;Gameplay
+153;Økosystemet er det grundlæggende system, som borgerne skal forstå og kæmpe med. Fra at vokse store {Farms|Farming} og {Mines|Mining} til forståelse af virkningen af ​​{Pollution} gennem undersøgelse, vil borgernes indflydelse på økosystemet afgøre succes eller fiasko for spillerbeslutninger. At forstå, hvordan det fungerer ved hjælp af {Data} i spillet, bliver et vigtigt krav for at overleve. I modsætning til {Economy|Economy Overview} og {Government|Government Overview} er økosystemet ikke en borgerkonstruktion - dens adfærd er absolut, intet om, hvordan det fungerer, kan ændres på en måde, som økonomien kan. I denne forstand er det en reality check, det sted, hvor borgernes modstridende skævheder og tro kolliderer og afslører de sande konsekvenser.
+154;Mellem Økonomi Og Regering
+155;Efterhånden som borgerne udvikler samfundet, skal de være opmærksomme på 'Undertragedien'; at give en befolkning uhindret adgang til en fælles ressource ofte vil resultere i dens ødelæggelse. For at forhindre dette skal borgerne organisere sig og beslutte regler for det fælles gode gennem {Laws} og andre borgerlige regler, der kan begrænse individet, men som tillader gruppen at overleve. Denne konflikt, individet mod gruppen, udgør hjertet i udfordringen med at opbygge en civilisation.  
+156;Det levende system af planter og dyr, der giver mennesker mulighed for at overleve.
+157;
+Landbrug giver en måde at tage de plantearter, der er mest nyttige for mennesker, og skabe fødevareforsyning på verdensplan. Landbrug kan også fokusere på planter, der er nyttige til andre industrielle formål, såsom biobrændstof til en potentielt vedvarende energikilde.
+
+Landmændene skal være opmærksomme på ressourcerne og sundheden i deres jord og undgå udtømning og forurening. Gødning som {CompostFertilizerItem} og metoder til overvågning af jordressourcer som {SoilSamplerItem} vil være vigtige værktøjer til at holde landbrugsjord produktivt. Forskellige køretøjer, opbevaringsteknologier og mere kraftfulde håndværktøjer gør det muligt for spillerne at opskalere deres landbrugsaktiviteter, når deres samfunds mad- og brændstofbehov øges.
+
+Landbrug er en stor aktivitet i Eco, som vi ønsker at forbedre og udvide, når vi går videre med udvikling. Balancering og opbevaring vil være en central del af landbrugsforbedringer, der skal startes, da vi sørger for, at økosamfund genererer en passende efterspørgsel fra landmænd til at fremme teknologisk vækst, og at lagerobjekterne og mekanikken findes for at understøtte disse krav. Landbrug i sig selv har mange mulige forbedringer og udvidelser, blandt dem der udvikler og modificerer frø og organismer til at være mere produktive eller resistente over for forurenende stoffer eller andre miljømæssige faktorer.  
+158;Jord
+159;
+Jordens jord indeholder næringsstoffer, der tillader planter at vokse og trives: for meget eller for lidt af en given type kan ændre udbyttet og væksthastigheden for både naturligt forekommende og opdrættede planter. Efterhånden som planter vokser, tager de næringsstoffer fra jorden og returnerer det, når de dør, og bringer verden i en naturlig tilstand af ligevægt. Spillere påvirker disse ændringer ved at fjerne planterne fra miljøet gennem høst, skovrydning, minedrift eller indføring af forurening, som langsomt fjerner næringsstoffer fra jorden. Spillere kan genindføre næringsstoffer eller ændre de eksisterende forhold ved at bruge gødning på deres land.
+
+Når vi øger dyrenes afhængighed af plantelagene, kan vi få disse dele af økosystemerne til at påvirke jorden yderligere, da arter, der forbruger planter, også kan fjerne næringsstoffer fra jorden. En anden tilføjelse, der kan overvejes, er, hvordan matjord eksisterer inden for Eco: i øjeblikket er den rent kosmetisk og bundet til områdets biom, men i hver biom er matjorden en unik og værdifuld ressource sammenlignet med det tætte ler og snavs nedenfor.
+
+160;Det levende system af planter og dyr, der giver mennesker mulighed for at overleve.
+161;
+Jorden under dig er vært for et stort udvalg af ressourcer, såsom sten, metaller og andre mineralforekomster. Forskellige typer sten er vært for forskellige slags mineralforekomster eller egner sig til at fange andre ressourcer som olie. På grund af den enorme kompleksitet af jordressourcer i virkeligheden og nødvendigheden i Eco af at give spillerne en forudsigelig balance af råmaterialer til at begynde med, genereres klipper og deres aflejringer baseret på Biomes. Hvert biom leveres med en række tilknyttede klipper og aflejringer, der spredes ud under det i lag.
+
+162;Minedrift I Hånden
+163;
+For at udvinde malm skal du først finde den. Malm i Eco er hver især hostet i bestemte værtssten, så det er en god måde at starte at lære, hvilke sten der har den type malm, og derefter grave i nærheden af ​​sten af ​​den slags. Brug et {WoodenShovelItem} eller bedre til at grave jorden væk fra overfladen eller begynde at grave i en bakke fra siden. Når du først har ramt sten, du vil gennemgå, skal du bruge en pickaxe som {StonePickaxeItem} til at bryde den. Når du bryder sten med pickaxen, bryder du nogle gange et større stykke sten, der skal rammes igen for at bryde i stykker, der er små nok til at samle op. Det er en god ide at samle sten, når du bryder den, og stable den andre steder til brug, helst i et {StockpileItem} eller køretøj, du bruger til at transportere din malm som et {WoodCartItem}.
+
+164;Mineralforarbejdning
+165;
+Når du har samlet en stor mængde metalmalm, skal du behandle malmen, før du kan fremstille metalprodukter med den. Dette er en beskidt og dyr proces, og optimering af det og biprodukterne fra det vil være et løbende spørgsmål om overvejelse. De tre hovedtrin i mineralforarbejdningen er:
+
+Findeling: findeling betyder at knuse klippen til mindre partikler, som kan behandles yderligere. Knust sten af ​​den type malmen er hostet i er det vigtigste biprodukt af denne proces.
+Koncentration: Koncentration er en måde at adskille de ønskede metaller i en malmsten fra affaldsstenen. Denne proces er aldrig perfekt og resulterer uundgåeligt i en stor produktion af sten, der stadig indeholder spor af frigjorte metaller. Denne affaldssten med spor af tungmetaller er kendt som {TailingsItem}. {CopperOreItem} og {GoldOreItem} kræver kemisk leeching og våd bearbejdning for at adskille sig fra deres værtssten og producerer således mere forurenet og flygtigt {WetTailingsItem} under koncentrationsprocessen.
+Smeltning: Når du først har ædelt malmkoncentrat, kan du til sidst smelte det i metalprodukter som {IronBarItem} på et {BloomeryItem} eller ved hjælp af en mere avanceret smelteteknologi.
+
+166;Det levende system af planter og dyr, der giver mennesker mulighed for at overleve.
+167;
+Når borgere brænder brændstof til madlavning eller frembringelse af energi, smelter metaller, behandler spildevand og deltager i utallige andre nødvendige industrielle aktiviteter, er et almindeligt biprodukt forurening. Forurening er ethvert stof, der kan virke som en forurening eller gift, når det føres tilbage i miljøet. I Eco er der mange kilder og flere sorter af forurening, hvoraf nogle er mere potente end andre. Tungmetaller kan forurene jord og påvirke tilgængelige næringsstoffer og sundheden for planter og dyr, der lever på og i den. Vand kan sprede forurenende stoffer hurtigt og øge størrelsen af ​​deres påvirkning. Luftforurening kan usynligt eller åbenlyst strømme fra en komfur eller et kraftværk, tilføje drivhusgasser og påvirke luftkvaliteten samt falde ned i jorden igen som sur regn.
+
+For at sikre økosystemers overlevelse og bevare ressourcer som jord og vand skal spillerne styre og indeholde de forureningskilder, som deres civilisation skaber. I nogle tilfælde vil spild eller dødbringende koncentrationer være uundgåelige, og derefter kan afhjælpning og opbevaring være den eneste mulighed for at bringe landet tilbage til en uskadt tilstand.
+
+168;Grundforurening
+169;
+Når det først er frigivet i jorden og vandbordet, er det ikke let at stoppe eller fjerne jordforurenende stoffer. Forskellige materialer i Eco er kilder til jordforurening, især tailings fra minedrift og skrald fra håndværk og andre spilleraktiviteter. Forurening spredes som en gradient, der øges i koncentration med tiden, hvis kilden til forurenende stoffer forbliver eller øges. Når kilden til forurenende stoffer fjernes fra kontakt med jorden, spredes jordforurening og spredes med tiden.
+
+170;Luftforurening
+171;
+Mange spilleraktiviteter kan skabe skadelige emissioner, som, hvis de frigives i atmosfæren, fungerer som luftforurening. At skabe på objekter med CO2-output eller køre generatorer med dem bidrager til lokalt og globalt forureningsniveau. Over lange perioder bidrager det globale CO2-niveau til en global opvarmningseffekt, som igen påvirker havets overflade. Der er naturlige dræn og indtag for nogle forurenende stoffer som CO2 såsom skove.
+
+Koncentrationer af luftforurening falder tilbage til jorden som sur regn, som vi simulerer ved hjælp af luftforurening og lokale nedbørsmængder.
+
+172;Vandforurening
+173;
+Vand er et medium, hvorigennem forurening spreder sig hurtigere og længere, strømmer nedstrøms og blomstrer ud i søer eller have. Forurening i vandet kommer generelt fra nærliggende jordforureningskilder, men kan også komme ind i vandet via den sure regnmekaniker i områder med masser af luftforurening.
+
+Fjernelse af kilden er den eneste måde at stoppe vandforurening i øjeblikket, men oprydnings- og saneringsstrategier er funktioner, vi overvejer for fremtiden.
+
+174;Indeslutning
+175;
+I mange tilfælde er der ingen perfekt løsning til at håndtere forurenende materialer. Der skal skabes plads til at opbevare forskellige forurenende stoffer, og forurenende stoffer skal opbevares på en måde, der forhindrer dem i at komme ind i det omgivende miljø igen. Dette er en udfordring, der skal være nøglen til miljøledelse af industrien i Eco. I øjeblikket kræver tailingsmekanik dyb underjordisk opbevaring; dette vil blive forbedret med yderligere udvikling.
+
+Indeslutningsmekanik er forkant med de funktioner, vi ønsker at forbedre, relateret til forureningsgruppen med funktioner i Eco. Spillere skal bruge indeslutning til at håndtere de store mængder tailings og affald, som deres samfund producerer.
+
+176;Det levende system af planter og dyr, der giver mennesker mulighed for at overleve.
+177;Forfatningsmæssige artikler definerer, hvordan ting sker i regeringen: Hvem kan vedtage love, fastsætte skatter, ændre regler osv. Det kan også definere bestemte handlinger som behov for et valg ved at angive en {Election Process|Election Processes} inde i dem.
+
+Forfatningsmæssige artikler kan tilføjes to steder. På et {CapitolItem} kan du tilføje op til tre, og på {AmendmentsItem} kan du tilføje op til yderligere 10 mere pr. Vare.
+
+Definition af regeringens regler er meget vigtigt for at holde den en stabil, samfundsstøttende struktur. Regeringer kan få stor magt over hele verden med love, og der er fare for, at denne magt misbruges. Ved at indstille et system med kontrol og balance kan borgerne designe en regering, der kan gennemgå en række ændringer, herunder ledelsesændringer, samtidig med at de bevarer magten til at gennemføre positive ændringer i verden.
+
+178;Et sæt regler om, hvordan regeringen fungerer.
+179;En forfatning er et grundlæggende dokument, der definerer, hvordan et samfund vil blive styret. En forfatning skal oprettes, inden enhver anden regeringsindvendelse. De oprettes på et {Capitol|CapitolItem}.
+ 
+Omstyrtning af regeringer
+Når en hovedstad er placeret, kan en forfatning ratificeres ved at åbne den og klikke på Ratificer. Så længe der ikke er andre forfatninger, oprettes regeringen med det samme.
+ 
+Hvis der allerede er en forfatning aktiv, kan en ny forfatning kun træde i stedet, hvis boligværdien af ​​dens rum overstiger den eksisterende forfatning med et betydeligt beløb, afhængigt af serverindstillingerne.
+ 
+Bemærk: En kommende opdatering af Eco tillader flere samtidige regeringer.
+180;Grundlæggende dokument for en regering.
+181;
+Demografi er klasser af borgere, skabt i regeringen. Disse kan derefter bruges hvor som helst, du kan angive en borger (tilladelser, love osv.).
+
+For eksempel kunne borgere definere en demografisk 'Lumberjacks', som kun ville indeholde brugere med et logningsfærdighedsniveau på 3 eller mere. Derefter kunne der oprettes en lov, der kun tillader 'Lumberjacks' at hugge træer af gammel vækst.
+
+Demografi defineres på et {Census Bureau|CensusBureauItem}.
+
+Demografi kan også have lønninger fastsat. Løn betales med jævne mellemrum, så længe en borger forbliver inden for demografien.
+
+182;Definerer et sæt borgere, der matcher nogle kriterier.
+183;Distrikter oprettes af spillere på et {ZoningOfficeItem} og kan bruges som områder, der er specificeret i love.
+
+Et distrikt er et valgt landområde, ikke sammenhængende, som spillerne kan justere efter ønske. Distrikter er indeholdt i distriktskort, og der kan være flere distriktskort i verden. Men inden for hvert distriktskort må ingen distrikter overlappe hinanden.
+
+Distrikter kan bruges til at angive, hvor handlinger er tilladt med love. En lov kan for eksempel oprettes, der forhindrer oprettelse af fældning af træer i et 'beskyttet zone'-distrikt.
+
+184;En defineret del af jorden, som kan henvises til ved love og andre systemer.
+185;Valgte titler er embedsmænd, der kan tildeles tilladelser til at styre regeringens politik. Disse titler kan bruges overalt, hvor du kan angive en borger (tilladelser, love osv.).
+
+Valgte titler oprettes på et {GovernmentOfficeItem}. Flere betingelser kan indstilles, når en valgt titel defineres:
+
+  - En {Election Process|Election Processes} med tidsbegrænsninger for titelindehavere
+  - Antallet af borgere, der kan have den valgte titel på samme tid
+  - Krav om at blive i embetet, når de først er valgt til titlen
+  - En efterfølger, der overtager stillingen, hvis en titelindehaver fjernes fra embedet
+
+Under oprettelsen af ​​en valgt titel kan følgende tilladelser tildeles:
+
+  - Indstilling af skattesatsen til et {TreasuryItem}
+  - Adgang til at bruge midlerne på statskassens bankkonto
+  - Regeringsbankrettigheder til at oprette offentlige bankkonti, der er undtaget fra beregninger af personlig formue
+  - Evnen til at placere en global kortmarkør for at underrette borgerne om et interessepunkt
+
+Valgte titler kan tildeles lønninger, der regelmæssigt udbetales til de borgere, der har titlen.  
+186;Valgte Titler er embedsmænd, der kan tildeles tilladelser til at styre regeringens politik.
+187;Borgere kan definere nye valgtyper på et {BoardOfElectionsItem}, og hver valgproces, der oprettes der, kan bruges til forskellige ændringer i regering og ledelse.
+
+{Civic Articles} kan henvise til valgprocesser for at udpege handlinger, der kræver valg. {Elected Titles} oprettet på et {GovernmentOfficeItem} skal angive en valgproces, hvormed nye medlemmer bliver valgt.
+
+Hver valgproces kan definere et andet sæt vælgere, vetoere, timings, procent, der er nødvendige for at vinde osv. Ved hjælp af forskellige valgtyper kan borgerne designe deres regering til at have forskellige magtsæder. For eksempel kan de definere en magtfuld titel, der skal vælges af den generelle befolkning, men som også kan anklages af dem.
+
+188;Definerer, hvordan et valg finder sted.
+189;Valg kan have to former:
+  
+    - Valg af embedsmænd. Dette er valg af {Elected Titles}, som giver en borger specifikke beføjelser.
+    - Folkeafstemninger. Et ja-eller-nej-afstemning, der vil afgøre, om der skal foretages en specifik borgerlig handling.
+
+Valg startes på et {BallotBoxItem}, hvor borgere kan udføre en række borgerlige handlinger. Afhængigt af hvad {Civic Articles} er tilgængelige, kan disse handlinger muligvis kræve valg; hvis de gør det, har borgeren mulighed for at starte en med det samme.
+
+Valg kan have et antal indstillinger bestemt af deres {Election Process|Election Processes}. Dette angiver, hvem der kan stemme, hvem der kan nedlægge veto, hvor længe valget varer, hvilken procent der er behov for at vinde osv. Flere valgtyper kan oprettes til forskellige formål. For eksempel kunne der oprettes en repræsentativ regering med nogle valg, der kun tillader valgte embedsmænd at stemme, mens de fleste borgere kun stemmer ved valg til repræsentanter.  
+190;En afstemning rettet mod en gruppe borgere for at bestemme en holdning eller folkeafstemning.
+191;Eksekutive handlinger er engangsaktioner, der kan påvirke en bestemt gruppe borgere eller alle borgere på én gang.
+  
+Executive-handlinger kan foreslås på et {ExecutiveOfficeItem} ved hjælp af {Civic Action Component}. Disse handlinger har tre hovedeffekter:
+  
+ - Udsted en engangs {Tax|Taxes}
+ - Giv en betaling til borgere fra {TreasuryItem}
+ - Skift {Property} -ejeren af ​​den eksisterende ejendom
+
+Afhængigt af hvilke {Civic Articles} der er tilgængelige, kan disse handlinger muligvis ikke kræve valg. I nogle borgerlige artikler hedder det, at kun {Elected Titles} kan udføre udøvende handlinger.  
+192;En handling udført af en regeringsembedsmand, der har indvirkning på skatter, ejendom osv.
+193;Den straf, som de kloge lider under, som nægter at deltage i regeringen, er at leve under dårligere mænds regering.\n- Plato
+194;Mellem økosystemet og økonomien ligger regeringen, der drives af borgerne for at sikre, at begge overlever og trives.
+  
+  
+195;
+Regeringen er skabt af borgere, stykke for stykke, der vokser deres magt og kapacitet sammen med befolkningens magt. Regeringens dele er:
+  
+196;{Constitution}
+Før ethvert andet aspekt af regeringen kan oprettes, skal der oprettes en forfatning på et {CapitolItem}. Det bestemmer, hvordan regeringen fungerer via borgerlige artikler.
+
+197;{Civic Articles}
+En forfatning indeholder borgerlige artikler, der definerer, hvordan regeringen fungerer: hvem kan gøre hvad, og hvordan. De kan oprettes ved en {CapitolItem} i en ny forfatning eller føjes til en eksisterende forfatning ved en {AmendmentsItem} -tabel.
+
+198;{Laws}
+Lovgivning bestemmer regler og processer, som alle borgere er tvunget til at følge. Et {CourtItem} kan indeholde op til 3 love.
+
+199;{Elections}
+Valg startes automatisk, når der foretages ændringer, der kræver dem, som fastlagt i forfatningen. De kan have mange effekter (ændring af love, valg af ledere, udførelse af udøvende handlinger).
+
+200;{Election Processes}
+En valgproces bestemmer, hvordan valg fungerer: hvem der kan stemme og nedlægge veto, hvor længe de varer, hvilke flertal der kræves osv. Et {BoardOfElectionsItem} kan rumme op til tre valgprocesser.
+
+201;{Elected Titles}
+En valgt titel er en regeringsstilling, der kan gives særlige privilegier. Et {GovernmentOfficeItem} kan have en valgt titel.
+
+202;{Demographics}
+En demografi definerer en gruppe mennesker efter specifikke regler. Denne gruppe kan derefter bruges i andre aspekter af regeringen. En {CensusBureauItem} kan rumme op til tre demografier.
+
+203;{Districts}
+Definerer et areal, som der kan henvises til i love og andre steder. Et {ZoningOfficeItem} kan rumme op til tre distriktskort.
+
+204;{Executive Actions}
+En udøvende handling er en engangsoperation, der kan udføres for at vedtage ændringer i samfundet. De udføres på et {ExecutiveOfficeItem} af brugere, der får privilegier fra forfatningen (typisk valgte titler).
+
+205;
+{Ballot Boxes|Civic Action Component}
+  En stemmeseddel giver mulighed for at udføre operationer i forbindelse med valg og kontorhold.
+
+206;
+{Treasury|Treasury Component}
+  Bestemmer skatter på forskellige dele af økonomien.
+
+207;En institution designet og drevet af folket for at fremme det fælles gode.
+209;Lov er det middel, hvormed regeringen foretager ændringer i verden for at nå befolkningens mål.
+
+Lovgivning oprettes ved at placere et {CourtItem}, og afhængigt af de {Civic Articles}, der er tilgængelige, kan det kræve valg for at blive vedtaget. Hver lov oprettes med en liste over årsager og virkninger, og når årsagen sker, vil effekten blive aktiveret. Dette giver stor fleksibilitet i, hvordan lovene fungerer, og de kan dække mange områder; fra beskatning til regulering til udbetalte midler, der stimulerer aktiviteter.
+
+Mange 'Årsag' valg giver kontekst om den borger, der udløste det, hvor det blev udløst osv. Disse 'kontekst' egenskaber kan ses i værktøjstipset Årsag og er tilgængelige til at specificere data i 'Effekter'. For eksempel kan en effekt beskatte den specifikke spiller, der huggede et træ ned  
+210;Regler om årsag og virkning designet af borgerne og håndhæves automatisk for at nå samfundsmæssige mål.
+211;Til gavn for folket eller i det mindste regeringens berigelse kan der pålægges skatter på mange handlinger i Eco.
+  
+Skat på skat
+På et {TreasuryItem} kan skatter indstilles på en række forskellige handlinger:
+ - Moms. Skat på salg af varer i en butik.
+ - Crafting gebyr skat. Skat på de gebyrer, der opkræves fra deling af din håndværksstation.
+ - Kontraktsskat. Skatter fra betalinger foretaget gennem kontrakter og arbejdsgrupper.
+ - Direkte overførselsskat. Skatter fra overførsler mellem spillere.
+ - Selvafgiftsoverførselsskat. Skatter, der tages, når du overfører til en konto, du har adgang til (for eventuelt at beskytte mod skatteundgåelse smuthuller).
+
+Kun en borger, der har en {Elected Title|Elected Titles}, der har fået ret til at 'sætte skatter i statskassen', kan justere disse satser. Alle skatter, der tages fra disse indstillinger, gemmes på den særlige 'Treasury' bankkonto. Tildeling kan foretages ud af denne specielle bankkonto til andre gennem kommandoer i statskassen.
+
+Lovskatter
+Skatter kan også indstilles via {Laws}, som kan få deres beløb og destinationer bestemt dynamisk. Den bankkonto, de er placeret på, kan også bestemmes, hvilket giver mulighed for finansiering af specifikke midler til specifikke formål, der er gemt på bankkonti, der kun er tilgængelige for et begrænset antal mennesker. Ved hjælp af lovsystemet kan disse skatter meget specifikt målrettes og justeres baseret på de handlinger, der sker.
+
+For eksempel kunne der oprettes en 'valgt transportposition' valgt titelposition, der kun har adgang til en transportfond {Bank Account|Bank Accounts}. Der kunne derefter oprettes en lov til beskatning af produktion og handel med brændstof, hvor provenuet går til transportfonden, hvor den aktuelt valgte transportminister kan bruge dem til at finansiere ny vejbygning {Work Parties}.
+
+212;Der kan tages skat fra økonomien for at finansiere offentlige arbejderprojekter såvel som incitamenter eller disincentivisering af økonomisk aktivitet.
+213;Titler bruges til at udpege en gruppe brugere og derefter henvise til denne gruppe i andre ting som tilladelser. De adskiller sig fra {Demographics}, idet titler angives direkte af borgere, mens borgere inden for en demografi automatisk defineres ud fra en borgerdefineret tilstand.
+
+Der findes to typer titler:
+
+ - Almindelige titler. Disse kan oprettes og administreres af alle på et {RegistrarItem}. Der kan borgeren indstille, hvilke andre borgere der kan tildele rollen (ledere), og hvilke der besætter rollen.
+ - Valgte titler. Disse titler kan kun vælges (eller udnævnes) og oprettes på et {GovernmentOfficeItem}. Regeringskontorets egenskaber bestemmer, hvilken type {valg} der er behov for for at vælge den givne stilling. Valgte titler kan kun efterlades, hvis de med magt fjernes fra embetet, hvis de fratræder (begge udføres på et {BallotBoxItem}, eller hvis deres periode slutter som defineret i stillingens tidsbegrænsninger.
+
+Valgte titler giver stor fleksibilitet til at definere styring af en verden, og privilegier kan knyttes direkte til disse konti. For eksempel kunne der oprettes en skattelov, der beskatter køretøjsbrug og placerer den i en fond, som kun den valgte titel 'transportminister' har adgang til. Hvis der er endnu et valg til denne stilling, og det skifter ledere, mister den tidligere borger automatisk adgang til kontoen.
+
+Ved at stille krav til den valgte titel kan du sikre fortsat god regeringsførelse for borgere, der har kontor. For eksempel kan du stille et krav om, at alle beboere på et givet kontor er en del af den 'aktive' demografi, kan have det. Hvis en kontorholder bliver inaktiv, fjernes de automatisk fra embetet og en angivet efterfølger sættes i deres stilling.
+
+Titler kan også have lønninger. Løn betales med jævne mellemrum, så længe en borger fortsætter med at besætte titlen (og betaleren har midler).  
+214;Stillinger, der kan indeholde en eller flere borgere. Bruges til at udpege tilladelser og betale lønninger.
+215;En borger kan ikke trives uden ordentligt husly, og sammen med din {Ernæring} bestemmer din boligværdi din {Erfaring} multiplikator. Jo bedre dit huss materialer og møbler er, jo højere bliver din oplevelsesmultiplikator.
+
+Derudover kræver mange genstande huse og hjælpeprogrammer for at fungere. Hussystemet består af følgende dele:
+ - {Residency}. Du kan dele opholdssted for en ejendom med andre.
+ - {Rooms}. Et rum er et fuldt indeholdt rum, og mange genstande kræver, at de placeres inde i et rum for at fungere.
+ - {Property}. Borgere kan kræve individuelle grunde, som de derefter kan kontrollere adgangen til.
+ - {Power}. Mange ting kræver en strømkilde for at fungere, og genereret strøm kan deles mellem mange borgere.
+ - {Sewage}. Visse genstande kræver et kloaksystem med rør, pumper og spildevandsrensning.
+
+216;Dit hus (sammen med din diæt) bestemmer din dygtighed.
+217;Mange objekter kræver magt for at fungere, og efterhånden som dit samfund skrider frem, vil de typer magt også udvikle sig.
+  
+Tidligt kommer mest strøm fra kalorier, som borgerne bruger. Lokale kraftkilder kan også bygges som {Waterwheels|Waterwheel Item}, der kun får strøm i umiddelbar nærhed. Når teknologien udvikler sig til elektricitet, kan strøm derefter genereres centralt, hvilket gør det muligt for grupper at danne sig sammen for at drive byer som en gruppe i stedet for at skulle konfigurere strømkilder individuelt (samfundsprojekter som dette passer godt til at bruge {Taxes} -systemet for at finansiere dem og {Contracts} og {Work Parties} for at få dem bygget).
+  
+Der findes mange typer kraftproduktion, og hver har forskellige brændstofbehov såvel som miljøpåvirkning. Opbygning, brændstofpåføring og drift af kraftværker kan blive en vigtig kilde til {Pollution}, efterhånden som teknologien skrider frem, og borgerne bliver nødt til nøje at regulere, hvilke typer kraft der anvendes, og hvordan forurening håndteres for at forhindre en økologisk katastrofe.  
+218;Mange objekter kræver strøm for at fungere, som kan genereres på en række forskellige måder.
+219;
+Ved at gøre krav på ejendom kan borgerne beskytte adgangen til grunde og bestemme, hvem der har adgang til jorden, og hvad de har lov til at gøre på genstande indeholdt i det.  
+220;Jord Ejendomsrettigheder
+221;
+Jord kan gøres gældende som ejendom ved hjælp af en {Land Claim Stake|Property Tool Item} og målretning mod et uopgivet jord. Når der målrettes, forbruges et {Land Claim Paper|Property Claim Item}, og borgeren bliver ejer af skøden. Ejendommen på din nuværende position kan ses i verdenspanelet nederst til højre på skærmen, og ved at klikke på titlen åbnes gerningen.
+222;Objekt Ejendomsrettigheder
+223;Objekter kan have deres adgangsrettigheder indstillet separat fra det land, de befinder sig på, for at give forbrugerne adgang til objekter, der er på privat jord. Disse indstillinger bestemmes i en {Authorization Component}.
+
+224;Gerninger
+225;På gerningen kan borgere tilføje og fjerne parter, der kan få adgang til jorden (placere eller fjerne blokke). Ejeren kan også ændres ved at klikke på gearet ud for ejernavnet. Bemærk, at både {Demographics} og {Titles} begge kan gives ejerskab på en gerning, inklusive {Elected Titles}. At strukturere en regering på denne måde kan kun tillade valgte embedsmænd at have visse adgangsrettigheder til jord.
+226;Borgere og regeringer kan eje ejendom og bestemme deres adgangsret.
+227;Værelserne er lukkede områder beskyttet mod elementerne, hvor alle huller til omverdenen er fyldt med vægge, døre og vinduer.
+
+Du kan se detaljerne om et rum i et panel på højre side af skærmen, mens du er inde i et med angivelse af dets oplysninger. Mange typer genstande har rumkrav og optager plads i deres rum og kræver, at materialerne i rummet er af en bestemt kvalitet. Din boligværdi påvirkes også af kvaliteten af ​​værelsesmaterialerne. Dette betyder, at mursten et hus for eksempel vil give meget mere fordel end en snavsskovl.
+
+
+Møbler og værelsestyper
+Ved at gøre krav på jord og bygge rum på det, vil du begynde at få yderligere erfaring, som fortsætter, selv når du er offline. Tilføjelse af yderligere typer værelser og møbler til disse værelser øger det yderligere. Hver type møbler er forbundet med et slags rum: Badeværelse, soveværelse, køkken eller generelt (vises på emnets værktøjstip). Værelsestypen bestemmes af hvilken kategori du har det højeste bidrag fra møbler. Hvert værelse får sin værdi beregnet ved at opsummere alle møbler inde i det.
+
+Gentagelse af de samme møbler inde i et rum eller gentagelser af samme værelsestype i et hus giver dig faldende afkast; det vil sige, du får stadig huspoint til dem, men ikke så mange som den første. Til sidst vil pointgevinsten være ubetydelig, og det vil ikke være det værd at tilføje mere af den type møbler eller rum til huset. For eksempel vil dit 12. badeværelse tilføje meget mindre værdi til dit hus end dit første.
+
+Rummaterialekvalitet
+Det gennemsnitlige niveau for rummaterialet bestemmer også din boligværdi ved at indstille en blød hætte. Når din værelsesværdi har overskredet den bløde hætte til rummet, får du aftagende afkast for yderligere huspoint. Når dette sker, kan det være tid til at renovere materialerne i rummet.
+
+228;Værelser beskytter dig og dit udstyr mod elementerne, giver færdighedspoint og tillader udstyr at fungere.
+229;
+Mange industri- og husgenstande kræver spildevandsstøtte for at fungere. Typisk betyder dette at kræve vand som et input og et output til spildevand. Alle objekter, der har en {Pipe Component}, har brug for en spildevandstilslutning.
+
+Kloaksystemer oprettes ved at forbinde en {MechanicalWaterPumpItem} eller {ElectricWaterPumpItem} til en vandkilde og derefter bygge rør mellem de forskellige objekter, der skal leveres. På affaldssiden fører rør spildevandet fra objektet til enten at dumpe det i miljøet (producerer {Pollution} ved udgangsstedet) eller behandle det i et {Waster Filter|WasteFilterItem}, som vil generere {Compost|CompostItem} fra spildevandet.
+
+Rør oprettes automatisk forbindelse til enhver tilstødende rørblok af samme type. Brug forskellige rørmaterialer til at lave kloaksystemer med forskellige rør tæt på.
+
+230;Visse genstande kræver spildevand for at levere vand og fjerne spildevand.
+231;Komponenter relateret til industrien.
+232;Når du får erfaring i Eco, vil du være i stand til at låse op for nye specialiteter og nye evner inden for disse specialiteter. Der er to typer erfaring, du får, karakteroplevelse og specialoplevelse. Begge øges med din oplevelsesmultiplikator.
+
+Karakteroplevelse
+Karaktererfaring er din baggrundsindlæringsrate, hvor hurtigt du får viden og evner. Det stiger konstant, selv når du er offline. Hver virkelige dag får du karakteroplevelse med en hastighed på 1 * din oplevelsesmultiplikator. Når du når et niveau op, får du en ny speciallåsning repræsenteret af en stjerne. Hvert niveau op vil kræve mere og mere karakteroplevelse at få, så det er meget vanskeligt at have mere end et par specialiteter.
+
+Specialoplevelse
+Specialoplevelse er din færdighed med en bestemt evne, og i stedet for at gå konstant op, går den kun op, når du udfører handlinger relateret til den specialitet, såsom at skabe eller udføre arbejde. Ligesom karakteroplevelse ganges den også med din oplevelsesmultiplikator. Langs venstre side af skærmen ser du ikoner, der viser, hvor meget erfaring du får, når du udfører handlinger, og du kan klikke på disse for at se nærmere på niveauet for den specialitet.
+Nogle niveau-ups giver dig mulighed for at låse op for talenter, der giver specifikke bonusser relateret til de færdigheder, de er i.
+
+Oplev multiplikator
+Din oplevelsesmultiplikator (eller XP-multiplikator) er en personlig værdi, der repræsenterer dit sundheds- og supportsystem, og det bestemmer, hvor hurtigt du lærer nye færdigheder. Det bestemmes som en sum af dine {Nutrition} og {Housing|Housing Overview} værdier. Fordi det påvirker både din karakter og dine specielle oplevelsespoint, skal du holde det så højt som muligt ved at spise den nærende mad og have et velindrettet hus.
+
+
+233;Der er to slags erfaringer inden for Eco: Character Experience (opnået ved mad og boliger) og Speciality Experience (opnået ved at udføre handlinger i en specialitet).
+234;
+Din erfaring {Experience} bestemmes af din ernæring og bolig {Housing|Housing Overview}, og jo mere nærende mad du spiser jo hurtigere får du {Experience}. Jo sundere du er, jo hurtigere går du frem.
+
+Der er fire næringsstoffer repræsenteret i fødevarer: protein, fedt, vitaminer og kulhydrater. Ved at tilføje gennemsnittet af hver af disse næringsstoffer i al den mad, du har spist i de sidste 24 timer, bestemmes din oplevelsesmultiplikator. Dette betyder, at hvis du spiser junkfood (lave næringsstoffer), vil det påvirke dig i 24 timer, før det har passeret gennem din krop.
+
+Derudover anvendes en balancemultiplikator, hvilket giver yderligere 0% - 50% af din samlede baseret på hvor lige næringsstofferne er i din krop. Hvis du f. eks. Har nøjagtigt 25% af hvert næringsstof, får du en ekstra 50% færdighed.
+
+Afhængigt af sværhedsindstillingerne for denne server kan der også indstilles en 'skill gain multiplier', som øger den yderligere.
+
+Endelig tilføjes en basisfærdighedsgevinstværdi til summen. Dette sikrer, at selvom du er helt sulten, får du stadig mindst nogle færdigheder. Du kan selv se alle disse beregninger i værktøjstip til mad i UI nederst til venstre.
+
+Kalorier
+I modsætning til næringsstoffer bruges kalorier, når du udfører arbejde, og når du løber tør for kalorier, kan du ikke arbejde, før du spiser mere. Kaloriforbrug kan reduceres kraftigt ved opgraderede værktøjer og nivelleringsevner.
+Al mad giver både kalorier og næringsstoffer, så mens du vinder kalorier fra mad, bestemmer du også din færdighedsmultiplikator, så pas på den diæt.
+
+235;Ernæring sammen med boliger bestemmer, hvor hurtigt du får erfaring.
+236;Det centrale i en blomstrende økonomi er evnen til at specialisere sig og handle og derved arbejde mere effektivt, end hvis du forsøgte at gøre alt selv. At opnå et succesfuldt samfund afhænger af, at begge kan lykkes.
+    
+    En borgeres færdigheder giver dem unikke evner og forbedringer, som gør det muligt for dem at {Trade} med andre borgere, der har forskellige færdigheder i økonomien. Når du får {Experience}, kan du låse op for nye {Specialties} og opjustere eksisterende. Den erfaring, du får, ganges med din {Nutrition} og {Housing|Housing Overview}.    
+  
+237;Færdighedssystemet giver borgerne mulighed for at specialisere sig i specifikke handler.
+238;
+Specialiteter låses op, når du nivellerer fra Character {Experience}. Hver specialitet (repræsenteret med en stjerne) vil låse op for nye evner, du kan bruge.
+
+Erhverv og specialiteter
+{Professions|Profession Overview} er simpelthen grupperinger af færdigheder og tjener ikke noget andet formål end at gemme lignende færdigheder sammen.
+Specialiteter er hver indeholdt i et erhverv og kræver to trin for at vinde.
+
+1. Først skal du læse en færdighedsrulle for færdigheden.
+2. Dernæst skal du bruge en stjerne til at tage specialet.
+
+Når du har valgt specialiteten, får du de basale evner, der er knyttet til den. Når du udfører handlinger relateret til denne specialitet, får du specialitet {Experience}, udjævner specialiteten og frigør nye evner til den.
+Du kan se spredningen af ​​specialiteter, som andre borgere har valgt, i dialogboksen med valg af færdigheder, og det er ofte en god ide at vælge specialiteter, som andre spillere ikke har valgt eller nivelleret. Dette giver dig mulighed for hver at udføre dine egne specialiteter og {Trade} med hinanden for en nettogevinst.
+
+
+239;Specialiteter kan opnås ved at samle karakteroplevelse, og hver specialitet vil låse op for nye unikke evner.
+240;Mad sammen med boliger er afgørende for at øge dine færdigheder.
+241;Tømrere er specialister i at arbejde med træ.
+
+  - {LoggingSkill} giver borgerne mulighed for at hugge træer hurtigere, mens de bruger mindre kalorier. Derudover bruges denne specialitet til at producere {HewnLogItem}, som er det primære byggemateriale til tømrerfaget.
+  - {CarpentrySkill} giver borgerne mulighed for at producere træmøbler og {Boards|Board Item}. Ved at bruge et {SawmillItem} kan borgere med denne specialitet producere {LumberItem} og møbler af højere kvalitet.
+  - {CompositesSkill} giver borgerne mulighed for at bruge avanceret teknologi til at producere det fineste træbyggemateriale.
+  - {PaperMillingSkill} giver borgerne mulighed for at forfine træmasse til {PaperItem}. Papir bruges til nogle specialmøbler.
+	
+242;Tømrere er specialister i at arbejde med træ.
+243;Kokke laver mad af høj kvalitet, der gør det muligt for borgerne at få erfaring hurtigere. Ved hjælp af den rå mad, der produceres af landmænd og jægere, skaber kokke mad, der indeholder mange næringsstoffer. Efterhånden som teknologien skrider frem, laver kokkespecialiteterne mad af højere kvalitet.
+  
+  - {CampfireCookingSkill} er kokkespecialiteten på indgangsniveau, der bruger et {CampfireItem} til at tilberede bedre måltider end den grundlæggende forkullede mad, der produceres af ikke-kokke.
+  - {CookingSkill} er det andet trin i kokkens erhverv, der bruger et {CastIronStoveItem} til at producere måltider af højere kvalitet.
+  - {BakingSkill} er et alternativ til madlavning, der bruger {FlourItem} til at producere bagværk.
+  - {AdvancedCookingSkill} er et kokkefag på højt niveau, der producerer det højeste niveau af mad.
+  - {AdvancedBakingSkill} er et alternativ til avanceret madlavning, der bruger {YeastItem} til at producere bagværk af høj kvalitet med {LeavenedDoughItem}.  
+244;Kokke laver mad af høj kvalitet, der gør det muligt for borgerne at få erfaring hurtigere.
+245;Ingeniører bruger de materialer, der er skabt af andre erhverv, til at gå foran i teknologisk fremskridt. De køretøjer, de producerer, forbedrer i høj grad handelskapaciteten og den hastighed, hvormed borgerne arbejder. De håndværksborde, de producerer, bruges af en række forskellige erhverv til at skabe avancerede varer. At være ingeniør kræver hyppig interaktion med andre erhverv, da ingeniører ikke er i stand til at producere de primære input, der er nødvendige for at skabe.
+  
+- {BasicEngineeringSkill} giver borgerne mulighed for at producere veje og vogne for at hjælpe med transport. Derudover skaber grundlæggende teknik de håndværksborde, der er nødvendige for at behandle og smelte malm.
+- {MechanicsSkill} giver borgerne mulighed for at oprette tidlige motoriserede køretøjer som et {SteamTruckItem}. Mekanik er den første kilde til elektrisk kraft, der hjælper med at muliggøre teknologisk udvikling.
+- {IndustrySkill} giver borgerne mulighed for at oprette avancerede køretøjer, som et {ExcavatorItem}, til hurtigt at samle store mængder naturressourcer.
+- {OilDrillingSkill} giver borgerne mulighed for at bruge et {PumpJackItem} til at indsamle {PetroleumItem} til brug i brændstof og en række industrielle projekter.
+- {ElectronicsSkill} er en avanceret ingeniørspecialitet, der bruger dyre ingredienser til at producere de mest avancerede materialer, der er nødvendige til moderne håndværksprojekter. Ud over dette og leverer en kilde til grøn elektricitet bruges elektronik til at fremstille det {LaserItem}, der er nødvendigt for at redde verden fra meteoren.  
+246;Ingeniører er hovedopfindere, der producerer køretøjer og andre avancerede produkter til andre borgere.
+247;
+Landmænd er specialister i landbrug. De afgrøder, de producerer, er en primær kilde til de kalorier, der er nødvendige for, at borgerne kan udføre arbejde.
+ 
+  - {FarmingSkill} giver borgerne mulighed for at skabe frø ud af produkter for at hjælpe med at skabe store gårde.
+  - {FertilizersSkill} giver borgerne mulighed for at tilføje næringsstoffer til jorden og teste jordforholdene med et {SoilSamplerItem}.
+  - {GatheringSkill} giver borgerne mulighed for at høste flere produkter fra både vilde planter og menneskeskabte gårde.
+  - {MillingSkill} giver borgerne mulighed for at behandle produkter i et {MillItem} til brug af kokke i mere avancerede opskrifter.  
+248;Landmænd er specialister i landbrug.
+249;
+Jægere er specialister i effektiv jagt på dyr og forbereder kød til brug af kokke. De to jægerspecialiteter hænger tæt sammen, da dyrene, der jages, skal behandles, før de kan bruges af en kok.
+    
+  - {ButcherySkill} giver borgerne mulighed for at behandle dyrekroppe til tilberedt kød til kokke. Skindene og huderne, de skaber, kan bruges til tøj og andre håndværksprojekter.
+  - {HuntingSkill} giver borgerne bonusskader, når de jager på dyr, og giver dem mulighed for at nærme sig dyr tættere på afstand uden at få dem til at løbe.  
+250;Jægere er specialister på jagt på dyr og forbereder kød til kokke.
+251;Murere er specialister i minedrift og arbejder med sten. De giver en værdifuld kilde til byggemateriale og møbler til boliger. Malmen, de samler, bruges af Smiths til at smelte metalstænger.
+  
+  - {MiningSkill} giver borgerne mulighed for at bruge færre kalorier under minedrift af sten og malm. Minearbejdere behandler også den opsamlede malm og koncentrerer den til brug til smeltning.
+  - {MasonrySkill} giver borgerne mulighed for at producere {MortarItem}, en primær ingrediens til de fleste murbygningsmaterialer. {MortaredStoneItem}, de producerer, er en god kilde til tidligt boligmateriale.
+  - {PotterySkill} giver borgerne mulighed for at skabe {BrickItem} byggemateriale og møbler ud af {ClayItem}.
+  - {GlassworkingSkill} giver borgerne mulighed for at oprette {GlassItem} og senere {FramedGlassItem}. Glas er et dejligt supplerende byggemateriale og bruges i en række industrielle projekter.
+  - {AdvancedMasonrySkill} er en murereevne på højt niveau, der producerer Ashlar Stone-byggemateriale og -møbler af højeste kvalitet.  
+252;Murere er specialister i minedrift og arbejder med sten.
+253;Erhverv er grupper af lignende {Specialties}, der låser op for nye håndværksopskrifter og giver evner som reduceret kaloriforbrug, når man laver eller bruger et værktøj. Inden for hvert erhverv er en gruppe af lignende specialiteter.
+  
+Nedenfor er en liste over alle erhverv og de tilsvarende specialiteter. Borgere kan vælge at fokusere på et erhverv eller lære specialiteter fra en række forskellige erhverv.  
+254;Erhverv giver borgerne en særlig evne og evnen til at lave avancerede genstande.
+255;Smiths smeltede koncentreret malm i metalstænger, der kan bruges af en række forskellige erhverv. Derudover skaber Smiths overlegne værktøjer, der hjælper borgere med at arbejde mere produktivt.
+  
+- {SmeltingSkill} er specialister i at fremstille metalstængerne, der udgør grundlaget for den teknologiske udvikling. Jernværktøjerne, de skaber, giver betydelig fordel i forhold til de tidlige stenværktøjer.
+- {AdvancedSmeltingSkill} giver borgerne mulighed for yderligere at forfine jernstænger til {Steel|SteelBarItem} til brug i industrien og højt lag byggematerialer. Borgere med denne specialitet kan bruge det stål, de skaber, til endnu mere moderne værktøjer end jernværktøjerne skabt ved grundlæggende smeltning.  
+256;Smiths smeltede malm i metalstænger og skabte avancerede værktøjer.
+257;Alle borgere er overlevende i Eco-verdenen.
+  
+Erfaring med {SelfImprovementSkill} opnås når som helst en borger nivellerer en anden specialitet. Selvforbedring har to hovedfordele. Efterhånden som borgerne skrider frem, vil de have øget bærevægtskapacitet og større mavekapacitet for ekstra kalorier. Derudover forbruges færre kalorier, når du bruger hamre, skovle og øvelser.
+  
+258;Overlevende bruger mindre kalorier, når de bruger grundlæggende værktøjer og har øget bærevægt.
+259;Skræddere arbejder med klud til at lave tøj og avancerede møbler til andre borgere. I modsætning til andre erhverv har skrædderyrket kun en specialitet.
+
+{TailoringSkill} giver borgerne mulighed for at oprette {ClothItem} til brug i udformning af projekter fra en række forskellige erhverv. Tøjskræddere skaber borgerne specielle bonusser. For eksempel har en {BigBackpackItem} en højere maksimal vægtgrænse end starteren {BasicBackpackItem}.
+	
+260;Skræddere arbejder med klud til at lave tøj og avancerede møbler til andre borgere.
+261;Ethvert objekt, der indeholder en køretøjskomponent, kan monteres og interageres med på en række forskellige måder, hvilket giver en række fordele.
+  
+Mange køretøjer har brug for {Power|Power Component} for at fungere, og hver har deres egen {Storage|Storage Component}. Opbygning af infrastruktur overalt i verden vil i høj grad forbedre dine {Transport} -muligheder, da mange køretøjer har brug for veje til at køre.
+262;  
+- Transport: Køretøjer som {WoodCartItem} kan transportere varer og mennesker fra sted til sted. Efterhånden som teknologien skrider frem, bliver mere avancerede køretøjer tilgængelige med hurtigere bevægelseshastigheder og højere bæreevne på bekostning af at skabe forurening
+
+- Udgravning: {ExcavatorItem} og {SkidSteerItem} kan hurtigt flytte store mængder snavs og sten. Dette vil i høj grad øge hastigheden på {Mining} og gøre det muligt hurtigt at rydde arealer til nye byggeprojekter.
+
+- Kontraktion: {CraneItem} kan hurtigt udføre store {Building} projekter. Kranen har et meget større bygningsområde end en borger, der bygger med en hammer og kan få adgang til store mængder lager.
+
+264;Køretøjer kan bruges til at udføre en række forskellige opgaver.
+265;
+I Eco høster spillere mad oprindeligt fra de vilde biomer omkring dem. Planter er modne efter muligheden for at høste bæredygtigt. Vilde madkilder kan tjene som en supplerende vedvarende ressource, men vil hurtigt gå ned, hvis de udnyttes. Nogle planter vil være nyttige til mere end bare mad - de kan tilvejebringe kemiske forbindelser, der ikke findes andetsteds eller de råvarer, der er nødvendige til tekstiler og tøj.
+
+Forskellige planter kræver forskellige værktøjer til høst, såsom en skovl eller en le. Andre arter kan vælges manuelt uden værktøj. På samme måde dræbes nogle planter, når de høstes, og andre vil blot dyrke de plukkede frugter igen, hvis de fortsætter med at vokse og være sunde.  
+266;Det levende system af planter og dyr, der giver mennesker mulighed for at overleve.
+267;
+Dyrearter er indbyggere i verden i Eco, der varierer meget med hensyn til mulig anvendelse som ressourcer. Nogle arter giver fremragende kilder til kød og mad som mælk, hvor andre kan give nyttige biprodukter som uld, læder, talg eller benmel. Men dyr varierer også meget med hensyn til deres modstandsdygtighed og tilpasningsevne til påvirkninger på deres populationer, levesteder og fødekilder.
+
+Gennem jagt kan spillere bruge forskellige fælder og håndværktøjer til at høste vilde dyr direkte fra de økosystemer, de lever i til brug. Jagt kan også tjene som en måde at kontrollere eller udslette overdreven population af dyr på. Jagt vil være en vigtig, men ikke strengt nødvendig aktivitet for spillere, især tidligere for at imødekomme appetitten fra et stort samfund.
+
+Jagt på et dyr er kun det første skridt i at få mest muligt ud af det. Slagter fremskridt giver spillere mulighed for at behandle og bruge dyr til et stort udvalg af animalske produkter. Samarbejde med andre erhverv som kokke og skræddere vil låse op for mange ernæringsmæssige, industrielle og endda kulturelle anvendelser til dyr og deres produkter, som ikke alle skal opnås gennem jagt. Men hvis et bestemt animalsk produkt bliver populært i økonomien, skal man være opmærksom på at undgå destruktivt pres på en art. Jagt er ofte det sidste slag mod en truet art, hvis produkter bliver mere og mere værdifulde, efterhånden som de bliver mere og mere sjældne.
+
+For at komme i gang med jagt skal du udarbejde et {WoodenBowItem} og nogle {Arrows|Arrow Item}. Mere avancerede buer gør det lettere at nå dit mål hurtigt. Husk at dyr kan dræbes hurtigere med et målrettet skud, og at det kan være lettere at jage nogle dyr baseret på tidspunktet på dagen.  
+268;Det levende system af planter og dyr, der giver mennesker mulighed for at overleve.
+269;Ecopedia guide til at komme i gang.
+270;
+Når du først har dækket dine grundlæggende behov, er det tid til at tænke over, hvordan du vil bidrage til samfundets fælles projekt, og dit erhverv er, hvordan du gør det.
+  
+271;
+
+Hver profession har et antal {Specialties} under sig, som vil låse op for særlige evner. Da borgere kun kan have et begrænset antal specialiteter, er en god tilgang at tage forskellige specialiteter og derefter {Trade} imellem hinanden. I vinduet med færdigheder kan du se, hvor mange borgere der har valgt hvert erhverv og se efter de mest nødvendige færdigheder og vælge dem at fokusere på.  
+272;
+Tjek {Profession Overview} for en rundvisning i de forskellige muligheder.
+  
+273;(Bemærk: Færdighedsdialogen er skjult indtil senere i selvstudiet. Den kan synliggøres ved at udfylde selvstudiet eller springe den over.)
+ 
+274;En verden med en række erhverv kan handle for gensidige fordele.
+275;
+{Government|Government Overview} over Eco drives af individuelle borgere, og kvaliteten af ​​styringen afhænger fuldt ud af, hvordan disse borgere deltager.
+
+    Der er en række måder at deltage i regeringen, herunder:
+
+    - Oprettelse af regeringen ved at oprette et {CapitolItem} og {Constitution}.
+    - Definition af borgerobjekter inklusive {Districts}, {Demographics}, {Elected Titles}, {Election Processes} og {Amendments|Constitution}.
+    - At køre som kandidat til en {Elected Title|Elected Titles} og give særlige beføjelser tildelt den i forfatningen.
+    - Vedtagelse af {Laws} efter opnåelse af privilegiet (defineret i forfatningen).
+    - Vedtagelse af {Executive Actions} med privilegier, der også er defineret i forfatningen.
+    - Afstemning i {Elections} for {Elected Titles} og andre borgerlige handlinger.
+    - Debatterer love med brug af {Data}, præsenterer argumenter for dine medborgere, der argumenterer for et valg frem for et andet.  
+276;
+Hver af disse muligheder er tilgængelige på en række forskellige steder, som skal konstrueres af borgerne. Den nuværende regering kan ses ved at vælge regeringsikonet i handlingslinjen og svæve over hvert afsnit angiver, hvor det borgerlige objekt er defineret.
+  
+277;Dine borgerlige pligter er de mange forskellige måder, du kan interagere med regeringen på.
+278;For at bringe et samfund gennem tiderne til teknikkens toppe er det nødvendigt med en blomstrende {Economy|Economy Overview}, og ved at deltage i det kan borgere både hjælpe med at udvikle samfundet og fremme deres egne evner og velstand.
+ 
+Deltagelse i økonomien sker gennem {Trade} af både varer og tjenester. At finde eksisterende bosættelser med {Stores|Store Component}, {Contracts} og {Work Parties} giver borgerne mulighed for at handle med de varer og arbejdskraft, de er specialiserede i, til andres specialiteter og nå deres individuelle mål hurtigere, end hvis de hver havde arbejdet alene.
+Når du påtager dig nye projekter, der kræver materialer eller arbejdskraft, som du ikke selv har evnen til at oprette eller udføre, kan du i stedet sælge de varer og tjenester, du kan udføre på markedet, ved at oprette butikker og indstille priser i en {Currency} efter eget valg. Brug af denne valuta til at købe andres varer og tjenester giver dig derefter mulighed for at nå disse mål uden at skulle lære alt selv.
+
+Når du opbygger dine muligheder og har flere behov fra andre borgere, kan du oprette dine egne butikker, kontrakter og arbejdsgrupper for at søge deres hjælp. Når du erhverver rigdom, stiger din magt til at gennemføre ændringer (både gode og dårlige). 
+279;Den mest effektive måde at gøre fremskridt inden for viden og teknologi er handel inden for økonomien.
+280;Mens et fungerende samfund er nødvendigt for at stoppe meteoren, skal hver enkelt have deres egne behov opfyldt, begyndende med mad og husly. 
+281;Valg Af En Løsning
+282;Når du vælger et sted at slå sig ned, skal du overveje følgende faktorer:
+283;Nærhed Til Ressourcer
+Naturlige fødekilder og bygningsmaterialer i nærheden vil i høj grad fremskynde de indledende fremskridt.
+
+Nærhed til andre
+At etablere sig i nærheden af ​​andre bosættelser tilbyder en klar fordel, da du derefter kan handle med andre for at få fremskridt hurtigere. Imidlertid kan et overfyldt område også have begrænsede muligheder for ekspansion og naturlig mad i nærheden. Du vil gerne finde en balance baseret på personlig præference.  
+284;Gør Krav På Din Grund
+285; Når du har valgt et sted at opbygge din første løsning, skal du gøre krav på {Property} omkring det. Når du placerer dit starttelt, sker dette automatisk, og yderligere ejendom kan kræves med jordpapirer. Ejendom, som du hævder, vil blive beskyttet mod andre borgere, medmindre du giver dem adgang.
+286;Mad
+287;At finde en fødevareforsyning er afgørende for at have de kalorier, du har brug for til at arbejde. Derudover påvirker {Nutrition} af den mad, du spiser, hvor hurtigt du får erfaring, så du vil gerne spise den bedste tilgængelige mad til de hurtigste gevinster. Når du bosætter dig i ørkenen, skal du kigge efter fødekilder i nærheden, du kan tage fra, eller planlægge at oprette en {Farm|Farming}. Når du bosætter dig i nærheden af ​​en eksisterende landsby, skal du kigge på den lokale økonomi for at se, hvad du kan {Trade} for at få mad.
+288;Oprettelse af en kilde til mad og husly er en første prioritet. 
+289;{Ecosystem|Ecosystem Overview} er udbyderen af ​​et stort antal ressourcer, som borgere kan bruge, men det er også sårbart over for deres indvirkning. At lykkes som et samfund vil kræve intelligent styring af påvirkninger ved hjælp af {Government|Government Overview} til at regulere, hvad der er tilladt.
+ 
+Forskellige former for {Pollution} kan påvirke miljøet og skabe potentiale for katastrofer, der kan ødelægge din fødevareforsyning og stoppe fremskridt, hvilket fører til økologisk sammenbrud. Ved hjælp af {Data} -værktøjer kan borgere overvåge den indflydelse, de har på verden, og bruge disse data til at argumentere for specifikke regler for at beskytte dem eller fremskynde økonomien i andre veje.
+
+Verden begynder som en enorm uberørt vildmark, og gennem tiderne skal borgere radikalt transformere den ved hjælp af teknologi til at opbygge den industri og den viden, der kræves for at stoppe {The Meteor}. Borgerne bliver nødt til at udføre en omhyggelig navigation mellem maksimalt at bruge økosystemets ressourcer og undgå at beskadige miljøet uden for reparationen.
+
+290;Økosystemet giver mange ressourcer, men er sårbart over for menneskelige handlinger.
+291;
+Eco er en verden bestilt af to trusler: Miljøkollaps og den evigt truende {Meteor|The Meteor}.
+  
+For at få succes skal du udvikle dig gennem tiderne og fremme videnskab og industri til et niveau, der kan ødelægge meteoren uden at forårsage økologisk sammenbrud i processen. Du vil gøre dette som et individuelt medlem af et større samfund, og det er afgørende for succes at skabe et positivt samspil mellem individuelle behov og samfundsmæssige behov.
+
+Dit fokus i Eco vil være på at styre dine individuelle fremskridt, mens du samtidig arbejder på at udvikle {Economy|Economy Overview} som helhed og gøre det inden i et rigt {Ecosystem|Ecosystem Overview} af planter og dyr, der er påvirket af det, du gør.
+
+For at hjælpe med at skabe et positivt forhold mellem denne trekant af enkeltpersoner, økonomi og økosystem har du værktøjerne fra {Government|Government Overview} til din rådighed. Du kan indstille bindende {love}, der bestemmer, hvad der er tilladt og køre til {Election|Elections} for at få regeringsbeføjelser til at foretage ændringer og vejlede samfundet.
+
+ Men først tæller først, du bliver nødt til at tage sig af dine grundlæggende behov, før du kan redde verden. For at gøre det skal du starte med {Food and Shelter}.
+292;Din rejse i Eco.
+293;Verden har fået en udløbsdato, en meteor i en kollapsende bane rundt om kloden, der er sat til at kollidere i 30 realtidsdage og ødelægger alt på den undervejs.
+  
+Håbet går imidlertid ikke tabt, for med den rigtige teknologi kan denne krise forhindres. Ved at arbejde sammen om at skabe et blomstrende {Economy|economy overview} og fremme fremskridt med {Research} har menneskeheden en chance for at opbygge det {Laser|LaserItem}, der er nødvendigt for at ødelægge denne trussel.
+
+Det vil ikke være en let opgave, og den industri, der kræves for at nå sådanne niveauer af fremskridt, vil udgøre en reel trussel mod {Ecosystem|Ecosystem Overview}. For at bekæmpe dette og undgå at blive offer for et økologisk sammenbrud af din egen skabelse skal en velreguleret {Government|Government Overview} designes, implementeres og oprettes af dens borgere.
+
+Verdens skæbne afhænger af, at borgerne handler sammen i harmoni med økosystemet for at opnå store teknologiske bedrifter, og kun gennem studeret samarbejde kan de få succes.  
+294;En truende trussel ovenfra.
+295;Gennem brug af værktøjer kan borgere bygge store strukturer og flytte bjerge. Startværktøjerne giver dig kun mulighed for at foretage mindre ændringer, men efterhånden som teknologien skrider frem, får du værktøjer, der kan udføre batchoperationer og til sidst {Vehicle|Vehicle Component}, der kan foretage massive transformationer til verden. 
+296;Der findes en række forskellige værktøjstyper:
+  - {Building} Værktøjer. Hamre giver dig mulighed for at placere byggematerialer i 'Forms', skovle tillader bevægelig jord.
+  - {Farming} Værktøjer. Pløjning, plantning og såning har alle værktøjer til at øge deres effektivitet.
+  - {Transport} Værktøjer. Køretøjer og værktøjer til vejkonstruktion er især nyttige til transport af gods.
+  - {Harvesting} værktøjer. Disse værktøjer tillader indsamling af ressourcer fra økosystemet.
+  - {Hunting} Værktøjer. Jagt på dyr efter mad kræver specialværktøjer.
+  
+Værktøjer, der drives manuelt, kræver kalorier, der påvirker din {Nutrition}.
+Alle værktøjer er forbundet med holdbarhed, som falder, når de bruges. Når et værktøj har mistet sin holdbarhed, vil det tage en enorm mængde kalorier at bruge og skal repareres ved en {Repair|Repair Component} bord.  
+297;At have adgang til de bedste værktøjer giver dig mulighed for at opnå mest fremskridt.
+298;Efter at have samlet nogle grundlæggende råmaterialer er bygning en af ​​de første ting, en borger vil gøre for at etablere sig i verden.  
+299;Ved hjælp af en hammer eller en kran kan borgere skabe bygninger til boliger og industri.
+300;
+My Deeds Component giver borgerne mulighed for at se se og administrere alt {Property}, som de ejer, hvilket giver en grænseflade for let at få adgang til dem.  
+301;Tillader borgere at se og administrere al ejendom, de ejer.
+302;
+Tekstkomponenten findes på skilte, {Vehicles|Vehicle Component} og {Distribution Station|Item Distribution Component}.
+  
+Tekst kan være nyttig til at give rutevejledning, reklame eller bare skrive en venlig hilsen
+
+For dem, der er kendt med tekstmarkering, kan en række tags bruges til at ændre tekstens størrelse, farve og formatering.
+
+303;Tillader borgere at skrive tekst, der vises til andre borgere.
+304;
+Et grundlæggende mål for økosystemets simulering i Eco er at indeholde et væld af madnettet. Fødevarer kan betragtes som et sæt 'forbrugere' og 'forbrugte' forhold mellem planter og dyr, der fokuserer på et bestemt dyresamfund og deres yndlingsfødevarer. Generelt er ideen at have mindst et stærkt madnet til stede i hvert biom. Fødevarer er ofte grundlaget for de vigtigste inter- og intra-forhold mellem arter i et økosystem. Mange arter er afhængige af andre arter til mad eller til at jage den art, der spiser dem.
+
+Dyrets bytte og rovdyr kan ses gennem webgrænsefladen og kontrollere de sammenkædede lag. I øjeblikket er bytte-rovdyr-forholdet en måde: rovdyrene kræver, at byttet skal eksistere, men de fjerner faktisk ikke nogen fra simuleringen. Dette betyder, at en eksplosion af elg ville øge ulvepopulationen, men dette ville ikke lægge pres på elgen. At ændre dette forhold til at forbruge begge veje og samtidig sikre, at det ikke går ud af kontrol på en uventet og pludselig måde, er vigtigt, når vi bevæger os fremad.  
+305;Det levende system af planter og dyr, der giver mennesker mulighed for at overleve.
+306;Følg udviklingen af ​​Eco.
+307;
+Vi har til hensigt, at Eco skal være et evigt spil, der vokser i dybde og bredde og forbindelser til andre fremtidige spil, et system med ubegrænsede muligheder, der sigter mod at gå ud over underholdning. Dette træ indeholder fortid, nutid og fremtid for Eco.
+
+    Via vores hjemmeside kan du se alle de interaktive dele af træet og se, hvor vi er på vej og den vejledende filosofi bag spillet.  
+308;Se Eco Træ på
+309;Følg udviklingen af ​​Eco.
+310;Oprettelse Af En Butik
+311;Reparation Af Værktøjer
+312;Bygninger i Eco
+313;
+Bygninger er opdelt i {Rooms} og tjener en række formål.
+
+Nogle af disse anvendelser inkluderer:
+
+- At skabe et hjem fyldt med møbler for at få bonus {Experience} fra boliger
+
+- Der er plads til {Crafting} -stationer til at fungere
+
+- Indeholder de forskellige {Civic Objects|Civic Object Component}, der er nødvendige for at oprette en regering
+
+314;Oprettelse Af Bygninger
+315;Når der bæres et byggemateriale, er hammeren i stand til at skifte mellem forskellige blokformer og byggemønstre.
+
+Borgere bygger deres første hjem ved hjælp af et {StoneHammerItem}, men efterhånden som teknologien skrider frem, bliver der stadig bedre bygningsværktøjer til rådighed, der bruger mindre kalorieindhold, når de bruges.
+
+Større byggeprojekter kan hurtigt afsluttes med brug af et {CraneItem}, men på bekostning af oprettelse af {Pollution}.
+316;Typer Af Køretøjer
+317;Typer Af Borgerlige Objekter
+318;
+Når en {Constitution} er vedtaget, er nye regeringspolitikker indeholdt som borgerlige objekter i den regeringsbygning, de blev oprettet i. Der er mange typer regeringsbygninger, hver med deres egen type borgerlige objekt:
+
+- {Laws} er sat til et {CourtItem}
+- {Demographics} er indstillet til et {CensusBureauItem}
+- {Districts} er indstillet til et {ZoningOfficeItem}
+- {Elected Titles} indstilles til et {GovernmentOfficeItem}
+- {Civic Articles} er indstillet til et {CapitolItem} eller {AmendmentsItem}
+- {Election Processes} indstilles til et {BoardOfElectionsItem}
+319;Forslag Til Borgerlige Objekter
+320;
+Ved at klikke på 'Kladde' -knappen kan en borger foreslå et nyt borgerligt objekt. Borgerne kan valgfrit starte et nyt kladde til et borgerligt objekt ved at klikke på knappen 'Kopier', der vises, når de svæver over ikonet. Dette åbner en dialog, der giver dig mulighed for at vælge ethvert borgerligt objekt (fortid eller nutid), der skal bruges som basis.
+
+Ved at besøge borgerobjektkomponenten i en regeringsbygning, der allerede indeholder borgerlige genstande, kan disse politikker ændres eller ophæves. For at ophæve et borgerligt objekt skal du klikke på det røde 'X', der vises, når du holder musen over ikonet. For at ændre en eksisterende skal du klikke på knappen 'Revider', der er tilgængelig i grænsefladen.
+
+Bygningerne, der indeholder borgerlige genstande, skal forblive placeret og aktive, for at de borgerlige genstande forbliver i kraft. Hvis en regeringsbygning samles op, kommer alle borgerlige genstande derpå med den, og de bliver til sidst handicappede, hvis bygningen ikke udskiftes.
+321;
+- Foreslå via valg: Borgere med evnen til at foreslå valg vil være i stand til at foreslå en tilføjelse / sletning / redigering, som derefter udløser et nyt valg (ved hjælp af den {Election Process|Election Processes}, der er defineret i forfatningen).
+
+- Kun visning: Hvis borgeren ikke har nogen privilegier som defineret i forfatningen, kan de kun se de borgerlige objekter ved at klikke på dem og har ikke lov til at foretage ændringer.  
+322;
+Der er adgang til denne komponent fra et {RealEstateDeskItem}. Det giver links til alle de individuelle gerninger, der er tilgængelige ved at interagere med et {PropertyToolItem} om en handling, som borgeren ejer.
+
+Borgerne kan hurtigt omdøbe deres gerninger, vælge en farve til den pågældende ejendom på minikortet eller give forbrugerrettigheder til andre borgere, som normalt sker gennem {Authorization Component}.
+
+Et nyttigt træk ved denne komponent er evnen til hurtigt at flytte grunde fra en gerning til en anden. Dette inkluderer muligheden for at oprette en ny gerning for at opdele et eksisterende stykke ejendom.
+
+323;Tekstkomponenten giver en borger mulighed for at skrive tekst, der vises på et verdensobjekt, som andre borgere kan læse.
+324;Rørkrav
+325;
+Når du åbner rørkomponenten, ser forskellige rørindgange og udgange ud til at repræsentere rørkravene. Objekter med denne komponent skal opfylde alle rørkravene for, at objektet skal være aktivt.
+
+Nogle objekter kræver alle tre brug af rør for at have en aktiv {Status|Status Component}, mens andre objekter kun kræver nogle. Hvert rørsystem kan kun bruges til en af ​​de tre anvendelser.
+
+Ved at holde musen over skærmen til et af rørene vises en værktøjstip med flere oplysninger om, hvorfor et rør er eller ikke er aktivt.  
+326;Tømrer
+327;
+{Carpenters|Carpenter} specialiserer sig i høst af træer og forarbejdning af træ til møbler og byggemateriale til boliger.
+  - {LoggingSkill} giver borgerne mulighed for at høste træer mere effektivt. Derudover bruges logning til at producere {Hewn Logs|HewnLogItem}, som er det primære byggemateriale til tømrerfaget.
+  - {CarpentrySkill} giver borgerne mulighed for at producere træmøbler og {Boards|Board Item}. Ved at bruge et {SawmillItem} kan borgere med denne specialitet producere {LumberItem}.
+  - {CompositesSkill} giver borgerne mulighed for at bruge avanceret teknologi til at producere det fineste byggemateriale af {CompositeLumberItem}.
+  - {PaperMillingSkill} giver borgerne mulighed for at forfine træmasse til {PaperItem}. Papir bruges til nogle specialmøbler.
+
+328;Kok
+329;
+{Chefs|Chef}} specialiserer sig i madlavning af mere nærende mad for at øge den hastighed, som borgerne får erfaring.
+  - {CampfireCookingSkill} er kokkens specialitet på indgangsniveau, der bruger et {CampfireItem} til at forberede grundlæggende måltider.
+  - {CookingSkill} er det andet trin i kokkens erhverv, der bruger et {CastIronStoveItem} til at producere måltider af højere kvalitet.
+  - {BakingSkill} er et alternativ til madlavning, der bruger {FlourItem} til at producere bagværk.
+  - {AdvancedCookingSkill} er et professionelt køkkenchef på højt niveau, der producerer den mest nærende mad.
+  - {AdvancedBakingSkill} er et alternativ til avanceret madlavning, der bruger {LeavenedDoughItem} til at fremstille bagværk af høj kvalitet. 
+330;Ingeniør
+331;
+{Engineers|Engineer}} er specialiserede i produktion af køretøjer og avancerede materialer til brug til andre erhverv.
+  - {BasicEngineeringSkill} giver borgerne mulighed for at producere veje og vogne for at hjælpe med transport. Derudover skaber grundlæggende teknik de håndværksborde, der er nødvendige for at behandle og smelte malm.
+  - {MechanicsSkill} giver borgerne mulighed for at oprette tidlige motoriserede køretøjer som et {SteamTruckItem}. Mekanik er den første kilde til elektrisk kraft, der hjælper med at muliggøre teknologisk udvikling.
+  - {IndustrySkill} giver borgerne mulighed for at oprette avancerede køretøjer som et {ExcavatorItem}, der hurtigt kan samle store mængder naturressourcer.
+  - {OilDrillingSkill} giver borgerne mulighed for at bruge et {PumpJackItem} til at indsamle {PetroleumItem} til brug i brændstof og en række industrielle projekter.
+  - {ElectronicsSkill} bruger dyre ingredienser til at producere de mest avancerede materialer, der er nødvendige til moderne håndværksprojekter. Ud over at levere en kilde til grøn elektricitet bruges elektronik til at fremstille det {LaserItem}, der er nødvendigt for at redde verden fra meteoren.
+
+332;Landmand
+333;
+{Farmers|Farmer} er specialister i landbrug. De afgrøder, de producerer, er en primær kilde til de kalorier, der er nødvendige for, at borgerne kan udføre arbejde.
+  - {GatheringSkill} giver borgerne mulighed for at høste flere produkter fra både vilde planter og menneskeskabte gårde.
+  - {FarmingSkill} giver borgerne mulighed for at skabe frø ud af produkter for at hjælpe med at skabe store gårde.
+  - {FertilizersSkill} tillader borgere at udføre gødning og teste jordforhold med et {SoilSamplerItem}.
+  - {MillingSkill} giver borgerne mulighed for at behandle produkter i et {MillItem} til brug af kokke i mere avancerede opskrifter.
+
+334;Jæger
+335;
+{Hunters|Hunter} er specialister i effektiv jagt på dyr og forbereder kød til brug af kokke. De to jægerspecialiteter hænger tæt sammen, da dyrene, der jages, skal behandles, inden kødet kan bruges af en kok.
+  - {HuntingSkill} giver borgerne bonusskader, når de jager på dyr, og giver dem mulighed for at nærme sig dyr tættere på afstand uden at få dem til at løbe.
+  - {ButcherySkill} giver borgerne mulighed for at behandle dyrekroppe til tilberedt kød til kokke. Skindene og huderne, de skaber, kan bruges til tøj og andre håndværksprojekter.
+
+336;Murer
+337;
+{Masons|Mason} er specialister i minedrift og arbejder med sten. De giver en værdifuld kilde til byggemateriale og møbler til boliger. Malmen, de samler, bruges af Smiths til at smelte metalstænger.
+  - {MiningSkill} giver borgerne mulighed for at bruge færre kalorier under minedrift af sten og malm. Minearbejdere behandler også opsamlet malm, der skal bruges til smeltning.
+  - {MasonrySkill} giver borgerne mulighed for at producere {MortarItem}, en primær ingrediens til de fleste murbygningsmaterialer. {MortaredStoneItem}, de producerer, er en god kilde til tidligt boligmateriale.
+  - {PotterySkill} giver borgerne mulighed for at skabe {BrickItem} byggemateriale og møbler ud af {ClayItem}.
+  - {GlassworkingSkill} giver borgerne mulighed for at oprette {GlassItem} og senere {FramedGlassItem}. Glas er et dejligt supplerende byggemateriale og bruges i en række industrielle projekter.
+  - {AdvancedMasonrySkill} er en murereevne på højt niveau, der producerer Ashlar Stone-byggemateriale og -møbler af højeste kvalitet.
+
+338;Smed
+339;
+{Smiths|Smith} er specialiseret i at smelte malm og fremstille værktøjer til andre borgere ved hjælp af de metalstænger, de skaber.
+  - {SmeltingSkill} giver borgerne mulighed for at smelte metalstængerne, der udgør grundlaget for den teknologiske udvikling. Jernværktøjerne, de skaber, giver en betydelig fordel i forhold til de tidlige stenværktøjer.
+  - {AdvancedSmeltingSkill} giver borgerne mulighed for yderligere at forfine jernstænger til {Steel|SteelBarItem} til brug i industrien og byggematerialer i høj klasse. Borgere med denne specialitet kan bruge det stål, de skaber mere avancerede værktøjer.
+
+340;Skrædder
+341;
+{Tailor} har specialiseret sig i at fremstille avancerede møbler og specialtøj, der giver bonusser, når de bæres. I modsætning til de fleste erhverv er der kun en skræddersyet specialitet.
+  - {TailoringSkill} giver borgerne mulighed for at oprette {ClothItem} for at skabe møbler af høj kvalitet og til brug i håndværksprojekter af en række forskellige erhverv. Tøjskræddere skaber borgerne specielle bonusser. For eksempel har en {BigBackpackItem} en højere maksimal vægtgrænse end starteren {BasicBackpackItem}.
+
+342;Overlevende
+343;
+{Survivalists|Survivalist} er specialiseret i at bære ekstra vægt og reducere de anvendte kalorier, når man bruger grundlæggende værktøjer. Alle borgere er overlevende i Eco-verdenen.
+   - Erfaring med {SelfImprovementSkill} opnås når som helst en borger nivellerer en anden specialitet. Selvforbedring har to hovedfordele. Efterhånden som borgerne skrider frem, vil de have øget bærevægtskapacitet og større mavekapacitet for ekstra kalorier. Derudover forbruges færre kalorier, når du bruger hamre og skovle.
+
+344;En generel oversigt over den aktuelle økonomi, der indeholder information såsom tilgængelige handler, arbejdsgrupper og kontrakter.
+345;Economy Viewer giver et generelt overblik over den aktuelle økonomi og er et utroligt nyttigt redskab til økonomisk deltagelse. Blandt andre brugere viser Economy Viewer placeringen af ​​hver {StoreItem}, og hvad der i øjeblikket købes og sælges.
+346;
+Economy Viewer giver detaljerede oplysninger om følgende:
+
+   - Aktuelle {Trade} tilbud
+   - Eksisterende {Work Parties} og deres status
+   - Eventuelle {Contracts}, der er bogført
+   - Placeringer af {Public Crafting Stations|Crafting Component}
+   - Oplysninger om eksisterende {Currencies|Currency}
+   
+Derudover giver Economy Viewer borgere mulighed for direkte at overføre valuta til andre borgere og hurtigt kontrollere status for deres egne {Bank Accounts} og eventuel udestående gæld.
+   
+347;Adgang til Economy Viewer
+348;Du kan få adgang til Economy Viewer ved at klikke på Economy-knappen nederst til højre på skærmen.
+349;At Fodre Verdenen
+Fødevarer danner rygraden i et voksende samfund inden for Eco og fremmer den stigning i færdigheder, der er nødvendige for at opbygge en civilisation. Et velorganiseret netværk af fødevareproducenter, fra landmænd til kokke, sikrer, at borgerne får færdigheder i det tempo, de har brug for.
+
+350;Ejendommen, hvor du har opholdt dig, giver dine boligpoint.
+351;
+Hver gerning kan have et vilkårligt antal beboere, og disse beboere vil dele i en {Experience} boost baseret på kvaliteten og antallet af beboere.
+
+Efterhånden som antallet af beboere øges, øges belægningsstraffen. For et lille antal beboere (1 eller 2) er der praktisk talt ingen straf, og borgere kan effektivt sambo på denne måde og dele i fordelene ved et velassorteret hus. Efterhånden som beboerne stiger ud over dette (5 og derover), bliver straffen mere stejl og til sidst topper den ud på 99%, når huset er for overfyldt.
+
+Imidlertid er den faldende afkast på værelserne positivt påvirket af belægning (fordi tre badeværelser er overkill, når du bor alene, men fantastisk, når du har værelseskammerater). Dette betyder, at du kan overvinde bøden ved at bygge et større hus, og dobbeltværelser vil blive omvendt påvirket af belægningsbonusen.
+  
+For at blive bosiddende i en ejendom skal du klikke på navnet på ejendommen (synlig i pop op-statuspanelet, når du er i ejendommen). Derfra kan du blive bosiddende (hvis du ejer gerningen) samt invitere andre til at blive beboere. Disse andre inviterede borgere kan derefter deltage som beboer gennem den samme grænseflade. Du kan endda invitere grupper ved at specificere titler eller demografi, så du kan oprette boliger til særlige klasser af borgere (for eksempel nye spillere). Du kan også indstille det maksimale antal beboere for at sikre, at bopæl administreres på denne måde (ved at invitere store grupper) ikke resulterer i overfyldte boliger.
+
+Bemærk: En yderligere funktion tilføjes sidstnævnte, der tillader automatiske lejeaftaleaftaler mellem borgere. Indtil videre kan dette gøres med manuelle overførsler.
+352;Tilladelser Til Beboere
+Når en borger bliver bosiddende i en ejendom, får de et særligt sæt tilladelser, selvom de ellers ikke har adgang til ejendommen, kendt som beboerrettigheder. Disse rettigheder er som følger:
+
+  - Forudindrettede rum understøttetL Beboere kan få adgang til alle verdensgenstande på ejendommen som forbrugere.
+  - Du kan flytte i dine egne ting: Beboere kan placere genstande hvor som helst på ejendommen (men ikke blokke).
+  - Ingen stjæling af møblerne, der fulgte med stedet, er tilladt: Beboere må kun afhente verdensgenstande, hvis de oprindeligt placerede dem.
+

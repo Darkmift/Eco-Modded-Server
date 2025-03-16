@@ -1,0 +1,1178 @@
+0;Componente legate de economie.
+1;Componenta bancară este locul în care sunt create și gestionate [Bank Accounts]. Cetățenii își pot crea mai multe conturi sau pot împărți conturi cu alți cetățeni. Conturile mai pot fi atribuite si [Titles] și [Demographics].
+2;Utilizatorii de cont pot efectua tranzacții folosind contul (adăugând și eliminând fonduri).
+
+Managerii de cont pot schimba utilizatorii atât în lista de manageri, cât și în lista de utilizatori, pot redenumi contul și pot efectua tranzacții.
+
+În Setări avansate, puteți seta contul ca cont de guvern. Conturile guvernamentale pot primi și plăti fonduri fiscale și sunt ignorate atunci când colectează impozite și calculează averea personală. Pentru a seta acest lucru, trebuie să aveți privilegii bancare guvernamentale, atribuite de un [Elected Title|Elected Titles].
+3;Componenta Bank este utilizată pentru a crea și gestiona conturi bancare
+4;Componenta Comitetului Contractului permite cetățenilor să posteze și să accepte [Contracts] și [Work Parties], permițând munca forțată și alte acorduri între cetățeni.
+5;Stabilirea unui contract
+6;
+La postarea unui contract, acesta poate avea oricâte sau cât de puține clauze dorite și fiecare clauză poate fi configurată pentru a descrie jobul solicitat. Fiecare clauză trebuie îndeplinită înainte ca contractul să fie considerat complet.
+
+Când „Auto-Accept” este bifat, finalizarea contractelor este detectată automat de sistem. De exemplu, dacă un contract este stabilit pentru a construi un drum între două puncte, contractantul care efectuează lucrarea poate deschide contractul în meniul lateral și poate apăsa „Job Finalizat”, ceea ce va declanșa o detectare dacă lucrarea este într-adevăr finalizată. În acest caz, contractul va fi plătit conform acordului și închis automat.
+
+„Clauza personalizată” este o clauză specială care permite jucătorilor să descrie în cuvinte ceea ce și-ar dori să facă. Dacă un contract conține o astfel de clauză, acesta trebuie să fie aprobat manual de către client (acceptarea automată poate să nu fie verificată), deoarece detectarea automată nu poate determina când este terminat.
+  
+Când nu este bifată detectarea automată, antreprenorul va face clic pe „Lucrare terminată” atunci când consideră că lucrarea este terminată, iar contractantul va accepta sau va respinge finalizarea. Contractele fără acceptare automată necesită mai multă încredere între cetățeni, deoarece nu există nicio garanție că antreprenorul va accepta sincer un loc de muncă finalizat. Cetățenii sunt sfătuiți să utilizeze [Reputation] ca mijloc de determinare a încrederii în aceste situații.
+
+Contractele au o durată stabilită în care trebuie să fie finalizate, determinată la momentul înregistrării contractului. În plus, contractele pot fi setate să se repete pentru lucrări recurente - atunci când acest lucru este activat, de fiecare dată când un contract este acceptat, contorul de repetări se va reduce cu unul.
+
+Orice plată oferită pentru un contract va fi reținută într-un escrow special[Bank Account|Bank Accounts] în timp ce contractul este activ. În cazul în care contractul se încheie cu succes, acea plată va fi transferată contractorului, iar în caz de eșec, va fi rambursată clientului. De asemenea, antreprenorul poate colecta o depunere, care va fi reținută în garanție și rambursată contractantului după finalizarea cu succes, sau acordată clientului în caz de eșec.
+  
+7;Petreceri de lucru
+8;
+[Work Parties] poate fi, de asemenea, afișat pe un comitet contractual, permițând crearea de sarcini care pot fi îndeplinite de mai mulți alți cetățeni, spre deosebire de contractele care sunt doar un acord între două părți. Înainte de a posta o petrecere de lucru, un cetățean trebuie să înceapă o comandă de lucru pe o masă de artizanat pe care o deține.
+
+După ce au postat un grup de lucru, muncitorii se pot alătura proiectului la comisia de contract. În mod implicit, oricine se poate alătura grupului de lucru ca muncitor, dar pot fi stabilite cerințe pentru roluri individuale sau cerințe generale pentru ca oricine să se alăture. Când se bifează „Extindeți rolurile când este complet”, spațiul pentru noii muncitori să se alăture este creat automat atunci când toate rolurile sunt ocupate.
+
+Atunci când stabiliți munca dorită, afișul grupului de lucru poate decide să angajeze pentru forță de muncă, resurse sau ambele. Orice cetățean care contribuie la grupul de lucru va primi o parte din plată în funcție de cantitatea de muncă pe care a oferit-o. Prin atribuirea unei greutăți suplimentare unui anumit loc de muncă într-un grup de lucru, acel loc de muncă va primi o parte mai mare din plată.
+
+9;
+Există o varietate de opțiuni de plată pentru un grup de lucru și pot fi oferite mai multe opțiuni de plată pentru același grup de lucru.
+
+- Când oferiți [Currency] ca plată, există o opțiune de a „plăti pe măsură ce plătești”, care îi va plăti pe muncitori pe măsură ce contribuie, în loc să plătească o sumă forfetară la încheierea contractului.
+
+- Când oferiți [Reputation] ca plată, aceasta va fi împărțită de toți cetățenii care au contribuit la finalizarea grupului de lucru.
+
+- Când oferiți [Research] ca plată, toți cetățenii care contribuie cu suma necesară vor descoperi instantaneu tehnologia la finalizarea grupului de lucru. Cercetarea poate fi oferită ca plată numai atunci când grupul de lucru creează o carte de cercetare sau dacă cetățeanul care oferă grupului de lucru are cartea de cercetare în inventarul lor la postarea grupului de lucru.
+
+- La acordarea unui [Title|Titles] ca plată, cetățeanul care postează contractul trebuie să fie administratorul titlului pentru titlul oferit. Toți cetățenii care contribuie cu suma minimă vor primi noul titlu. Tipul de acces determină dacă vor deveni manager de titlu sau utilizator de titlu.
+
+10;Componenta Comitetului pentru contracte permite cetățenilor să posteze sau să accepte contracte și oferte pentru grupuri de lucru
+11;Componenta de credit permite cetățenilor să stabilească moneda și contul bancar pentru toate tranzacțiile pe un obiect pe care îl dețin.
+  
+12;
+Când selectați [Bank Accounts], cetățenii pot selecta orice cont la care au primit acces (efectuat într-un [Bank Component]). În mod implicit, va fi selectat contul personal al cetățeanului.
+
+Oricare din lume [Currencies|Currency] poate fi selectat în componenta de credit. Aceasta este moneda care va fi utilizată pentru orice tranzacții care au loc pe acel obiect (de exemplu a [Store|Store Component] va accepta orice monedă este setată aici). 
+
+Când selectați Niciuna pentru moneda unui magazin, tranzacțiile directe sunt posibile fără a fi necesară o monedă.
+13;Componenta de credit permite cetățenilor să seteze contul bancar și moneda pentru tranzacțiile pe un obiect.
+14;Componenta Deed Sales permite cetățenilor să cumpere și să vândă [Property].
+  
+15;
+Vizitând un [Real Estate Desk|Real Estate Desk Item], cetățenii pot crea listări pentru faptele lor și pot vizualiza listele altor cetățeni. Toate listările postate pot fi accesate de la orice birou imobiliar.
+
+La crearea unei listări, proprietarul proprietății stabilește prețul și [Currency] folosit. Toate veniturile vor intra în cele selectate [Bank Account|Bank Accounts].
+
+La cumpărarea unui act, moneda va fi preluată din contul bancar selectat de cumpărător. 
+
+După ce proprietatea este vândută, actul și toate obiectele conținute în act sunt transferate noului proprietar. 
+  
+16;Componenta Deed Sales permite cetățenilor să cumpere și să vândă proprietăți.
+17;Componenta de schimb permite cetățenilor să tranzacționeze una [Currency] pentru altul.
+18;Schimb Valutar
+19;
+Proprietarul unui [CurrencyExchangeItem] folosește componenta de schimb pentru a oferi schimburi valutare altor cetățeni. Atunci când configurați un schimb, moneda proprietarului este moneda oferită spre vânzare. Pentru fiecare unitate de monedă proprietar cumpărată, cetățenilor li se va percepe suma stabilită a monedei alternative.
+
+Când un [Authorized Consumer|Authorization Component] vizitează schimbul valutar, vor vedea o listă cu toate schimburile oferite. În mod implicit, toți cetățenii sunt consumatori autorizați.
+	
+20;Restricții la schimb
+21;
+Proprietarul schimbului valutar are opțiunea de a configura restricții de sold. Acestea vor împiedica cetățenii să schimbe valută dacă suma valutară din contul ales nu respectă restricția.
+
+Numărul din stânga este deținerea valutei minime, iar numărul din dreapta este deținerea valutei maxime. Dacă oricare dintre valorile restricției de sold este lăsată la 0, nu va exista nicio limită pentru acea parte a restricției de sold.
+	
+22;Permite cetățenilor să configureze un schimb valutar.
+23;Componenta de distribuție a articolelor permite proprietarului să furnizeze articole gratuite noilor cetățeni, ca un act de bunăvoință și pentru a spori prosperitatea inițială a cetățenilor.
+24;
+Toți cetățenii noi care se califică (în funcție de cât timp au jucat) își pot colecta obiectele vizitând [DistributionStationItem]. La intrarea în lume, noii cetățeni vor începe cu un marcator global de hărți pentru a-i avertiza că articolele sunt disponibile. Rețineți că [Storage Component] trebuie să rămână în stoc cu articolele distribuite pentru a permite noilor cetățeni să le colecteze.
+
+Proprietarul poate desemna ce articole urmează să fie distribuite, câte din fiecare articol și cât de recent cetățeanul trebuie să se alăture lumii pentru a fi eligibil.
+  
+25;Permite proprietarului să ofere articole gratuite noilor cetățeni, ca un act de bunăvoință și pentru a spori prosperitatea inițială a cetățenilor.
+26;Componenta Mint permite cetățenilor să creeze [Currencies|Currency] care sunt susținute de o resursă.
+
+27;
+Când creați o monedă la un [MintItem], se alege un element de susținere, precum și o cantitate de monede per articol care sunt generate din fiecare articol consumat. Prin utilizarea unui element de susținere pentru monedă, suma totală posibilă a monedei poate fi limitată la numărul de articole contribuite, oferind astfel mai multă stabilitate pe măsură ce devine mai greu să inundați piața cu monedă nouă. Alegerea elementului de rezervă va afecta acest lucru, elementele mai rare oferind în general mai multă stabilitate, fiind mai greu de obținut.
+
+Materialul de susținere și monedele per articol sunt permanente, deci aveți grijă atunci când decideți cum să faceți o monedă înapoi. Odată ce o monedă este bătută, aceasta va deveni legată de menta pe care a fost creată, chiar dacă menta respectivă este ridicată.
+
+Cetățeni cărora li s - au acordat drepturi de consum în cadrul [Authorization Component] poate utiliza componenta Monetărie pentru a crea monedă suplimentară. Moneda poate fi încorporată în țintă [Bank Account|Bank Accounts] selectat de proprietarul monetăriei sau de orice cont bancar la care are acces cetățeanul monetar în [Bank Component].
+  
+28;Permite cetățenilor să creeze și să imprime monede susținute.
+29;
+Componenta Magazin permite cetățenilor să stabilească articolele pe care doresc să le cumpere și să le vândă altor cetățeni. Aceste acțiuni se pot întâmpla automat, nefiind necesar ca proprietarul magazinului să fie online.
+  
+30;
+Moneda și contul bancar selectate în [Credit Component] va fi utilizat pentru toate tranzacțiile de la magazin. Când selectați Niciuna pentru moneda unui magazin, sunt posibile tranzacții directe care nu sunt supuse impozitului pe vânzări. 
+32;Configurează o interfață pentru ca alți cetățeni să cumpere și să vândă mărfuri de la dvs. automat.
+33;Componente legate de guvern.
+34;
+Componenta de acțiune civică permite cetățenilor să participe [Elections], a executa [Executive Actions], și demisionează din funcție, în funcție de obiectul utilizat.
+
+35;Participarea la Alegeri
+36;
+Când utilizați componenta de acțiune civică la a [Ballot Box|Ballot Box Item], cetățenii pot candida la [Elected Titles] și să participe la alegeri. 
+
+Prin apăsarea butonului Vot, jucătorii sunt redirecționați către interfața web unde pot vedea toate rulează [Elections], discutați-i cu concetățenii lor, oferiți dovezi pentru argumentele lor [Data], și votează.  
+
+Cetățenii cărora li s-a acordat puterea de veto în prezent [Election Process|Election Processes] poate anula instantaneu alegerile.
+
+Pentru a candida la titluri alese, mai întâi un cetățean eligibil trebuie să utilizeze acțiunea Start Election. Odată ce au început alegerile, cetățenii eligibili pot selecta Enter Election pentru a participa la cursă și pentru a susține un discurs de campanie. Candidații pot opta să se retragă din alegeri în orice moment, folosind opțiunea disponibilă pe o urnă.
+
+37;Efectuarea de acțiuni executive
+38;
+Utilizarea componentei de acțiune civică la un [Executive Office|Executive Office Item] permite unui titlu ales să efectueze acțiuni executive unice care afectează un set de cetățeni.
+
+Condițiile cetățenești dictează cetățenilor cărora li se aplică acțiunea executivă și pot fi stabilite condiții multiple pentru calitatea unui cetățean. Pentru a efectua o acțiune pentru toți cetățenii, utilizați [Demographic] „Toată lumea” ca condiție de cetățean.
+
+Acțiunea asupra fiecărui cetățean va intra în vigoare de îndată ce va fi aprobată acțiunea executivă. Mai multe acțiuni pot fi efectuate simultan pentru fiecare cetățean care îndeplinește condițiile.
+
+39;Acțiunile Guvernului
+40;
+La [Government Office|Government Office Item], Componenta de acțiune civică permite ca titlurile alese să demisioneze sau să elimine alte titluri alese din funcție.
+
+Acțiunea Demisia din funcție permite oricărui ales ales să renunțe la funcția sa. Dacă un titlu succesor a fost atribuit titlului ales atunci când a fost creat, un nou oficial va fi selectat aleatoriu dintre toți cetățenii care dețin acel titlu; în caz contrar, Titlul ales devine vacant.
+
+Acțiunea Eliminare oficial din funcție permite cetățenilor cărora li s-a acordat autoritatea să elimine din funcție titlurile alese. Se aplică aceleași reguli pentru găsirea unui succesor ca și cum funcționarul ar demisiona.
+
+41;Permite cetățenilor să participe la alegeri și să efectueze acțiuni executive.
+42;    
+Componenta obiect civic permite cetățenilor să propună, să modifice și să abroge diverse obiecte civice. 
+43;Civic Duties
+44;În cadrul unei componente de obiect civic, veți vedea o listă a dvs. [Civic Duties]. Aceasta informează cetățeanul ce permisiuni au cu privire la obiectele civice, având în vedere actualul [Constitution]. Posibilitățile diferitelor îndatoriri civice sunt:
+45;Componenta obiect civic permite cetățenilor să propună, să modifice și să abroge obiecte civice.
+46;Componenta Registrator permite crearea și gestionarea celor ne-aleși [Titles].  Aceste titluri pot fi utilizate în multe dintre aceleași scopuri ca [Elected Titles], dar sunt numiți la grefier.
+47;Atribuirea titlurilor
+48;Managerii de titlu pot redenumi titlul și pot atribui noi manageri și titulari. Administratorii de titluri nu sunt considerați utilizatori de titluri.
+
+Utilizatorii de titluri sunt cetățenii considerați titulari și primesc toate beneficiile și condițiile asociate.
+	
+49;Setari Avansate
+50;
+În Setările avansate, pot fi setate cerințele pentru titularii de titluri, iar salariile pe oră pot fi atribuite titularilor de titluri care se califică.
+  
+Atunci când se decide ce este necesar deținătorilor de funcții, pot fi stabilite o varietate de condiții. Dacă un cetățean nu reușește să mențină aceste cerințe, își va pierde misiunea de utilizator titlu. Prin utilizarea unui „set de condiții”, pot fi stabilite mai multe cerințe pentru titularii de titluri.
+ 
+Salariile sunt plătite utilizatorilor de titluri de la orice [Bank Account|Bank Accounts] că un administrator de titluri a primit permisiunea de a utiliza în [Componenta bancară]. Salariile sunt plătite în fiecare oră (în funcție de setările lumii) în contul personal al fiecărui utilizator Titlu. Tipul de salariu poate fi utilizat pentru a exclude orele offline din plățile salariale.
+	
+51;Permite crearea și gestionarea titlurilor nealese.
+52;Componenta Trezorerie permite [Elected Titles] cărora li s-a acordat dreptul de a „stabili impozite la trezorerie” pentru a ajusta rata de impozitare și pentru a selecta moneda implicită mondială.
+53;Taxes
+54;După [Taxes] sunt setate în Componenta Trezoreriei, sunt aplicate automat tuturor tranzacțiilor relevante. Toate veniturile sunt destinate Trezoreriei [Bank Account|Bank Accounts]. Titlurile alese care au setarea „Privilegiile bancare guvernamentale” pot tranzacționa direct din contul Trezoreriei (permițând selectarea contului în cadrul [Credit Component]). De asemenea, banii pot ieși din trezorerie prin [Laws] care fac plăți către cetățeni.
+55;Moneda implicită mondială
+56;Moneda implicită mondială este implicită [Currency] utilizat la plasarea unui obiect nou care conține componenta de credit. Cetățenii pot alege în continuare să folosească orice monedă într-un [Trade], dar având o monedă implicită mondială, este mai ușor să stabiliți o economie cu o monedă comună.
+57;Impozite directe
+58;Titlurile alese cu drept de „Setarea impozitelor la Trezorerie” pot impozita sau aloca fonduri direct de la cetățeni. Acest lucru se face prin gestionarea monedei dorite și selectarea cetățenilor cărora li se va aplica acțiunea. Un titlu ales trebuie să ofere întotdeauna un motiv pentru care efectuează această acțiune care este afișată tuturor cetățenilor.
+  
+Gestionarea trezoreriei include, de asemenea, opțiunea de a face schimb de valută din contul trezoreriei. Acest lucru va elimina moneda permanent, deci aveți grijă când utilizați această abilitate pe monedele susținute.
+  
+59; Permite cetățenilor care dețin un titlu ales cu permisiunea fiscală să stabilească impozitele și să selecteze moneda implicită în lume.
+60;Componente legate de locuințe.
+61;Componenta de autorizare permite specificarea permisiunilor pe care cetățenii le au asupra obiectului.
+    
+62;
+Actul afișat aici este pur și simplu un link către actul [Property] pe care se află obiectul (sau fapta asociată cu [Vehicle|Vehicle Component] dacă este una).
+
+Consumatorii autorizați pot fi enumerați aici, fie ca persoane specifice, [Titles], sau [Demographics]. Oricine enumerat poate interacționa cu obiectul fără a avea control deplin. Un magazin, de exemplu, va permite cetățenilor cu drepturi de consum să cumpere și să vândă acolo, dar numai cetățenii cu drepturi depline asupra proprietății pot schimba ceea ce este de vânzare sau pot muta magazinul în sine.
+
+Toate obiectele plasate au componente de autorizare.
+  
+63;Permite cetățenilor să stabilească drepturile de acces pentru un anumit obiect.
+64;Paturile permit cetățenilor să accelereze timpul când toți cetățenii îl folosesc simultan (sau offline).  
+  
+(Această caracteristică este dezactivată implicit pe serverele dedicate pentru a preveni accelerarea timpului când utilizatorii sunt offline, dar poate fi activată de un administrator de server.)
+65;Permite somnul pe servere single-player sau pe serverele în care este activat somnul.
+66;Componente legate de industrie.
+67;
+Componenta Crafting este obișnuită [Craft|Crafting] elemente, adăugați resurse sau forță de muncă și anulați proiectele existente. Când contribuiți la un [Work Party|Work Parties], Componenta Crafting poate fi accesată de cetățenii care s-au alăturat grupului de lucru.
+  
+68;Articole de artizanat
+69;
+After selecting an item and quantity to craft, resources and labor are required to start the project. These resources can be added manually (placing them directly on the crafting table) or by linking a [Storage Component] that contains them.
+
+Citizens with a related [Specialty|Specialties] require less calories to add labor. Some projects require skilled labor from a citizen with the corresponding specialty. This reduction is applied after the work order is started so citizens of various skill level can contribute to the same work party.
+
+By adding an upgrade in the [Modules Component], work orders on a crafting table will have reduced crafting time and resource costs.
+
+If a project is cancelled early (by right clicking the order), the resources will be refunded but the spent labor will be lost.
+  
+70;Adăugarea de muncă
+71;
+For every unit of labor needed, [Calories|Nutrition] are consumed. After a work order is started, citizens can add labor by pressing the 'Work' button in the Crafting Component. 
+
+Once a project is started, labor can quickly be added from outside the Crafting Component by right clicking on a crafting table. When adding labor in this way, holding down 'Ctrl' will add 5x the normal amount of labor. Holding down 'Alt' will add all available calories.
+  
+72;Ingrediente etichetate
+73;
+Some recipes use Tagged Ingredients that can accept similar items as inputs. For example, an item may specify it needs 'Rock', and will accept any type of rock with that tag ([GraniteItem], [BasaltItem], etc).
+	
+Tagged ingredients will be consumed automatically, so there is no need to create separate orders using the different ingredients.
+  
+74;Rețete pentru părinți
+75;
+Unele rețete fac parte dintr-un grup mai mare de rețete, cunoscute sub numele de Rețete părinte. Atunci când elaborează una dintre aceste rețete, un cetățean poate selecta o variantă specifică de produs. Numărul creat va fi cantitatea selectată pentru rețeta părinte.
+
+În mod implicit, vor fi afișate numai rețetele care au resurse disponibile. Bifând „Afișare toate”, vor fi afișate toate variantele posibile.
+  
+76;Componenta Crafting este utilizată pentru a crea obiecte și pentru a adăuga forță de muncă proiectelor.
+77; The Module Component allows citizens to insert upgrades into their [Crafting] tables. After inserting an upgrade, work orders on that table will have reduced resource costs and crafting times.
+78;Utilizarea upgrade-urilor
+79;
+Upgrade-urile vin în cinci niveluri diferite de calitate. O actualizare de nivel 1 reduce costul resurselor și timpul de lucru cu 10%, fiecare nivel progresiv adăugând o scădere suplimentară.
+
+Mesele de artizanat acceptă diferite tipuri de upgrade-uri. Tabelele timpurii acceptă „Actualizări de bază”, în timp ce tabelele ulterioare necesită „Actualizări avansate” sau „Actualizări moderne”. Fiecare nivel de actualizare are cinci niveluri de calitate diferite, cel mai înalt nivel de calitate fiind un upgrade de specialitate.
+
+Unele rețete au costuri folosind ingrediente statice. Ingredientele statice nu sunt afectate de reducerea costurilor resurselor, dar rețetele care le conțin încă obțin o reducere pentru timpul de lucru.
+		
+80;Specialty Upgrades
+81;
+The highest level of upgrade can only be crafted by a citizen who has reached the maximum level in their chosen [Specialty|Specialties]. Unlike other upgrades, these upgrades recieve an additional cost reduction when crafting recipes using the specified profession.
+
+Some specialties have different tiers of upgrades that correspond to different crafting tables. For example, [CarpentrySkill] has the [CarpentryBasicUpgradeItem] for the [CarpentryTableItem] and the [CarpentryAdvancedUpgradeItem] for the [SawmillItem].
+  
+82;Permite cetățenilor să-și actualizeze mesele de artizanat.
+83;
+Componenta Pipe permite unui cetățean să verifice starea ieșirii de smog a unui obiect, utilizarea apei și debitul de canalizare.  
+  
+84;Ieșire smog
+85;
+Bifând sfatul instrument Ieșire smog, un cetățean poate găsi informații suplimentare despre producția curentă de poluare a obiectului și despre [Pollution] niveluri.
+
+Conductele pot fi folosite pentru a redirecționa fluxul de poluare a aerului. Conductele care conțin ieșirea Smog pot avea mai multe intrări, dar trebuie să aibă un singur capăt deschis, în afara tuturor încăperilor și deasupra obiectului.
+
+Obiectele care emit poluare cu smog poluează doar atunci când obiectul este activ.
+	
+86;Apă și Canalizare
+87;
+Objects with a Water Input and pumps with a Water Output connect through a system of pipes. Water pipes systems can have multiple inputs for water pumps and multiple outputs for each object with a water demand.	
+
+By checking the water tooltip in the Pipe Component, a citizen can see exactly how much water an object is producing or consuming. If there is not enough water being produced, objects will start to become inactive.
+
+Pipes containing Sewage Output function similar to water pipes, but the [Sewage] they contain is a source of ground pollution. After [Waste Filters|Waste Filter Item] are invented, the sewage output can be piped into to a filter to mitigate the ground pollution.
+	
+88;Componenta Pipe permite unui cetățean să verifice starea producției de smog a unui obiect și utilizarea apei.
+89;Componenta de alimentare este utilizată pentru a verifica starea rețelei electrice locale. De asemenea, este utilizat pentru a verifica consumul de obiecte care necesită combustibil pentru a funcționa.
+90;Fuel
+91;
+Obiectele care consumă combustibil pot avea aport de combustibil aici și fiecare poate necesita diferite tipuri de combustibil pentru a funcționa. Sfaturile pentru combustibilul acceptat conțin o listă de articole specifice care pot fi utilizate pentru alimentarea obiectului. De asemenea, combustibilul poate fi adăugat din [Storage Component]
+
+În timpul funcționării, un obiect consumă combustibil în fiecare secundă, măsurat în wați (W). Fiecare tip de combustibil conține o cantitate diferită de energie potențială, măsurată în Jouli (J). Pentru fiecare 1 Watt necesar pe secundă, se consumă 1 Joule de energie. Combustibilul nu se consumă în timp ce obiectul este inactiv.
+  
+92;Statistici Energetice
+93;
+There are two types of [Power] that can be used by an object, Electric and Mechanical. The power grid displays the type and availability of the needed power for this object. If there is not enough power supply to match the power demanded, objects will become inactive.
+
+Power generators that consume fuel become inactive if there are no nearby objects demanding power. There is no need to turn them on and off to conserve fuel.
+  
+94;Componenta de alimentare este utilizată pentru a verifica oferta și cererea de energie și combustibil.
+95;Componenta de reparare permite cetățenilor să repare instrumentele la un [ToolBenchItem].
+96;
+After inserting a broken tool, the repair costs will appear. Advanced tools can be repaired for less resources by citizens with the corresponding [Specialty|Specialties]. The resources used can be manually added by a citizen or taken from a linked container in the [Storage Component].
+
+The owner of a Tool Bench can allow other citizens access to repair their own tools for a fee set in the [Credit Component]. When offering tool repair to the public, consumer rights must be given in the [Authorization Component].
+  
+97;Permite cetățenilor să repare instrumentele.
+98;
+The Status Component allows citizens to see the requirements for an object to be active, and which of those requirements are met. If an object causes [Pollution], the status component also shows the lifetime pollution production for that object.
+	
+99;Starea Obiectului
+100;
+Fiecare condiție din Componenta de stare trebuie îndeplinită înainte ca un obiect să poată fi activ. Câteva exemple de condiții includ:
+
+- A fi cuprins într-un valabil [Room|Rooms]
+
+- Având destul [Power]
+
+- Un lucru [Sewage] sistem
+	
+101;Indicator de stare
+102;
+Atunci când interacționează cu un obiect cu o componentă de stare, cetățenii pot vedea rapid starea obiectului verificând indicatorul de stare din colțul din stânga sus. Un cerc verde înseamnă că un obiect este activ, în timp ce un cerc roșu înseamnă că este inactiv.
+	
+103;Afișează dacă un obiect este activ sau inactiv și de ce.
+104;Componenta de stocare este utilizată pentru a gestiona inventarul containerelor de stocare și a le lega de obiecte care necesită stocare.
+  
+105;Gestionarea stocării
+106;
+Inventory can be moved between containers by dragging stacks of items from one container to another.
+
+Holding down the 'Shift' key while dragging items will move all stacks of the same item between containers. Right clicking a stack of items will allow a player to divide a stack into smaller quantities. Holding down ‘Ctrl’ when clicking a stack of items will split the stack in half.
+
+Some storage containers, like a [StockpileItem], can contain any type of item. Other storage containers, like a [StorageChestItem], can only contain non-carriable items.
+  
+107;Conectarea containerelor de stocare
+108;
+Un obiect poate fi legat de containere din Componenta de stocare bifând caseta de selectare pentru container. Odată conectat, obiectul obține acces la toate articolele din containere și poate folosi containerul pentru depozitare. La conectarea containerelor de stocare, cel mai de sus container din componenta de stocare va fi utilizat mai întâi pentru stocare. Ordinea poate fi modificată făcând clic și glisând afișajele de stocare din listă. 
+  
+109;Gestionează inventarul și permite conectarea stocării la alte obiecte.
+110;O economie înfloritoare cu comerțul este esențială pentru dezvoltarea tehnologiei necesare pentru a opri meteoritul.
+111;Conturile bancare sunt depozite de [Currency] pe care unul sau mai mulți cetățeni le poate accesa. Fiecare cetățean intră în lume cu un cont bancar personal permanent, care conține o sumă infinită a creditului personal. Se pot acorda conturi bancare suplimentare și li se pot regla drepturile de acces la a [Bank|bank component].
+
+Conturile bancare sunt utile pentru organizarea monedei, permiterea accesului la fonduri de către mai multe părți și stocarea colecției de impozite și desemnarea cine le poate accesa. Guvernele vor crea, în general, o serie de conturi bancare pentru a gestiona fluxul de impozite, asigurându-se că fondurile sunt utilizate conform destinației. Fiecare cont bancar poate deține sume nelimitate de valute nelimitate, fiecare monedă urmărind separat. Dacă faceți clic pe contul bancar, va fi afișat registrul care afișează toate tranzacțiile către sau de la acesta, deoarece toate tranzacțiile din Eco sunt publice.
+
+112;Conturile bancare servesc ca stocare și separare a monedei pentru diferite utilizări de către diferiți cetățeni și entități guvernamentale.
+113;
+    A contract is an agreement between two citizens created at a [Contract Board|contract board component].  The agreement can have any number of clauses, and specify combinations of work to be performed and compensation to be paid.  It is posted by the client citizen, and can be accepted by any valid citizen asynchronously.
+114;Exemple de contracte includ:
+    - Creați un drum între două puncte desemnate.
+    - Împrumută bani între două părți cu o rată a dobânzii și o dată scadentă.
+    - Construiți o cameră cu cerințe date la o anumită locație.
+    - Cerințe personalizate descrise în text și acceptate / respinse de client la finalizare.
+  
+115;Contractele mențin un acord între doi cetățeni.
+116;
+Crafting is the creation of new products from ingredients, labor, and/or power.  Crafting may also create byproducts that cause pollution and negatively affec the environemnt.  It forms the backbone of the economy, generating demand for resources which come from the ecosystem around them, as well as demand for individual skilled labor and shared services like [Power|Power Component] or [Sewage].
+
+Any table which has a [Crafting Component] can create products defined in a list. Crafting tables can be shared, each having configurable [Authorization Component] that determines who may access them, and fees can be set in the [Credit Component] on the table to earn money from sharing your table.
+
+The inputs and outputs can either be taken directly from the crafting table, or placed in an attached [Storage Component].  Placing ingredients and products in storage allows citizens to queue up large orders that run automatically. 
+
+Many recipes require labor of a specific [Skill|skills overview].  While any citizen can start a crafting recipe or contribute ingredients, only a citizen with the required skills may add labor to it.  To form a group and have many citizens contribute to a work order while sharing in payment, [Work Parties] may be created.
+  
+117;Artizanatul este crearea de produse de către cetățeni la mese specifice.
+118;Currencies are a means of facilitating trade, as a representation of value. Their value is entirely determined by how they’re used.
+
+There are two types of currencies in Eco, backed and unbacked.
+  
+An unbacked currency is currency by fiat, and every player starts with their own personal currency with an infinite amount. These are especially useful early game when there is no global currency designated.  However, these currencies require a lot of trust that the owner of them does not manipulate their value, as they have an unlimited amount and can easily destabilize an economy that uses them.
+  
+Backed currencies are much more stable. A backed currency is created at a [Mint|Mint Component] by converting a currency supporting material into coins.  More currency can only be created by acquiring more of the given material.  This provides a much stronger limit on the amounts of currency that can be introduced into the world and forms a stronger foundation for global trade.  Often, a world will choose to move from a collection of personal currencies to one or more backed currencies as the economy grows through the arc of the game, and more global trade and collaboration is required.
+  
+Currencies can be transferred to others in the Economy Viewer, as well as through [Trade].  All currency is stored in a [Bank Account|Bank Accounts].
+
+119;Moneda este o construcție socială care facilitează comerțul.
+120;Economia nu are adesea nimic de-a face cu suma cheltuită, ci cu înțelepciunea folosită pentru a-i cheltui. 
+121;Economia cuprinde acțiunile de recoltare, producție și comerț între cetățeni, luând din [Ecosystem|Ecosystem Overview] în temeiul reglementării [Government|Government Overview]. Cetățenii vor trebui să asigure o economie care funcționează fără probleme pentru a progresa suficient de mult în tehnologie pentru a opri meteorul, fără a-l lăsa să fugă și să distrugă planeta prin poluare în acest proces.
+  
+122;Conceptele economiei
+123;
+- [Crafting]. Utilizarea ustensilelor industriale pentru crearea de bunuri noi.
+  - [Trade]. Schimb de bunuri create de persoane fizice cu diferite specialități sau acces la resurse.
+  - [Transport]. Mutarea resurselor dintr-un loc în altul și construirea infrastructurii în întreaga lume pentru a face acest lucru.
+  - [Research]. Promovarea cunoștințelor umane pentru îmbunătățirea societății.
+  - [Currency]. O reprezentare a valorii create de cetățeni care facilitează activitatea economică.
+  - [Work Parties]. Grupuri de muncă organizate care împart recompense.
+  - [Contracts]. Acorduri între doi cetățeni cu privire la muncă sau alte aranjamente.
+  - [Bank Accounts]. Containere de valută cu acces configurabil.
+  - [Finance]. Furnizarea de capital altor cetățeni pentru a-i ajuta să progreseze în timp ce obțineți și dumneavoastră un profit.
+  
+124;Economia constă în utilizarea resurselor, comerțul și progresul tehnologic de către cetățeni.
+125;Through the use of [Contracts], Citizens in Eco can create loan and bond agreements between two parties, tracking automatically the interest payment and due date of the funds.  Loans and bonds are a great way for new citizens to collaborate with long-time citizens with more wealth in a way that benefits both parties and increases societal progress.
+
+If a citizen takes a loan, the offering party gives them money which they are expected to pay with interest.
+If a citizen purchases a bond, they give money to the offering party which they expect to be repaid with interest.
+
+Penalties for defaulting on loans can be constructed using [Laws], by watching for the Default on Loan/Bond trigger.  Actions can then be taken, such as repossessing property or applying other penalties and fines.
+
+126;Finanțele sunt gestionarea monedei pentru a promova progresul.
+127;Fiecare jucător poate afecta reputația oricărui alt jucător, care poate fi la rândul său folosit ca factor în legi, contracte etc., care poate interoga reputația cetățenilor și poate determina privilegii (sau lipsa acestora) pe baza valorii). Pentru a seta reputația unui cetățean, treceți cu mouse-ul peste numele acestuia în chat și faceți clic pe listele de reputație din sfatul de instrument (o listă cu toți cetățenii poate fi găsită pe pagină [Current Citizens]).
+
+128;Reputația este modificată de un multiplicator de rețea, care este calculat ca +1 pentru fiecare cetățean care vă oferă reputație pozitivă și -1 pentru fiecare cetățean care vă oferă reputație negativă. În acest fel, devine mai benefic să ajuti mulți cetățeni și să câștigi o reputație larg răspândită decât să te concentrezi pe câțiva cetățeni. Reputația relativă este o altă valoare care ia în considerare doar cetățenii cărora le-ați dat reputație pozitivă.
+
+129;O valoare stabilită de alți cetățeni sau din legi care reprezintă poziția dvs. socială.
+130;Research creates new shareable knowledge, unlocking new types of products and abilities.  It is conducted at a [ResearchTableItem] where you craft a skill book.  Once created, a skill book can be used to create an unlimited number of skill scrolls, which will unlock the specialty for a citizen that uses one.
+
+Each skill scroll is a one-time-use consumable that unlocks a new [Specialty|specialties] in whomever uses it, which must then be claimed with a level-up through the [Skills|skills overview] system.  Gaining a new skill scroll also grants the citizen the benefit of a set of [Property Claim Papers|Property], which allows them to claim more land as they gain in skill.
+    
+Skill books are some of the most difficult items to create, and citizens will typically need to collaborate to acquire all the various resources and labor required to produce them.  As such, research projects are especially well-suited for [Work Parties], as citizens can use them to share the work needed to create them along with the knowledge reward upon completion.
+  
+131;Cercetarea creează noi cunoștințe care pot fi partajate, deblocând noi tipuri de produse și abilități.
+132;Trade with your fellow citizens is essential in Eco, as each player has a set of [Specialties] that they can contribute to most effectively while trading with other citizens who are skilled in professions in which they are not. 
+
+ - Trades can be setup at a [Store Component], listing buy/sell prices for the different goods you would like.  Citizens can then buy and sell goods to you asynchronously, without being present.
+ - Trade of labor can happen through [Contracts] and [Work Parties], allowing players to perform work for payment within agreed upon terms.  This can be performed asynchronously as well.
+ - Trade of currencies can happen at a [Currency Exchange|Exchange Component], listing buy/sell prices for exchanges of different currencies.
+ - Trade is facilitated by [Transport] and building transportation infrastructure between the burgeoning hubs of your civilization will greatly promote the ability to trade.
+ - Trade is subject to [Taxes], set by the Government[government overview], which can either promote or reduce the value of certain trades.
+
+133;Comerțul între cetățeni cu abilități diferite și care posedă bunuri diferite este coloana vertebrală a economiei.
+134;With resources spread out through the world and the locations where they are collected and processed differing from where they’re used, transport becomes a critical factor to success in Eco.
+
+To efficiently transform materials, you’ll need to create vehicles to carry them, and those require flattening the ground into roads.  Using a [StoneRoadToolItem] you can flatten ground and make it usable be vehicles, and with ramps you can make gentle slopes that vehicles can travel on.  More advanced vehicles will require mode advanced roads to travel efficiently, and roads will need to be upgraded periodically as new technology comes available.
+
+Building roads between villages and resource caches will take time and the effort of many citizens, and is a great candidate for public works projects funded by [Taxes] and built using [Work Parties].  As the world progresses in technology, more and more transportation infrastructure will be created to aid the flow of commerce, eventually growing to a point where the road construction and vehicle usage will create an impact on the environment.  Careful management of this influence will be key to preserving the ecosystems that they pass through.
+
+135;Cu resursele și utilizarea acestora răspândite în întreaga lume, transformarea lumii prin construirea infrastructurii de transport devine necesară.
+136;A Work Party is an agreement among multiple citizens to perform work.  They are started by an individual citizen by visiting a [Contract Board|Contract Board Component] after creating a work order.
+
+The citizen issuing a Work Party can define the various parameters of the work, which includes:
+ - The work orders to be completed.
+ - What is required of citizens who want to join the work party.
+ - What payment will be given to people who participate.
+ - How that payment will be distributed.
+ - How that payment will be distributed.
+
+Work parties are especially useful for performing [Research]. A citizen can setup a research project, costing a large amount of resources, and attach a work party to it. Citizens can then automatically join the work party (even when the issuing citizen is offline, if they meet the designated requirements) and start performing the task.
+
+Payment can take a variety of forms:
+- [Currency], distributed based on how much work is performed, either immediately or upon completion.
+- [Reputation], given from the work party creator to the laborer (subject to the daily limits of reputation that may be given).
+- Knowledge of a specific specialty (the same effect as reading a skill-scroll). For this benefit, the work party creator must possess the skill book for the specialty, or it must be crafted in one of the work orders of the party.
+- Granting a [Title], which can give them new privileges for accessing property and other abilities.
+
+The economy of Eco is focused not just on trading of goods but trading of labor, and work parties make it easy to farm out many kinds of work to the general populace.
+  
+137;Grupurile de lucru sunt acorduri comune ale unui număr de jucători pentru îndeplinirea unei sarcini date, compensația fiind distribuită în diferite moduri.
+138;Biomul viu al lumii, oferind resurse pe care oamenii trebuie să le folosească pentru a supraviețui.
+139;
+Diversitatea imensă și bogăția vieții de pe planetă pot fi clasificate, în linii mari, în zone numite biomi. Biomii din Eco sunt regiuni ale lumii care se încadrează în intervale speciale de precipitații și temperatură. Datorită acestor diferențe fizice simulate, diferite specii de microorganisme, plante, ciuperci și animale sunt capabile să supraviețuiască și să prospere în diferiți biomi. Fiecare biom din Eco găzduiește un set unic de resurse pe care jucătorii le pot descoperi și extrage pentru a-și construi și alimenta societățile. Comunitățile de viață din cadrul fiecărui biom au relații interdependente, de obicei legate de habitat, dietă și sol, care la rândul lor apar din cauza resurselor climatice și terestre prezente. 
+  
+Biomii sunt ecosisteme din cadrul ecosistemului global și, în interiorul biomurilor, există uneori alte divizii sau „subbiomi”, cum ar fi deșertul înalt, pajiștile din pășuni, iarbă glaciară în tundră sau coastele marine. Biomii și subbiomii sunt unități contigue, dintre care multe au restricții cu privire la ce biom pot locui lângă sau înăuntru. În timp, pe măsură ce condițiile se schimbă din cauza influenței jucătorului, biomurile au potențialul de a fi remodelate radical. 
+
+Schimbările climatice pot schimba granițele biomurilor, deplasând comunitățile - unele specii vor supraviețui și se vor adapta, dar altele nu vor fi atât de rezistente. Deplasarea directă a solului și a altor distrugeri ale habitatelor din activități precum construcția, agricultura, exploatarea minieră și exploatarea forestieră vor avea, de asemenea, un impact asupra speciilor din biomi în grade diferite. Speciile de plante sau animale ar putea prefera nu numai biomi anumiți, ci anumite părți ale subbiomilor, ceea ce va însemna un impact mai mare dacă acele zone foarte localizate sunt modificate sau distruse. Speciile rezistente și adaptabile vor putea prospera dincolo de limitele biomului pe măsură ce sunt modificate, dar aceleași specii pot deveni o amenințare pentru plantele sau animalele mai sensibile din noii biomi în care sunt introduși.
+ 
+140;Biomi în Eco:
+141;Ocean: părțile oceanului de pe rafturile continentale, abundente cu viață.
+Oceanul adânc: cele mai adânci părți ale oceanului, purtând cele mai mari specii marine și populațiile migratoare de pești.
+Coasta rece: plaje și ape puțin adânci în climă mai rece.
+Coasta caldă: plaje și ape puțin adânci în climă mai caldă.
+Zonele umede: un biom unic caracterizat printr-o saturație a solului cu apă dulce sau sărată.
+Pajiști: un biom în care există suficientă apă pentru a susține ierburile, dar nu prea mulți copaci.
+Deșert: Cel mai uscat biom, iar în Eco, în prezent, este și cel mai fierbinte.
+Pădurea rece: un biom suficient de umed pentru a susține o acoperire densă a copacilor și suficient de rece încât arborii coniferi tind să domine.
+Pădurea caldă: un biom suficient de umed pentru a susține acoperirea densă a copacilor și suficient de cald încât arborii cu frunze late tind să domine.
+Pădurea tropicală: un biom umed și cald, care susține o pădure abundentă cu viață vegetală și animală.
+Taiga: un biom rece și oarecum uscat care susține o pădure rară de copaci coniferi.
+Tundra: un biom foarte rece, care nu poate susține copacii, dar găzduiește o comunitate unică de plante și animale.
+Gheață: Cele mai reci zone ale pământului, acoperite de gheață glaciară. 
+
+Există, de asemenea, câteva sub-biomi în Eco în prezent:
+
+Deșert înalt: o parte înălțată geologic din deșert cu specii mai tolerante la frig și care se bucură de stâncile abrupte cauzate de eroziune.
+Stepa rece: o pajiște puțin mai rece, caracterizată adesea prin chiar mai puțini copaci și spații deschise mai mari.  
+  
+142;Sistemul viu al plantelor și animalelor care oferă mijloacelor pentru a supraviețui oamenilor.
+143;Graphs
+144;
+Fiecare lume Eco stochează fiecare acțiune din joc și monitorizează progresul fiecărui aspect al simulării. Datele sunt stocate în câteva categorii majore, în special ecosistemul și economia. Pe măsură ce jucătorii efectuează acțiuni sau pe măsură ce ecosistemul se schimbă, acesta va fi reprezentat pe grafice vizibile cetățenilor.
+
+Graficele sunt cele mai utile pentru a compara stările diverselor valori și pentru a le vizualiza ore suplimentare. Ca atare, acestea sunt utile în special pentru determinarea retrospectivă a rezultatelor legilor și reglementărilor, prin studierea modului în care lucrurile s-au schimbat după ce au fost implementate. Ele sunt, de asemenea, utile pentru extrapolarea în efecte viitoare, proiectarea ritmului la care lucrurile se schimbă (adică scăderea populației ca urmare a defrișărilor) și efectuarea modificărilor înainte de a se produce. Citirea, compunerea și înțelegerea graficelor este un instrument foarte puternic pentru guvern, iar cetățenilor li se oferă instrumentele pentru a elabora grafice care susțin sau infirmă argumentele și le prezintă concetățenilor lor direct în discuții pentru acțiuni civice.
+
+145;Hărți termice
+146;
+Lumile ecologice sunt locuri variate, cu multe biomuri și locații diferite ale dezvoltării umane și ale impactului asupra mediului. Pentru a vedea cum variază diferite părți ale lumii, sunt disponibile hărți de căldură pentru toate efectele lumii din joc. Valori precum activitatea cetățenilor, ratele populației, ratele de poluare, temperatura, umezeala și alte zeci pot fi vizualizate prin hărți de căldură, cu modificări înregistrate în timp, care pot fi redate și utilizate pentru argumentarea științifică.
+
+Jucătorii le pot vizualiza în două moduri: prin minimapă în joc, care poate afișa și teren colorat în joc. În al doilea rând, pot fi vizualizate în browserul web, unde se profită de capacitatea lor de redare în timp. Un instantaneu al fiecărei hărți de căldură este stocat în datele serverului la fiecare 10 minute (configurabil), iar cetățenii pot vizualiza vizualizări de tip time-lapse cu privire la modul în care hărțile de căldură se schimbă în timp. Acest lucru este esențial pentru măsurarea impactului în locații specifice și determinarea celor mai bune rute pentru a construi infrastructuri și așezări de știri.
+
+147;Mini-hartă
+148;
+Minimapa este un instrument puternic în cadrul jocului, care servește mai multor scopuri: navigare, planificare, vizualizare date, localizare proprietăți și multe altele. Poate fi activat pentru a vizualiza diferitele straturi mondiale ale jocului (heatmaps), evidențiind regiunile cu populație ridicată / scăzută, poluare, activitate cetățenească, etc. Marcatorii mondiali pot fi adăugați manual sau global pentru toți cetățenii, pentru a direcționa către puncte specifice, ajutând la coordonarea activității umane. Aceste markere sunt, de asemenea, utilizate pentru a direcționa cetățenii în mod automat către munca dinamică, specificând unde trebuie construite drumurile într-un contract, unde să livreze mărfurile pentru transport etc.
+
+În prezent, lucrăm la adăugarea desemnării în joc a proprietăților și districtelor, precum și la specificarea suprafețelor de teren specifice pentru grupuri de lucru și contracte, permițând, de exemplu, cetățenilor să evidențieze în joc zonele pe care doresc să le angajeze pe alții pentru a ară un câmp, sau construiți un drum etc. Acest lucru va deschide în mare măsură capacitatea pieței forței de muncă, permițând cetățenilor să fie mult mai specifici într-un mod mai ușor atunci când vor desemna unde ar dori să lucreze.
+
+149;Sistemul viu al plantelor și animalelor care oferă mijloacelor pentru a supraviețui oamenilor.
+150;The true meaning of life is to plant trees, under whose shade you do not expect to sit.\n– Nelson Henderson
+151;
+
+Ecosistemul este un scop în sine în Eco, iar prosperitatea sa continuă este obiectivul principal al jocului, alături de progresul economic. Adică, ecosistemul începe într-o stare de câștig, iar jucătorii trebuie să-și folosească resursele fără a-l aduce într-o stare de pierdere, ceea ce ar însemna distrugerea umanității.
+
+Ecosistemul din Eco rulează pe o simulare continuă, activă atât timp cât rulează serverul, indiferent dacă jucătorii sunt sau nu în joc. Fiecare plantă și animal simulat cresc, consumă surse de hrană și se reproduc. Este singura sursă de materiale din care jucătorii trebuie să își construiască societatea, iar procesul de extragere a acestora o va afecta foarte mult. Tăierea unei păduri ar putea distruge habitatul unei creaturi, ducându-le la dispariție. Reziduurile miniere pot polua râurile și lacurile din apropiere, otrăvind fermele care se bazează pe ele. Acțiunile pe care jucătorii le fac în Eco își afectează mediul, iar jucătorii vor trebui să înțeleagă impactul pe care îl au pentru a prospera și a opri meteoritul. Nu este o opțiune de a lăsa ecosistemul într-o stare curată, neatinsă; meteoritul se asigură că alegerea va duce și la distrugerea ecosistemului. Pentru a-l salva, cetățenii trebuie să ia din ea, construind o societate care are puterea de a opri meteorul, având în același timp reținerea de a nu distruge ecosistemul în acest proces.
+
+152;Gameplay
+153;The ecosystem is the foundational system which citizens must understand and contend with. From growing large [Farms|Farming] and [Mines|Mining] to understanding the impact of [Pollution] through study, the impact of citizens on the ecosystem will determine the success or failure of player decisions. Understanding how it functions using in-game [Data] becomes a key requirement of survival. Unlike the [Economy|Economy Overview] and the [Government|Government Overview], the ecosystem is not a citizen construct – its behavior is absolute, nothing about how it functions can be changed by fiat the way the economy can. In this sense it’s a reality check, the place where the conflicting biases and beliefs of citizens collide and reveal the true consequences.
+154;Între economie și guvernare
+155;As citizens progress society, they must beware the ‘Tragedy of the Commons’; that giving a population unfettered access to a common resource will frequently result in its destruction. To prevent this, citizens must organize, deciding rules for the common good through [Laws] and other civic regulations which may limit the individual but allow the group to survive. This conflict, the individual vs the group, forms the heart of the challenge of building a civilization.
+  
+156;Sistemul viu al plantelor și animalelor care oferă mijloacelor pentru a supraviețui oamenilor.
+157;
+Farming provides a way to take the plant species most useful to people and create a global scale food supply. Farming can also focus on plants useful for other industrial purposes, like biofuel for a potentially renewable source of energy.
+
+Farmers will need to pay attention to the resources and health of their soil, avoiding depletion and pollution. Fertilizers like [CompostFertilizerItem] and methods of monitoring soil resources like the [SoilSamplerItem] will be important tools to keep farmland productive. Various vehicles, storage technologies, and more powerful hand tools will allow players to scale up their farming operations as the food and fuel needs of their societies increases.
+
+Farming is a big activity in Eco that we want to enhance and expand as we move forward with development. Balancing and storage will be a core part of farming improvements to start, as we make sure that Eco societies generate an appropriate demand from farmers to fuel technological growth, and that the storage objects and mechanics exist to support these demands. Farming itself has many possible improvements and expansions, among them developing and modifying seeds and organisms to be more productive or resistant to pollutants, or other environmental factors.
+  
+158;Sol
+159;
+Solul Eco conține substanțe nutritive care permit plantelor să crească și să prospere: prea mult sau prea puțin din orice tip dat poate schimba randamentul și viteza de creștere atât a plantelor naturale, cât și a celor crescute. Pe măsură ce plantele cresc, ele iau substanțe nutritive din sol și le returnează atunci când mor aducând lumea într-o stare naturală de echilibru. Jucătorii influențează aceste schimbări prin îndepărtarea plantelor din mediu prin recoltare, defrișare, exploatare sau introducerea poluării care elimină încet nutrienții din sol. Jucătorii pot reintroduce substanțele nutritive sau pot modifica raporturile existente folosind îngrășăminte pe terenul lor.
+
+Pe măsură ce creștem dependențele animalelor de straturile de plante, putem face ca acele părți ale ecosistemelor să afecteze și mai mult solul, deoarece speciile care consumă plante pot elimina și nutrienți din sol. Un alt adaos care poate fi luat în considerare este modul în care solul vegetal există în Eco: în prezent este pur cosmetic și legat de biomul zonei, dar în fiecare biom solul vegetal este o resursă unică și valoroasă în comparație cu argila densă și murdăria de dedesubt.
+
+160;Sistemul viu al plantelor și animalelor care oferă mijloacelor pentru a supraviețui oamenilor.
+161;
+Pământul de sub dvs. găzduiește o mare varietate de resurse, cum ar fi roci, metale și alte depozite minerale. Diferitele tipuri de roci găzduiesc diferite tipuri de depozite minerale sau se pretează să prindă alte resurse, cum ar fi petrolul. Datorită complexității imense a resurselor pământului în realitate și a necesității în Eco de a oferi jucătorilor un echilibru previzibil de materii prime pentru a începe, rocile și depozitele lor sunt generate pe baza biomelor. Fiecare biom vine cu o suită de roci asociate și depozite care se întind sub el în straturi.
+
+162;Exploatarea manuală
+163;
+To mine ore, first you must locate it. Ores in Eco are each hosted in particular host rocks, so learning which rocks have the type of ore you want and then digging near rocks of those type is a good way to start. Use a [WoodenShovelItem] or better to dig away soil from the surface or start digging into a hill from the side. Once you hit rock you want to go through, you'll need to use a pickaxe like the [StonePickaxeItem] to break it. When breaking rocks with the pickaxe, sometimes you'll break off a larger piece of rock that needs to be hit again to break into pieces small enough to pick up. It's a good idea to pick up rock as you break it, and stack it elsewhere for use, preferably in a [StockpileItem] or vehicle you're using to transport your ore like a [WoodCartItem].
+
+164;Prelucrarea mineralelor
+165;
+Once you have collected a large amount of metal ore, you'll need to process the ore before you can craft metal products with it. This is a dirty and expensive process, and optimizing it and the byproducts from it will be an ongoing matter of consideration. The three main steps of mineral processing are:
+
+Comminution: Comminution means to crush the rock into smaller sized particles which can be further processed. Crushed rock of the type the ore is hosted in is the main byproduct of this process.
+Concentration: Concentration is a way to separate the desired metals in an ore rock from the waste rock. This process is never perfect, and inevitably results in a large output of waste rock which still contains traces of freed metals. This waste rock with traces of heavy metals is known as [TailingsItem]. [CopperOreItem] and [GoldOreItem] require chemical leeching and wet processing to separate from their host rocks, and thus produce more polluted and volatile [WetTailingsItem] during the concentration process.  
+Smelting: Once you have precious ore concentrate, you can at last smelt it into metal products like [IronBarItem] at a [BloomeryItem] or using a more advanced smelting technology. 
+
+166;Sistemul viu al plantelor și animalelor care oferă mijloacelor pentru a supraviețui oamenilor.
+167;
+Pe măsură ce cetățenii ard combustibil pentru a găti sau a genera energie, pentru a topi metale, pentru a procesa canalizarea și pentru a se angaja în nenumărate alte activități industriale necesare, un produs secundar comun este poluarea. Poluarea este orice substanță care poate acționa ca un contaminant sau otravă atunci când este introdusă înapoi în mediu. În Eco există multe surse și mai multe varietăți de poluare, dintre care unele sunt mai puternice decât altele. Metalele grele pot contamina solul, afectând substanțele nutritive disponibile și sănătatea plantelor și animalelor care trăiesc pe și în el. Apa poate răspândi rapid contaminanții și poate crește dimensiunea impactului acestora. Poluarea aerului se poate revărsa în mod invizibil sau evident dintr-un aragaz sau o centrală electrică, adăugându-se la gaze cu efect de seră și afectând calitatea aerului, precum și poate cădea înapoi în pământ ca ploaia acidă. 
+
+Pentru a asigura supraviețuirea ecosistemelor și a păstra resurse precum solul și apa, jucătorii vor trebui să gestioneze și să conțină sursele de poluare pe care le creează civilizația lor. În unele cazuri, deversările sau concentrațiile mortale vor fi inevitabile, iar apoi remedierea și depozitarea pot fi singura opțiune de a readuce terenul într-o stare nevătămată. 
+
+168;Ground Pollution
+169;
+Odată eliberați în sol și pânza freatică, poluanții solului nu sunt ușor de oprit sau îndepărtat. Diverse materiale din Eco sunt surse de poluare a solului, în special sterilul provenit din minerit și gunoiul provenit din meșteșuguri și alte activități ale jucătorilor. Poluarea se răspândește ca un gradient care crește în concentrație cu timpul dacă sursa de poluanți rămâne sau crește. Când sursa de poluanți este îndepărtată de contactul cu solul, poluarea solului se răspândește și se disipează în timp.
+
+170;Air Pollution
+171;
+Multe activități ale jucătorilor pot crea emisii nocive care, dacă sunt eliberate în atmosferă, acționează ca poluare a aerului. Crearea la obiecte cu ieșiri de CO2 sau rularea generatoarelor cu ele contribuie la nivelurile de poluare locale și globale. Pe perioade lungi de timp, nivelurile globale de CO2 contribuie la un efect de încălzire globală care afectează la rândul său nivelul mării. Există chiuvete și prize naturale pentru unii poluanți precum CO2, cum ar fi pădurile.
+
+Concentrațiile de poluare a aerului vor cădea înapoi la sol ca ploi acide, pe care le simulăm folosind poluarea aerului și cantitățile locale de precipitații.
+
+172;Poluarea Apei
+173;
+Apa este un mediu prin care poluarea se răspândește mai repede și mai departe, grăbindu-se în aval și înflorind în lacuri sau oceane. Poluarea în apă provine, în general, din surse de poluare a solului din apropiere, dar, de asemenea, poate pătrunde în apă prin mecanicul ploilor acide în zonele cu multă poluare a aerului. 
+
+Eliminarea sursei este singura modalitate de a opri în prezent poluarea apei, dar strategiile de curățare și remediere sunt caracteristici pe care le luăm în considerare pentru viitor.
+
+174;Izolare
+175;
+În multe cazuri, nu există o soluție perfectă pentru a face față materialelor poluante. Trebuie făcut spațiu pentru depozitarea diferiților poluanți, iar poluanții trebuie depozitați într-un mod care să le împiedice să intre din nou în mediul înconjurător. Aceasta este o provocare care ar trebui să fie cheia managementului de mediu al industriei în Eco. În prezent mecanica sterilului necesită depozitare subterană profundă; acest lucru va fi îmbunătățit odată cu dezvoltarea ulterioară. 
+
+Mecanica de izolare este prima linie a caracteristicilor pe care dorim să le îmbunătățim legate de grupul de caracteristici Poluare din Eco. Jucătorii ar trebui să folosească izolare pentru a face față cantităților mari de steril și gunoi pe care societățile lor le produc.
+
+176;Sistemul viu al plantelor și animalelor care oferă mijloacelor pentru a supraviețui oamenilor.
+177;Consitutional Articles define how things happen in the government: who can pass laws, set taxes, change the rules, etc.  It can also define certain actions as needing an election, by specifying an [Election Process|Election Processes] inside them.  
+
+Constitutional Articles can be added in two places.  On a [CapitolItem], you can add up to three, and on [AmendmentsItem] you can add up to another 10 more per item.
+
+Defining the rules of the government is very important for keeping it a stable, society-supporting structure.  Governments can be granted a great deal of power over the world with laws, and there's a danger of this power being abused.  By setting a system of checks and balances, citizens can design a government that can undergo a number of changes, including changes of leadership, while maintaining the power to effect positive changes in the world.
+
+178;Un set de reguli despre modul în care funcționează guvernul.
+179;A constitution is a founding document defining how a society will be governed.  A constitution must be created before any other government object. They are created at a [Capitol|CapitolItem].
+ 
+Overthrowing Governments
+Once a capitol is placed, a constitution can be ratified by opening it and clicking Ratify. As long as there are no other constitutions, the government will be immediately created.
+ 
+If there is already a constitution active, a new constitution can only take its place if the housing value of its room exceeds the existing constitution by a significant amount, depending on the server settings. 
+ 
+Note: A forthcoming update of Eco will allow multiple concurrent governments.
+180;Documentul fondator al unui guvern.
+181;
+  Demographics are classes of citizen, created in the government. These can then be used anywhere you can specify a citizen (permissions, laws, etc).
+
+For example, citizens could define a demographic 'Lumberjacks', which would only contain users with a logging skill level of 3 or more.  Then, a law could be created that only permits 'Lumberjacks' to cut down old-growth trees.
+
+Demographics are defined at a [Census Bureau|CensusBureauItem].
+
+Demographics can also have wages set on them. Wages are paid periodically as long as a citizen remains within the demographic.
+
+182;Definește un set de cetățeni care corespund unor criterii.
+183;Districts are created by players at a [ZoningOfficeItem] and can be used as areas that are specified by laws.
+
+A district is a selected area of land, non-contiguous, which players can adjust at will.  Districts are contained in District Maps, and there can be multiple district maps in the world. However, within each district map, no districts may overlap.
+
+Districts can be used to designate where actions are allowed with laws. A law can be created, for example, that prevents creating chopping trees in a 'Protected Zone' district.
+
+184;O secțiune de teren definită, la care se poate face referire prin legi și alte sisteme.
+185;Elected Titles are government officials that can be assigned permissions to manage government policy. These titles can be used anywhere you can specify a citizen (permissions, laws, etc.). 
+
+Elected titles are created at a [GovernmentOfficeItem]. Several conditions can be set when defining an elected title:
+
+  - An [Election Process|Election Processes] with term limits for title holders
+  - The number of citizens who can hold the elected title at the same time
+  - Requirements to stay in office once elected to the title
+  - A successor who takes over the position if a title holder is removed from office
+
+While creating an elected title, the following permissions can be assigned:
+
+  - Setting the tax rate at a [TreasuryItem]
+  - Access to spend the funds in the Treasury bank account
+  - Government banking privileges to create government bank accounts that are exempt from personal wealth calculations
+  - The ability to place a global map marker to notify citizens of a point of interest
+
+Elected titles can be assigned wages that are paid periodically to the citizens that hold the title.
+  
+186;Titlurile alese sunt oficiali guvernamentali cărora li se pot atribui permisiuni pentru gestionarea politicii guvernamentale.
+187;Citizens can define new types of elections at a [BoardOfElectionsItem], and each election process created there can be used for various changes to government and leadership.
+
+[Civic Articles] can reference Election Processes in order to designate actions that require an election.  [Elected Titles] created at a [GovernmentOfficeItem] must specify an Election Process by which new members get elected.
+
+Each Election Process can define a different set of voters, vetoers, timings, percent needed to win, etc.  Using different types of elections, citizens can design their government to have different seats of power. For example, they can define a powerful Title that must be elected by the general population but can be impeached by them as well. 
+
+188;Definește modul în care au loc alegerile.
+189;Elections can take two forms:
+  
+    - Elections of Officials . These are elections of [Elected Titles] which give specific powers to a citizen.
+    - Referendums.  A yes-or-no vote that will determine if a specific civic action should be taken.
+
+Elections are started at a [BallotBoxItem], where citizens can perform a number of civic actions.  Depending on what [Civic Articles] are available, these actions may or may not require an election; if they do, the citizen will have the option to start one immediately.
+
+Elections can have a number of settings determined by their [Election Process|Election Processes]. This will state who can vote, who can veto, how long the election lasts, what percent is needed to win, etc.  Multiple types of elections can be created for different purposes. For example, a representative government could be created with some elections only allowing elected officials to vote, while most citizens vote only in elections for representatives.
+  
+190;Un sondaj a fost adresat unui grup de cetățeni pentru a stabili o poziție sau un referendum.
+191;Executive Actions are one-time actions that can affect a specific group of citizens or all citizens at once.
+  
+Executive Actions can be proposed at an [ExecutiveOfficeItem] using the [Civic Action Component]. These actions have three main effects:
+  
+ - Issue a one-time [Tax|Taxes]
+ - Provide a payment to citizens from the [TreasuryItem]
+ - Change the [Property] owner of existing property
+
+Depending on what [Civic Articles] are available, these actions may or may not require an election. Some civic articles state that only [Elected Titles] may perform Executive Actions.
+  
+192;O acțiune efectuată de un oficial guvernamental care are efecte asupra impozitelor, proprietății etc.
+193;Pedeapsa pe care o suferă înțelepții care refuză să ia parte la guvernare este să trăiască sub guvernarea oamenilor mai răi. \n-Platon
+194;Între ecosistem și economie se află guvernul, condus de cetățeni pentru a asigura supraviețuirea și prosperarea ambelor.
+  
+  
+195;
+    Guvernul este creat de cetățeni, bucată cu bucată, crescându-și puterea și capacitatea alături de puterea populației. Părțile guvernului sunt:
+  
+196;[Constitution]
+Înainte ca orice alt aspect al guvernului să poată fi creat, trebuie să se creeze o Constituție la
+[CapitolItem]. Determină modul în care guvernul operează prin intermediul articolelor civice.
+
+197;[Civic Articles]
+A constitution contains civic articles which define how the government functions: who can do what, and how.  They can be created at a [CapitolItem] on a new constitution or added to an existing constitution at an [AmendmentsItem] table.
+
+198;[Laws]
+Laws determine rules and processes that all citizens are compelled to follow.  A [CourtItem] can hold up to 3 laws. 
+
+199;[Elections]
+Elections will be started automatically when making changes that require them, as determined by the constitution. They can have many effects (changing laws, electing leaders, performing executive actions).
+
+200;[Election Processes]
+An election process determines how elections work: who can vote and veto, how long they last, what majorities are required, etc. A [BoardOfElectionsItem] can hold up to three election processes.
+
+201;[Elected Titles]
+An Elected Title is a government position that can be given special privileges. A [GovernmentOfficeItem] can hold one elected title.
+
+202;[Demographics]
+A demographic defines a group of people according to specific rules. This group can then be used in other aspects of the government.  A [CensusBureauItem] can hold up to three demographics.
+
+203;[Districts]
+Defines an area of land which can be referenced in laws and other places.  A [ZoningOfficeItem] can hold up to three district maps.
+
+204;[Executive Actions]
+An executive action is a one-time operation that can be performed to enact changes to society. They are performed at an [ExecutiveOfficeItem] by users given privileges from the constitution (typically elected titles).
+
+205;
+  [Ballot Boxes|Civic Action Component]
+  A ballot box allows operations to be performed related to elections and holding office.
+
+206;
+  [Treasury|Treasury Component]
+  Determines taxes on various parts of the economy.
+
+207;An institution designed and run by the people to promote the common good.
+209;Laws are the means by which the government makes changes in the world, to achieve goals of the populace.
+
+Laws are created by placing a [CourtItem], and depending on the [Civic Articles] available may require an election to pass.  Each law is created with a list of causes and effects, and when the cause happens the effect will be activated.  This allows a lot of flexibility in how the laws work, and they can cover many areas; from taxation to regulation to paid out funds incentivizing activities.
+
+Many ‘Cause’ choices will provide context about the citizen who triggered it, where it was triggered, etc. These ‘context’ properties can be seen in the Cause tooltip, and are available for specifying data in the ‘Effects’.  For example, an effect may tax the specific player who chopped down a tree
+  
+210;Reguli de cauză și efect concepute de cetățeni și aplicate automat pentru a atinge obiectivele societății.
+211;For the good of the people, or at least the enrichment of the government, taxes can be levied on many actions in Eco.
+  
+Treasury Taxes
+At a [TreasuryItem], Taxes can be set on a variety of actions:
+ - Sales Tax.  Tax applied to the sale of goods at a store.
+ - Crafting Fee Tax. Tax applied to the fees taken from sharing your crafting station.
+ - Contract Tax. Taxes taken from payments made through contracts and work parties.
+ - Direct Transfer Tax. Taxes taken from transfers between players.
+ - Self Direct Transfer Tax. Taxes taken when transferring to an account you have access to (to optionally protect against tax avoidance loopholes).
+
+Only a citizen holding an [Elected Title|Elected Titles] who has been granted the right to ‘Set Taxes at the Treasury’ may adjust these rates.  All taxes taken from these settings will be stored in the special ‘Treasury’ bank account.  Allocation may be made out of this special bank account into others through commands on the treasury.
+
+Law Taxes
+Taxes can also be set through [Laws], which can have their amounts and destinations determined dynamically. The bank account they are placed in can also be determined, allowing for the funding of specific funds for specific purposes, stored in bank accounts accessible to a limited number of people only.  Using the law system, these taxes can be very specifically targeted and adjusted based on the actions that are happening.
+
+For example, a 'Minister of Transportation' Elected Title position could be created, having sole access to a Transportation Fund [Bank Account|Bank Accounts].  A law could then be created to tax the production and trade of fuel, with proceeds going into the Transportation Fund, where the currently elected Minister of Transportation can use them to fund new roadbuilding [Work Parties].
+
+212;Impozitul poate fi preluat de la economie pentru finanțarea proiectului de lucrări publice, precum și pentru a stimula sau dezincentiva activitatea economică.
+213;Titles are used for designating a group of users, then referencing that group in other things like permissions.  They are different from [Demographics] in that Titles are specified directly by citizens, while the citizens within a demographic are automatically defined based on a citizen-defined condition.
+
+There are two types of Titles available:
+
+ - Regular Titles. These can be created and managed by anyone at a [RegistrarItem].  There, the citizen can set which other citizens can assign the role (managers) and which are occupying the role.
+ - Elected Titles. These titles can only be elected (or appointed) and are created at a [GovernmentOfficeItem].  The properties of the government office determine what kind of [Election] is needed to elect the given position.  Elected Titles can only be left if they are forcibly removed from office, if they resign (both performed at a [BallotBoxItem], or if their term ends as defined in the position’s term limits.
+
+Elected Titles give a lot of flexibility in defining the governance of a world, and privileges can be tied directly to these accounts. For example, a tax law could be created that taxes vehicle usage and puts it into a fund that only the Elected Title ‘Minister of Transportation’ has access to. If there is another election for that position and it changes leaders, then the former citizen will automatically lose access to the account.
+
+By setting requirements on the Elected Title, you can ensure the continued good governance by citizens holding office. For example, you could place a requirement that all occupants of a given office are part of the 'Active' demographic may hold it. If an office holder becomes inactive, they will then automatically be removed from office and a specified successor put in their position.
+
+Titles can also have wages set on them. Wages are paid periodically as long as a citizen continues to occupy the title (and the payer has funds).
+  
+214;Poziții care pot ocupa unul sau mai mulți cetățeni. Folosit pentru desemnarea permiselor și plata salariilor.
+215;A citizen cannot thrive without proper shelter, and together with your [Nutrition] your Housing value will determine your [Experience] multiplier.  The better your house’s materials and furnishing are, the higher your experience multiplier.  
+
+Additionally, many objects require houses and utilities to operate. The housing system consists of the following parts:
+ - [Residency]. You can share residency of a property with others.
+ - [Rooms]. A room is a fully contained space, and many objects require being placed inside a room to function.
+ - [Property]. Citizens can claim individual plots of land which they then can control access to.
+ - [Power]. Many items require a power source to operate, and generated power can be shared among many citizens.
+ - [Sewage]. Certain items require a sewage system of pipes, pumps, and wastewater treatment.
+
+216;Locuința dvs. (împreună cu dieta dvs.) determină câștigul dvs. de calificare.
+217;Many objects require power to function, and as your society progresses the types of power will progress as well.
+  
+Early on, most power will come from calories expended by citizens.  Local-power sources can also be built such as [Waterwheels|Waterwheel Item], powering only the immediate vicinity.  When technology progresses to electricity, power can then be generated centrally, allowing groups to form together to power towns and cities as a group rather than having to individually setup power sources (community projects like this are a great fit for using the [Taxes] system to fund them, and [Contracts] and [Work Parties] to get them built).
+  
+Many types of power generation exist, and each has different fuel needs as well as environmental impact.  The building, fueling, and operation of power plants can become a major [Pollution] source as technology advances, and citizens will need to carefully regulate the types of power used and how pollution is handled to prevent an ecological catastrophe.
+  
+218;Multe obiecte necesită putere pentru a funcționa, care poate fi generată într-o varietate de moduri.
+219;
+    Prin revendicarea proprietății, cetățenii pot proteja accesul la terenuri, stabilind cine are permisiunea de a accesa terenul și ce li se permite să facă cu privire la obiectele conținute pe acesta.
+  
+220;Drepturi de proprietate asupra terenului
+221;
+  Land can be claimed as property by using a [Land Claim Stake|Property Tool Item] and targeting an unclaimed plot of land.  When targeted, a [Land Claim Paper|Property Claim Item] will be consumed, and the citizen will become the owner on the deed. The property at your current position can be seen in the world panel in the bottom right of the screen, and clicking the title will open the deed.
+222;Drepturile de proprietate asupra obiectului
+223;Obiectele pot avea drepturile lor de acces setate separat de terenul pe care se află, pentru a permite accesul consumatorilor la obiecte aflate pe teren privat. Aceste setări sunt determinate într-un [Authorization Component].  
+
+224;Deeds
+225;On the deed, citizens can add and remove parties that may access the land (place or remove blocks).  The owner can also be changed by clicking the gear beside the owner name.  Note that both [Demographics] and [Titles] can both be given ownership on a deed, including [Elected Titles]. Structuring a government this way can allow only elected officials to have certain access rights to land.
+226;Cetățenii și guvernele pot deține proprietăți și pot stabili drepturile de acces ale acestora.
+227;Camerele sunt zone închise protejate de elementele în care toate găurile către lumea exterioară sunt umplute cu pereți, uși și ferestre.
+
+Puteți vedea detaliile despre o cameră într-un panou din partea dreaptă a ecranului, în timp ce vă aflați în interior, indicând informațiile sale. Multe tipuri de obiecte au cerințe de cameră și vor ocupa spațiu în camera lor și necesită ca materialele camerei să fie de o calitate specifică. Valoarea locuinței dvs. este, de asemenea, afectată de calitatea materialelor camerei. Acest lucru înseamnă că o cărămidă, o casă, de exemplu, va oferi mult mai multe beneficii decât o cârpă de murdărie.
+
+
+Mobilier și tipuri de camere
+Revendicând terenuri și construind camere pe acesta, veți începe să câștigați experiență suplimentară, care persistă chiar și atunci când este offline. Adăugarea unor tipuri suplimentare de camere și mobilier pentru aceste camere va spori și mai mult. Fiecare tip de mobilier este asociat cu un fel de cameră: Baie, Dormitor, Bucătărie sau General (afișat în descrierea articolului). Tipul camerei va fi determinat în funcție de categoria din care aveți cea mai mare contribuție de mobilier. Fiecare cameră va avea valoarea sa calculată prin însumarea tuturor mobilierului din interior.
+
+Repetările aceluiași mobilier în interiorul unei camere sau repetările de același tip de cameră într-o casă vă vor oferi profituri diminuate; adică veți obține în continuare puncte de cazare pentru ei, dar nu atât de multe ca prima. În cele din urmă, câștigul punctului va fi neglijabil și nu va merita să mai adăugați acel tip de mobilier sau cameră în casă. De exemplu, cea de-a 12-a baie va adăuga mult mai puțină valoare casei tale decât prima ta.
+
+Calitatea materialului camerei
+Nivelul mediu al materialului camerei va determina, de asemenea, valoarea locuinței dvs., prin setarea unui capac moale. Odată ce valoarea camerei dvs. a depășit limita minimă a camerei, atunci veți obține randamente diminuate pentru puncte suplimentare de locuință. Când se întâmplă acest lucru, poate fi timpul să renovăm materialele camerei.
+
+228;Camerele vă protejează pe dvs. și echipamentul dvs. de elemente, oferind puncte de îndemânare și permitând funcționarea echipamentului.
+229;
+Many industrial and housing objects require sewage support to function.  Typically, this means requiring water as an input, and an output for waste water.  Every object that has a [Pipe Component] will need a sewage connection.
+
+Sewage systems are created by connecting a [MechanicalWaterPumpItem] or [ElectricWaterPumpItem] to a water source, and then building Pipes between the different objects that need supplying.  On the waste side, pipes will take the waste water from the object to either dump it into the environment (producing [Pollution] at the exit point), or process it at a [Waster Filter|WasteFilterItem], which will generate [Compost|CompostItem] from the wastewater.
+
+Pipes will automatically connect to any adjacent pipe block of the same type.  To make sewage systems with different pipes in close proximity, use different materials of pipes.
+
+230;Anumite articole necesită canalizare pentru alimentarea cu apă și eliminarea apelor uzate.
+231;Componente legate de industrie.
+232;Pe măsură ce câștigi experiență în Eco, vei putea debloca noi specialități și noi abilități în cadrul acestor specialități. Există două tipuri de experiență pe care le veți câștiga, Experiență personaj și Experiență specială. Ambele sunt mărite de multiplicatorul de experiență.
+
+Experiența personajului
+Experiența personajului este rata de învățare de bază, cât de repede dobândești cunoștințe și abilități. Este în continuă creștere, chiar și atunci când sunteți offline. În fiecare zi, veți câștiga Experiență personaj cu o rată de 1 * multiplicator al experienței. Când ajungeți la un nivel ridicat, veți obține o nouă deblocare de specialitate, reprezentată de o stea. Fiecare nivel crescut va necesita din ce în ce mai multă experiență de caracter pentru a câștiga, așa că este foarte dificil să ai mai mult de câteva specialități.
+
+Experiență de specialitate
+Experiența de specialitate este abilitatea ta la o abilitate specifică și, mai degrabă decât să urci în mod constant, crește doar atunci când efectuezi acțiuni legate de acea specialitate, cum ar fi artizanatul sau efectuarea de muncă. Ca și Experiența personajelor, și ea este înmulțită cu multiplicatorul de experiență. De-a lungul părții stângi a ecranului, veți vedea pictograme care afișează cât de multă experiență câștigați atunci când efectuați acțiuni și puteți face clic pe acestea pentru a vedea mai îndeaproape nivelurile pentru specialitatea respectivă.
+Unele creșteri de nivel vă vor permite să deblocați talente, care oferă bonusuri specifice legate de abilitățile în care se află.
+
+Multiplicator de experiență
+Multiplicatorul dvs. de experiență (sau multiplicatorul XP) este o valoare personală care reprezintă sistemul dvs. de sănătate și asistență și determină cât de repede învățați noi abilități. Este determinat ca o sumă a dvs.[Nutrition] și [Housing|Housing Overview] valori.  Deoarece vă afectează atât caracterul, cât și punctele de experiență de specialitate, veți dori să îl mențineți cât mai sus consumând alimente nutritive și având o casă bine mobilată.
+
+
+233;Există două tipuri de experiență în Eco: Experiența personajului (obținută prin hrană și locuință) și Experiența de specialitate (obținută prin efectuarea acțiunilor într-o specialitate).
+234;
+Your Experience[Experience] is determined by your nutrition and housing[Housing|Housing Overview], and the more nutritious the food you eat the faster you will gain [Experience].  The healthier you are, the faster you advance.
+
+There are four nutrients represented in foods: Protein, Fat, Vitamins, and Carbs.  By adding up the average of each of these nutrients in all the food you’ve eaten in the last 24 hours, your experience multiplier is determined.   This means that if you eat junk food (low nutrients) it will affect you for 24 hours before it has passed through your body.
+
+Additionally, a balance multiplier is applied, giving an additional 0% - 50% of your total based on how equal the nutrients are in your body. If you have exactly 25% of each nutrient for example, you will gain an extra 50% skill.
+
+Depending on the difficulty settings for this server, a ‘skill gain multiplier’ may also be set which increases it further.
+
+Finally, a base skill gain value is added to the total. This ensures that even when you’re totally starving, you’re still gaining at least some skill.  You can see all these calculations for yourself in the tooltip for food in the bottom left UI.
+
+Calories
+Calories, unlike nutrients, are spent when you perform work, and when you run out of calories you’ll be unable to work until you eat more.  Calorie usage can be greatly reduced by upgraded tools and leveling-up skills.
+All food provides both calories and nutrients, so while gaining calories from food you’re also determining your skill multiplier, so watch that diet.
+
+235;Nutriția, alături de locuințe, determină cât de repede câștigi experiență.
+236;Central to a thriving economy is the ability to specialize and trade, thereby working more efficiently than if you attempted to do everything yourself.  Achieving a successful society depends on successfully accomplishing both.  
+    
+    A citizen's skills give them unique abilities and enhancements, which allows them to [Trade] with other citizens having different skills in the economy. As you gain [Experience], you can unlock new [Specialties] and level-up existing ones.  The experience you gain is multiplied by your [Nutrition] and [Housing|Housing Overview].    
+  
+237;Sistemul de calificare permite cetățenilor să se specializeze în meserii specifice.
+238;
+    Specialties are unlocked as you level-up from Character [Experience].  Each specialty (represented with a star) will unlock new abilities you can use.
+
+Professions and Specialties
+[Professions|Profession Overview] are simply groupings of skills, and don’t serve any other purpose besides storing similar skills together.
+Specialties are each contained under a profession and require two steps to gain.
+
+1. First, you must read a skill scroll for the skill.
+2. Next, you must spend a star to take the specialty.
+
+Once you have chosen the specialty, you gain the base-level abilities associated with it. As you perform actions related to that specialty, you will gain Specialty [Experience], leveling up the specialty and unlocking new abilities to it.
+You can see the spread of specialties that other citizens have chosen on the skill selection dialog, and it is often a good idea to choose specialties that other players have not chosen or leveled up. This will allow you to each perform your own specialties and [Trade] with each other for a net gain.
+
+
+239;Specialitățile pot fi obținute prin colectarea Experienței personajului și fiecare specialitate va debloca noi abilități unice.
+240;Mâncarea, împreună cu locuința, este esențială pentru creșterea abilităților.
+241;Carpenters are specialist at working with wood.
+
+  - [LoggingSkill] allows citizens to chop trees faster while expending less calories. In addition, this specialty is used to produce [HewnLogItem] which are the primary building material for the carpentry profession.
+  - [CarpentrySkill] allows citizens to produce wooden furniture and [Boards|Board Item]. By using a [SawmillItem], citizens with this specialty can produce [LumberItem] and higher quality furniture.
+  - [CompositesSkill] allows citizens to use advanced technology to produce the finest quality wood building material.
+  - [PaperMillingSkill] allows citizens to refine wood pulp into [PaperItem]. Paper is used for some specialty furniture.
+	
+242;Tâmplarii sunt specialiști în lucrul cu lemnul.
+243;Chefs cook high quality food that enables citizens to gain experience faster. Using the raw food produced by farmers and hunters, chefs create food that is high in nutrients. As technology advances, the chef specialties cook progressively higher quality food.
+  
+  - [CampfireCookingSkill] is the entry level Chef specialty that uses a [CampfireItem] to prepare better meals than the basic charred food produced by non-chefs.
+  - [CookingSkill] is the second step in the Chef profession that uses a [CastIronStoveItem] to produce higher quality meals.
+  - [BakingSkill] is an alternative to Cooking that uses [FlourItem] to produce baked goods.
+  - [AdvancedCookingSkill] is a high-level Chef profession that produces the highest tier of food.
+  - [AdvancedBakingSkill] is an alternative to Advanced Cooking that uses [YeastItem] to produce high quality baked goods with [LeavenedDoughItem].
+  
+244;Bucătarii gătesc mâncare de înaltă calitate, care le permite cetățenilor să câștige experiență mai repede.
+245;Engineers use the materials created by other professions to lead the way in technological advancement. The vehicles they produce greatly improve the capacity for trade and the speed at which citizens work. The crafting tables they produce are used by a variety of professions to create high-end goods. Being an engineer requires frequent interaction with other professions as engineers are unable to produce the primary inputs necessary for crafting.
+  
+-[BasicEngineeringSkill] allows citizens to produce roads and carts to help with transportation. In addition, basic engineering creates the crafting tables necessary to process and smelt ore.
+-[MechanicsSkill] allows to citizens to create early motorized vehicles, like a [SteamTruckItem]. Mechanics provides the first source of electric power to help enable tecnological progression.
+-[IndustrySkill] allows citizens to create advanced vehicles, like an [ExcavatorItem], to quickly collect large amounts of natural resources.
+-[OilDrillingSkill] allows citizens to use a [PumpJackItem] to collect [PetroleumItem] for use in fuel and a variety of industrial projects.
+-[ElectronicsSkill] is a high-end engineer specialty that uses expensive ingredients to produce the most advanced materials needed for modern crafting projects. In addition to this and providing a source of green electricity, electronics is used to craft the [LaserItem] needed to save the world from the meteor.
+  
+246;Inginerii sunt maeștri inventatori care produc vehicule și alte produse avansate pentru alți cetățeni.
+247;
+    Farmers are specialists in agriculture. The crops they produce are a primary source of the calories needed for citizens to perform work.
+ 
+  - [FarmingSkill] allows citizens to create seeds out of produce to help create large farms.
+  - [FertilizersSkill] allows citizens add nutrients to soil and test soil conditions with a [SoilSamplerItem].
+  - [GatheringSkill] allows citizens to harvest more produce from both wild plants and human-created farms.
+  - [MillingSkill] allows citizens to process produce in a [MillItem] for use by chefs in more advanced recipes.
+  
+248;Fermierii sunt specialiști în agricultură.
+249;
+    Hunters are specialists at efficiently hunting animals and preparing meat for use by chefs. The two hunter specialties are closely linked as the animals hunted must be processed before it can be used by a chef. 
+    
+  - [ButcherySkill] allows citizens to process animal carcasses into prepared meat for chefs. The pelts and hides they create can be used for clothing and other crafting projects.
+  - [HuntingSkill] grants citizens bonus damage when hunting animals and allows them to approach animals at a closer distance without causing them to run.
+  
+250;Vânătorii sunt specialiști în vânarea animalelor și pregătirea cărnii pentru bucătari.
+251;Masons are specialists at mining and working with stone. They provide a valuable source of building material and furniture for homes. The ore they collect is used by Smiths to smelt metal bars.
+  
+  -[MiningSkill] allows citizens to expend less calories while mining stone and ore. Miners also process the collected ore and concentrate it to be used for smelting.
+  -[MasonrySkill] allows citizens to produce [MortarItem], a primary ingredient for most mason building materials. The [MortaredStoneItem] they produce is a great source of early housing material.
+  -[PotterySkill] allows citizens to craft [BrickItem] building material and furniture out of [ClayItem].
+  -[GlassworkingSkill] allows citizens to create [GlassItem] and later [FramedGlassItem]. Glass is a nice supplemental buildling material and is used in a variety of industrial projects.
+  -[AdvancedMasonrySkill] is a high-level mason skill that produces the finest quality Ashlar Stone building material and furniture.
+  
+252;Masonii sunt specialiști în minerit și lucrează cu piatră.
+253;Professions are groups of similar [Specialties] that unlock new crafting recipes and provide abilities like reduced calorie usage when crafting or using a tool. Within each profession is a group of similar specialties.
+  
+Below is a list of all professions and the corresponding specialties. Citizens can choose to focus on one profession or learn specialties from a variety of professions.
+  
+254;Profesiile oferă cetățenilor abilitate specială și abilitatea de a crea obiecte avansate.
+255;Smiths smelt concentrated ore into metal bars that can be used by a variety of professions. In addition, Smiths create superior tools that help citizens work more productively.
+  
+- [SmeltingSkill] are specialists at making the metal bars that make up the foundation of technological advancement. The iron tools they create provide significant benefit over the early stone tools.
+- [AdvancedSmeltingSkill] allows citizens to further refine iron bars into [Steel|SteelBarItem] for use in industry and high-tier building materials. Citizens with this specialty can use the steel they create to even more modern tools than the iron tools created by basic smelting.
+  
+256;Smiths mirosea minereu în bare metalice și creează instrumente avansate.
+257;All citizens are survialists in the world of Eco. 
+  
+Experience in [SelfImprovementSkill] is gained anytime a citizen levels up another specialty. Self-improvement has two main benefits. As citizens progress, they will have increased carry weight capacity and a larger stomach capcity for extra calories. In addition, less calories are consumed when using hammers, shovels, and drills.
+  
+258;Supraviețuitorii consumă mai puține calorii atunci când folosesc instrumente de bază și au crescut greutatea la purtare.
+259;Tailors work with cloth to make clothing and high-end furniture for other citizens. Unlike other professions, the Tailor profession has only one specialty.
+	
+[TailoringSkill] allows citizens to create [ClothItem] for use in crafting projects by a variety of professions. The clothing tailors creates provides citizens with special bonuses. For example, a [BigBackpackItem] has a higher maximum weight limit than the starter [BasicBackpackItem].
+	
+260;Croitorii lucrează cu pânză pentru a confecționa haine și mobilier de lux pentru alți cetățeni.
+261;Any object containing a Vehicle Component can be mounted and interacted with in a variety of ways, providing a number of benefits.
+  
+Many vehicles require [Power|Power Component] to operate and each have their own [Storage|Storage Component]. Building infrastructure around the world will greatly enhance your [Transport] capabilites as many vehicles require roads to operate.
+262;  
+- Transportation: Vehicles like the [WoodCartItem] can transport goods and people from place to place. As technology progresses, more advanced vehicles become available with faster movement speeds and higher carrying capacity at the cost of creating pollution
+
+- Excavation: The [ExcavatorItem] and [SkidSteerItem] can quickly move large quantites of dirt and rock. This will greatly increase the speed of [Mining] and allow areas of land to be quickly cleared for new construction projects.
+
+- Contruction: The [CraneItem] can quickly perform large-scale [Building] projects. The crane has a much larger building range than a citizen who is building with a hammer and can access large amounts of storage.
+
+264;Vehicles can be used for performing a variety of tasks.
+265;
+In Eco, players harvest food initially from the wild biomes around them. Plants ripe for the opportunity to harvest sustainably abound. Wild food sources can serve as a supplementary renewable resource, but will quickly crash if taken advantage of. Some plants will be useful for more than just food-- they may provide chemical compounds that can be found no-where else, or the raw materials needed for textiles and clothing.
+
+Different plants require different tools to harvest, such as a shovel, or a scythe. Other species can be picked by hand without a tool. Similarly, some plants are killed when they are harvested, and others will simply re-grow the picked fruits if they continue to grow and be healthy. 
+
+
+  
+266;Sistemul viu al plantelor și animalelor care oferă mijloacelor pentru a supraviețui oamenilor.
+267;
+Animal species are inhabitants of the world in Eco that vary greatly in terms of possible use as resources. Some species make for excellent sources of meat and food like milk, where others may provide useful byproducts like wool, leather, tallow, or bone meal. But animals also vary greatly in terms of their resilience and adaptability to impacts on their populations, habitat, and food sources. 
+
+Through hunting, players can use various traps and hand tools to harvest wild animals directly from the ecosystems they live in for use. Hunting can also serve as a way to control or cull excessive populations of animals. Hunting will be an important but not strictly necessary activity for players especially earlier on in order to meet the appetite of a large society. 
+
+Hunting an animal is only the first step in making the most use out of it. Butchery advancements will allow players to process and use animals for a large variety of animal products. Collaboration with other professions like cooks and tailors will unlock many nutritional, industrial, and even cultural uses for animals and their products, not all of which need be obtained through hunting. However, if a particular animal product becomes popular in the economy, care will have to be taken to avoid destructive pressure on a species. Hunting is often the final blow to an endangered species whose products become more and more valuable as they become more and more rare.
+
+To get started with hunting, you'll need to craft a [WoodenBowItem] and some [Arrows|Arrow Item]. More advanced bows will make it easier to hit your target quickly. Keep in mind that animals can be killed more quickly with a well-aimed shot, and that it may be easier to hunt some animals based on the time of day. 
+  
+268;Sistemul viu al plantelor și animalelor care oferă mijloacelor pentru a supraviețui oamenilor.
+269;Ecopedia guide for getting started.
+270;
+    Once you've covered your basic needs, it's time to think about how you want to contribute to the joint project of society, and your profession is how you do that.
+  
+271;
+
+Each profession has a number of [Specialties] beneath it which will unlock special abilities. Because citizens can only have a limited number of specialties, a good approach is to take different specialties and then [Trade] between each other.  In the skills window, you can see how many citizens have chosen each profession and look for the most-needed skills, choosing those to focus on.
+  
+272;
+    Check out the [Profession Overview] for a tour of the different options.
+  
+273;(Note: the skills dialog is hidden until later in the tutorial.  It can be made visible by completing the tutorial or skipping it.)
+ 
+274;A world with a range of professions can trade for mutual benefits.
+275;
+    The [Government|Government Overview] of Eco is run by individual citizens, and the quality of governance is fully dependent on how those citizens participate.
+
+    There are a number of ways to participate in the running of the government, including:
+
+    - Founding the government by creating a [CapitolItem] and [Constitution].
+    - Defining civics objects including [Districts], [Demographics], [Elected Titles], [Election Processes], and [Amendments|Constitution].
+    - Running as a candidate for an [Elected Title|Elected Titles], giving special powers assigned to it by the constitution.
+    - Enacting [Laws] after attaining the privilege to (defined in the constitution).
+    - Enacting [Executive Actions], with privileges also defined in the constitution.
+    - Voting in [Elections] for [Elected Titles] and other civic actions.
+    - Debating laws with the use of [Data], presenting arguments to your fellow citizens arguing for one choice over another.
+  
+276;
+    Each of these options are available at a variety of locations which must be constructed by citizens. The current government can be viewed by selecting the Government icon in the action bar and hovering over each section will specify where the civic object is defined.
+  
+277;Your civic duties are the many different ways you can interact with the government.
+278;To bring a society through the ages to the peaks of technology, a thriving [Economy|Economy Overview] is needed, and by participating in it citizens can both help progress society as well advance their own abilities and wealth.
+ 
+Participating in the economy takes place through [Trade] of both goods and services.  Finding existing settlements with [Stores|Store Component], [Contracts], and [Work Parties] will give citizens to trade the goods and labor they specialize in for the specialties of others, achieving their individual goals faster than if they had each worked alone.  
+As you take on new projects that require materials or labor you don't yourself have the ability to create or perform, you can instead sell the goods and services you can perform on the market, by creating stores and setting prices in a [Currency] of your choice. Using this currency to purchase the goods and services of others will then allow you to reach those goals without having to learn everything yourself.
+
+As you build up your capabilities and have more needs of other citizens, you can create your own stores, contracts, and work parties to seek their aid.  As you acquire wealth, your power to effect change (both good and bad) rises.
+ 
+279;The most efficient way to progress in knowledge and technology is trade within the economy.
+280;While a functioning society is necessary to stop the meteor, each individual must have their own needs met, starting with food and shelter.
+ 
+281;Alegerea Unei Settlement
+282;When choosing a location to settle in, you'll want to consider the following factors:
+283;Proximity to Resources
+Natural food sources and building supplies nearby will greatly speed up initial progress.
+
+Proximity to Others
+Setting up near other settlements offers a distinct advantage, as you can then trade with others to gain progress faster.  However, an overcrowded area may also have limited options for expansion and natural food in the vicinity. You'll want to find a balance based on personal preference.
+  
+284;Claiming Your Plot
+285; Once you've selected a place to build your first settlement, you'll want to claim [Property] around it.  When placing your starting tent this will automatically occur, and further property can be claimed with land papers.  Property you claim will be protected from other citizens, unless you give them access.
+286;Food
+287;Finding a food supply is critical to having the calories you need to work.  Additionally, the [Nutrition] of the food you eat impacts how fast you gain experience, so you'll want to eat the best food available for the fastest gains.  When settling in the wilderness, look for food sources nearby you can take from, or plan to setup a [Farm|Farming].  When settling near an existing village, have a look at the local economy to see what you can [Trade] in order to get food.
+288;Setting up a source of food and shelter is a first priority. 
+289;The [Ecosystem|Ecosystem Overview] is the provider of a vast number of resources citizens can make use of, but it also vulnerable to their impact.  Succeeding as a society will require intelligent management of impact, using the [Government|Government Overview] to regulate what is allowed. 
+ 
+Various forms of [Pollution] can affect the environment, creating the potential for catastrophes that could destroy your food supply and halt progress, leading to ecological collapse.  Using [Data] tools, citizens can monitor the impact they're having on the world and use that data to argue for specific regulations to protect it, or accelerate the economy in other avenues.
+
+The world begins as a vast untouched wilderness, and through the ages citizens will need to radically transform it using technology to build the industry and knowledge required to stop [The Meteor].  Citizens will need to execute a careful navigation between using the resources of the ecosystem maximally and avoiding damaging the environment beyond the repair.
+
+290;The ecosystem provides many resources, but is vulnerable to human actions.
+291;
+  Eco is a world bookended by two threats: Environmental collapse, and the ever-looming [Meteor|The Meteor].
+  
+To succeed, you'll need to progress through the ages, advancing science and industry to a level that can destroy the meteor without causing ecological collapse in the process.  You will do this as an individual member of a larger society, and the creating a positive interplay between individual needs and societal needs is critical to success.  
+
+Your focus in Eco will be on managing your individual progress while simultaneously working to progress the [Economy|Economy Overview] as a whole, and doing so inside a rich [Ecosystem|Ecosystem Overview] of plants and animals that are affected by what you do.  
+
+To aid in creating a positive relationship between this triangle of Individuals, Economy, and Ecosystem, you have the tools of [Government|Government Overview] at your disposal. You can set binding [Laws] that determine what is allowed and run for [Election|Elections] to gain governmental powers to make changes and guide society.
+
+ But first matters first, you'll need to take care of your basic needs before you can save the world.  To do that, you'll start with [Food and Shelter].
+292;Călătoria dvs. în Eco.
+293;The world has been given an expiration date, a meteor in a collapsing orbit around the globe, set to collide in 30 real-time days, destroying everything on it in the process.  
+  
+However, hope is not lost, for with the right technology this crisis can be prevented. By working together to generate a thriving [Economy|economy overview] and advance progress with [Research], humanity has a chance to build the [Laser|LaserItem] needed to destroy this threat.
+
+It will not be an easy task, and the industry required to reach such levels of advancement will pose a real threat to the [Ecosystem|Ecosystem Overview].  To combat this and avoid falling victim to an ecological collapse of your own creation, a well-regulated [Government|Government Overview] must be designed, implemented, and created by its citizens.
+
+The fate of the world depends on its citizens acting together in harmony with the ecosystem to achieve great technological feats, and only through studied collaboration can they succeed.
+  
+294;O amenințare iminentă de sus.
+295;Through the use of tools, citizens can build great structures and move mountains.  The starting tools will allow you to effect small change only, but as technology advances you will gain tools that can perform batch operations, and eventually [Vehicle|Vehicle Component] that can make massive transformations to the world. 
+296;There are a number of different tool types available:
+  - [Building] Tools.  Hammers will allow you to place construction materials in 'Forms', shovels allow moving soil.  
+  - [Farming] Tools.  Plowing, planting, and sowing all have tools to increase their efficiency.
+  - [Transport] Tools.  Vehicles and tools for constructing roads are especially are useful for transporting goods.
+  - [Harvesting] Tools.  These tools allow collection of resources from the ecosystem.
+  - [Hunting] Tools.  Hunting animals for food requires specialized tools.
+  
+Tools that are manually powered require Calories, affecting your [Nutrition].
+All tools have Durability associated with them, which drops as they are used.  Once a tool has lost its durability, it will take a tremendous amount of calories to use, and should be repaired at a [Repair|Repair Component] Table.
+  
+297;Accesul la cele mai bune instrumente vă permite să obțineți cele mai multe progrese.
+298;După colectarea unor materii prime de bază, construirea este unul dintre primele lucruri pe care le va face un cetățean pentru a se stabili în lume.
+  
+  
+299;Folosind un ciocan sau o macara, cetățenii pot crea clădiri pentru case și industrie.
+300;
+Componenta Faptele mele permite cetățenilor să vadă și să gestioneze totul [Property] pălăria pe care o dețin, oferind o interfață pentru a le accesa cu ușurință.
+  
+301;Permite cetățenilor să vadă și să gestioneze toate proprietățile pe care le dețin.
+302;
+The Text Component can be found on Signs, [Vehicles|Vehicle Component], and the [Distribution Station|Item Distribution Component].
+  
+Text can be useful for giving directions, advertising, or just writing a friendly greeting
+
+For those familar with text markup, a variety of tags may be used to alter the size, color, and formatting of text.
+
+303;Permite cetățenilor să scrie text care este afișat altor cetățeni.
+304;
+Un obiectiv fundamental al simulării ecosistemului în Eco este de a conține o multitudine de rețele alimentare. Pânzele alimentare pot fi considerate ca un set de relații „consumator” și „consumat” între plante și animale, care se concentrează pe o anumită comunitate de animale și alimentele lor preferate. În general, ideea este să existe cel puțin o rețea alimentară puternică prezentă în fiecare biom. Pânzele alimentare sunt adesea baza celor mai importante relații inter și intra dintre speciile dintr-un ecosistem. Multe specii se bazează pe alte specii pentru hrană sau pentru a vâna speciile care le mănâncă.
+
+Prada și prădătorii animalelor pot fi vizualizate prin intermediul interfeței web și verificând straturile legate. În prezent, relația pradă-prădător este o modalitate: prădătorii necesită existența prăzii, dar de fapt nu elimină niciunul din simulare. Aceasta înseamnă că o explozie de elani ar crește populația de lupi, dar acest lucru nu ar pune presiune asupra elanilor. Schimbarea acestei relații pentru a consuma ambele moduri, asigurându-ne, în același timp, că nu scapă de sub control într-un mod neașteptat și brusc, este importantă pe măsură ce avansăm.
+  
+305;Sistemul viu al plantelor și animalelor care oferă mijloacelor pentru a supraviețui oamenilor.
+306;Urmăriți dezvoltarea Eco.
+307;
+    Ne propunem ca Eco să fie un joc pentru totdeauna, în creștere în profunzime și lățime și conexiuni cu alte jocuri viitoare, un sistem de posibilități nelimitate care își propune să depășească divertismentul. Acest copac conține trecutul, prezentul și viitorul Eco.
+
+     Prin intermediul site-ului nostru web, puteți vizualiza toate părțile interactive ale arborelui și puteți vedea unde ne îndreptăm și filozofia de ghidare din spatele jocului.
+  
+308;Vizualizați Arborele Eco la
+309;Urmăriți dezvoltarea Eco.
+310;Configurarea unui magazin
+311;Instrumente de reparare
+312;Clădiri în Eco
+313;
+Buildings are divided up into [Rooms] and serve a variety of purposes.
+
+Some of these uses include:
+
+- Making a home filled with furniture to gain bonus [Experience] from housing
+
+- Providing a space for [Crafting] stations to function
+
+- Housing the various [Civic Objects|Civic Object Component] neccesary to establish a government
+
+314;Crearea de Clădiri
+315;When carrying a building material, the hammer is able to switch between different block shapes and building patterns.
+
+Citizens build their first homes using a [StoneHammerItem], but as technology progresses increasingly better building tools become available that consume less calorie when used.
+
+Large-scale construction projects can be quickly completed with the use of a [CraneItem], but at the cost of creating [Pollution].
+  
+316;Tipuri de Vehicule
+317;Tipuri de Obiecte Civice
+318;
+Once a [Constitution] is passed, new government policies are contained as Civic Objects in the government building they were created in. There are many types of government buildings, each with their own type of civic object:
+
+- [Laws] are set at a [CourtItem]
+- [Demographics] are set at a [CensusBureauItem]
+- [Districts] are set at a [ZoningOfficeItem]
+- [Elected Titles] are set at a [GovernmentOfficeItem]
+- [Civic Articles] are set at a [CapitolItem] or [AmendmentsItem]
+- [Election Processes] are set at a [BoardOfElectionsItem]
+	
+319;Propunerea de Obiecte Civice
+320;
+Dacă faceți clic pe butonul Schiță, va permite unui cetățean să propună un nou obiect civic. Cetățenii pot începe opțional o nouă schiță pentru un obiect civic făcând clic pe butonul Copiere care apare atunci când treceți deasupra pictogramei. Aceasta va afișa un dialog care vă permite pentru a selecta orice obiect civic (trecut sau prezent) de utilizat ca bază. 
+321;
+- Aplicați imediat modificările: cetățenii cărora li se acordă privilegiul executiv pot adăuga, elimina și edita obiecte civice imediat.
+
+- Propuneți prin alegeri: cetățenii cu capacitatea de a propune alegeri vor putea propune o adăugare / ștergere / modificare, care va declanșa apoi o nouă alegere (folosind orice [Election Process|Election Processes] care este definit în constituție).
+
+- Numai vizualizare: dacă cetățeanul nu are privilegii definite în constituție, poate vizualiza obiectele civice doar făcând clic pe ele și nu le este permis să facă modificări.
+  
+322;
+Această componentă este accesată de la un [RealEstateDeskItem]. Oferă legături către toate actele individuale care pot fi accesate prin interacțiunea cu un [PropertyToolItem] pe o fapta pe care o detine cetateanul.
+
+Cetățenii își pot redenumi rapid faptele, pot alege o culoare pentru proprietatea respectivă pe minimapă sau pot oferi drepturilor consumatorilor altor cetățeni, toate acestea fiind realizate în mod normal [Authorization Component].
+
+O caracteristică utilă a acestei componente este capacitatea de a muta rapid parcele de proprietăți de la o faptă la alta. Aceasta include opțiunea de a crea un act nou pentru a împărți o parte de proprietate existentă.
+
+323;Componenta Text permite unui cetățean să scrie text care este afișat pe un obiect mondial pentru ca alți cetățeni să îl poată citi.
+324;Cerințe de țevi
+325;
+When opening the Pipe Component, different pipe inputs and outputs will appear to represent the pipe requirements. Objects with this component must meet all the pipe requirements for that object to be active.
+
+Some objects require all three uses of pipes to have an active [Status|Status Component], while others objects only require some. Each pipe system can only be used for one of the three uses. 
+
+By holding the mouse over the display for one of the pipes, a tooltip appears with more information about why a pipe is or isn't active.
+  
+326;Tâmplar
+327;
+[Carpenters|Carpenter] specialize in harvesting trees and processing the wood into furniture and building material for homes.
+  - [LoggingSkill] allows citizens to harvest trees more efficiently. In addition, Logging is used to produce [Hewn Logs|HewnLogItem] which are the primary building material for the carpentry profession.
+  - [CarpentrySkill] allows citizens to produce wooden furniture and [Boards|Board Item]. By using a [SawmillItem], citizens with this specialty can produce [LumberItem].
+  - [CompositesSkill] allows citizens to use advanced technology to produce the finest quality [CompositeLumberItem] building material.
+  - [PaperMillingSkill] allows citizens to refine wood pulp into [PaperItem]. Paper is used for some specialty furniture.
+
+328;Bucătar-șef
+329;
+[Chefs|Chef] specialize in cooking more nutritious food to boost the rate citizens gain experience.
+  - [CampfireCookingSkill] is the entry level Chef specialty that uses a [CampfireItem] to prepare basic meals.
+  - [CookingSkill] is the second step in the Chef profession that uses a [CastIronStoveItem] to produce higher quality meals.
+  - [BakingSkill] is an alternative to Cooking that uses [FlourItem] to produce baked goods.
+  - [AdvancedCookingSkill] is a high-level Chef profession that produces the most nutritious food.
+  - [AdvancedBakingSkill] is an alternative to Advanced Cooking that uses [LeavenedDoughItem] to make high quality baked goods. 
+ 
+330;Inginer
+331;
+[Engineers|Engineer] specialize in producing vehicles and advanced crafting materials for use by other professions.
+  - [BasicEngineeringSkill] allows citizens to produce roads and carts to help with transportation. In addition, basic engineering creates the crafting tables necessary to process and smelt ore.
+  - [MechanicsSkill] allows to citizens to create early motorized vehicles, like a [SteamTruckItem]. Mechanics provides the first source of electric power to help enable tecnological progression.
+  - [IndustrySkill] allows citizens to create advanced vehicles, like an [ExcavatorItem] that can quickly collect large amounts of natural resources.
+  - [OilDrillingSkill] allows citizens to use a [PumpJackItem] to collect [PetroleumItem] for use in fuel and a variety of industrial projects.
+  - [ElectronicsSkill] uses expensive ingredients to produce the most advanced materials needed for modern crafting projects. In addition to providing a source of green electricity, electronics is used to craft the [LaserItem] needed to save the world from the meteor.
+
+332;Agricultor
+333;
+[Farmers|Farmer] are specialists in agriculture. The crops they produce are a primary source of the calories needed for citizens to perform work.
+  - [GatheringSkill] allows citizens to harvest more produce from both wild plants and human-created farms.
+  - [FarmingSkill] allows citizens to create seeds out of produce to help create large farms.
+  - [FertilizersSkill] allows citizens craft fertilizer and test soil conditions with a [SoilSamplerItem].
+  - [MillingSkill] allows citizens to process produce in a [MillItem] for use by chefs in more advanced recipes.
+
+334;Vânător
+335;
+[Hunters|Hunter] are specialists at efficiently hunting animals and preparing meat for use by chefs. The two hunter specialties are closely linked as the animals hunted must be processed before the meat can be used by a chef. 
+  - [HuntingSkill] grants citizens bonus damage when hunting animals and allows them to approach animals at a closer distance without causing them to run.
+  - [ButcherySkill] allows citizens to process animal carcasses into prepared meat for chefs. The pelts and hides they create can be used for clothing and other crafting projects.
+
+336;Zidar
+337;
+[Masons|Mason] are specialists at mining and working with stone. They provide a valuable source of building material and furniture for homes. The ore they collect is used by Smiths to smelt metal bars.
+  -[MiningSkill] allows citizens to expend less calories while mining stone and ore. Miners also process collected ore to be used for smelting.
+  -[MasonrySkill] allows citizens to produce [MortarItem], a primary ingredient for most mason building materials. The [MortaredStoneItem] they produce is a great source of early housing material.
+  -[PotterySkill] allows citizens to craft [BrickItem] building material and furniture out of [ClayItem].
+  -[GlassworkingSkill] allows citizens to create [GlassItem] and later [FramedGlassItem]. Glass is a nice supplemental buildling material and is used in a variety of industrial projects.
+  -[AdvancedMasonrySkill] is a high-level mason skill that produces the finest quality Ashlar Stone building material and furniture.
+
+338;Fierar
+339;
+[Smiths|Smith] specialize in smelting ore and making tools for other citizens using the metal bars they create.
+  - [SmeltingSkill] allows citizens to smelt the metal bars that make up the foundation of technological advancement. The iron tools they create provide significant benefit over the early stone tools.
+  - [AdvancedSmeltingSkill] allows citizens to further refine iron bars into [Steel|SteelBarItem] for use in industry and high-tier building materials. Citizens with this specialty can use the steel they create more advanced tools.
+
+340;Croitor
+341;
+The [Tailor] specializes in making high end furniture and specialized clothing that provide bonuses when worn. Unlike most professions, there is only one Tailor specialty.
+  - [TailoringSkill] allows citizens to create [ClothItem] to create high quality furniture and for use in crafting projects by a variety of professions. The clothing tailors create provides citizens with special bonuses. For example, a [BigBackpackItem] has a higher maximum weight limit than the starter [BasicBackpackItem].
+
+342;Supravietuitor
+343;
+[Survivalists|Survivalist] specializes in carrying extra weight and reducing the calories expended when using basic tools. All citizens are survivalists in the world of Eco. 
+   - Experience in [SelfImprovementSkill] is gained anytime a citizen levels up another specialty. Self-improvement has two main benefits. As citizens progress, they will have increased carry weight capacity and a larger stomach capacity for extra calories. In addition, less calories are consumed when using hammers and shovels.
+
+344;A general overview of the current economy that contains information such as available trades, work parties, and contracts.
+345;The Economy Viewer provides a general overview of the current economy and is an incredibly useful tool for economic participation. Among other users, the Economy Viewer shows the location of every [StoreItem] and what is currently being bought and sold.
+346;
+The Economy Viewer provides detailed information about the following:
+
+   - Current [Trade] offers
+   - Existing [Work Parties] and their status
+   - Any [Contracts] that are posted
+   - Locations of [Public Crafting Stations|Crafting Component]
+   - Information on existing [Currencies|Currency]
+   
+In additon, the Economy Viewer allows citizens to directly transfer currency to other citizens and quickly check the status of their own [Bank Accounts] and any outstanding debts.
+   
+347;Accessing the Economy Viewer
+348;The Economy Viewer can be accessed by clicking the Economy button located at the bottom right of the screen.
+349;Feeding the World
+Food forms the backbone of a growing society in Eco, fueling the increase in skills needed to build a civilization.  A well-organized network of food producers, from farmers to chefs, ensures that citizens gain skills at the rate they need.
+
+350;The property where you have taken residency provides your housing points.
+351;
+Each deed can have any number of residents, and those residents will share in an [Experience] boost based on the quality and number of occupants.
+
+As the number of occupants increases, the occupancy penalty increases.  At small numbers of occupants (1 or 2), there is virtually no penalty, and citizens can effectively cohabitate this way and share in the benefit of a well-stocked house.  As the occupants increases beyond that (5 and above), the penalty becomes more steep, eventually topping out at 99% when the house is too overcrowded.
+
+However, the 'diminishing returns' rate of rooms is favorably affected by occupancy (because three bathrooms is overkill when you live alone, but great when you have roommates).  This means that you can overcome the penalty by building a larger house, and duplicate rooms will be inversely affected the occupancy bonus.
+  
+To become a resident of a property, click the name of the property (visible on the popup status panel when youre in the property). From there you can become a resident (if you own the deed) as well as invite others to become residents.  These other invited citizens may then join as a resident through the same interface. You can even invite groups by specifying titles or demographics, allowing you to create housing for special classes of citizens (new players for example). You can also set the max number of occupants, to ensure that residency managed this way (by inviting large groups) doesn't result in overcrowded housing.
+
+Note: An additional feature will be added latter permitting automatic rent collection agreements between citizens. For now this can be done with manual transfers.
+352;Permissions for Residents
+When a citizen becomes a resident of a property, they will gain a special set of permissions, even if they don't otherwise have access to the property, known as Resident Rights. These rights are as follows:
+
+  - Pre-furnished rooms supportedL Residents can access all world objects on the property as consumers.
+  - You can move in your own stuff: Residents may place objects anywhere on the property (but not blocks).
+  - No stealing the furniture that came with the place allowed: Residents may pick up world objects only if they originally placed them.  
+

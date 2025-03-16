@@ -1,0 +1,24 @@
+<ecopedia icon="EcopediaSettlementsInfluence">
+    <summary></summary>summary>
+  <section type="banner" image="settlements_influence" />
+  <section>
+    Once a settlement is [Founded|Founding], it will begin casting influence in a radius around the foundation.  Any land under its influnece will be subject to its laws and civic actions.
+  </section>
+  <section type="header">Culture Generates Influence</section>
+  <section>
+    Influence can be extended with [Culture]. The higher the culture level of a property, the more influence it will cast for the owning settlement.  This allows you to expand your borders by increasing culture, or creating new cultural properties. There are limits, however, on the number of cultural properties and the max influence castable, so borders cannot be expanded indefinitely. Each level-up of settlement allows a farther range of influence to be cast, and more cultural properties to be created.
+    
+    Influence is cast from the average position of the rooms on the property, weighted by their property values.  
+
+    [Homesteads|HomesteadClaimStakeObject] are single-person properties that are associated with whatever settlement their owner is a Citizen of. If the owner is not a citizen of any settlement, then it will not be influenced by any.  This can create holes in town influence when citizens renounce their citizenship, however a powerful settlement can force-claim this property through the process of [Annexation].
+  </section>
+  <section type="header">Multiple Influencing Settlements</section>
+  <section>
+    Each settlement level (Town, Country, Federation) has its own map of influence, and only one settlement of each type may influence a given plot (IE, two Towns cannot influence the same plot).  However, if a settlement is a <i>sub-settlement</i> of another settlement, then that parent will <i>also</i> cast influence on the plot (IE, a Country's influence will be cast everywhere its member town's influences are cast).  In plots influenced by more than one settlement in this way, the governments of <i>all</i> settlement will apply.
+    
+    When two settlements of the same type are competing for influence, the closer one will push further into the influence boundaries of the other.  However, any land that is already claimed will remain influenced even if it would otherwise be contained in the opposing settlement. This can even lead to parts of the settlement breaking off and being enveloped by other settlements.
+</section>  <section type="header">Border Control</section>
+  <section>
+    On an [Immigration Desk|ImmigrationDeskObject], leadership of a settlement may designate neighboring homesteads or settlements which can claim within our influence. If a neighbor wants to claim land that is otherwise influenced by your settlement (perhaps for a price), this is the way to allow it.
+  </section>
+</ecopedia>

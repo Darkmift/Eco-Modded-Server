@@ -1,0 +1,1100 @@
+0;Composantes liées à l'économie.
+1;L'onglet Banque est l'endroit où les {Bank Accounts} sont créés et gérés. Les citoyens peuvent créer plusieurs comptes personnels ou partager des comptes avec d'autres citoyens. Les comptes peuvent également être attribués à {Titles} et {Demographics}.
+2;Les utilisateurs du compte peuvent effectuer des transactions en utilisant le compte (ajout et retrait de fonds).
+
+Les responsables de compte peuvent modifier les utilisateurs dans la liste des administrateurs et des utilisateurs, renommer le compte et effectuer des transactions.
+
+Dans les paramètres avancés, vous pouvez définir le compte en tant que compte gouvernemental. Les comptes gouvernementaux peuvent recevoir et verser des fonds fiscaux et sont ignorés lors de la perception des impôts et du calcul de la richesse personnelle. Pour définir cela, vous devez disposer des privilèges bancaires gouvernementaux, attribués par un {Elected Title|Elected Titles}.
+3;L'onglet Banque est utilisé pour créer et gérer des comptes bancaires
+4;L'onglet Tableau des contrats permet aux citoyens de publier et d'accepter des {Contracts} et des {Work Parties}, permettant le travail de groupe et d'autres accords entre citoyens.
+5;Configuration d'un contrat
+6;
+Lors de la publication d'un contrat, il peut contenir autant de clauses que vous le souhaitez, et chaque clause peut être configurée pour décrire le travail demandé. Chaque clause doit être satisfaite avant que le contrat ne soit considéré comme complet.
+
+Lorsque Auto-Accept est coché, l'achèvement des contrats est automatiquement détecté par le système. Par exemple, si un contrat est défini pour construire une route entre deux points, l'ouvrier peut ouvrir le contrat dans son menu latéral et appuyer sur Travail terminé'', ce qui déclenchera une détection si le travail est effectivement terminé. Si tel est le cas, le contrat sera payé conformément à l'accord et automatiquement clôturé.
+
+La clause personnalisée est une clause spéciale qui permet aux joueurs de décrire avec des mots ce qu'ils aimeraient faire. Si un contrat contient une telle clause, elle doit être approuvée manuellement par le client (l'acceptation automatique ne peut pas être cochée), car la détection automatique ne peut pas déterminer quand elle est terminée.
+  
+Lorsque la détection automatique n'est pas cochée, l'ouvrier cliquera sur Travail terminé lorsqu'il pense que c'est le cas, et le client acceptera ou rejettera l'achèvement. Les contrats sans acceptation automatique nécessitent plus de confiance entre les citoyens, car il n'y a aucune garantie que l’initiateur du contrat acceptera honnêtement un travail terminé. Les citoyens sont invités à utiliser {Reputation} comme moyen de déterminer la confiance dans ces situations.
+
+Les contrats ont une durée définie dans laquelle ils doivent être terminés, déterminé lors de la publication du contrat. En outre, les contrats peuvent être configurés pour se répéter pour les travaux récurrents - lorsque cette option est activée, chaque fois qu'un contrat est accepté, le compteur de répétition diminue de un.
+
+Tout paiement proposé pour un contrat sera conservé sur un Tiers de confiance spécial {Bank Account|Bank Accounts} pendant que le contrat est actif. Si le contrat se termine avec succès, ce paiement sera transféré à l'ouvrier, et s'il échoue, il sera remboursé au client. Un dépôt peut également être collecté sur le compte de l'ouvrier. Ce dépôt sera tenu en séquestre et remboursé à l'ouvrier une fois celui-ci terminé, ou remis au client en cas d'échec.  
+7;Groupes de travail
+8;
+Les {Work Parties} peuvent également être affichés sur un tableau des contrats, permettant la création de tâches qui peuvent être accomplies par plusieurs autres citoyens, par opposition aux contrats qui sont un accord entre deux parties uniquement. Avant de poster un groupe de travail, un citoyen doit commencer un ordre de travail sur une table d'artisanat qu'il possède.
+
+Après avoir affiché un groupe de travail, les ouvriers peuvent rejoindre le projet au tableau des contrats. Par défaut, n'importe qui peut rejoindre le groupe de travail en tant qu'ouvrier, mais des exigences peuvent être définies pour des rôles individuels ou des exigences générales pour que n'importe qui puisse rejoindre. Lorsque l'option Développer les rôles lorsque complet est cochée, l'espace pour les nouveaux travailleurs à rejoindre est créé automatiquement lorsque tous les rôles sont remplis.
+
+Lors de la définition du travail souhaité, le créateur du groupe de travail peut décider d'embaucher pour la main-d'œuvre, les ressources ou les deux. Tout citoyen qui contribue au groupe de travail recevra une part du paiement en fonction de la quantité de travail qu'il a fournie. En attribuant un poids supplémentaire à un travail particulier dans un groupe de travail, ce travail recevra une part plus élevée du paiement.
+
+9;
+Il existe une variété d'options de paiement pour un groupe de travail, et plusieurs options de paiement peuvent être proposées pour le même groupe de travail.
+
+- Lorsque vous offrez {Currency} comme paiement, il existe une option de Pay as you Go qui paiera les ouvriers au fur et à mesure qu'ils contribuent au lieu de payer une somme forfaitaire lorsque le contrat est terminé.
+
+- Lorsque vous proposez {Reputation} comme paiement, elle sera partagé par tous les citoyens qui ont contribué à la fin de la partie de travail.
+
+- En offrant {Research} comme paiement, tous les citoyens qui contribuent au montant requis découvriront instantanément la technologie une fois le travail terminé. La recherche ne peut être offerte à titre de paiement que lorsque le groupe de travail crée un livre de recherche ou si le citoyen proposant le groupe de travail a le livre de recherche dans son inventaire lors de l'affichage du groupe de travail.
+
+- Lors de l'octroi d'un {Title|Titles} comme paiement, le citoyen qui publie le contrat doit être un gestionnaire de titre pour le titre proposé. Tous les citoyens qui contribuent au montant minimum se verront attribuer le nouveau titre. Le type d'accès détermine s'ils deviendront un gestionnaire de titres ou un utilisateur de titres.
+
+10;Le tableau des contrats permet aux citoyens d'afficher ou d'accepter des contrats et des offres de groupes de travail
+11;L'onglet Crédit permet aux citoyens de définir la monnaie et le compte bancaire pour toutes les transactions sur un objet qu'ils possèdent.  
+12;
+Lors de la sélection de {Bank Accounts}, les citoyens peuvent sélectionner n'importe quel compte auquel ils ont eu accès (effectué dans un {Bank Component}). Par défaut, le compte personnel du citoyen sera sélectionné.
+
+Toutes les {Currencies|Currency} du monde peuvent être sélectionnées dans le composant de crédit. C'est la monnaie qui sera utilisée pour toutes les transactions qui ont lieu sur cet objet (par exemple, un {Store|Store Component} acceptera la monnaie définie ici).
+
+Lorsque vous sélectionnez aucun pour la monnaie dans un magasin, les transactions directes sont possibles sans avoir besoin d'une monnaie.
+13;L'onglet Crédit permet aux citoyens de définir le compte bancaire et la monnaie pour les transactions sur un objet.
+14;L'onglet Vente de titre de propriété permet aux citoyens d'acheter et de vendre des {Property}.  
+15;
+En visitant un {Real Estate Desk|Real Estate Desk Item}, les citoyens peuvent créer des listes de leurs titres de propriété et consulter les listes d'autres citoyens. Toutes les annonces publiées peuvent être consultées à partir de n'importe quel bureau immobilier.
+
+Lors de la création d'une annonce, le propriétaire fixe le prix et la {Currency} utilisée. Tous les revenus iront au {Bank Account|Bank Accounts} sélectionné.
+
+Lors de l'achat d'un titre de propriété, la monnaie sera prélevée sur le compte bancaire sélectionné par l'acheteur.
+
+Après la vente de la propriété, le titre et tous les objets contenus dans le titre sont transférés au nouveau propriétaire.  
+16;L'onglet Vente de titre de propriété permet aux citoyens d'acheter et de vendre une propriété.
+17;L'onglet Échange permet aux citoyens d'échanger une {Currency} contre une autre.
+18;Échange de monnaies
+19;
+Le propriétaire d'un {CurrencyExchangeItem} utilise le composant d'échange pour proposer des échanges de monnaies à d'autres citoyens. Lors de la configuration d'un échange, la monnaie du propriétaire est la monnaie proposée à la vente. Pour chaque unité de monnaie du propriétaire achetée, les citoyens seront facturés le montant de la monnaie alternative.
+
+Lorsqu'un {Authorized Consumer|Authorization Component} visite le bureau de change, il voit une liste de tous les échanges proposés. Par défaut, tous les citoyens sont des utilisateurs autorisés.
+20;Restrictions d'échange
+21;
+Le propriétaire du bureau de change a la possibilité d'établir des restrictions de solde. Celles-ci empêcheront les citoyens d'échanger des monnaies si le montant des monnaies sur le compte choisi ne respecte pas la restriction.
+
+Le chiffre de gauche correspond à la quantité minimale de monnaies détenues et celui de droite à la quantité maximale de monnaies détenues. Si l'une des deux valeurs de la restriction de solde est laissée à 0, il n'y aura pas de limite pour cette partie de la restriction de solde.
+22;Permet aux citoyens de configurer un bureau de change.
+23;L'onglet Distributeur d'articles permet au propriétaire de fournir des objets gratuits aux nouveaux citoyens, par acte de bonne volonté et pour stimuler la prospérité initiale des citoyens.
+24;
+Tous les nouveaux citoyens qui sont qualifiés (en fonction de leur ancienneté) peuvent récupérer leurs objets en se rendant sur le {DistributionStationItem}. En entrant dans le monde, les nouveaux citoyens commenceront avec un marqueur de carte mondiale pour les avertir que les objets sont disponibles. Notez que le {Storage Component} doit rester en stock avec les objets distribués pour permettre aux nouveaux citoyens de les collecter.
+
+Le propriétaire peut désigner les articles à distribuer, le nombre de chaque article et la date à laquelle le citoyen doit avoir rejoint le monde pour être éligible.  
+25;Permet au propriétaire de fournir des articles gratuits aux nouveaux citoyens, comme un acte de bonne volonté et pour stimuler la prospérité initiale des citoyens.
+26;L'onglet Monnaie permet aux citoyens de créer des {Currencies|Currency} qui sont adossées à une ressource.
+
+27;
+Lors de la création d'une monnaie à un {MintItem}, on choisit un article de support, ainsi qu'un nombre de pièces par article qui sont générées à partir de chaque article consommé.  En utilisant un article de support pour la monnaie, le montant total possible de monnaie peut être limité au nombre d'articles fournis, ce qui offre une plus grande stabilité car il devient plus difficile d'inonder le marché avec de la nouvelle monnaie.  Le choix de l'article de support aura une incidence sur ce point, les articles plus rares étant généralement plus difficiles à obtenir et offrant une plus grande stabilité.
+
+Le matériel de support et les pièces par article sont permanents, il faut donc être prudent lorsque l'on décide comment soutenir une monnaie. Une fois qu'une monnaie est frappée, elle sera liée à l'hôtel de la monnaie sur lequel elle a été créée, même si cet hôtel de la monnaie est ramassé.
+
+Les citoyens qui ont obtenu des droits de consommation dans le cadre de la {Authorization Component} peuvent utiliser la composante monnaie pour frapper d'autres monnaies. La monnaie peut être frappée dans le {Bank Account|Bank Accounts} cible sélectionné par le propriétaire de la monnaie, ou dans tout compte bancaire auquel le citoyen a accès dans la {Bank Component}.  
+28;Permet aux citoyens de créer et d'imprimer des monnaies soutenues.
+29;
+L'onglet Magasin permet aux citoyens de définir les articles qu'ils souhaitent acheter et vendre à d'autres citoyens. Ces actions peuvent se faire automatiquement, sans que le propriétaire du magasin ait besoin d'être en ligne.  
+30;
+La monnaie et le compte bancaire sélectionnés dans la {Credit Component} seront utilisés pour toutes les transactions au magasin. En sélectionnant aucune pour la monnaie dans un magasin, il est possible d'effectuer des transactions directes qui ne sont pas soumises à la taxe sur les ventes. 
+32;Met en place une interface pour les autres citoyens pour acheter et vendre des produits de vous/à vous automatiquement.
+33;Composants liés au gouvernement.
+34;
+L'onglet Action civique permet aux citoyens de participer à des {Elections}, d'effectuer des {Executive Actions} et de démissionner, en fonction de l'objet utilisé.
+
+35;Participer aux élections
+36;
+L'onglet Action civique dans un {Ballot Box|Ballot Box Item}, permet aux citoyens de se présenter aux {Elected Titles} et participer aux élections. 
+
+En appuyant sur le bouton Voter, les joueurs sont redirigés vers l'interface web où ils peuvent voir toutes les {Elections} en cours, en discuter avec leurs concitoyens, fournir des preuves de leurs arguments avec les {Data}, et voter.  
+
+Les citoyens qui ont obtenu un droit de veto dans le cadre des {Election Process|Election Processes} actuels peuvent instantanément annuler une élection.
+
+Pour se présenter aux élections, un citoyen éligible doit d'abord utiliser l'action Lancer l'élection. Une fois que l'élection a commencé, les citoyens éligibles peuvent sélectionner l'action Entrer dans l'élection pour se joindre à la course et faire un discours de campagne. Les candidats peuvent choisir de se retirer de l'élection à tout moment en utilisant l'option disponible sur une urne.
+
+37;Exécuter des actions de l'exécutif
+38;
+L'onglet Action civique à un {Executive Office|Executive Office Item} permet à un titre élu d'effectuer des actions exécutives ponctuelles qui affectent un ensemble de citoyens.
+
+Les conditions relatives aux citoyens dictent à quels citoyens l'action de l'exécutif s'applique, et de multiples conditions peuvent être fixées pour qu'un citoyen soit qualifié. Pour effectuer une action pour tous les citoyens, utilisez la condition {Demographic} Tous comme condition du citoyen.
+
+L'action pour chaque citoyen prendra effet dès que l'action de l'exécutif sera approuvée. Plusieurs actions peuvent être effectuées en même temps pour chaque citoyen qui remplit les conditions.
+
+39;Actions des bureaux des élus
+40;
+Au {Government Office|Government Office Item}, l'onglet Action civique permet aux titres élus de démissionner ou de destituer d'autres titres élus de leurs fonctions.
+
+L'action Démissionner permet à tout élu de quitter son poste. Si un titre successeur a été attribué au titre élu lors de sa création, un nouveau fonctionnaire sera choisi au hasard parmi tous les citoyens détenant ce titre ; sinon, le titre élu devient vacant.
+
+L'action Destituer un élu de son poste permet aux citoyens qui ont reçu l'autorité de destituer les titres élus de leur poste. Les mêmes règles pour trouver un successeur s'appliquent comme si le fonctionnaire démissionnait.
+
+41;Permet aux citoyens de participer aux élections et de mener des actions de l'exécutif.
+42;    L'onglet Objectif Civique permet aux citoyens de proposer, de modifier et d'abroger divers Objectifs Civiques. 
+43;Devoirs civiques
+44;Dans l'onglet Objectif civique, vous verrez une liste de vos {Civic Duties}. Cette liste informe le citoyen des autorisations dont il dispose en matière d'objectifs civiques, compte tenu de la {Constitution} actuelle, et des possibilités de différents devoirs civiques :
+45;La composante Objectif civique permet aux citoyens de proposer, de modifier et d'abroger des objectifs civiques.
+46;L'onglet Registre permet de créer et de gérer des {Titles} non élus.  Ces titres peuvent être utilisés à de nombreuses fins identiques à celles des {Elected Titles}, mais ils sont nommés au niveau du bureau d'enregistrement.
+47;Attribution des titres
+48;Les gestionnaires de titres peuvent renommer le titre et affecter de nouveaux gestionnaires et détenteurs de titres. Les gestionnaires de titres ne sont pas considérés comme des utilisateurs de titres.
+
+Les utilisateurs de titre sont les citoyens considérés comme titulaires de titre et bénéficient de tous les avantages et conditions associés.
+49;Options avancées
+50;
+Dans les paramètres avancés, il est possible de définir les exigences applicables aux détenteurs de titres et d'attribuer un salaire horaire aux détenteurs de titres qui remplissent les conditions requises.
+  
+Diverses conditions peuvent être fixées pour déterminer les exigences imposées aux détenteurs de titres. Si un citoyen ne respecte pas ces conditions, il perdra son statut de détenteur de titre. En utilisant un ensemble de conditions, plusieurs exigences peuvent être fixées pour les détenteurs de titres.
+ 
+Les salaires sont payés aux détenteurs de titres à partir de tout {Bank Account|Bank Accounts} qu'un gestionnaire de titres a reçu l'autorisation d'utiliser dans la {Bank Component}. Les salaires sont payés chaque heure (en fonction des paramètres du monde) sur le compte personnel de chaque utilisateur de titre. La rubrique peut être utilisée pour exclure les heures hors ligne du paiement des salaires.
+	
+51;Permet la création et la gestion des titres non élus.
+52;L'onglet Trésor public permet aux {Elected Titles} qui ont obtenu le droit de fixer les impôts du Trésor public d'ajuster le taux d'imposition et de sélectionner la monnaie mondiale par défaut.
+53;Taxes
+54;Une fois que les {Taxes} sont définies dans la rubrique Trésorerie, elles sont automatiquement appliquées à toutes les transactions pertinentes. Toutes les recettes vont dans le {Bank Account|Bank Accounts} du trésorier. Les titres sélectionnés qui ont le paramètre Privilèges bancaires du gouvernement peuvent effectuer des transactions directement à partir du compte de la trésorerie (ce qui permet de sélectionner le compte dans l'{Credit Component}).  L'argent peut également provenir de la trésorerie via les {Laws} qui effectuent des paiements aux citoyens.
+55;Monnaie par défaut du Monde
+56;La monnaie mondiale par défaut est la {Currency} par défaut utilisée lors du placement d'un nouvel objet contenant la partie crédit. Les citoyens peuvent toujours choisir d'utiliser n'importe quelle monnaie dans une {Trade}, mais le fait d'avoir une monnaie mondiale par défaut facilite l'établissement d'une économie avec une monnaie commune.
+57;Taxes directes
+58;Les élus ayant le droit de fixer les taxes du Trésor public peuvent imposer ou allouer des fonds directement aux citoyens. Cela se fait en gérant la monnaie souhaitée et en sélectionnant les citoyens auxquels l'action s'appliquera. Un titre d'élu doit toujours donner une raison pour laquelle il effectue cette action, qui est affichée à tous les citoyens.
+	  
+La gestion du budget comprend également la possibilité de vider le compte du trésor public de ses fonds. Cela supprimera la monnaie de façon permanente, alors soyez prudent lorsque vous utilisez cette possibilité sur des monnaies garanties.  
+59; Permet aux citoyens titulaires d'un titre élu avec autorisation fiscale de définir des taxes et de sélectionner la monnaie par défaut mondiale.
+60;Composantes liées au logement.
+61;L'onglet Autorisation permet de préciser les autorisations dont disposent les citoyens sur l'objet.
+    
+62;
+Le titre de propriété affiché ici est simplement un lien vers l'acte de la {Property} sur laquelle se trouve l'objet (ou l'acte associé à la {Vehicle|Vehicle Component} s'il en est une).
+Les utilisateurs autorisés peuvent être listés ici, soit comme personnes spécifiques, {Titles}, ou {Demographics}.  Toute personne figurant sur la liste peut interagir avec l'objet sans en avoir le contrôle total.  Un magasin, par exemple, permettra aux citoyens ayant des droits d'utilisation d'y acheter et d'y vendre, mais seuls les citoyens ayant des droits complets sur le bien peuvent changer ce qui est à vendre, ou déplacer le magasin lui-même.
+
+Tous les objets placés ont des composantes d'autorisation.  
+63;Permet aux citoyens de définir les droits d'accès à un objet donné.
+64;Les lits permettent aux citoyens d'accélérer le temps lorsque tous les citoyens l'utilisent simultanément (ou hors ligne).  
+  
+(Cette fonction est désactivée par défaut sur les serveurs dédiés pour empêcher l'accélération du temps lorsque les utilisateurs sont hors ligne, mais elle peut être activée par un administrateur de serveur)
+65;Permet de dormir sur les serveurs en mode solo ou sur les serveurs où le sommeil est activé.
+66;Composants liés à l'industrie.
+67;
+L'onglet Fabrication est utilisé pour {Craft|Crafting} des articles, ajouter des ressources ou du travail et annuler des projets existants. Lorsque vous contribuez à un {Work Party|Work Parties}, la rubrique création est accessible aux citoyens qui ont rejoint le groupe de travail.
+  
+68;Articles d'artisanat
+69;
+Après avoir sélectionné un article et une quantité à fabriquer, des ressources et de la main-d'œuvre sont nécessaires pour démarrer le projet. Ces ressources peuvent être ajoutées manuellement (en les plaçant directement sur la table de fabrication) ou en liant un {Storage Component} qui les contient.
+
+Les citoyens ayant une {Specialty|Specialties} associées ont besoin de moins de calories pour ajouter du travail. Certains projets exigent la main-d'œuvre qualifiée d'un citoyen ayant la spécialité correspondante. Cette réduction est appliquée après le démarrage de l'ordre de travail, afin que les citoyens de différents niveaux de compétence puissent contribuer au même groupe de travail.
+
+En ajoutant une amélioration dans le {Modules Component}, les ordres de travail sur une table de fabrication améliorées réduiront le temps de fabrication et les coûts en ressources.
+
+Si un projet est annulé prématurément (par un Clic-Droit sur la commande), les ressources seront remboursées mais la main-d'œuvre dépensée sera perdue.  
+70;Ajouter du travail
+71;
+Pour chaque unité de travail nécessaire, des {Calories|Nutrition} sont consommées. Après le démarrage d'un ordre de travail, les citoyens peuvent ajouter du travail en appuyant sur le bouton Travail dans le composant de fabrication.
+
+Une fois qu'un projet est démarré, le traveil peut être rapidement ajoutée depuis l'extérieur du composant de fabrication en cliquant avec le bouton droit sur une table de fabrication. Lors de l'ajout du travail de cette manière, maintenir enfoncée la touche Ctrl ajoutera 5 fois la quantité normale de travail. Maintenez la touche Alt pour ajouter toutes les calories disponibles.  
+72;Ingrédients étiquetés
+73;
+Certaines recettes utilisent des groupes d'ingrédients qui peuvent accepter des éléments similaires comme intrants. Par exemple, un élément peut spécifier qu'il a besoin de roche et accepte tout type de roche de ce groupe ({GraniteItem}, {BasaltItem}, etc.).
+	
+Les ingrédients du groupe seront consommés automatiquement, il n'est donc pas nécessaire de créer des commandes distinctes pour les différents ingrédients.  
+74;Famille de recettes
+75;
+Certaines recettes font partie d'un groupe plus large de recettes, connu sous le nom de familles de recettes. Lorsqu'il élabore une de ces recettes, un citoyen peut choisir une variante spécifique à produire. Le nombre d'exemplaires fabriqués sera la quantité sélectionnée pour la recette mère.
+
+Par défaut, seules les recettes dont les ressources sont disponibles seront affichées. En cochant Afficher tout, toutes les variantes possibles seront affichées.  
+76;L'onglet Fabrication est utilisé pour créer des objets et ajouter du travail aux projets.
+77; L'onglet Module permet aux citoyens d'insérer une amélioration dans leurs tables de {Crafting}. Après avoir inséré une amélioration, les commandes sur cette table auront des coûts de ressources réduits et des temps de fabrication réduits.
+78;Utiliser des améliorations
+79;
+Les améliorations se déclinent en cinq niveaux de qualité différents. Une amélioration de niveau 1 réduit le coût des ressources et le temps de fabrication de 10%, chaque niveau progressif ajoutant une diminution supplémentaire.
+
+Les tables d'artisanat acceptent différents types d'améliorations. Les premières tables acceptent les Améliorations Basique, tandis que les tables ultérieures nécessitent des Améliorations Avancées ou des Améliorations Modernes. Chaque niveau d'amélioration a cinq niveaux de qualité différents, le niveau de qualité le plus élevé étant une améliorations de spécialité.
+
+Certaines recettes ont des coûts en utilisant des ingrédients statiques. Les ingrédients statiques ne sont pas affectés par la réduction du coût des ressources, mais les recettes qui les contiennent bénéficient toujours d'une réduction du temps de fabrication.
+80;Amélioration des spécialités
+81;
+Le niveau d'amélioration le plus élevé ne peut être fabriqué que par un citoyen qui a atteint le niveau maximum dans la {Specialty|Specialties} choisie. Contrairement aux autres améliorations, ces améliorations bénéficient d'une réduction de coût supplémentaire lors de la création de recettes en utilisant la profession spécifiée.
+
+Certaines spécialités ont différents niveaux d'améliorations qui correspondent à différentes tables d'artisanat. Par exemple, {CarpentrySkill} à le {CarpentryBasicUpgradeItem} pour la {CarpentryTableItem} et le {CarpentryAdvancedUpgradeItem} pour la {SawmillItem}.  
+82;Permet aux citoyens d'améliorer leurs tables de fabrication.
+83;
+L'onglet Tuyaux permet à un citoyen de vérifier l'état de la production de pollution aérienne, de l'utilisation de l'eau et le débit des eaux usées d'un objet.  
+84;Évacuation de pollution aérienne
+85;
+En consultant l'infobulle  Pollution , un citoyen peut trouver des informations supplémentaires sur la production de pollution de l'objet en cours et les niveaux de {Pollution} dans le monde.
+	
+Des tuyaux peuvent être utilisés pour rediriger le flux de la pollution atmosphérique. Les tuyaux contenant la pollution sortante peuvent avoir plusieurs entrées mais doivent avoir une seule extrémité ouverte, en dehors de toutes les pièces, et au-dessus de l'objet.
+
+Les objets qui émettent de la pollution par la fumée ne polluent que lorsque l'objet est actif. 
+	
+86;Eau et eaux usées
+87;
+Les objets avec une entrée d'eau et les pompes avec une sortie d'eau se connectent via un système de tuyaux. Les systèmes de conduites d'eau peuvent avoir plusieurs entrées pour les pompes à eau et plusieurs sorties pour chaque objet avec une demande en eau.
+
+En vérifiant l'infobulle de l'eau dans le composant Tuyau, un citoyen peut voir exactement combien d'eau un objet produit ou consomme. S'il n'y a pas assez d'eau produite, les objets commenceront à devenir inactifs.
+
+Les canalisations contenant des eaux usées fonctionnent de la même manière que les canalisations d'eau, mais les {Sewage} qu'elles contiennent sont une source de pollution du sol. Une fois que les {Waste Filters|Waste Filter Item} sont inventés, les eaux usées peuvent être acheminées vers un filtre pour atténuer la pollution du sol.
+88;L'onglet Tuyaux permet aux citoyens de vérifier l'état de consommation d'eau et de rejet de pollution aérienne et d'eau usée.
+89;L'onglet Énergie est utilisé pour vérifier l'état du réseau électrique local. Il est également utilisé pour vérifier la consommation des objets qui ont besoin de carburant pour fonctionner.
+90;Carburant
+91;
+Les objets qui consomment du carburant peuvent avoir une entrée de carburant ici, et chacun peut nécessiter différents types de carburant pour fonctionner. Les infobulles contiennent la liste des carburants pouvant être utilisés pour alimenter l'objet. Le carburant peut également être ajouté à partir du {Storage Component}.
+
+En fonctionnement, un objet consomme du carburant toutes les secondes, mesuré en Watts (W). Chaque type de carburant contient une quantité d'énergie potentielle différente, mesurée en Joules (J). Pour chaque Watt nécessaire par seconde, une Joule d'énergie est consommé. Le carburant n'est pas consommé tant que l'objet est inactif.  
+92;Statistiques énergétiques
+93;
+Il existe deux types de {Power} qui peuvent être utilisés par un objet : électrique et mécanique. Le réseau électrique affiche le type et la disponibilité de la puissance nécessaire pour cet objet. S'il n'y a pas suffisamment d'alimentation pour correspondre à la puissance demandée, les objets deviendront inactifs.
+
+Les groupes électrogènes qui consomment du carburant deviennent inactifs s'il n'y a pas d'objets à proximité exigeant de l'énergie. Il n'est pas nécessaire de les activer et de les désactiver pour économiser du carburant.  
+94;L'onglet Énergie permet de vérifier l'alimentation et la consommation d'énergie et de carburant.
+95;L'onglet Réparer permet aux citoyens de réparer leurs outils sur une {ToolBenchItem}.
+96;
+Après avoir inséré un outil cassé, les coûts de réparation apparaîtront. Les outils avancés peuvent être réparés pour moins de ressources par les citoyens avec la {Specialty|Specialties} correspondante. Les ressources utilisées peuvent être ajoutées manuellement par un citoyen ou extraites d'un conteneur lié dans le {Storage Component}.
+
+Le propriétaire d'un {ToolBenchItem} peut permettre à d'autres citoyens d'accéder à la réparation de leurs propres outils moyennant des frais définis dans le {Credit Component}. Lors de l'offre de réparation d'outils au public, les droits des utilisateurs doivent être indiqués dans le {Authorization Component}.  
+97;Permet aux citoyens de réparer leurs outils.
+98;
+L'onglet Statut permet aux citoyens de voir les conditions requises, pour qu'un objet soit actif, et celles qui sont remplies. Si un objet cause {Pollution}, l'onglet Statut affiche également la production de pollution à vie pour cet objet.
+99;Statut de l'objet
+100;
+Chaque condition de l'onglet Statut doit être satisfaite avant qu'un objet puisse être actif. Quelques exemples de conditions qui comprennent :
+
+- Être contenu dans une {Room|Rooms} valide
+
+- Avoir assez de {Power}
+
+- Un système {Sewage} fonctionnel
+101;Indicateur de statut
+102;
+Lorsqu'ils interagissent avec un objet qui possède un onglet statut, les citoyens peuvent voir rapidement le statut de l'objet en vérifiant l'indicateur de statut dans le coin supérieur gauche. Un cercle vert signifie qu'un objet est actif tandis qu'un cercle rouge signifie qu'il est inactif.
+103;Affiche si un objet est actif ou inactif et pourquoi.
+104;L'onglet Stockage est utilisé pour gérer l'inventaire des conteneurs de stockage et les lier aux objets qui ont besoin de stockage.  
+105;Gérer le stockage
+106;
+L'inventaire peut être déplacé d'un stockage à l'autre en faisant glisser des piles d'articles d'un conteneur à un autre.
+
+Maintenez la touche Maj enfoncée tout en faisant glisser des éléments pour déplacer toutes les piles du même élément entre les conteneurs. Un Clic-Droit sur une pile d'objets permettra à un joueur de diviser une pile en plus petites quantités. Maintenez la touche Ctrl enfoncée lorsque vous cliquez sur une pile d’éléments pour diviser la pile en deux.
+
+Certains stockage, comme une {StockpileItem}, peuvent contenir n'importe quel type d'élément. D'autres stockages, comme un {StorageChestItem}, ne peuvent contenir que des éléments non transportables.  
+107;Relier les conteneurs de stockage
+108;
+Un objet peut être lié à des stokages dans l'onglet stockage en cochant la case du stokage. Une fois lié, l'objet accède à tous les éléments des stokages et peut utiliser l'onglet stockage. Lors de la liaison des stockages, le stockage le plus haut de la liste sera utilisé en premier pour le stockage. L'ordre peut être modifié en cliquant et en faisant glisser les affichages de stockage dans la liste.  
+109;Gère l'inventaire et permet de lier le stockage à d'autres objets.
+110;Une économie prospère grâce au commerce est essentielle pour développer la technologie nécessaire pour arrêter le météore.
+111;Les comptes bancaires sont des stockages de {Currency} auxquels un ou plusieurs citoyens peuvent accéder. Chaque citoyen entre dans le monde avec un compte bancaire personnel permanent, contenant un montant infini de son crédit personnel. Des comptes bancaires supplémentaires peuvent être accordés et leurs droits d'accès peuvent être ajustés dans un {Bank|bank component}.
+
+Les comptes bancaires sont utiles pour organiser la monnaie, permettre l'accès aux fonds par plusieurs parties, stocker la collecte des impôts et désigner qui peut y accéder. Les gouvernements ouvriront généralement un certain nombre de comptes bancaires pour gérer les entrées de taxes, en veillant à ce que les fonds soient utilisés comme prévu. Chaque compte bancaire peut contenir des quantités illimitées de monnaies, chaque monnaie étant suivie séparément. Cliquer sur le compte bancaire affichera le grand livre répertoriant toutes les transactions vers ou depuis celui-ci, car toutes les transactions dans Eco sont publiques.
+
+112;Les comptes bancaires servent de stockage et de séparation des monnaies pour diverses utilisations par divers citoyens et entités gouvernementales.
+113;
+Un contrat est un accord entre deux citoyens créé dans un {Contract Board|contract board component}. L'accord peut comporter n'importe quel nombre de clauses et spécifier des combinaisons de travail à effectuer et de rémunération à payer. Il est posté par le citoyen client et peut être accepté par tout citoyen valide de manière asynchrone.
+114;Voici des exemples de contrat :
+    - Créez une route entre deux points désignés.
+    - Prêt d'argent entre deux parties avec un taux d'intérêt et une date d'échéance donnés.
+    - Construisez une salle avec des exigences données à un endroit précis.
+    - Exigences personnalisées décrites dans le texte et acceptées/rejetées par le client à la fin.  
+115;Les contrats maintiennent un accord entre deux citoyens.
+116;
+La fabrication est la création de nouveaux produits à partir d'ingrédients, de travail et/ou d'énergie. La fabrication peut également générer des sous-produits qui causent de la pollution et affectent négativement l'environnement. Elle constitue l'épine dorsale de l'économie, générant une demande de ressources provenant de l'écosystème environnant, ainsi qu'une demande de travail qualifié individuelle et de services partagés tels que {Power|Power Component} ou {Sewage}.
+
+Toute table qui a un {Crafting Component} peut créer des produits définis dans une liste. Les tables de fabrication peuvent être partagées, chacune ayant un {Authorization Component} configurable qui détermine qui peut y accéder, et des frais peuvent être fixés dans le {Credit Component} sur la table pour gagner de l'argent en partageant votre table.
+
+Les entrées et sorties peuvent être soit prélevées directement de la table de fabrication, soit placées dans un {Storage Component} attaché. Placer les ingrédients et les produits dans le stockage permet aux citoyens de passer des commandes importantes qui s'exécutent automatiquement.
+
+De nombreuses recettes nécessitent le travail d'une compétence spécifique {Skill|skills overview}. Bien que n'importe quel citoyen puisse lancer une recette de fabrication ou contribuer des ingrédients, seul un citoyen ayant les compétences requises peut y ajouter du travail. Pour former un groupe et permettre à de nombreux citoyens de contribuer à une commande tout en partageant le paiement, des {Work Parties} peuvent être créées.  
+117;La fabrication est la création de produits par les citoyens à des tables spécifiques.
+118;Les monnaies sont un moyen de faciliter le commerce, en tant que représentation de la valeur. Leur valeur est entièrement déterminée par la manière dont ils sont utilisés.
+
+Il existe deux types de monnaies dans Eco, adossées et non adossées.
+  
+Une monnaie non adossée est la monnaie par défaut, et chaque joueur commence avec sa propre monnaie personnelle avec un montant infini. Celles-ci sont particulièrement utiles en début de partie lorsqu'il n'y a pas de monnaie mondiale désignée. Cependant, ces monnaies nécessitent beaucoup de confiance pour que leur propriétaire ne manipule pas leur valeur, car elles ont un montant illimité et peuvent facilement déstabiliser une économie qui les utilise.
+  
+Les monnaies adossées sont beaucoup plus stables. Une monnaie adossée est créée dans un {Mint|Mint Component} en convertissant un matériau de support de monnaie en pièces. Il n'est possible de créer plus de monnaie qu'en acquérant plus du matériel donné. Cela fournit une limite beaucoup plus forte sur les quantités de monnaies qui peuvent être introduites dans le monde et constitue une base plus solide pour le commerce mondial. Souvent, un monde choisira de passer d'une collection de monnaies personnelles à une ou plusieurs monnaies adossées à mesure que l'économie croît dans l'arc du jeu et que davantage de commerce et de collaboration sont nécessaires.
+  
+Les monnaies peuvent être transférées à d'autres dans le visionneur d'économie, ainsi que via {Trade}. Toutes les monnaies sont stockées dans un {Bank Account|Bank Accounts}.
+
+119;La monnaie est une construction sociétale qui facilite le commerce.
+120;L'économie n'a souvent rien à voir avec le montant d'argent dépensé, mais avec la sagesse avec laquelle on le dépense.
+    Henry Ford
+  
+121;L'économie comprend les actions de récolte, de production et d'échanges commerciaux entre citoyens, dans l{Ecosystem|Ecosystem Overview} sous la régulation du {Government|Government Overview}. Les citoyens doivent s'assurer du bon fonctionnement de l'économie afin de faire progresser leur technologie suffisamment pour arrêter la météorite, en évitant d'en perdre le contrôle ainsi que la pollution générée par ce processus.  
+122;Concepts économiques
+123;
+- {Crafting}. Utiliser des outils industriels pour créer de nouveaux produits.
+  - {Trade}. Échange de biens créés par des individus de différentes spécialités ou accès aux ressources.
+  - {Transport}. Déplacement des ressources d'un endroit à l'autre et construction d'infrastructures de transport dans le monde entier.
+  - {Research}. Faire progresser les connaissances humaines pour l'amélioration de la société.
+  - {Currency}. Une représentation de la valeur créée par les citoyens qui facilite l'activité économique.
+  - {Work Parties}. Groupes de travail organisés, partageant des récompenses.
+  - {Contracts}. Accords entre deux citoyens concernant le travail ou d'autres arrangements.
+  - {Bank Accounts}. Conteneurs de monnaies avec accès configurable.
+  - {Finance}. Fournir du capital à d'autres citoyens pour les aider à progresser tout en réalisant un profit.  
+124;L'économie est constituée de l'ensemble de l'utilisation des ressources, du commerce et du progrès technologique par les citoyens.
+125;Grâce à l'utilisation de {Contracts}, les citoyens d'Eco peuvent créer des accords de prêts et d'obligations entre deux parties, en suivant automatiquement le paiement des intérêts et la date d'échéance des fonds.  Les prêts et les obligations sont un excellent moyen pour les nouveaux citoyens de collaborer avec des citoyens de longue date plus riches, d'une manière qui profite aux deux parties et qui accroît le progrès de la société.
+
+Si un citoyen contracte un prêt, la partie qui le propose lui donne de l'argent qu'il doit payer avec des intérêts.
+Si un citoyen achète une obligation, il donne de l'argent à la partie qui l'offre, qu'il s'attend à voir remboursée avec des intérêts.
+
+Les pénalités pour défaut de remboursement des prêts peuvent être définies à l'aide des {Laws}, en surveillant le déclenchement de la procédure de défaut de remboursement des prêts/obligations.  Des mesures peuvent alors être prises, telles que la reprise de propriété ou l'application d'autres pénalités et amendes.
+
+126;La finance est la gestion de la monnaie pour promouvoir le progrès.
+127;Chaque joueur peut influencer la réputation de tout autre joueur, qui peut à son tour être utilisée comme un facteur dans les lois, les contrats, etc. qui peuvent remettre en question la réputation d'un citoyen et déterminer les privilèges (ou leur absence) en fonction de la valeur). Pour définir la réputation d'un citoyen, survolez son nom dans discussion et cliquez sur sa réputation dans l'info-bulle (une liste de tous les citoyens se trouve sur la page {Current Citizens}).
+
+128;La réputation est modifiée par un multiplicateur de réseau, qui se calcule comme suit : +1 pour chaque citoyen vous donnant une réputation positive, et -1 pour chaque citoyen vous donnant une réputation négative.  De cette façon, il devient plus avantageux d'aider de nombreux citoyens et d'acquérir une réputation étendue que de se concentrer sur quelques citoyens.  La réputation relative est une autre valeur qui ne prend en compte que les citoyens auxquels vous avez donné une réputation positive.
+
+129;Une valeur fixée par d'autres citoyens ou par des lois qui représente votre statut social.
+130;La recherche crée de nouveaux savoirs partageables, débloquant de nouveaux types de produits et de capacités.  Elle est menée dans un {ResearchTableItem} où vous créez un livre de compétences.  Une fois créé, un livre de compétences peut être utilisé pour créer un nombre illimité de pages de compétences, qui débloqueront la spécialité pour un citoyen qui en utilise un.
+
+Chaque page de compétence est un consommable à usage unique qui déverrouille une nouvelle {Specialty|specialties} chez celui qui l'utilise, qui doit ensuite la réclamer avec un niveau supérieur par le biais du système {Skills|skills overview}.  L'acquisition d'un nouveau rouleau de compétences permet également au citoyen de bénéficier d'un ensemble de {Property Claim Papers|Property}, qui lui permet de réclamer plus de terres à mesure qu'il acquiert des compétences.
+    
+Les livres de compétences sont parmi les éléments les plus difficiles à créer, et les citoyens devront généralement collaborer pour acquérir toutes les diverses ressources et la main-d'œuvre nécessaires à leur production.  En tant que tels, les projets de recherche sont particulièrement bien adaptés aux {Work Parties}, car les citoyens peuvent les utiliser pour partager le travail nécessaire à leur création ainsi que la récompense de la connaissance à l'achèvement.
+  
+131;La recherche crée de nouvelles connaissances partageables, débloquant de nouveaux types de produits et de capacités.
+132;Les échanges avec vos concitoyens est essentiels dans Eco, car chaque acteur dispose d'un ensemble de {Specialties} auxquelles il peut contribuer le plus efficacement tout en commerçant avec d'autres citoyens qui sont compétents dans des professions dans lesquelles ils ne le sont pas. 
+
+ - Les échanges peuvent être mis en place dans un {Store Component}, en indiquant les prix d'achat/de vente des différents produits que vous souhaitez.  Les citoyens peuvent alors vous acheter et vous vendre des biens de manière asynchrone, sans être présents.
+ - Les échanges de main-d'œuvre peuvent se faire par le biais de {Contracts} et de {Work Parties}, ce qui permet aux joueurs d'effectuer un travail contre rémunération dans des conditions convenues.  Ce travail peut également être effectué de manière asynchrone.
+ - Les échanges de monnaies peuvent se faire dans le cadre d'une {Currency Exchange|Exchange Component}, en indiquant les prix d'achat/de vente pour les échanges de différentes monnaies.
+ - Le commerce est facilité par le {Transport} et la construction d'une infrastructure de transport entre les centres florissants de votre civilisation favorisera grandement la capacité à commercer.
+ - Le commerce est soumis à des {Taxes}, fixées par le gouvernement {government overview}, qui peuvent soit promouvoir soit réduire la valeur de certains échanges.
+
+133;Le commerce entre citoyens de différentes capacités et possédant des biens différents est l'épine dorsale de l'économie.
+134;Les ressources étant dispersées dans le monde entier et les lieux de collecte et de traitement étant différents de ceux où elles sont utilisées, le transport devient un facteur essentiel de réussite en matière d'écologie.
+
+Pour transformer efficacement les matériaux, il faut créer des véhicules pour les transporter, et pour cela, il faut aplanir le sol en routes.  En utilisant un {StoneRoadToolItem}, vous pouvez aplatir le sol et le rendre utilisable par les véhicules, et avec des rampes, vous pouvez créer des pentes sur lesquelles les véhicules peuvent circuler.  Les véhicules les plus perfectionnés devront emprunter des routes à mode de transport avancé pour se déplacer efficacement, et les routes devront être mises à niveau périodiquement à mesure que de nouvelles technologies seront disponibles.
+
+La construction de routes entre les villages et les zones de stockage des ressources exigera du temps et des efforts de la part de nombreux citoyens, et constitue un excellent candidat pour les projets de travaux publics financés par les {Taxes} et construits à l'aide de {Work Parties}.  À mesure que le monde progresse sur le plan technologique, de plus en plus d'infrastructures de transport seront créées pour faciliter le flux des échanges commerciaux, pour finalement se développer à un point tel que la construction de routes et l'utilisation de véhicules auront un impact sur l'environnement.  Une gestion prudente de cette influence sera essentielle pour préserver les écosystèmes qu'ils traversent.
+
+135;Les ressources et leur utilisation étant réparties dans le monde entier, il devient nécessaire de transformer le monde en construisant des infrastructures de transport.
+136;Les groupes de travail est un accord entre plusieurs citoyens pour effectuer un travail.  Ils sont lancés par un citoyen individuel en se rendant dans un {Contract Board|Contract Board Component} après avoir créé un ordre de travail.
+
+Le citoyen qui émet un groupe de travail peut définir les différents paramètres du travail, notamment
+ - Les bons de travail à exécuter.
+ - Ce qui est exigé des citoyens qui veulent rejoindre le groupe de travail.
+ - Le paiement qui sera versé aux personnes qui participent.
+ - Comment ce paiement sera distribué.
+
+Les groupes de travail sont particulièrement utiles pour effectuer des {Research}. Un citoyen peut mettre en place un projet de recherche, qui coûte une grande quantité de ressources, et y adjoindre un groupe de travail. Les citoyens peuvent alors se joindre automatiquement au groupe de travail (même lorsque le citoyen émetteur est hors ligne, s'il remplit les conditions requises) et commencer à effectuer la tâche.
+
+Le paiement peut prendre différentes formes :
+- {Currency}, distribué en fonction de la quantité de travail effectué, soit immédiatement, soit à l'achèvement.
+- {Reputation}, donnée par le créateur de l'équipe de travail au travailleur (sous réserve des limites quotidiennes de réputation qui peuvent être données).
+- Connaissance d'une spécialité spécifique (même effet que la lecture d'une page de compétence). Pour bénéficier de cet avantage, le créateur de l'équipe de travail doit posséder le livre de compétences pour la spécialité, ou il doit être élaboré dans l'un des ordres de travail de l'équipe.
+- L'octroi d'un {Title}, qui peut lui donner de nouveaux privilèges pour accéder à des biens et à d'autres compétences.
+
+L'économie de l'Eco est axée non seulement sur le commerce des biens mais aussi sur le commerce du travail, et les groupes de travail permettent de sous-traiter facilement de nombreux types de travail à la population en général.  
+137;Les groupes de travail sont des accords conjoints conclus par un certain nombre d'acteurs pour exécuter une tâche donnée, la rémunération étant répartie de diverses manières.
+138;Le biôme vivant du monde, qui fournit les ressources que les humains doivent utiliser pour survivre.
+139;
+L'immense diversité et la richesse de la vie sur la planète peuvent être largement classées en zones appelées biomes. Les biomes dans Eco sont des régions du monde qui se situent dans des gammes particulières de précipitations et de températures. En raison de ces différences physiques simulées, différentes espèces de micro-organismes, de plantes, de champignons et d'animaux sont capables de survivre et de se développer dans différents biomes. Chaque biome dans Eco héberge un ensemble unique de ressources que les joueurs peuvent découvrir et extraire afin de construire et d'alimenter leurs sociétés. Les communautés de vie au sein de chaque biome ont des relations d'interdépendance généralement liées à l'habitat, à l'alimentation et au sol, qui à leur tour découlent du climat et des ressources terrestres présentes.
+ 
+Les biomes sont des écosystèmes au sein de l'écosystème mondial, et à l'intérieur des biomes, il existe parfois d'autres divisions ou sous-biomes, comme le haut désert, les prairies à herbes hautes, la glace glaciaire dans la toundra ou les côtes marines. Les biomes et sous-biomes sont des unités contiguës, dont beaucoup ont des restrictions quant aux biomes à côté desquels ou dans lesquels ils peuvent résider. Au fil du temps, à mesure que les conditions changent sous l'influence des acteurs, les biomes peuvent être radicalement remodelés. 
+140;Biomes dans Eco :
+141;Océan : Les parties de l'océan situées sur les plateaux continentaux, où la vie est abondante.
+Océan profond : Les parties les plus profondes de l'océan, abritant les plus grandes espèces marines et les populations de poissons migrateurs.
+Côte froide : Plages et eaux peu profondes dans les climats plus froids.
+Côte chaude : Plages et eaux peu profondes dans les climats plus chauds.
+Marais : Biome unique caractérisé par une saturation du sol en eau douce ou saumâtre.
+Prairies : Biome dans lequel il y a suffisamment d'eau pour supporter les herbes mais pas beaucoup d'arbres.
+Désert : Le biome le plus sec, et actuellement le plus chaud dans Eco.
+Forêt froide : Biome suffisamment humide pour supporter une couverture arborée dense, et suffisamment froid pour que les conifères aient tendance à dominer.
+Forêt chaude : Biome suffisamment humide pour supporter une couverture arborée dense, et suffisamment chaud pour que les feuillus aient tendance à dominer.
+Forêt tropicale : Biome humide et chaud qui supporte une forêt abondante en vie végétale et animale.
+Forêt boréale : Biome froid et quelque peu sec qui abrite une forêt clairsemée de conifères.
+Toundra : Biome très froid qui ne peut pas supporter d'arbres mais qui abrite une communauté végétale et animale unique.
+Glace : Les zones les plus froides du pays, couvertes de glace.
+
+Il y a également quelques sous-biomes dans Eco actuellement :
+
+Haut désert : Une partie du désert géologiquement élevée avec des espèces plus tolérantes au froid et qui profitent des falaises abruptes causées par l'érosion.
+Steppe froide : Prairie légèrement plus froide, souvent caractérisée par un nombre encore plus restreint d'arbres et de grands espaces ouverts. 
+  
+142;Le système vivant des plantes et des animaux qui fournit les moyens de survie des humains.
+143;Graphiques
+144;
+Chaque monde Eco stocke chaque action du jeu et surveille la progression de chaque aspect de la simulation. Les données sont stockées dans quelques grandes catégories, notamment l'écosystème et l'économie. Au fur et à mesure que les joueurs effectuent des actions ou que l'écosystème change, il sera représenté sur des graphiques visibles par les citoyens.
+
+Les graphiques sont très utiles pour comparer l'état de diverses mesures et les visualiser en temps réel. Ils sont donc particulièrement utiles pour déterminer les résultats des lois et règlements rétrospectivement, en étudiant comment les choses ont changé après leur mise en œuvre. Elles sont également utiles pour extrapoler les effets futurs, en projetant le rythme auquel les choses changent (c'est-à-dire la baisse de la population en raison de la déforestation) et en effectuant des changements avant qu'ils ne se produisent. La lecture, la composition et la compréhension des graphiques constituent un outil très puissant pour le gouvernement, et les citoyens disposent des outils nécessaires pour élaborer des graphiques qui soutiennent ou réfutent les arguments et les présentent à leurs concitoyens directement sur les discussions pour des actions civiques.
+
+145;Cartes thermiques
+146;
+Les mondes écologiques sont des lieux variés, avec de nombreux biomes et différents lieux de développement humain et d'impact environnemental. Pour voir comment les différentes parties du monde varient, des cartes thermiques sont disponibles pour tous les effets du monde dans le jeu. Des valeurs telles que l'activité des citoyens, les taux de population, les taux de pollution, la température, l'humidité et des dizaines d'autres peuvent être visualisées grâce aux cartes thermiques, avec des changements enregistrés au fil du temps qui peuvent être reproduits et utilisés pour l'argumentation scientifique.
+
+Les joueurs peuvent les visualiser de deux façons : par la minimap dans le jeu, qui peut également afficher un terrain coloré dans le jeu. Ensuite, ils peuvent être visualisés dans le navigateur web, où leur capacité à rejouer au fil du temps est mise à profit. Un instantané de chaque carte thermique est stocké dans les données du serveur toutes les 10 minutes (configurable), et les citoyens peuvent voir des vues à intervalles réguliers de la façon dont les cartes thermiques changent au fil du temps. Cela est essentiel pour mesurer les impacts dans des endroits spécifiques et déterminer les meilleurs itinéraires pour construire les infrastructures et les nouvelles implantations.
+
+147;Mini-map
+148;
+La mini-map est un outil puissant dans le jeu qui sert à de nombreuses utilisations : navigation, planification, visualisation de données, localisation de propriétés, et bien d'autres encore. Elle peut être activée pour visualiser les différentes couches du monde du jeu (cartes thermiques), en mettant en évidence les régions à forte/faible population, la pollution, l'activité des citoyens, etc. en utilisant un dégradé de couleurs. Des marqueurs mondiaux peuvent être ajoutés manuellement, ou globalement pour tous les citoyens, afin de les diriger vers des points spécifiques, ce qui facilite la coordination de l'activité humaine. Ces marqueurs sont également utilisés pour diriger automatiquement les citoyens vers un travail dynamique, en spécifiant où les routes doivent être construites dans un contrat, où livrer les marchandises pour le transport, etc.
+
+Nous travaillons actuellement à l'ajout de la désignation de propriétés et de districts dans le jeu, ainsi qu'à la spécification de zones de terrain spécifiques pour les groupes de travail et les contrats, permettant par exemple aux citoyens de mettre en évidence dans le jeu les zones pour lesquelles ils souhaitent engager d'autres personnes pour labourer un champ, ou construire une route, etc. Cela permettra au marché du travail d'être beaucoup plus ouvert, les citoyens pouvant être beaucoup plus précis et plus facile à utiliser pour désigner les endroits où ils souhaitent que le travail soit effectué.
+
+149;Le système vivant des plantes et des animaux qui fournit les moyens de survie des humains.
+150;Le vrai sens de la vie est de planter des arbres, sous l'ombre desquels on ne s'attend pas à s'asseoir.\n- Nelson Henderson
+151;
+
+L'écosystème est une fin en soi dans Eco, et sa prospérité continue est le but premier du jeu, au même titre que le progrès économique. En d'autres termes, l'écosystème commence dans un état gagnant, et les joueurs doivent utiliser ses ressources sans l'amener dans un état perdant, ce qui signifierait la destruction pour l'humanité.
+
+L'écosystème dans Eco fonctionne sur une simulation continue, active tant que le serveur est en marche, que les joueurs soient dans le jeu ou non. Chaque plante et chaque animal simulé croît, consomme des sources de nourriture et se reproduit. C'est la seule source de matériaux à partir de laquelle les joueurs doivent construire leur société, et le processus d'extraction de ces matériaux l'affectera grandement. L'abattage d'une forêt peut détruire l'habitat d'une créature, la conduisant à l'extinction. Les résidus miniers peuvent polluer les rivières et les lacs avoisinants, empoisonnant les fermes qui en dépendent. Les actions des joueurs dans Eco affectent leur environnement, et les joueurs devront comprendre l'impact qu'ils ont afin de prospérer et d'arrêter le météore. Il n'est pas question de laisser l'écosystème dans un état vierge et intact ; le météore garantit que ce choix entraînera également la destruction de l'écosystème. Pour le sauver, les citoyens doivent en tirer profit, en construisant une société qui a le pouvoir d'arrêter le météore, tout en ayant la contrainte de ne pas détruire l'écosystème dans le processus.
+
+152;Gameplay
+153;L'écosystème est le système fondamental que les citoyens doivent comprendre et auquel ils doivent faire face. De la croissance des grandes {Farms|Farming} et {Mines|Mining} à la compréhension de l'impact de la {pollution} par l'étude, l'impact des citoyens sur l'écosystème déterminera le succès ou l'échec des décisions des acteurs. Comprendre son fonctionnement à l'aide de {Data} du jeu devient une condition essentielle de survie. Contrairement à l{Economy|Economy Overview} et au {Government|Government Overview}, l'écosystème n'est pas une construction citoyenne - son comportement est absolu, rien sur son fonctionnement ne peut être modifié par la manière dont l'économie peut fonctionner. En ce sens, il s'agit d'un contrôle de la réalité, le lieu où les préjugés et les croyances contradictoires des citoyens se heurtent et révèlent les véritables conséquences.
+154;Entre économie et gouvernement
+155;À mesure que les citoyens progressent dans la société, ils doivent prendre garde à la tragédie des biens communs, à savoir que le fait de donner à une population un accès sans entrave à une ressource commune entraînera souvent sa destruction. Pour éviter cela, les citoyens doivent s'organiser et décider des règles pour le bien commun par le biais de {Laws} et autres règlements civiques qui peuvent limiter l'individu mais permettre au groupe de survivre. Ce conflit, l'individu contre le groupe, constitue le cœur du défi de la construction d'une civilisation.  
+156;Le système vivant des plantes et des animaux qui fournit les moyens de survie des humains.
+157;
+L'agriculture permet de récolter les espèces végétales les plus utiles à l'homme et de créer un approvisionnement alimentaire à l'échelle mondiale. L'agriculture peut également se concentrer sur les plantes utiles à d'autres fins industrielles, comme le biocarburant, source d'énergie potentiellement renouvelable.
+
+Les agriculteurs devront prêter attention aux ressources et à la santé de leurs sols, en évitant l'épuisement et la pollution. Les engrais comme le {CompostFertilizerItem} et les méthodes de surveillance des ressources du sol comme le {SoilSamplerItem} seront des outils importants pour maintenir la productivité des terres agricoles. Divers véhicules, des technologies de stockage et des outils manuels plus puissants permettront aux agriculteurs de développer leurs activités agricoles à mesure que les besoins en nourriture et en carburant de leur société augmenteront.
+
+L'agriculture est une activité importante dans l'Eco que nous voulons améliorer et développer au fur et à mesure que nous avançons dans le développement. L'équilibre et le stockage seront au cœur des améliorations agricoles dans un premier temps, car nous nous assurons que les sociétés écologiques génèrent une demande appropriée de la part des agriculteurs pour alimenter la croissance technologique, et que les objets et les mécanismes de stockage existent pour soutenir ces demandes. L'agriculture elle-même peut faire l'objet de nombreuses améliorations et extensions, notamment en développant et en modifiant les semences et les organismes pour qu'ils soient plus productifs ou plus résistants aux polluants ou à d'autres facteurs environnementaux.  
+158;Sol
+159;
+Le sol d'Eco contient des nutriments qui permettent aux plantes de croître et de se développer : une quantité trop importante ou trop faible d'un type donné peut modifier le rendement et la vitesse de croissance des plantes naturelles ou cultivées. Au fur et à mesure de leur croissance, les plantes prélèvent des éléments nutritifs dans le sol et les restituent à leur mort, ce qui permet au monde de retrouver un équilibre naturel. Les joueurs influencent ces changements en retirant les plantes de l'environnement par la récolte, la déforestation, l'exploitation minière ou l'introduction de pollution qui enlève lentement les nutriments du sol. Les joueurs peuvent réintroduire des nutriments ou modifier les ratios existants en utilisant des engrais sur leurs terres.
+
+En augmentant la dépendance des animaux vis-à-vis des couches végétales, nous pouvons faire en sorte que ces parties des écosystèmes affectent davantage le sol, car les espèces qui consomment des plantes peuvent également retirer des nutriments du sol. Un autre élément à prendre en compte est l'existence de la couche arable au sein d'Eco : actuellement, elle est purement cosmétique et liée au biome de la région, mais dans chaque biome, la couche arable est une ressource unique et précieuse par rapport à l'argile dense et à la terre qui se trouvent en dessous.
+
+160;Le système vivant des plantes et des animaux qui fournit les moyens de survie des humains.
+161;
+Le sol sous vos pieds abrite une grande variété de ressources, telles que des roches, des métaux et d'autres gisements minéraux. Différents types de roches abritent différents types de gisements minéraux ou se prêtent au piégeage d'autres ressources comme le pétrole. En raison de l'immense complexité des ressources terrestres en réalité et de la nécessité dans Eco de fournir aux joueurs un équilibre prévisible des matières premières pour commencer, les roches et leurs gisements sont générés sur la base des Biomes. Chaque biome est accompagné d'une série de roches et de dépôts associés qui s'étendent par couches en dessous.
+
+162;L'exploitation minière à la main
+163;
+Pour extraire du minerai, il faut d'abord le localiser. Les minerais dans Eco sont tous situés à des endroits particuliers, donc reconnaître les roches qui ont le type de minerai que vous souhaitez et ensuite creuser près de ces roches est une bonne façon de commencer. Utilisez un {WoodenShovelItem} ou mieux encore, creusez pour enlever la terre de la surface ou commencez à creuser dans une colline par le côté. Une fois que vous avez touché la roche que vous voulez traverser, vous devrez utiliser une pioche comme la {StonePickaxeItem} pour la briser. Lorsque vous cassez des roches avec la pioche, il arrive que vous brisiez un gros morceau de roche qui doit être frappé à nouveau pour se briser en morceaux assez petits pour être ramassés. C'est une bonne idée de ramasser la roche au fur et à mesure que vous la cassez, et de l'empiler ailleurs pour l'utiliser, de préférence dans un {StockpileItem} ou un véhicule que vous utilisez pour transporter votre minerai comme une {WoodCartItem}.
+
+164;Traitement des minéraux
+165;
+Une fois que vous avez collecté une grande quantité de minerai de métal, vous devez traiter le minerai avant de pouvoir fabriquer des produits en métal avec celui-ci. Il s'agit d'un processus sale et coûteux, et l'optimisation de ce processus et de ses sous-produits sera un sujet de réflexion permanent. Les trois principales étapes du traitement des minerais sont les suivantes :
+
+La fragmentation : La fragmentation consiste à broyer la roche en particules de plus petite taille qui peuvent être traitées ultérieurement. Le principal sous-produit de ce processus est la roche concassée du type dans lequel le minerai est logé.
+Concentration : La concentration est un moyen de séparer les métaux désirés dans une roche de minerai de la roche stérile. Ce processus n'est jamais parfait et entraîne inévitablement une production importante de stériles qui contiennent encore des traces de métaux libérés. Ces stériles contenant des traces de métaux lourds sont connus sous le nom de {TailingsItem}. Les {CopperOreItem} et {GoldOreItem} nécessitent un lessivage chimique et un traitement par voie humide pour se séparer de leurs roches hôtes, et produisent donc des {WetTailingsItem} plus pollués et plus volatils pendant le processus de concentration.  
+Fusion : Une fois que vous avez un concentré de minerai précieux, vous pouvez enfin le fondre en produits métalliques comme {IronBarItem} dans un {BloomeryItem} ou en utilisant une technologie de fusion plus avancée.
+
+166;Le système vivant des plantes et des animaux qui fournit les moyens de survie des humains.
+167;
+Lorsque les citoyens brûlent du combustible pour cuisiner ou produire de l'énergie, fondent des métaux, traitent les eaux usées et s'engagent dans d'innombrables autres activités industrielles nécessaires, un sous-produit commun est la pollution. La pollution est toute substance qui peut agir comme un contaminant ou un poison lorsqu'elle est réintroduite dans l'environnement. Il existe de nombreuses sources et plusieurs variétés de pollution, dont certaines sont plus puissantes que d'autres. Les métaux lourds peuvent contaminer le sol, affectant les nutriments disponibles et la santé des plantes et des animaux qui y vivent. L'eau peut propager les contaminants rapidement et augmenter l'ampleur de leur impact. La pollution atmosphérique peut se déverser de manière invisible ou évidente à partir d'un poêle ou d'une centrale électrique, s'ajoutant aux gaz à effet de serre et ayant un impact sur la qualité de l'air, ainsi que retomber dans le sol sous forme de pluies acides. 
+
+Pour assurer la survie des écosystèmes et préserver les ressources comme le sol et l'eau, les acteurs devront gérer et contenir les sources de pollution que leur civilisation crée. Dans certains cas, des déversements ou des concentrations mortelles seront inévitables, et la remise en état et le stockage pourraient alors être la seule option pour remettre la terre dans un état intact.
+
+168;Pollution terrestre
+169;
+Une fois rejetés dans les sols et la nappe phréatique, les polluants du sol ne sont pas faciles à arrêter ou à éliminer. Divers matériaux présents dans Eco sont des sources de pollution des sols, notamment les résidus miniers et les déchets issus de l'artisanat et d'autres activités des joueurs. La pollution se propage selon un gradient qui augmente en concentration avec le temps si la source de polluants demeure ou augmente. Lorsque la source de polluants est retirée du contact avec le sol, la pollution du sol se propage et se dissipe avec le temps.
+
+170;Pollution de l'air
+171;
+De nombreuses activités des joueurs peuvent créer des émissions nocives qui, si elles sont rejetées dans l'atmosphère, agissent comme une pollution atmosphérique. Le fait de fabriquer des objets produisant du CO2 ou de faire fonctionner des générateurs avec ces objets contribue à la pollution locale et mondiale. Sur de longues périodes, les niveaux de CO2 globaux contribuent à un effet de réchauffement climatique qui affecte à son tour le niveau de la mer. Il existe des puits et des apports naturels pour certains polluants comme le CO2, comme les forêts.
+
+Les concentrations de pollution atmosphérique retombent sur le sol sous forme de pluies acides, que nous simulons en utilisant la pollution atmosphérique et les quantités de pluie locales.
+
+172;Pollution de l'eau
+173;
+L'eau est un milieu à travers lequel la pollution se répand plus rapidement et plus loin, s'engouffrant en aval et s'épanouissant dans les lacs ou les océans. La pollution de l'eau provient généralement de sources de pollution des sols proches, mais elle peut également pénétrer dans l'eau par le biais du mécanisme des pluies acides dans les régions où la pollution atmosphérique est importante. 
+
+L'élimination de la source est la seule façon de mettre fin à la pollution de l'eau, mais les stratégies de nettoyage et de remise en état sont des éléments que nous envisageons pour l'avenir.
+
+174;Contenu
+175;
+Dans de nombreux cas, il n'existe pas de solution parfaite pour traiter les matières polluantes. Il faut faire de la place pour stocker divers polluants, et les polluants doivent être stockés de manière à éviter qu'ils ne retournent dans le milieu environnant. C'est un défi qui devrait être la clé de la gestion environnementale de l'industrie dans Eco. Actuellement, la mécanique des résidus nécessite un stockage souterrain en profondeur ; ce point sera amélioré avec de nouveaux développements. 
+
+La mécanique de confinement est au premier plan des caractéristiques que nous voulons améliorer en ce qui concerne le groupe de caractéristiques de pollution dans Eco. Les joueurs devraient utiliser le confinement pour traiter les grandes quantités de résidus et de déchets que leur société produit.
+
+176;Le système vivant des plantes et des animaux qui fournit les moyens de survie des humains.
+177;Les articles constitutionnels définissent la manière dont les choses se passent au sein du gouvernement : qui peut adopter des lois, fixer des impôts, modifier les règles, etc.  Il peut également définir certaines actions comme nécessitant une élection, en y spécifiant un {Election Process|Election Processes}.  
+
+Des articles constitutionnels peuvent être ajoutés à deux endroits.  Sur un {CapitolItem}, vous pouvez en ajouter jusqu'à trois, et sur un {AmendmentsItem}, vous pouvez en ajouter jusqu'à dix de plus par article.
+
+Il est très important de définir les règles du gouvernement pour que celui-ci reste une structure stable et favorable à la société.  Les gouvernements peuvent se voir accorder un grand pouvoir sur le monde avec des lois, et il y a un risque d'abus de ce pouvoir.  En établissant un système de freins et de contrepoids, les citoyens peuvent concevoir un gouvernement qui peut subir un certain nombre de changements, y compris des changements de direction, tout en conservant le pouvoir d'apporter des changements positifs dans le monde.
+
+178;Un ensemble de règles sur le fonctionnement du gouvernement.
+179;Une constitution est un document fondateur qui définit la manière dont une société sera gouvernée.  Une constitution doit être créée avant tout autre objet de gouvernement. Elles sont créées dans un {Capitol|CapitolItem}.
+ 
+Renverser les gouvernements
+Une fois qu'un pupitre de la Constitution est placé, une constitution peut être ratifiée en l'ouvrant et en cliquant sur Ratifier. Tant qu'il n'y aura pas d'autres constitutions, le gouvernement sera immédiatement créé.
+ 
+Si une constitution est déjà en vigueur, une nouvelle constitution ne peut prendre sa place que si la valeur de sa pièce dépasse de manière significative la constitution existante, en fonction des paramètres du serveur. 
+ 
+Remarque : une prochaine mise à jour d'Eco permettra la création de plusieurs gouvernements simultanés.
+180;Le document fondateur d'un gouvernement.
+181;
+Les données démographiques sont des classes de citoyens, créées au sein du gouvernement. Elles peuvent ensuite être utilisées partout où il est possible de préciser le type de citoyen (autorisations, lois, etc.).
+
+Par exemple, les citoyens peuvent définir une catégorie démographique bûcherons qui ne contiendra que les utilisateurs ayant un niveau de compétence en abattage de 3 ou plus.  Ensuite, une loi pourrait être créée qui autoriserait uniquement les bûcherons à abattre des séquoias géants.
+
+Les données démographiques sont définies au niveau d'un {Census Bureau|CensusBureauItem}.
+
+Les données démographiques peuvent également être assorties de salaires. Les salaires sont payés périodiquement tant qu'un citoyen reste au sein de sa catégorie démographique.
+
+182;Définit un groupe de citoyens correspondant à certains critères.
+183;Les quartiers sont créés par les joueurs dans un {ZoningOfficeItem} et peuvent être utilisés comme des zones spécifiées par des lois.
+
+Un quartier est une zone de terrain sélectionnée, non contiguë, que les joueurs peuvent ajuster à volonté.  Les quartiers sont contenus dans les cartes de quartier, et il peut y avoir plusieurs cartes de quartier dans le monde. Toutefois, à l'intérieur de chaque carte de quartier, aucun quartier ne peut se chevaucher.
+
+Les quartiers peuvent être utilisés pour désigner les endroits où des actions sont autorisées par la loi. Une loi peut être créée, par exemple, pour empêcher la coupe d'arbres dans un quartier de zone protégée.
+
+184;Une section de terre définie, qui peut être référencée par des lois et d'autres systèmes.
+185;Les titres élus sont des fonctionnaires qui peuvent se voir attribuer des autorisations pour gérer la politique gouvernementale. Ces titres peuvent être utilisés partout où vous pouvez spécifier un citoyen (autorisations, lois, etc.). 
+
+Les titres élus sont créés dans un {GovernmentOfficeItem}. Plusieurs conditions peuvent être fixées lors de la définition d'un titre élu :
+
+  - Un {Election Process|Election Processes} avec des limites de durée pour les détenteurs de titres
+  - Le nombre de citoyens qui peuvent détenir le titre élu en même temps
+  - Conditions pour rester en fonction une fois élu au titre
+  - Un successeur qui reprend le poste en cas de destitution d'un titulaire de titre
+
+Lors de la création d'un titre élu, les autorisations suivantes peuvent être attribuées :
+
+  - Fixer le taux d'imposition à un {TreasuryItem}.
+  - Accès à la dépense des fonds sur le compte bancaire du Trésor
+  - Privilèges bancaires du gouvernement pour créer des comptes bancaires gouvernementaux qui sont exemptés du calcul de la richesse personnelle
+  - La possibilité de placer un marqueur cartographique mondial pour signaler aux citoyens un point d'intérêt
+
+Les titres élus peuvent se voir attribuer des salaires qui sont payés périodiquement aux citoyens qui détiennent le titre.  
+186;Les titres d'élus sont des fonctionnaires du gouvernement qui peuvent se voir attribuer des autorisations pour gérer la politique gouvernementale.
+187;Les citoyens peuvent définir de nouveaux types d'élections à un {BoardOfElectionsItem}, et chaque processus électoral qui y est créé peut être utilisé pour divers changements de gouvernement et de direction.
+
+Les {Civic Articles} peuvent faire référence aux processus électoraux afin de désigner les actions qui nécessitent une élection. Les {Elected Titles} créés dans un {GovernmentOfficeItem} doivent spécifier un processus électoral par lequel les nouveaux membres sont élus.
+
+Chaque processus électoral peut définir un ensemble différent d'électeurs, de veto, de calendrier, de pourcentage nécessaire pour gagner, etc.  En utilisant différents types d'élections, les citoyens peuvent concevoir leur gouvernement de manière à avoir différents sièges au pouvoir. Par exemple, ils peuvent définir un titre puissant qui doit être élu par l'ensemble de la population, mais qui peut également être mis en cause par celle-ci.
+
+188;Définit le déroulement d'une élection.
+189;Les élections peuvent prendre deux formes :
+  
+    - Élections des fonctionnaires . Ce sont des élections de {Elected Titles} qui donnent des pouvoirs spécifiques à un citoyen.
+    - Les référendums.  Un vote par oui ou par non qui déterminera si une action civique spécifique doit être entreprise.
+
+Les élections sont lancées à un {BallotBoxItem}, où les citoyens peuvent effectuer un certain nombre d'actions civiques.  En fonction des {Civic Articles} disponibles, ces actions peuvent ou non nécessiter une élection ; si elles le font, le citoyen aura la possibilité d'en lancer une immédiatement.
+
+Les élections peuvent avoir un certain nombre de paramètres déterminés par leurs {Election Process|Election Processes}. Ces paramètres indiquent qui peut voter, qui peut opposer son veto, combien de temps dure l'élection, quel pourcentage est nécessaire pour gagner, etc.  Plusieurs types d'élections peuvent être créés à des fins différentes. Par exemple, un gouvernement représentatif pourrait être créé, certaines élections ne permettant aux élus que de voter, alors que la plupart des citoyens ne votent que pour les élections des représentants.  
+190;Sondage effectué auprès d'un groupe de citoyens pour déterminer une position ou un référendum.
+191;Les actions exécutives sont des actions ponctuelles qui peuvent affecter un groupe spécifique de citoyens ou tous les citoyens à la fois.
+  
+Les actions exécutives peuvent être proposées à un {ExecutiveOfficeItem} en utilisant l'{Civic Action Component}. Ces actions ont trois effets principaux :
+  
+ - Émettre une {Tax|Taxes} unique
+ - Fournir un paiement aux citoyens à partir du {TreasuryItem}
+ - Changer le propriétaire {Property} d'un bien existant
+
+En fonction des {Civic Articles} disponibles, ces actions peuvent ou non nécessiter un choix. Certains articles civiques stipulent que seuls les {Elected Titles} peuvent effectuer des actions exécutives.  
+192;Une action effectuée par un fonctionnaire du gouvernement ayant des effets sur les impôts, la propriété, etc.
+193;Le plus grand châtiment consiste à être gouverné par un plus méchant que soi, quand on ne veut pas gouverner soi-même.\n- Platon
+194;Entre l'écosystème et l'économie se trouve le gouvernement, dirigé par les citoyens pour assurer la survie et la prospérité des deux.
+  
+  
+195;
+    Le gouvernement est créé par les citoyens, morceau par morceau, en augmentant leur pouvoir et leurs capacités parallèlement au pouvoir de la population.  Les parties du gouvernement sont :
+  
+196;{Constitution}
+Avant de pouvoir créer tout autre aspect du gouvernement, une Constitution doit être créée dans un {CapitolItem}. Elle détermine le mode de fonctionnement du gouvernement par le biais d'articles civiques.
+
+197;{Civic Articles}
+Une constitution contient des articles civiques qui définissent le fonctionnement du gouvernement : qui peut faire quoi, et comment.  Ils peuvent être créés dans un {CapitolItem} sur une nouvelle constitution ou ajoutés à une constitution existante dans un {AmendmentsItem}.
+
+198;{Laws}
+Les lois déterminent les règles et les processus que tous les citoyens sont tenus de suivre.  Un {CourtItem} peut contenir jusqu'à 3 lois.
+
+199;{Elections}
+Les élections seront déclenchées automatiquement lorsque des modifications seront nécessaires, comme le prévoit la Constitution. Elles peuvent avoir de nombreux effets (modification des lois, élection de dirigeants, réalisation d'actions exécutives).
+
+200;{Election Processes}
+Le processus électoral détermine le fonctionnement des élections : qui peut voter et opposer son veto, leur durée, les majorités requises, etc. Un {BoardOfElectionsItem} peut organiser jusqu'à trois processus électoraux.
+
+201;{Elected Titles}
+Un titre d'élu est un poste gouvernemental qui peut être doté de privilèges spéciaux. Un {GovernmentOfficeItem} peut détenir un titre d'élu.
+
+202;{Demographics}
+Une population définit un groupe de personnes selon des règles spécifiques. Ce groupe peut ensuite être utilisé dans d'autres aspects du gouvernement.  Un {CensusBureauItem} peut contenir jusqu'à trois données démographiques.
+
+203;{Districts}
+Définit une zone de terre qui peut être référencée dans les lois et autres lieux.  Un {ZoningOfficeItem} peut contenir jusqu'à trois cartes de quartier.
+
+204;{Executive Actions}
+Une action de l'exécutif est une opération ponctuelle qui peut être effectuée pour mettre en œuvre des changements dans la société. Elles sont effectuées dans un {ExecutiveOfficeItem} par des utilisateurs bénéficiant de privilèges prévus par la constitution (généralement des titres élus).
+
+205;
+  {Ballot Boxes|Civic Action Component}
+  Une urne permet d'effectuer des opérations liées aux élections et à l'exercice d'un mandat.
+
+206;
+{Treasury|Treasury Component}
+Détermine les taxes sur différents secteurs de l'économie.
+
+207;Une institution conçue et gérée par le peuple pour promouvoir le bien commun.
+209;Les lois sont les moyens par lesquels le gouvernement apporte des changements dans le monde, pour atteindre les objectifs de la population.
+
+Les lois sont créées en plaçant un {CourtItem}, et en fonction des {Civic Articles} disponibles, peuvent nécessiter l'adoption d'une élection.  Chaque loi est créée avec une liste de causes et d'effets, et lorsque la cause se produit, l'effet sera activé.  Cela permet une grande souplesse dans le fonctionnement des lois, qui peuvent couvrir de nombreux domaines, de la fiscalité à la réglementation en passant par les fonds versés pour encourager les activités.
+
+De nombreux choix de Cause fourniront un contexte sur le citoyen qui l'a déclenchée, où elle a été déclenchée, etc. Ces propriétés de contexte peuvent être consultées dans l'infobulle Cause, et sont disponibles pour spécifier les données dans les Effets.  Par exemple, un effet peut taxer le joueur spécifique qui a abattu un arbre  
+210;Règles de cause à effet conçues par les citoyens et appliquées automatiquement afin d'atteindre des objectifs sociétaux.
+211;Pour le bien de la population, ou au moins l'enrichissement du gouvernement, des taxes peuvent être prélevées sur de nombreuses actions dans Eco.
+
+Taxes du Trésor
+Sur un {TreasuryItem}, les taxes peuvent être fixées sur une variété d'actions :
+ - Taxe sur les ventes.  Taxe appliquée à la vente de marchandises dans un magasin.
+ - Taxe sur les frais d'artisanat. Taxe appliquée aux frais prélevés sur le partage de votre poste d'artisanat.
+ - Taxe sur les contrats. Taxe prélevée sur les paiements effectués dans le cadre de contrats et de groupes de travail.
+ - Taxe sur les transferts directs. Taxes prélevées sur les transferts entre joueurs.
+ - Taxe sur les transferts directs entre joueurs. Taxes prélevées lors du transfert vers un compte auquel vous avez accès (pour vous protéger éventuellement contre les failles de l'évasion fiscale).
+
+Seul un citoyen titulaire d'un {Elected Title|Elected Titles} qui a obtenu le droit de fixer les impôts au Trésor peut ajuster ces taux.  Toutes les taxes prélevées à partir de ces paramètres seront stockées sur le compte bancaire spécial du Trésor.  Ce compte bancaire spécial peut être affecté à d'autres comptes par le biais de commandes du Trésor.
+
+Droit des impôts
+Les taxes peuvent également être fixées par des {Laws}, dont les montants et les destinations peuvent être déterminés de manière dynamique. Le compte bancaire sur lequel elles sont placées peut également être déterminé, ce qui permet de financer des fonds spécifiques à des fins précises, stockés sur des comptes bancaires accessibles à un nombre limité de personnes seulement.  Grâce au système juridique, ces taxes peuvent être ciblées de manière très spécifique et ajustées en fonction des actions qui sont menées.
+
+Par exemple, on pourrait créer un poste de ministre des transports ayant un titre élu et ayant un accès exclusif à un fonds de transport {Bank Account|Bank Accounts}.  Une loi pourrait alors être créée pour taxer la production et le commerce de carburant, les recettes étant versées au Fonds des transports, où le ministre des transports actuellement élu peut les utiliser pour financer la construction de nouvelles routes {Work Parties}.
+
+212;L'impôt peut être prélevé sur l'économie pour financer des projets de travaux publics ainsi que pour encourager ou décourager l'activité économique.
+213;Les titres sont utilisés pour désigner un groupe d'utilisateurs, puis pour faire référence à ce groupe dans d'autres choses comme les autorisations.  Ils sont différents des {Demographics} dans la mesure où les titres sont spécifiés directement par les citoyens, tandis que les citoyens d'un groupe démographique sont automatiquement définis sur la base d'une condition définie par le citoyen.
+
+Deux types de titres sont disponibles :
+
+ - Titres réguliers. Ils peuvent être créés et gérés par n'importe qui dans un {RegistrarItem}.  Le citoyen peut y définir quels autres citoyens peuvent attribuer le rôle (gestionnaires) et quels sont ceux qui occupent le rôle.
+ - Titres élus. Ces titres peuvent uniquement être élus (ou nommés) et sont créés dans un {GovernmentOfficeItem}.  Les propriétés de l'office gouvernemental déterminent le type d'{Election} nécessaire pour élire le poste donné.  Les titres élus ne peuvent être laissés que s'ils sont démis de leurs fonctions par la force, s'ils démissionnent (tous deux effectués à un {BallotBoxItem}, ou si leur mandat se termine comme défini dans les limites du mandat du poste.
+
+Les titres élus donnent beaucoup de flexibilité dans la définition de la gouvernance d'un monde, et les privilèges peuvent être directement liés à ces comptes. Par exemple, une loi fiscale pourrait être créée pour taxer l'utilisation des véhicules et la placer dans un fonds auquel seul le titre élu ministre des transports a accès. S'il y a une autre élection pour ce poste et que cela change de dirigeant, l'ancien citoyen perdra automatiquement l'accès à ce compte.  Les titres peuvent également être assortis de salaires. Les salaires sont versés périodiquement tant qu'un citoyen continue d'occuper le titre (et que le payeur dispose de fonds).  
+214;Postes qui peuvent être occupés par un ou plusieurs citoyens.  Utilisé pour désigner les autorisations et payer les salaires.
+215;Un citoyen ne peut pas s'épanouir sans un abri convenable et avec votre {Nutrition} la valeur de votre logement déterminera votre {Experience} multiplicatrice. Plus les matériaux et l'ameublement de votre maison sont bons, plus votre multiplicateur d'expérience est élevé.  
+
+De plus, de nombreux objets nécessitent des maisons et des services publics pour fonctionner. Le système de boîtier comprend les éléments suivants :
+ - {Residency}. Vous pouvez partager la résidence d'une propriété avec d'autres.
+ - {Rooms}. Une pièce est un espace entièrement confiné et de nombreux objets doivent être placés à l'intérieur d'une pièce pour fonctionner.
+ - {Property}. Les citoyens peuvent revendiquer des parcelles de terrain individuelles auxquelles ils peuvent ensuite contrôler l'accès.
+ - {Power}. De nombreux articles nécessitent une source d'énergie pour fonctionner, et l'énergie produite peut être partagée entre de nombreux citoyens.
+ - {Sewage}. Certains articles nécessitent un système d'égouts composé de tuyaux, de pompes et de traitement des eaux usées.
+216;Votre résidence (ainsi que votre alimentation) détermine votre gain de compétences.
+217;De nombreux objets ont besoin d'énergies pour fonctionner, et à mesure que votre société progresse, les types de ces énergies progressent également.
+  
+Au début, la plupart des énergies proviendront des calories dépensées par les citoyens.  Des sources d'énergie locales peuvent également être construites, telles que les {Waterwheels|Waterwheel Item}, n'alimentant que le voisinage immédiat.  Lorsque la technologie passera à l'électricité, l'énergie pourra alors être produite de manière centralisée, ce qui permettra à des groupes de se constituer pour alimenter les villes en tant que groupe plutôt que de devoir installer individuellement des sources d'énergie (les projets communautaires de ce type conviennent parfaitement pour utiliser le système des {Taxes} pour les financer, et des {Contracts} et {Work Parties} pour les faire construire).
+  
+Il existe de nombreux types de production d'électricité, chacun ayant des besoins en combustible et un impact environnemental différents.  La construction, l'alimentation en combustible et l'exploitation des centrales électriques peuvent devenir une source majeure de {Pollution} à mesure que la technologie progresse, et les citoyens devront réglementer avec soin les types d'énergie utilisés et la manière dont la pollution est traitée pour éviter une catastrophe écologique.  
+218;De nombreux objets ont besoin d'énergie pour fonctionner, qui peut être générée de différentes manières.
+219;
+En revendiquant la propriété, les citoyens peuvent protéger l'accès aux parcelles de terre, en déterminant qui est autorisé à accéder à la terre et ce qu'ils sont autorisés à faire sur les objets qu'elle contient.  
+220;Droits de propriété foncière
+221;
+Les terres peuvent être revendiquées comme propriété en utilisant un {Land Claim Stake|Property Tool Item} et en ciblant une parcelle de terre non revendiquée.  Lorsqu'il est ciblé, un {Land Claim Paper|Property Claim Item} sera utilisé, et le citoyen deviendra le propriétaire du titre de propriété. La propriété à votre position actuelle peut être vue dans le panneau mondial en bas à droite de l'écran, et en cliquant sur le titre, vous ouvrirez l'acte.
+222;Droits de propriété des objets
+223;Les droits d'accès aux objets peuvent être fixés séparément du terrain sur lequel ils se trouvent, afin de permettre aux utilisateurs d'accéder aux objets qui se trouvent sur des terrains privés. Ces paramètres sont déterminés dans une {Authorization Component}.
+
+224;Titres de propriété
+225;Sur le titre, les citoyens peuvent ajouter et retirer des parties qui peuvent accéder au terrain (placer ou retirer des blocs).  Il est également possible de changer le propriétaire en cliquant sur l'engrenage à côté du nom du propriétaire.  Notez que les {Demographics} et les {Titles} peuvent tous deux être attribués à un propriétaire sur un titre, y compris les {Elected Titles}. Une telle structure gouvernementale peut permettre aux seuls élus d'avoir certains droits d'accès à la terre.
+226;Les citoyens et les gouvernements peuvent posséder des biens et déterminer leurs droits d'accès.
+227;Les pièces sont des espaces fermés, protégés des éléments, dans lesquels toutes les ouvertures sur le monde extérieur sont comblées par des murs, portes et fenêtres.
+
+Vous pouvez voir les détails d'une pièce dans un panneau à droite de l'écran détaillant ses informations lorsque vous êtes à l'intérieur. De nombreux types d'objet possèdent des prérequis liés à la pièce. Ils occupent de l'espace dans celle-ci et peuvent nécessiter que les matériaux qui la composent soient d'une qualité particulière. La valeur de votre logement est également affectée par la qualité des matériaux des pièces. Cela signifie qu'une maison en brique par exemple, sera bien plus rentable qu'un taudis en terre.
+
+
+Aménagement et type de pièces
+En revendiquant du territoire et en construisant des pièces dessus, vous allez commencer à augmenter vos gains d'expérience, y compris lorsque vous êtes hors jeu. Ajouter de nouveaux types de pièces et les aménager augmentera encore ce gain. Chaque type de mobilier est associé à un type de pièce : Salle de bain, Chambre, Cuisine, ou Général (affiché dans l'aide de l'objet). Le type d'une pièce sera déterminé par la catégorie dans laquelle le mobilier apporte la plus grande contribution. La valeur de chaque pièce est calculée en sommant les valeurs de tous les aménagements qu'elle contient.
+
+La multiplication d'un même meuble ou d'un même type de pièce dans une maison génèrera des revenus décroissants; cela dit, cela vous confèrera tout de même des points de logement, mais moins que pour les premiers. Finalement, le gain en points deviendra négligeable et il deviendra inutile d'ajouter plus de ce type de meuble ou pièce dans une maison. Par exemple, votre 12ème salle de bain ajoutera beaucoup moins de valeur à votre maison que la première.
+
+Qualité des matériaux d'une pièce
+Le niveau moyen des matériaux des pièces va déterminer la valeur de votre logement, en utilisant un seuil. Une fois qu'une pièce a dépassé ce seuil, les points de logement qu'elle génèrera au delà auront des rendements décroissants. Lorsque cela arrivera, il sera peut être temps de rénover les matériaux de la pièce.
+
+228;Les pièces vous protègent, vous et votre équipement, contre les éléments, en fournissant des points de compétence et en permettant à l'équipement de fonctionner.
+229;De nombreux objets industriels et de logement ont besoin d'être raccordé à l'eau pour fonctionner. Habituellement, cela signifie qu'ils ont besoin d'une arrivée d'eau en entrée et d'une évacuation pour l'eau usée en sortie. Chaque objet qui a un {Pipe Component} a besoin d'être raccordé à l'eau.
+
+Les systèmes de raccord à l'eau sont créés en connectant une {MechanicalWaterPumpItem} ou une {ElectricWaterPumpItem} à une source d'eau, puis construire des tuyaux entre les différents objets qui ont besoin d'être approvisionnés. Du côté sortie, les tuyaux vont emmener les eaux usées de l'objet soit pour les rejeter dans l'environnement (générant de la {Pollution} au point de sortie), soit les traiter avec un {Waster Filter|WasteFilterItem}, qui va générer du {Compost|CompostItem} à partir des eaux usées.
+
+Les tuyaux se connectent automatiquement à n'importe quel bloc adjacent du même type. Pour créer différents systèmes de raccordement à l'eau proches les uns des autres, utilisez différents matériaux pour vos tuyaux.
+
+230;Certains objets nécessitent des égouts pour l'approvisionnement en eau et l'évacuation des eaux usées.
+231;Composants liés à l'industrie.
+232;En acquérant de l'expérience dans le domaine de l'écologie, vous serez en mesure de débloquer de nouvelles spécialités et de nouvelles capacités au sein de ces spécialités. Il existe deux types d'expérience que vous acquerrez, l'expérience de caractère et l'expérience de spécialité.  Ces deux types d'expérience sont augmentés par votre multiplicateur d'expérience.
+
+Expérience de personnage
+L'expérience de caractère est le taux d'apprentissage de votre passé, la vitesse à laquelle vous acquérez des connaissances et des capacités.  Il augmente constamment, même lorsque vous êtes hors ligne.  Chaque jour réel, vous gagnerez de l'expérience de personnage au taux de 1 * votre multiplicateur d'expérience.  Lorsque vous atteindrez un niveau supérieur, vous gagnerez une nouvelle spécialité déverrouillée, représentée par une étoile.  Chaque niveau supérieur nécessitera de plus en plus d'expérience de personnage à acquérir, il est donc très difficile d'avoir plus que quelques spécialités.
+
+Expérience de spécialité
+L'expérience de spécialité est votre compétence à un niveau spécifique et, plutôt que d'augmenter constamment, elle n'augmente que lorsque vous effectuez des actions liées à cette spécialité, comme l'artisanat ou le travail.  Comme l'expérience de personnage, elle est multipliée par votre multiplicateur d'expérience. Dans la partie gauche de l'écran, vous verrez des icônes indiquant le niveau d'expérience que vous gagnez lorsque vous effectuez des actions, et vous pouvez cliquer dessus pour voir de plus près les niveaux supérieurs pour cette spécialité.
+Certains niveaux vous permettront de débloquer des talents, qui donnent des bonus spécifiques liés aux compétences qu'ils possèdent.
+
+Multiplicateur d'expérience
+Le multiplicateur d'expérience (ou multiplicateur XP) est une valeur personnelle représentant votre système de santé et de soutien, et il détermine la vitesse à laquelle vous acquérez de nouvelles compétences.  Il est déterminé par la somme de vos valeurs {Nutrition} et {Housing|Housing Overview}.  Comme elle affecte à la fois vos points d'expérience de caractère et de spécialité, vous voudrez la maintenir aussi élevée que possible en mangeant des aliments nutritifs et en ayant une maison bien meublée.
+
+
+233;Il existe deux types d'expérience en matière d'éco : L'expérience de caractère (acquise par l'alimentation et la résidence) et l'expérience de spécialité (acquise en effectuant des actions dans une spécialité).
+234;Votre expérience
+L{Experience} est déterminée par votre nutrition et votre logement{Housing|Housing Overview}. Plus la nourriture que vous mangez est nutritive, plus vous gagnez d{Experience} rapidement. Plus votre santé est bonne, plus vite vous avancez.
+
+Il y a quatre nutriments représentés dans la nourriture : Protéines, Graisses, Vitamines et Glucides. Votre multiplicateur d'expérience est déterminé en faisant la somme des moyennes de chacun de ces nutriments dans la nourriture que vous avez consommée durant les dernières 24 heures. Cela signifie que si vous consommez de la nourriture de mauvaise qualité (faible en nutriments), cela vous affectera pendant 24 heures, jusqu'à ce qu'elle soit évacuée de votre corps.
+
+En plus de cela, un multiplicateur d'équilibre est appliqué, donnant un bonus additionnel entre 0% et 50% en fonction de l'équilibre des nutriments dans votre corps. Par exemple, si vous avez exactement 25% de chaque nutriment, vous aurez un bonus de 50%.
+
+En fonction des réglages de difficulté du serveur, un ‘multiplicateur’ peut également être appliqué pour augmenter encore cette valeur.
+
+Enfin, un gain de base est ajouté au total. Cela assure que même lorsque vous êtes totalement affamé, vous continuez à progresser. Vous pouvez voir par vous-même tous ces calculs dans l'aide liée à la nourriture en bas à gauche de votre interface.
+
+Calories
+Les calories, contrairement aux nutriments, sont dépensées lorsque vous effectuez un travail, et lorsque vous arrivez à court de calories, vous serez incapable de travailler jusqu'à ce que vous ayez mangé. L'utilisation des calories peut être grandement réduit par les outils améliorés et l'amélioration de compétences.
+Toute nourriture fournit à la fois des calories et des nutriments, par conséquent, en même temps que vous gagnez des calories, vous déterminez également votre multiplicateur, donc faites attention à votre alimentation.
+
+Nourrir le monde
+La nourriture est le pilier de la croissance d'une société dans Eco, alimentant l'amélioration des compétences nécessaires pour construire une civilisation. Un réseau de production de nourriture bien organisé, des fermiers aux cuisiniers, permet aux citoyens d'améliorer leurs compétences à une vitesse soutenue.
+
+235;L'alimentation, tout comme votre résidence, détermine la rapidité avec laquelle vous acquérez de l'expérience.
+236;La capacité à se spécialiser et à commercer est essentielle à une économie florissante, ce qui permet de travailler plus efficacement que si l'on essayait de tout faire soi-même.  La réussite d'une société dépend de la réussite des deux critères si dessus.
+
+ Les compétences d'un citoyen lui confèrent des capacités et des améliorations uniques, qui lui permettent de {Trade} avec d'autres citoyens ayant des compétences différentes dans l'économie. Au fur et à mesure que vous acquérez de l'{Experience}, vous pouvez débloquer de nouvelles {Specialties} et mettre à niveau celles qui existent déjà.  L'expérience que vous acquérez est multipliée par votre {Nutrition} et {Housing|Housing Overview}.  
+237;Le système de compétences permet aux citoyens de se spécialiser dans des professions spécifiques.
+238;Les spécialités sont déverrouillées au fur et à mesure que vous vous mettez à niveau par rapport au personnage {Experience}.  Chaque spécialité (représentée par une étoile) déverrouillera de nouvelles capacités que vous pourrez utiliser.
+
+Professions et spécialités
+Les {Professions|Profession Overview} sont simplement des regroupements de compétences et ne servent à rien d'autre qu'à stocker ensemble des compétences similaires.
+Les spécialités sont chacune contenues sous une profession et nécessitent deux étapes pour être acquises.
+
+1. Tout d'abord, vous devez apprendre une page de compétences pour la compétence en question.
+2. Ensuite, vous devez dépenser une étoile pour prendre la spécialité.
+
+Une fois que vous avez choisi la spécialité, vous obtenez les compétences de base qui y sont associées. En effectuant des actions liées à cette spécialité, vous gagnerez la spécialité {Experience}, ce qui vous permettra d'élever le niveau de la spécialité et de débloquer de nouvelles capacités.
+Vous pouvez voir la répartition des spécialités que les autres citoyens ont choisies dans le dialogue de sélection des compétences, et il est souvent judicieux de choisir des spécialités que les autres joueurs n'ont pas choisies ou qu'ils n'ont pas mises à niveau. Cela vous permettra d'exécuter vos propres spécialités et de faire du {Trade} entre vous pour un gain net.
+
+
+239;Des spécialités peuvent être acquises en collectant de l'expérience de personnage, et chaque spécialité permettra de débloquer de nouvelles capacités uniques.
+240;La nourriture, tout comme votre résidence, est essentielle pour améliorer vos compétences.
+241;Les menusiers sont spécialisés dans le travail du bois.
+
+  - {LoggingSkill} permet aux citoyens de couper les arbres plus rapidement tout en dépensant moins de calories. En outre, cette spécialité est utilisée pour produire des {HewnLogItem} qui sont le principal matériau de construction pour la profession de menuisier.
+  - La {CarpentrySkill} permet aux citoyens de produire des meubles et des {Boards|Board Item} en bois. En utilisant un {SawmillItem}, les citoyens ayant cette spécialité peuvent produire des {LumberItem} et des meubles de meilleure qualité.
+  - La {CompositesSkill} permet aux citoyens d'utiliser une technologie avancée pour produire des matériaux de construction en bois de la plus haute qualité.
+  - La {PaperMillingSkill} permet aux citoyens de raffiner la pâte de bois pour en faire du {PaperItem}. Le papier est utilisé pour certains meubles spécialisés.
+242;Les menuisiers sont spécialisés dans le travail du bois.
+243;Les cuisiniers cuisinent des aliments de haute qualité qui permettent aux citoyens d'acquérir de l'expérience plus rapidement. En utilisant les aliments crus produits par les agriculteurs et les chasseurs, les cuisiniers créent des aliments riches en nutriments. Au fur et à mesure des progrès technologiques, les spécialités des cuisiniers cuisinent des aliments de qualité de plus en plus élevée.
+  
+  - {CampfireCookingSkill} est la spécialité de cuisinier d'entrée de gamme qui utilise un {CampfireItem} pour préparer de meilleurs repas que les aliments carbonisés de base produits par des non-cuisiniers.
+  - La {CookingSkill} est la deuxième étape de la profession de cuisinier qui utilise un {CastIronStoveItem} pour produire des repas de meilleure qualité.
+  - La {BakingSkill} est une alternative à la cuisine qui utilise un {FlourItem} pour produire des produits de boulangerie.
+  - Le métier de cuisinier est une profession de haut niveau qui permet de produire des aliments de qualité supérieure.
+  - L'{AdvancedBakingSkill} est une alternative au boulanger qui utilise {YeastItem} pour produire des produits de boulangerie de haute qualité avec {LeavenedDoughItem}.
+  
+244;Les cuisiniers cuisinent des aliments de haute qualité qui permettent aux citoyens d'acquérir de l'expérience plus rapidement.
+245;Les ingénieurs utilisent des matériaux créés par d'autres professions pour ouvrir la voie vers des avancements technologiques. Les véhicules qu'ils produisent améliorent grandement la capacité commerciale et la vitesse à laquelle les citoyens travaillent. Les tables d'artisanat qu'ils produisent sont utilisées par de multiples professions pour créer des biens haut de gamme. Être un ingénieur requiert de fréquentes interactions avec d'autres professions car les ingénieurs sont incapables de produire les ressources primaires nécessaires à leur travail.
+
+-{BasicEngineeringSkill} permet aux citoyens de produire des routes et des chariots pour aider au transport des ressources. De plus, l'ingénierie basique crée les tables d'artisanat nécessaires au traitement et à la fonte des minerais.
+-{MechanicsSkill} permet aux citoyens de créer les premiers véhicules motorisés, tels que le {SteamTruckItem}. Les mécaniciens fournissent la première source d'électricité permettant de continuer la progression technologique.
+-{IndustrySkill} permet aux citoyens de créer des véhicules avancés, tel que le {ExcavatorItem}, pour rapidement collecter de grandes quantités de ressources naturelles.
+-{OilDrillingSkill} permet aux citoyens d'utiliser une {PumpJackItem} pour collecter du {PetroleumItem} qui sera utilisé dans différents projets industriels.
+-{ElectronicsSkill} est une spécialité d'ingénierie haut de game qui utilise des ingrédients onéreux pour produire les matériaux les plus avancés nécessaires pour les projets d'artisanat moderne. En plus de cela et de produire une source d'électricité verte, l'électronique est utilisée pour fabriquer le {LaserItem} nécessaire pour sauver le monde du météore.  
+246;Les ingénieurs sont des maîtres inventeurs qui produisent des véhicules et d'autres produits de pointe pour d'autres citoyens.
+247;
+Les fermiers sont des spécialistes en agriculture. Leurs cultures sont une source primaire des calories dont les citoyens ont besoin pour travailler.
+
+- {FarmingSkill} permet aux citoyens de créer des graines à partir de leur récolte, afin de permettre la création de grandes fermes.
+- {FertilizersSkill} permet aux citoyens d'ajouter des nutriments dans le sol et de tester la composition du sol avec un {SoilSamplerItem}.
+- {GatheringSkill} permet aux citoyens de récolter plus de ressources aussi bien sur les plantes sauvages que les plantations humaines dans les fermes.
+- {MillingSkill} permet aux citoyens de fabriquer des produits dans un {MillItem} afin que les cuisiniers les utilisent dans des recettes avancées.  
+248;Les agriculteurs sont des spécialistes de l'agriculture.
+249;
+Les chasseurs sont spécialistes pour chasser efficacement les animaux et préparer la viande pour qu'elle soit utilisée par les cuisiniers. Les deux spécialités de chasse sont étroitement liées car les animaux chassés doivent être préparés avant de pouvoir être utilisés par un cuisinier.
+
+- {ButcherySkill} permet aux citoyens de transformer les carcasses d'animaux en viande préparée pour les cuisiniers. Les peaux et cuirs peuvent être utilisés pour fabriquer des vêtements et d'autres projets d'artisanat.
+- {HuntingSkill} accorde aux citoyens des dégâts bonus lorsqu'ils chassent des animaux et leur permet d'approcher les animaux de plus près sans les faire fuir.  
+250;Les chasseurs sont des spécialistes de la chasse aux animaux et de la préparation de la viande pour les cuisiniers.
+251;Les maçons sont des spécialistes de l'exploitation minière et du travail de la pierre. Ils constituent une source précieuse de matériaux de construction et de meubles pour les maisons. Le minerai qu'ils collectent est utilisé par les Forgerons pour fondre des barres de métal.
+  
+  - {MiningSkill} permet aux citoyens de dépenser moins de calories tout en extrayant de la pierre et du minerai. Les mineurs traitent également le minerai collecté et le concentrent pour être utilisé pour la fusion.
+  - {MasonrySkill} permet aux citoyens de produire {MortarItem}, un ingrédient principal de la plupart des matériaux de construction de maçon. Le {MortaredStoneItem} qu'ils produisent est une excellente source de matériaux de construction de départ.
+  - {PotterySkill} permet aux citoyens de fabriquer des matériaux de construction et des meubles {BrickItem} à partir de {ClayItem}.
+  - {GlassworkingSkill} permet aux citoyens de créer {GlassItem} et plus tard {FramedGlassItem}. Le verre est un beau matériau de construction supplémentaire et est utilisé dans une variété de projets industriels.
+  - {AdvancedMasonrySkill} est une compétence de maçon de haut niveau qui produit des matériaux de construction et des meubles en pierre de taille de la plus haute qualité.  
+252;Les maçons sont des spécialistes dans l'extraction et le travail de la pierre.
+253;Les professions sont des groupes de {Specialties} similaires qui débloquent de nouvelles recettes d'artisanat et offrent des capacités telles que l'utilisation réduite de calories lors de la fabrication ou de l'utilisation d'un outil. Au sein de chaque profession se trouve un groupe de spécialités similaires.
+  
+Vous trouverez ci-dessous une liste de toutes les professions et des spécialités correspondantes. Les citoyens peuvent choisir de se concentrer sur une profession ou d'apprendre des spécialités de diverses professions.  
+254;Les professions confèrent aux citoyens une capacité spéciale et la possibilité de fabriquer des objets avancés.
+255;Les Forgerons fondent du minerai concentré en ligots qui peuvent être utilisées par une variété de professions. De plus, Forgerons crée des outils de qualité supérieure qui aident les citoyens à travailler de manière plus productive.
+  
+- {SmeltingSkill} sont des spécialistes de la fabrication des ligots qui constituent la base du progrès technologique. Les outils en fer qu'ils créent offrent un avantage significatif par rapport aux premiers outils en pierre.
+- {AdvancedSmeltingSkill} permet aux citoyens d'affiner davantage les ligots de fer en {Steel|SteelBarItem} pour une utilisation dans l'industrie et les matériaux de construction de haut niveau. Les citoyens ayant cette spécialité peuvent utiliser l'acier qu'ils créent pour des outils encore plus modernes que les outils en fer créés par la fusion de base.  
+256;Les forgerons fondent le minerai en barres métalliques et créent des outils avancés.
+257;Tous les citoyens sont des survivants dans le monde d'éco. 
+  
+L'expérience en matière de {SelfImprovementSkill} s'acquiert chaque fois qu'un citoyen monte en grade dans une autre spécialité. L'auto-amélioration présente deux avantages principaux. À mesure que les citoyens progressent, ils ont une capacité de charge accrue et une plus grande capacité stomacale pour les calories supplémentaires. En outre, ils consomment moins de calories lorsqu'ils utilisent des marteaux, des pelles et des foreuses.
+  
+258;Les survivants dépensent moins de calories lorsqu'ils utilisent des outils de base et ont un poids de transport plus élevé.
+259;Les tailleurs travaillent avec le tissu pour créer des vêtements et des meubles haut de gamme pour les autres citoyens. Contrairement aux autres professions, la profession de tailleur a une seule spécialité.
+	
+{TailoringSkill} permet aux citoyens de créer des {ClothItem} utiles dans des projets d'artisanat par plusieurs professions. Les vêtements créés par les tailleurs offrent aux citoyens des bonus spéciaux. Par exemple, un {BigBackpackItem} a une limite de poids maximum plus élevée que le {BasicBackpackItem} de départ.
+	
+260;Les tailleurs travaillent avec le tissu pour fabriquer des vêtements et des meubles haut de gamme pour les autres citoyens.
+261;Tout objet contenant un composant de véhicule peut être monté et interagir avec lui de différentes manières, ce qui présente un certain nombre d'avantages.
+  
+De nombreux véhicules ont besoin d'un {Power|Power Component} pour fonctionner et chacun d'entre eux possède son propre {Storage|Storage Component}. La construction d'infrastructures dans le monde entier améliorera considérablement vos capacités de {transport}, car de nombreux véhicules ont besoin de routes pour circuler.
+262;  
+- Transport : Les véhicules comme le {WoodCartItem} peuvent transporter des marchandises et des gens d'un endroit à l'autre. Au fur et à mesure que la technologique progresse, des véhicules plus avancés deviennent disponibles avec des vitesses de déplacement plus rapides et des capacités de charge supérieures en contrepartie de créer plus de pollution
+
+- Minage : Le {ExcavatorItem} et le {SkidSteerItem} peuvent bouger rapidement de grosses quantités de terre et de roches. Cela augmentera beaucoup la vitesse de {Mining} et permettra le nettoyage rapide de zones pour les nouveaux projets de construction.
+
+- Construction : La {CraneItem} peut réaliser rapidement des projets de {Building} à grande ampleur. La grue a une beaucoup plus grande portée de construction qu'un citoyen qui construit avec un marteau et peut avoir accès à une grande quantité de stockages.
+
+264;Les véhicules peuvent être utilisés pour effectuer diverses tâches.
+265;
+Dans Eco, les joueurs récoltent d'abord de la nourriture dans les biomes sauvages qui les entourent. Les plantes mûres pour la récolte durable abondent. Les sources de nourriture sauvages peuvent servir de ressource renouvelable supplémentaire, mais elles s'effondreront rapidement si on en profite. Certaines plantes seront utiles pour bien plus que de la nourriture : elles peuvent fournir des composés chimiques que l'on ne trouve nulle part ailleurs, ou les matières premières nécessaires aux textiles et aux vêtements.
+
+Différentes plantes nécessitent différents outils pour être récoltées, comme une pelle ou une faux. D'autres espèces peuvent être cueillies à la main sans outil. De même, certaines plantes sont tuées lors de la récolte, et d'autres ne feront que repousser les fruits cueillis s'ils continuent à pousser et à être en bonne santé.  
+266;Le système vivant des plantes et des animaux qui fournit les moyens de survie des humains.
+267;
+Les espèces animales sont des habitants du monde en Eco qui varient beaucoup en termes d'utilisation possible en tant que ressources. Certaines espèces constituent d'excellentes sources de viande et de nourriture comme le lait, tandis que d'autres peuvent fournir des sous-produits utiles comme la laine, le cuir, le suif ou la farine d'os. Mais les animaux varient également beaucoup en termes de résilience et d'adaptabilité aux impacts sur leurs populations, leur habitat et leurs sources de nourriture. 
+
+Grâce à la chasse, les joueurs peuvent utiliser divers pièges et outils manuels pour chasser des animaux sauvages directement dans les écosystèmes où ils vivent afin de les utiliser. La chasse peut également servir de moyen de contrôler ou d'abattre des populations excessives d'animaux. La chasse sera une activité importante mais pas strictement nécessaire pour les joueurs, surtout au début, afin de répondre à l'appétit d'une grande société. 
+
+Chasser un animal n'est que la première étape pour en tirer le meilleur parti possible. Les progrès de la boucherie permettront aux joueurs de transformer et d'utiliser les animaux pour une grande variété de produits animaux. La collaboration avec d'autres professions comme les cuisiniers et les couturiers permettra de débloquer de nombreuses utilisations nutritionnelles, industrielles et même culturelles pour les animaux et leurs produits, qui ne doivent pas tous être obtenus par la chasse. Toutefois, si un produit animal particulier devient populaire dans l'économie, il faudra veiller à éviter toute pression destructrice sur une espèce. La chasse est souvent le coup de grâce porté à une espèce menacée dont les produits deviennent de plus en plus précieux à mesure qu'ils se raréfient.
+
+Pour commencer à chasser, vous devrez fabriquer un {WoodenBowItem} et quelques {Arrows|Arrow Item}. Des arcs plus perfectionnés vous permettront d'atteindre plus facilement et rapidement votre cible. Gardez à l'esprit que les animaux peuvent être tués plus rapidement avec un tir bien visé, et qu'il peut être plus facile de chasser certains animaux en fonction de l'heure de la journée.  
+268;Le système vivant des plantes et des animaux qui fournit les moyens de survie des humains.
+269;Guide Ecopedia pour démarrer.
+270;
+Une fois que vous avez couvert vos besoins primaires, il est temps de réfléchir à la manière dont vous voulez contribuer au projet commun de la société, et votre profession est la clé de cette contribution.  
+271;
+
+Chaque profession comporte un certain nombre de {Specialties} en dessous desquelles se trouvent des capacités spéciales. Comme les citoyens ne peuvent avoir qu'un nombre limité de spécialités, une bonne approche consiste à prendre différentes spécialités puis à faire du {Trade} entre eux.  Dans la fenêtre des compétences, vous pouvez voir combien de citoyens ont choisi chaque profession et rechercher les compétences les plus nécessaires, en choisissant celles sur lesquelles se concentrer.
+  
+272;
+Consultez la {Profession Overview} pour un tour d'horizon des différentes options.  
+273;(Remarque : la boîte de dialogue des compétences est masquée jusqu'à la fin du tutoriel. Elle peut être rendue visible en terminant le tutoriel ou en le zappant.) 
+274;Un monde avec un éventail de professions peut commercer pour des avantages mutuels.
+275;
+    La {Government|Government Overview} d'Eco est gérée par des citoyens individuels, et la qualité de la gouvernance dépend entièrement de la manière dont ces citoyens participent.
+
+    Il existe plusieurs façons de participer à la gestion du gouvernement, notamment
+
+    - La fondation du gouvernement par la création d'un {CapitolItem} et d'une {Constitution}.
+    - Définir des objectifs civiques, notamment les {Districts}, {Demographics}, {Elected Titles}, {Election Processes} et {Amendments|Constitution}.
+    - Se présenter comme candidat à un {Elected Title|Elected Titles}, en lui conférant les pouvoirs spéciaux qui lui sont attribués par la constitution.
+    - Adopter des {Laws} après avoir obtenu le privilège de (défini dans la constitution).
+    - Adopter des {Executive Actions}, avec des privilèges également définis dans la constitution.
+    - Voter dans les {Elections} pour les {Elected Titles} et autres actions civiques.
+    - Débattre des lois à l'aide de {Data}, présenter des arguments à vos concitoyens pour défendre un choix plutôt qu'un autre.
+  
+276;
+Chacune de ces options est disponible à divers endroits qui doivent être construits par les citoyens. Le gouvernement actuel peut être visualisé en sélectionnant l'icône Gouvernement dans la barre d'action et en survolant chaque section, vous préciserez où l'objectif civique est défini.
+  
+277;Vos devoirs civiques sont les nombreuses façons différentes dont vous pouvez interagir avec le gouvernement.
+278;Pour amener une société à travers les âges aux sommets de la technologie, il faut une {Economy|Economy Overview} prospère, et en y participant, les citoyens peuvent à la fois contribuer au progrès de la société et faire progresser leurs propres capacités et leur richesse.
+ 
+La participation à l'économie se fait par le biais du {Trade} de biens et de services.  La recherche d'implantations existantes avec des {Stores|Store Component}, des {Contracts} et des {Work Parties} permettra aux citoyens d'échanger les biens et la main-d'œuvre dans lesquels ils se spécialisent contre les spécialités d'autres personnes, en atteignant leurs objectifs individuels plus rapidement que s'ils travaillaient chacun de leur côté.  
+Lorsque vous entreprenez de nouveaux projets qui nécessitent des matériaux ou de la main-d'œuvre que vous n'avez pas la capacité de créer ou de fournir vous-même, vous pouvez vendre les biens et services que vous pouvez fournir sur le marché, en créant des magasins et en fixant les prix dans une {Currency} de votre choix. L'utilisation de cette monnaie pour acheter les biens et services d'autres personnes vous permettra ensuite d'atteindre ces objectifs sans avoir à tout apprendre par vous-même.
+
+Au fur et à mesure que vous développez vos capacités et que vous avez davantage besoin des autres citoyens, vous pouvez créer vos propres magasins, contrats et groupes de travail pour solliciter leur aide.  À mesure que vous acquérez de la richesse, votre pouvoir de provoquer des changements (bons ou mauvais) augmente. 
+279;Le moyen le plus efficace de progresser dans le domaine de la connaissance et de la technologie est le commerce au sein de l'économie.
+280;Si une société fonctionnelle est nécessaire pour arrêter le météore, chaque individu doit voir ses propres besoins satisfaits, à commencer par la nourriture et votre résidence.
+ 
+281;Choisir une colonie
+282;Lorsque vous choisissez un lieu où vous installer, vous devez tenir compte des facteurs suivants :
+283;Proximité des ressources
+Les sources de nourriture naturelles et les matériaux de construction à proximité accéléreront considérablement les premiers progrès.
+
+Proximité des autres
+S'installer à proximité d'autres citoyens offre un avantage certain, car vous pouvez alors commercer avec d'autres pour progresser plus rapidement.  Toutefois, une zone surpeuplée peut également avoir des possibilités limitées d'expansion et d'alimentation naturelle à proximité. Vous devrez trouver un équilibre en fonction de vos préférences personnelles.  
+284;Revendiquer votre terrain
+285; Une fois que vous aurez choisi un endroit pour construire votre première colonie, vous voudrez réclamer des {Property} autour de celui-ci.  Cela se fera automatiquement lorsque vous placerez votre tente de départ, et vous pourrez réclamer d'autres propriétés avec des titre de propriété.  Les biens que vous revendiquez seront protégés des autres citoyens, à moins que vous ne leur en donniez l'accès.
+286;Nourriture
+287;Pour avoir les calories nécessaires à votre travail, il est essentiel de trouver un approvisionnement en nourriture.  De plus, la {Nutrition} des aliments que vous mangez a un impact sur la vitesse à laquelle vous acquérez de l'expérience, vous voudrez donc manger les meilleurs aliments disponibles pour obtenir les gains les plus rapides.  Lorsque vous vous installez dans la nature, recherchez des sources de nourriture à proximité que vous pouvez utiliser, ou prévoyez de créer une {Farm|Farming}.  Lorsque vous vous installez près d'un village existant, examinez l'économie locale pour voir ce que vous pouvez {Trade} pour obtenir de la nourriture.
+288;La mise en place d'une source de nourriture et d'un abri est une première priorité. 
+289;L'{Ecosystem|Ecosystem Overview} est le fournisseur d'un grand nombre de ressources que les citoyens peuvent utiliser, mais il est également vulnérable à leur impact.  Pour réussir en tant que société, il faudra une gestion intelligente de l'impact, en utilisant le {Government|Government Overview} pour réglementer ce qui est autorisé. 
+ 
+Diverses formes de {pollution} peuvent affecter l'environnement, créant un potentiel de catastrophes qui pourraient détruire votre approvisionnement alimentaire et arrêter le progrès, entraînant un effondrement écologique.  Grâce aux outils {Data}, les citoyens peuvent surveiller l'impact qu'ils ont sur le monde et utiliser ces données pour plaider en faveur de réglementations spécifiques visant à le protéger, ou accélérer l'économie par d'autres moyens.
+
+Le monde commence comme une vaste étendue sauvage intacte, et à travers les âges, les citoyens devront le transformer radicalement en utilisant la technologie pour construire l'industrie et les connaissances nécessaires pour stopper {The Meteor}.  Les citoyens devront choisir avec soin entre utiliser au maximum les ressources de l'écosystème et éviter d'endommager l'environnement au-delà de toute réparation.
+
+290;L'écosystème fournit de nombreuses ressources, mais il est vulnérable aux actions humaines.
+291;
+  Eco est un monde sous le signe de deux menaces : L'effondrement de l'environnement, et le {Meteor|The Meteor} qui ne cesse de se manifester.
+  
+Pour réussir, vous devrez progresser à travers les âges, en faisant progresser la science et l'industrie à un niveau qui peut détruire le météore sans provoquer d'effondrement écologique dans le processus.  Vous y parviendrez en tant que membre individuel d'une société plus large, et la création d'une interaction positive entre les besoins individuels et les besoins de la société est essentielle pour réussir.  
+
+Dans Eco, vous vous concentrerez sur la gestion de vos progrès individuels tout en travaillant simultanément à faire progresser l'ensemble de {Economy|Economy Overview}, et ce dans un {Ecosystem|Ecosystem Overview} riche de plantes et d'animaux qui sont affectés par ce que vous faites.  
+
+Pour aider à créer une relation positive entre ce triangle formé par les individus, l'économie et l'écosystème, vous avez à votre disposition les outils de {Government|Government Overview}. Vous pouvez définir des {Laws} contraignantes qui déterminent ce qui est autorisé et se présente aux {Election|Elections} afin d'obtenir des pouvoirs gouvernementaux pour apporter des changements et guider la société.
+
+ Mais ce qui compte avant tout, c'est de répondre à vos besoins fondamentaux avant de pouvoir sauver le monde.  Pour ce faire, vous commencerez par {Food and Shelter}.
+292;Votre voyage dans Eco.
+293;Le monde a reçu une date d'expiration : un météore en orbite autour du globe s'effondrant, prêt à entrer en collision dans 30 jours en temps réel, détruisant ainsi tout ce qui s'y trouve.  
+  
+Cependant, l'espoir n'est pas perdu, car avec la bonne technologie, cette crise peut être évitée. En travaillant ensemble pour générer une {Economy|economy overview} prospère et faire progresser la {Research}, l'humanité a une chance de construire le {Laser|LaserItem} nécessaire pour détruire cette menace.
+
+Ce ne sera pas une tâche facile, et l'industrie nécessaire pour atteindre de tels niveaux de progrès constituera une réelle menace pour l'{Ecosystem|Ecosystem Overview}.  Pour lutter contre ce phénomène et éviter d'être victime d'un effondrement écologique de votre propre création, un {Government|Government Overview} bien réglementé doit être conçu, mis en œuvre et créé par ses citoyens.
+
+Le sort du monde dépend de l'action conjointe de ses citoyens en harmonie avec l'écosystème pour réaliser de grandes prouesses technologiques, et ce n'est que par une collaboration étudiée qu'ils pourront réussir.
+  
+294;Une menace qui vient d'en haut.
+295;Grâce à l'utilisation d'outils, les citoyens peuvent construire de grandes structures et déplacer des montagnes.  Les outils de départ vous permettront seulement d'effectuer de petits changements, mais au fur et à mesure des progrès technologiques, vous obtiendrez des outils qui peuvent effectuer des opérations par lots, et éventuellement {Vehicle|Vehicle Component}} qui peuvent apporter des transformations massives au monde. 
+296;Il existe plusieurs types d'outils différents :
+  - {Building} Les outils.  Les marteaux vous permettent de placer les matériaux de construction dans les coffrages, les pelles permettent de déplacer la terre.  
+  - {Farming} Les outils.  Le labour, la plantation et les semis sont tous dotés d'outils pour accroître leur efficacité.
+  - {Transport} Les outils.  Les véhicules et les outils pour la construction des routes sont particulièrement utiles pour le transport de marchandises.
+  - {Harvesting} Les outils.  Ces outils permettent de collecter des ressources de l'écosystème.
+  - {Hunting} Les outils.  La chasse aux animaux pour se nourrir nécessite des outils spécialisés.
+  
+Les outils qui sont actionnés manuellement nécessitent des Calories, ce qui affecte votre {Nutrition}.
+Tous les outils ont une durabilité associée, qui diminue au fur et à mesure qu'ils sont utilisés.  Une fois qu'un outil a perdu sa durabilité, il faudra une quantité énorme de calories pour l'utiliser, et devrait être réparé à un {Repair|Repair Component} Table.
+  
+297;Avoir accès aux meilleurs outils vous permet de réaliser le plus de progrès possible.
+298;Après avoir collecté quelques matières premières de base, la construction est l'une des premières choses qu'un citoyen fera pour s'établir dans le monde.  
+299;À l'aide d'un marteau ou d'une grue, les citoyens peuvent créer des bâtiments pour les habitations et l'industrie.
+300;
+L'onglet Titres de propriété permettent aux citoyens de voir et de gérer tous les {Property} qu'ils possèdent, en leur fournissant une interface pour y accéder facilement.  
+301;Permet aux citoyens de voir et de gérer tous les biens qu'ils possèdent.
+302;
+L'onglet Texte peut être trouvée sur les panneaux, {Vehicles|Vehicle Component}, et la {Distribution Station|Item Distribution Component}.
+  
+Le texte peut être utile pour donner des indications, faire de la publicité ou simplement écrire une salutation amicale
+
+Pour ceux qui sont familiers avec le codage de texte, une variété de codes peut être utilisée pour modifier la taille, la couleur et le formatage du texte.
+
+303;Permet aux citoyens d'écrire un texte qui est affiché aux autres citoyens.
+304;
+Un des objectifs fondamentaux de la simulation de l'écosystème dans Eco est de contenir une multitude de réseaux alimentaires. Les réseaux alimentaires peuvent être considérés comme un ensemble de relations de  consommateurs  et de  consommation  entre les plantes et les animaux, centré sur une communauté particulière d'animaux et leurs aliments préférés. En général, l'idée est d'avoir au moins un réseau alimentaire solide présent dans chaque biome. Les réseaux alimentaires sont souvent à la base des relations les plus importantes entre les espèces d'un écosystème. De nombreuses espèces dépendent d'autres espèces pour se nourrir ou pour chasser l'espèce qui les mange.
+
+Les proies et les prédateurs des animaux peuvent être visualisés par l'intermédiaire de l'interface web et en vérifiant les couches liées. Actuellement, la relation proie-prédateur est à sens unique : les prédateurs ont besoin que la proie existe, mais ils n'enlèvent rien à la simulation. Cela signifie qu'une explosion des wapitis augmenterait la population des loups, mais cela n'exercerait pas de pression sur les wapitis. Il est important de modifier cette relation pour consommer dans les deux sens tout en s'assurant qu'elle ne s'emballe pas de manière inattendue et soudaine.
+  
+305;Le système vivant des plantes et des animaux qui fournit les moyens de survie des humains.
+306;Suivez le développement d'Eco.
+307;
+Nous voulons qu'Eco soit un jeu éternel, dont la profondeur et l'ampleur ne cessent de croître et qui est relié à d'autres jeux futurs, un système de possibilités illimitées qui vise à aller au-delà du divertissement.  Cet arbre contient le passé, le présent et le futur d'Eco.
+
+    Via notre site web, vous pouvez consulter toutes les parties interactives de l'arbre et voir où nous allons et la philosophie qui sous-tend le jeu.
+  
+308;Voir l'arbre d'Eco à
+309;Suivez le développement d'Eco.
+310;Mise en place d'un magasin
+311;Réparation des outils
+312;Bâtiments dans Eco
+313;
+Les bâtiments sont divisés en {Rooms} et servent à diverses fonctions.
+
+Parmi ces utilisations, on peut citer
+
+- Faire un batiment remplie de meubles pour obtenir une {Experience} supplémentaire du logement
+
+- Fournir un espace permettant aux stations {Crafting} de fonctionner
+
+- Héberger les différents {Civic Objects|Civic Object Component} nécessaires à la mise en place d'un gouvernement
+
+314;Création de bâtiments
+315;Lorsqu'il transporte un matériau de construction, le marteau peut passer d'une forme de bloc à une autre et d'un modèle de construction à un autre.
+
+Les citoyens construisent leur première maison à l'aide d'un {StoneHammerItem}, mais au fur et à mesure des progrès technologiques, des outils de construction de plus en plus performants sont disponibles, qui consomment moins de calories lorsqu'ils sont utilisés.
+
+Les projets de construction à grande échelle peuvent être réalisés rapidement grâce à l'utilisation d'un {CraneItem}, mais au prix de la création de {Pollution}.
+  
+316;Types de véhicules
+317;Types d'objectifs civiques
+318;
+Une fois qu'une {Constitution} est adoptée, les nouvelles politiques gouvernementales sont contenues en tant qu'objectifs civiques dans le bâtiment gouvernemental où elles ont été créées. Il existe de nombreux types de bâtiments gouvernementaux, chacun ayant son propre type d'objectif civique :
+
+- Les {Laws} sont établis sur un {CourtItem}
+- {Demographics} sont établis sur un {CensusBureauItem}
+- Les {Districts} sont établis sur un {ZoningOfficeItem}
+- Les {Elected Titles} sont établis sur un {GovernmentOfficeItem}
+- Les {Civic Articles} sont définis sur un {CapitolItem} ou {AmendmentsItem}
+- Les {Election Processes} sont définies sur un {BoardOfElectionsItem}
+319;Proposer des objectifs civiques
+320;
+En cliquant sur le bouton Projet, un citoyen pourra proposer un nouvel objectif civique. Les citoyens peuvent éventuellement commencer une nouvelle ébauche d'un objectif civique en cliquant sur le bouton Copier qui apparaît lorsqu'on passe le curseur sur l'icône. Une boîte de dialogue apparaîtra alors, vous permettant de sélectionner n'importe quel objectif civique (passé ou présent) à utiliser comme base. 
+321;
+- Appliquer les changements immédiatement : les citoyens bénéficiant du privilège exécutif peuvent ajouter, supprimer ou modifier des objectifs civiques immédiatement.
+
+- Proposer par élection : les citoyens avec la capacité de proposer des élections sont capables de proposer une nouveauté/suppression/modification, ce qui déclenchera une nouvelle élection (en utilisant tout {Election Process|Election Processes} défini dans la constitution).
+
+- Voir uniquement : Si un citoyen n'a aucun privilège comme défini par la constitution, il ne peut que voir les objectifs civiques en cliquant dessus et n'est pas autorisé à les modifier.  
+322;
+Cet onglet est accessible à partir d'un {RealEstateDeskItem}. Il fournit des liens vers tous les titres de propriété individuels auxquels il est possible d'accéder en interagissant avec un {PropertyToolItem} sur un titre de propriété que le citoyen possède.
+
+Les citoyens peuvent renommer rapidement leurs titre de propriété, choisir une couleur pour cette propriété sur la mini-carte ou accorder des droits d'utilisateur à d'autres citoyens, ce qui se fait normalement via le {Authorization Component}.
+
+Une caractéristique utile de cette onglet est la possibilité de déplacer rapidement des titres de propriété d'un acte notarié à un autre. Cela inclut la possibilité de créer un nouvel acte pour diviser une propriété existante.
+
+323;L'onglet Texte permet à un citoyen d'écrire et d'afficher sur un objet du monde pour que les autres citoyens le lisent.
+324;Nécessite un tuyau
+325;
+Dans l'onglet Tuyaux, différentes entrées et sorties de tuyauterie apparaîtront pour représenter les besoins de la tuyauterie. Les objets dotés de cette onglet doivent répondre à toutes les exigences de tuyauterie pour que cet objet soit actif.
+
+Certains objets exigent que les trois utilisations de la tuyauterie aient un {Status|Status Component} actif, tandis que d'autres objets n'en exigent qu'une partie. Chaque système de tuyauterie ne peut être utilisé que pour l'une des trois utilisations. 
+
+En maintenant la souris sur l'affichage d'une des conduites, une info-bulle apparaît avec plus d'informations sur la raison pour laquelle une conduite est ou n'est pas active.  
+326;Menuisier
+327;
+{Carpenters|Carpenter} se spécialisent dans l'abattage d'arbres et la transformation du bois en meubles et matériaux de construction pour les logements.
+   - {LoggingSkill} permet aux citoyens d'abatre des arbres plus efficacement. De plus, les buches sont utilisé pour produire des {Hewn Logs|HewnLogItem} qui sont le principal matériau de construction pour la profession de menuisier.
+   - {CarpentrySkill} permet aux citoyens de produire des meubles en bois et des {Boards|Board Item}. En utilisant un {SawmillItem}, les citoyens ayant cette spécialité peuvent produire {LumberItem}.
+   - {CompositesSkill} permet aux citoyens d'utiliser une technologie de pointe pour produire des matériaux de construction {CompositeLumberItem} de la meilleure qualité.
+   - {PaperMillingSkill} permet aux citoyens de raffiner la pâte de bois en {PaperItem}. Le papier est utilisé pour certains meubles spécialisés.
+
+328;Cuisinier
+329;
+{Chefs|Chef} se spécialisent dans la cuisson d'aliments plus nutritifs afin de stimuler le rythme auquel les citoyens acquièrent de l'expérience.
+  - {CampfireCookingSkill} est la spécialité de cuisinier de premier niveau qui utilise un {CampfireItem} pour préparer des repas de base.
+  - La {CookingSkill} est la deuxième étape de la profession de cuisinier qui utilise un {CastIronStoveItem} pour produire des repas de meilleure qualité.
+  - La {BakingSkill} est une alternative à la cuisine qui utilise un {FlourItem} pour produire des produits de boulangerie.
+  - Le métier de cuisinier est une profession de haut niveau qui produit les aliments les plus nutritifs.
+  - L'{AdvancedBakingSkill} est une alternative au boulanger qui utilise {LeavenedDoughItem} pour fabriquer des produits de boulangerie de haute qualité. 
+330;Ingénieur
+331;
+Les {Engineers|Engineer} sont spécialisés dans la production de véhicules et de matériaux artisanaux avancés destinés à d'autres professions.
+  - Les {BasicEngineeringSkill} permettent aux citoyens de produire des routes et des charrettes pour faciliter le transport. En outre, l'ingénierie de base crée les tables d'artisanat nécessaires pour traiter et fondre le minerai.
+  - Les {MechanicsSkill} permettent aux citoyens de créer les premiers véhicules motorisés, comme un {SteamTruckItem}. La mécanique fournit la première source d'énergie électrique pour permettre la progression technologique.
+  - Les {IndustrySkill} permettent aux citoyens de créer des véhicules avancés, comme une {ExcavatorItem} qui peut rapidement collecter de grandes quantités de ressources naturelles.
+  - La {OilDrillingSkill} permet aux citoyens d'utiliser une {PumpJackItem} pour collecter des {PetroleumItem} qui seront utilisées comme carburant et dans divers projets industriels.
+  - {ElectronicsSkill} utilise des ingrédients coûteux pour produire les matériaux les plus avancés nécessaires aux projets d'artisanat moderne. En plus de fournir une source d'électricité verte, l'électronique est utilisée pour fabriquer le {LaserItem} nécessaire pour sauver le monde du météore.
+
+332;Agriculteur
+333;
+{Farmers|Farmer} sont des spécialistes de l'agriculture. Les cultures qu'ils produisent sont la principale source de calories dont les citoyens ont besoin pour effectuer leur travail.
+   - {GatheringSkill} permet aux citoyens de récolter plus de produits à partir de plantes sauvages et de fermes créées par l'homme.
+   - {FarmingSkill} permet aux citoyens de créer des semences à partir de produits pour aider à créer de grandes fermes.
+   - {FertilizersSkill} permet aux citoyens de fabriquer des engrais et de tester les conditions du sol avec un {SoilSamplerItem}.
+   - {MillingSkill} permet aux citoyens de transformer des produits dans un {MillItem} pour une utilisation par les cuisiniers dans des recettes plus avancées.
+
+334;Chasseur
+335;
+Les {Hunters|Hunter} sont des spécialistes de la chasse efficace des animaux et de la préparation de la viande à l'usage des cuisiniers. Les deux spécialités de chasseurs sont étroitement liées, car les animaux chassés doivent être transformés avant que la viande puisse être utilisée par un cuisinier. 
+  - {HuntingSkill} accorde aux citoyens une prime de dommages lorsqu'ils chassent des animaux et leur permet d'approcher les animaux à une distance plus proche sans les faire fuir.
+  - {ButcherySkill} permet aux citoyens de transformer les carcasses d'animaux en viande préparée pour les cuisiniers. Les peaux qu'ils créent peuvent être utilisées pour des vêtements et d'autres projets d'artisanat.
+
+336;Maçon
+337;
+{Masons|Mason} sont des spécialistes de l'exploitation minière et du travail de la pierre. Ils constituent une source précieuse de matériaux de construction et de mobilier pour les maisons. Le minerai qu'ils collectent est utilisé par les forgerons pour fondre les barres de métal.
+  -{MiningSkill} permet aux citoyens de dépenser moins de calories lors de l'extraction de la pierre et du minerai. Les mineurs traitent également le minerai collecté pour l'utiliser dans la fonte.
+  -Les {MasonrySkill} permettent aux citoyens de produire du {MortarItem}, un ingrédient de base pour la plupart des matériaux de construction des maçons. Le {MortaredStoneItem} qu'ils produisent est une grande source de matériaux de construction.
+  -La {PotterySkill} permet aux citoyens de fabriquer des {BrickItem} de construction et des meubles à partir de {ClayItem}.
+  -Les {GlassworkingSkill} permettent aux citoyens de créer des {GlassItem} et plus tard des {FramedGlassItem}. Le verre est un matériau de construction supplémentaire intéressant et est utilisé dans une variété de projets industriels.
+  -{AdvancedMasonrySkill} est une compétence de maçon de haut niveau qui produit des matériaux de construction et des meubles en pierre de taille de la plus haute qualité.
+
+338;Forgeron
+339;
+{Smiths|Smith} se spécialisent dans la fonte du minerai et la fabrication d'outils pour d'autres citoyens en utilisant les barres de métal qu'ils créent.
+  - Les {SmeltingSkill} permettent aux citoyens de fondre les barres métalliques qui constituent la base du progrès technologique. Les outils en fer qu'ils créent offrent des avantages considérables par rapport aux premiers outils en pierre.
+  - Les {AdvancedSmeltingSkill}} permettent aux citoyens de raffiner davantage les barres de fer pour en faire des {Steel|SteelBarItem} destinées à l'industrie et aux matériaux de construction de haut niveau. Les citoyens ayant cette spécialité peuvent utiliser l'acier qu'ils créent pour des outils plus avancés.
+
+340;Tailleur
+341;
+Le {Tailor} est spécialisé dans la fabrication de meubles haut de gamme et de vêtements spécialisés qui offrent des avantages lorsqu'ils sont portés. Contrairement à la plupart des professions, il n'existe qu'une seule spécialité de tailleur.
+  - La {TailoringSkill} permet aux citoyens de créer des {ClothItem} afin de créer des meubles de haute qualité et de les utiliser dans des projets d'artisanat par diverses professions. Les vêtements créés par les tailleurs offrent aux citoyens des bonus spéciaux. Par exemple, un {BigBackpackItem} a une limite de poids maximum plus élevée que le {BasicBackpackItem} de départ.
+
+342;Survivaliste
+343;
+{Survivalists|Survivalist} est spécialisé dans le port de poids supplémentaires et la réduction des calories dépensées lors de l'utilisation d'outils de base. Tous les citoyens sont des survivalistes dans le monde d'Eco. 
+   - L'expérience en {SelfImprovementSkill} s'acquiert chaque fois qu'un citoyen monte d'un cran dans une autre spécialité. L'amélioration personnelle présente deux avantages principaux. Au fur et à mesure que les citoyens progressent, ils auront une capacité de charge accrue et une plus grande capacité de l'estomac pour les calories supplémentaires. En outre, ils consomment moins de calories lorsqu'ils utilisent des marteaux, des pelles et des tarière de forage .
+
+344;Un aperçu général de l'économie actuelle qui contient des informations telles que les professions disponibles, les groupes de travail et les contrats.
+345;Le visionneur d'économie fournit un aperçu général de l'économie actuelle et constitue un outil incroyablement utile pour la participation économique. Parmi les autres utilisateurs, la visionneuse de l'économie indique l'emplacement de chaque {StoreItem} et ce qui est actuellement acheté et vendu.
+346;
+Le visionneur d'économie fournit des informations détaillées sur les points suivants :
+
+   - Offres {Trade} actuelles
+   - Les {Work Parties} existantes et leur statut
+   - Tous les {Contracts} qui sont affichés
+   - Emplacement des {Public Crafting Stations|Crafting Component}
+   - Informations sur les {Currencies|Currency} existantes
+   
+En outre, le visionneur d'économie permet aux citoyens de transférer directement des monnaies à d'autres citoyens et de vérifier rapidement le statut de leurs propres {Bank Accounts} et de toute dette en cours.   
+347;Accès au visionneur d'économie
+348;Le visionneur d'économie est accessible en cliquant sur le bouton Économie situé en bas à droite de l'écran.
+349;Nourrir le Monde
+La nourriture forme le pilier d'une société en croissance sur Eco, alimentant l'augmentation des compétences nécessaires pour construire une civilisation. Un réseau bien organisé de producteurs de nourriture, des fermiers aux cuisiniers, garantit que les citoyens gagnent des compétences à la fréquence requise.
+
+350;La propriété où vous avez pris résidence fournit vos points de logement.
+351;
+Chaque acte peut avoir n'importe quel nombre de résidents, et ces résidents partageront un coup de pouce {Experience} basé sur la qualité et le nombre d'occupants.
+
+À mesure que le nombre d'occupants augmente, la pénalité d'occupation augmente. Pour un petit nombre d'occupants (1 ou 2), il n'y a pratiquement pas de pénalité, et les citoyens peuvent effectivement cohabiter de cette manière et partager les bénéfices d'une maison bien garnie. Au fur et à mesure que le nombre d'occupants augmente au-delà (5 et plus), la pénalité devient plus forte, atteignant finalement 99% lorsque la maison est trop surpeuplée.
+
+Cependant, le taux de rendement décroissant'' des chambres est favorablement affecté par l'occupation (car trois salles de bains sont excessives lorsque vous vivez seul, mais très bien lorsque vous avez des colocataires). Cela signifie que vous pouvez surmonter la pénalité en construisant une maison plus grande, et les pièces en double seront inversement affectées par le bonus d'occupation.
+  
+Pour devenir résident d'une propriété, cliquez sur le nom de la propriété (visible dans le panneau d'état contextuel lorsque vous êtes dans la propriété). De là, vous pouvez devenir un résident (si vous êtes propriétaire de l'acte) et inviter d'autres personnes à devenir résidents. Ces autres citoyens invités peuvent ensuite se joindre en tant que résidents via la même interface. Vous pouvez même inviter des groupes en spécifiant des titres ou des données démographiques, ce qui vous permet de créer des logements pour des catégories particulières de citoyens (nouveaux joueurs par exemple). Vous pouvez également définir le nombre maximum d'occupants, pour vous assurer que la résidence gérée de cette manière (en invitant de grands groupes) n'entraîne pas de logements surpeuplés.
+
+Remarque : Une fonctionnalité supplémentaire sera ajoutée pour permettre des accords de perception automatique des loyers entre les citoyens. Pour l'instant, cela peut être fait avec des transferts manuels.
+352;Autorisations pour les résidents
+Lorsqu'un citoyen devient résident d'une propriété, il obtient un ensemble spécial d'autorisations, même s'il n'a pas autrement accès à la propriété, connu sous le nom de droits de résident. Ces droits sont les suivants :
+
+  - Chambres pré-meublées prises en charge. Les résidents peuvent accéder à tous les objets du monde sur la propriété en tant que utilisateurs.
+  - Vous pouvez vous déplacer dans vos propres affaires : les résidents peuvent placer des objets n'importe où sur la propriété (mais pas des blocs).
+  - Ne pas voler les meubles fournis avec le lieu autorisé : les résidents ne peuvent ramasser des objets du monde que s'ils les ont initialement placés.
